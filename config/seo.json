@@ -1,10 +1,10 @@
 {
-  "title": "ACME Storefront | Powered by Next.js Commerce",
-  "titleTemplate": "%s - ACME Storefront",
-  "description": "Next.js Commerce - https://www.nextjs.org/commerce",
+  "title": "LEBLANC STUDIOS | OFFICIAL WEBSITE",
+  "titleTemplate": "%s - LEBLANC STUDIOS",
+  "description": "SHOP AND VIEW THE LATEST MENSWEAR AND WOMENSWEAR COLLECTION FROM THE OFFICIAL LEBLANCSTUDIOS WEBSITE",
   "openGraph": {
-    "title": "ACME Storefront | Powered by Next.js Commerce",
-    "description": "Next.js Commerce - https://www.nextjs.org/commerce",
+    "title": "LEBLANC STUDIOS | OFFICIAL WEBSITE",
+    "description": "SHOP AND VIEW THE LATEST MENSWEAR AND WOMENSWEAR COLLECTION FROM THE OFFICIAL LEBLANCSTUDIOS WEBSITE",
     "type": "website",
     "locale": "en_IE",
     "url": "https://nextjs.org/commerce",
@@ -14,13 +14,13 @@
         "url": "/card.png",
         "width": 800,
         "height": 600,
-        "alt": "Next.js Commerce"
+        "alt": "LEBLANC STUDIOS"
       }
     ]
   },
   "twitter": {
-    "handle": "@nextjs",
-    "site": "@nextjs",
+    "handle": "@leblancstudios",
+    "site": "@leblancstudios",
     "cardType": "summary_large_image"
   }
 }
