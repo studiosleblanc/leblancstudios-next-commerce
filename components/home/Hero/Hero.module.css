@@ -1,0 +1,19 @@
+.root {
+  @apply relative min-h-screen w-full bg-gray-800;
+}
+
+.imageContainer {
+  @apply w-full;
+  & > div {
+    @apply max-w-full;
+  }
+}
+
+.heroContent {
+  @apply absolute w-full h-full px-8 pt-8;
+  z-index: 2;
+}
+
+.logo {
+  @apply h-auto;
+}

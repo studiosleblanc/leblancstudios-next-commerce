@@ -1,7 +1,9 @@
 import commerce from '@lib/api/commerce'
 import { Layout } from '@components/common'
-import { ProductCard } from '@components/product'
-import { Grid, Marquee, Hero } from '@components/ui'
+import { Hero } from '@components/home'
+
+// import { ProductCard } from '@components/product'
+// import { Grid, Marquee, Hero } from '@components/ui'
 // import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
 import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 
@@ -40,7 +42,7 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <Grid variant="filled">
+      {/* <Grid variant="filled">
         {products.slice(0, 3).map((product: any, i: number) => (
           <ProductCard
             key={product.id}
@@ -77,12 +79,17 @@ export default function Home({
         {products.slice(3).map((product: any, i: number) => (
           <ProductCard key={product.id} product={product} variant="slim" />
         ))}
-      </Marquee>
-      {/* <HomeAllProductsGrid
+      </Marquee> 
+      <HomeAllProductsGrid
         newestProducts={products}
         categories={categories}
         brands={brands}
       /> */}
+
+
+      <Hero />
+
+
     </>
   )
 }
