@@ -1,11 +1,11 @@
 import commerce from '@lib/api/commerce'
-import { Layout } from '@components/common'
-import { Hero } from '@components/home'
-
+import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 // import { ProductCard } from '@components/product'
 // import { Grid, Marquee, Hero } from '@components/ui'
 // import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
-import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
+import { Hero } from '@components/home'
+import { Layout } from '@components/common'
+import { MenWomen } from '@components/home/MenWomen'
 
 export async function getStaticProps({
   preview,
@@ -86,10 +86,8 @@ export default function Home({
         brands={brands}
       /> */}
 
-
       <Hero />
-
-
+      <MenWomen />
     </>
   )
 }
