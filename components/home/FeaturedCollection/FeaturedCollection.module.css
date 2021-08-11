@@ -1,0 +1,13 @@
+.root {
+  @apply flex flex-wrap bg-gray-900;
+}
+
+.column {
+  @apply w-1/2;
+  & > div {
+    @apply h-full;
+  }
+}
+
+.image {
+}

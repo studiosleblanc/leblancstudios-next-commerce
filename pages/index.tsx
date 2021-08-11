@@ -6,6 +6,7 @@ import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 import { Hero } from '@components/home'
 import { Layout } from '@components/common'
 import { MenWomen } from '@components/home/MenWomen'
+import { FeaturedCollection } from '@components/home/FeaturedCollection'
 
 export async function getStaticProps({
   preview,
@@ -88,6 +89,7 @@ export default function Home({
 
       <Hero />
       <MenWomen />
+      <FeaturedCollection />
     </>
   )
 }
