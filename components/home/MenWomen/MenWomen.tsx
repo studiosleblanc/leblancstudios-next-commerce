@@ -14,7 +14,7 @@ const MenWomen: FC = () => {
           width={963}
           height={1443}
           layout="responsive"
-          objectFit="cover"
+          // objectFit="cover"
           className={s.image}
           // layout="fill"
         />
@@ -27,7 +27,7 @@ const MenWomen: FC = () => {
           width={964}
           height={1440}
           layout="responsive"
-          objectFit="cover"
+          // objectFit="cover"
           className={s.image}
           // layout="fill"
         />
