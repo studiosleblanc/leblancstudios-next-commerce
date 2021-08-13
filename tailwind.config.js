@@ -46,6 +46,8 @@ module.exports = {
         red: 'var(--red)',
 
         // LBS Setup
+        aqua: '#A0DFC5',
+        lbsGray: '#C4C4C4',
       },
       textColor: {
         base: 'var(--text-base)',

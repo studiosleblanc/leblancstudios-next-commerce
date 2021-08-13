@@ -1,1 +1,1 @@
-export { default as FeaturedCollection } from './FeaturedColleciton'
+export { default } from './FeaturedColleciton'

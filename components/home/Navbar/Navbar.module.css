@@ -1,0 +1,46 @@
+.root {
+  @apply relative w-auto;
+  top: -18%;
+}
+
+.navbar {
+  @apply bg-aqua border-secondary border-solid;
+  width: 60%;
+  border-width: 1px;
+  margin-left: 20%;
+}
+
+.topRow {
+  @apply flex items-end border-secondary border-solid pb-1;
+  border-bottom-width: 1px;
+  min-height: 48px;
+}
+
+.toolbar {
+  @apply flex items-end;
+}
+
+.menu {
+  @apply flex items-center uppercase px-2;
+  & li {
+    @apply mx-2;
+  }
+}
+
+.bottomRow {
+  min-height: 48px;
+}
+
+.search {
+}
+.searchGroup {
+  @apply relative ml-3 mb-1;
+}
+.searchInput {
+  @apply bg-lbsGray border-secondary border-solid outline-none px-2;
+  border-width: 1px;
+  width: 200px;
+}
+.searchButton {
+  @apply absolute right-0 h-full pr-2 pl-1;
+}

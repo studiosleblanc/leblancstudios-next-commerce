@@ -1,1 +1,1 @@
-export { default as ArchivesSlider } from './ArchivesSlider'
+export { default } from './ArchivesSlider'

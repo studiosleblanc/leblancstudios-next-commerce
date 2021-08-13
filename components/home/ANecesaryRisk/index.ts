@@ -1,1 +1,1 @@
-export { default as ANecesaryRisk } from './ANecesaryRisk'
+export { default } from './ANecesaryRisk'
