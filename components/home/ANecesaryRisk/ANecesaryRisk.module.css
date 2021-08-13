@@ -12,8 +12,11 @@
 
 /* Card */
 .card {
+  @apply px-6;
 }
 
+.cardImageContainer {
+}
 .cardLogoContainer {
   @apply absolute bottom-8 px-4;
 }
