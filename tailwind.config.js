@@ -3,11 +3,9 @@ module.exports = {
     purgeLayersByDefault: true,
     applyComplexClasses: true,
   },
+  // mode: 'jit',
   purge: {
-    content: [
-      './pages/**/*.{js,ts,jsx,tsx}',
-      './components/**/*.{js,ts,jsx,tsx}',
-    ],
+    content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
     options: {
       safelist: {
         standard: ['outline-none'],
@@ -46,6 +44,8 @@ module.exports = {
         blue: 'var(--blue)',
         green: 'var(--green)',
         red: 'var(--red)',
+
+        // LBS Setup
       },
       textColor: {
         base: 'var(--text-base)',
