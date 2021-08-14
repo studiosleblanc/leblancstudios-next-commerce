@@ -1,5 +1,6 @@
 module.exports = {
   plugins: [
+    // 'postcss-import',
     'tailwindcss',
     'postcss-nesting',
     'postcss-flexbugs-fixes',
@@ -11,7 +12,7 @@ module.exports = {
         },
         stage: 3,
         features: {
-          'custom-properties': false,
+          'custom-properties': true,
         },
       },
     ],

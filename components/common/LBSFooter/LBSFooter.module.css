@@ -1,0 +1,52 @@
+.root {
+  @apply flex;
+  border-top: 2px solid #000;
+}
+
+.imageContainer {
+  @apply w-7/12;
+}
+
+.content {
+  @apply w-5/12 border-l-2 border-secondary border-solid;
+  @apply flex flex-col;
+}
+.menuRow {
+  @apply pb-3 flex flex-col justify-between;
+  flex-grow: 0.9;
+}
+.copyRow {
+  @apply border-t-2 border-secondary border-solid;
+  flex-grow: 3;
+}
+
+/* menu */
+.menu {
+  @apply flex flex-nowrap justify-around mt-14;
+  & ul {
+    @apply uppercase;
+  }
+  & li {
+    @apply mb-1;
+  }
+  & a {
+  }
+}
+
+.logoLBSContainer {
+  @apply px-3;
+}
+.logoLBS {
+  @apply ml-auto;
+}
+
+/* Copyright */
+.copy {
+  @apply px-3 py-3 cursor-default;
+  & p {
+    @apply text-right mb-2 text-lg tracking-wider;
+  }
+}
+.acpLogo {
+  @apply ml-auto;
+}

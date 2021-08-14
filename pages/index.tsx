@@ -3,12 +3,14 @@ import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 // import { ProductCard } from '@components/product'
 // import { Grid, Marquee, Hero } from '@components/ui'
 // import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
-import { Hero } from '@components/home'
 import { Layout } from '@components/common'
-import { MenWomen } from '@components/home/MenWomen'
-import { FeaturedCollection } from '@components/home/FeaturedCollection'
-import { ArchivesSlider } from '@components/home/ArchivesSlider'
-import { ANecesaryRisk } from '@components/home/ANecesaryRisk'
+import {
+  Hero,
+  MenWomen,
+  FeaturedCollection,
+  ArchivesSlider,
+  ANecesaryRisk,
+} from '@components/home'
 
 export async function getStaticProps({
   preview,

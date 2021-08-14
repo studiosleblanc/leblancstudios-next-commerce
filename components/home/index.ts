@@ -1,1 +1,6 @@
 export { default as Hero } from './Hero'
+export { default as MenWomen } from './MenWomen'
+export { default as FeaturedCollection } from './FeaturedCollection'
+export { default as ArchivesSlider } from './ArchivesSlider'
+export { default as ANecesaryRisk } from './ANecesaryRisk'
+export { default as Navbar } from './Navbar'

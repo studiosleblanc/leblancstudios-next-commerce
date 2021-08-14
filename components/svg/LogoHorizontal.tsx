@@ -1,6 +1,10 @@
 import React, { FC } from 'react'
 
-const LogoHorizontal: FC = props => {
+interface LogoHorizontalProps {
+  className?: string
+}
+
+const LogoHorizontal: FC<LogoHorizontalProps> = props => {
   return (
     <svg
       width="346"

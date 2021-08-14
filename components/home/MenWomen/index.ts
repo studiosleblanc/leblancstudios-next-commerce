@@ -1,1 +1,1 @@
-export { default as MenWomen } from './MenWomen'
+export { default } from './MenWomen'
