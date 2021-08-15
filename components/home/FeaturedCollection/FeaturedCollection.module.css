@@ -1,5 +1,5 @@
 .root {
-  @apply flex flex-wrap bg-gray-900;
+  @apply flex flex-wrap bg-secondary;
 }
 
 .column {

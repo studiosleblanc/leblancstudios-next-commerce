@@ -1,5 +1,6 @@
 .root {
   @apply absolute text-white z-10 text-xs font-bold border-white;
+  @apply transition-all duration-300 ease-in;
   & > span {
     @apply block w-full px-1 tracking-wider;
     margin-top: 2px;

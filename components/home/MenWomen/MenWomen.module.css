@@ -1,5 +1,5 @@
 .root {
-  @apply flex flex-wrap bg-gray-900;
+  @apply flex flex-wrap bg-secondary;
 }
 
 .column {
@@ -41,7 +41,8 @@
 
 .image {
   filter: grayscale(100%);
-  transition: filter ease 0.4s;
+  transition-property: filter;
+  @apply duration-300 ease-in;
 }
 
 /* Tooltip */
