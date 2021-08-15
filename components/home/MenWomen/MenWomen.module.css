@@ -4,15 +4,44 @@
 
 .column {
   @apply w-1/2;
-  & > div {
+}
+.card {
+  @apply relative h-full;
+  & > div:first-child {
+    /* important to keep image same size */
     @apply h-full;
   }
+  &:hover {
+    & .image {
+      filter: none;
+    }
+    & .tooltip {
+      @apply text-primary border-black;
+    }
+  }
+}
+.cardContent {
+  @apply absolute top-0 left-0 w-full h-full;
+}
+.cardHeader {
+  @apply absolute w-full;
+  top: 4%;
+}
+.cardFooter {
+  @apply absolute bottom-6 w-full;
+}
+.headerCaption {
+  @apply border-t-2 border-secondary pt-1 pr-3 text-right uppercase text-xs;
+  width: 357px;
+}
+.footerCaption {
+  @apply border-t-2 border-secondary pt-1 text-right uppercase;
+  width: 100px;
 }
 
 .image {
   filter: grayscale(100%);
   transition: filter ease 0.4s;
-  &:hover {
-    filter: none;
-  }
 }
+
+/* Tooltip */
