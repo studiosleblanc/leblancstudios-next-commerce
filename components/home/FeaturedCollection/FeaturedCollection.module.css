@@ -6,6 +6,15 @@
   @apply relative w-1/2;
 }
 
+/* column Left */
+.columnLeft {
+  &:hover {
+    & .content {
+      @apply block;
+    }
+  }
+}
+
 /* Image */
 .imgContainer {
   @apply h-full;
@@ -32,5 +41,8 @@
 
 /* Content */
 .content {
-  @apply absolute top-0 -right-full w-full h-full;
+  @apply absolute hidden top-0 -right-full w-full h-full bg-lbsGreen;
+  @apply border-secondary border-solid;
+  border-width: 1px;
+  z-index: 1;
 }

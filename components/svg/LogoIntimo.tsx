@@ -23,8 +23,8 @@ const LogoIntimo: FC<LogoIntimoProps> = props => {
       <path
         d="M89.862 34.143l6.61 121.291M153.724 89.875l-121.291 6.61"
         stroke="#060607"
-        stroke-width="3"
-        stroke-miterlimit="10"
+        strokeWidth="3"
+        strokeMiterlimit="10"
       />
     </svg>
   )

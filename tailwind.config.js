@@ -1,6 +1,6 @@
 module.exports = {
   future: {
-    purgeLayersByDefault: true,
+    // purgeLayersByDefault: true,
     applyComplexClasses: true,
   },
   // mode: 'jit',
@@ -48,6 +48,7 @@ module.exports = {
         // LBS Setup
         aqua: '#A0DFC5',
         lbsGray: '#C4C4C4',
+        lbsGreen: '#14FF00',
       },
       textColor: {
         base: 'var(--text-base)',
@@ -64,6 +65,20 @@ module.exports = {
       },
       scale: {
         120: '1.2',
+      },
+      animations: {
+        roll: 'roll 3s ease-in-out infinite',
+        intimo: 'intimo 10s linear infinite',
+      },
+      keyframes: {
+        roll: {
+          '0%, 100%': { transform: 'translateX(0) rotate(0deg)' },
+          '50%': { transform: 'translateX(20rem) rotate(385deg)' },
+        },
+        intimo: {
+          '0%': { transform: 'rotate(0)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
       },
     },
   },

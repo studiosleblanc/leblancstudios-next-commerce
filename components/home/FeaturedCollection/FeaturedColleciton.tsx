@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import cn from 'classnames'
 import Image from 'next/image'
 import s from './FeaturedCollection.module.css'
 import { LogoIntimo, TextShopTimelessDuck } from '@components/svg'
@@ -6,7 +7,7 @@ import { LogoIntimo, TextShopTimelessDuck } from '@components/svg'
 const FeaturedRow: FC = () => {
   return (
     <div className={s.root}>
-      <div className={s.column}>
+      <div className={cn(s.column, s.columnLeft)}>
         <div className={s.imgContainer}>
           <Image
             quality="85"
