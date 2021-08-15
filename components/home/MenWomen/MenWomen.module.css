@@ -31,8 +31,9 @@
   @apply absolute bottom-6 w-full;
 }
 .headerCaption {
-  @apply border-t-2 border-secondary pt-1 pr-3 text-right uppercase text-xs;
+  @apply border-t-2 border-secondary pt-1 pr-3 text-right uppercase text-xs whitespace-nowrap;
   width: 357px;
+  max-width: 50%;
 }
 .footerCaption {
   @apply border-t-2 border-secondary pt-1 text-right uppercase;
