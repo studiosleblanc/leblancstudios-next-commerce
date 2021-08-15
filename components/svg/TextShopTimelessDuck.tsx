@@ -1,10 +1,17 @@
 import React, { FC } from 'react'
 
-const TextShopTimelessDuck: FC = props => {
+interface TextShopTimelessDuckProps {
+  className?: string
+  width?: string | number
+  height?: string | number
+}
+
+const TextShopTimelessDuck: FC<TextShopTimelessDuckProps> = props => {
   return (
     <svg
-      width="662"
-      height="709"
+      // width="662"
+      // height="709"
+      viewBox="0 0 662 709"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}>

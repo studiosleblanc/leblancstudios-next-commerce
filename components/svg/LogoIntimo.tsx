@@ -1,6 +1,10 @@
 import React, { FC } from 'react'
 
-const LogoIntimo: FC = props => {
+interface LogoIntimoProps {
+  className?: string
+}
+
+const LogoIntimo: FC<LogoIntimoProps> = props => {
   return (
     <svg
       width="186"
@@ -24,6 +28,10 @@ const LogoIntimo: FC = props => {
       />
     </svg>
   )
+}
+
+interface LogoIntimoProps {
+  className?: string
 }
 
 export default LogoIntimo

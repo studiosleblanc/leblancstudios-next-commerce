@@ -3,11 +3,34 @@
 }
 
 .column {
-  @apply w-1/2;
+  @apply relative w-1/2;
+}
+
+/* Image */
+.imgContainer {
+  @apply h-full;
   & > div {
     @apply h-full;
   }
 }
-
 .image {
+}
+
+/* SVG Logos and Text */
+.textDuck {
+  @apply absolute;
+  width: 65%;
+  height: auto;
+  top: 8%;
+  left: 6%;
+}
+.logoIntimo {
+  @apply absolute;
+  bottom: 5%;
+  left: 6%;
+}
+
+/* Content */
+.content {
+  @apply absolute top-0 -right-full w-full h-full;
 }
