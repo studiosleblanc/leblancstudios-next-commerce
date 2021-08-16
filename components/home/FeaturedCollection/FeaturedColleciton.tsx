@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import { motion } from 'framer-motion'
 import cn from 'classnames'
 import Image from 'next/image'
 import s from './FeaturedCollection.module.css'
@@ -21,7 +22,12 @@ const FeaturedRow: FC = () => {
             // layout="fill"
           />
         </div>
-        <LogoIntimo className={s.logoIntimo} />
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{ repeat: Infinity, duration: 10, ease: 'linear' }}
+          className={s.logoIntimoWrapper}>
+          <LogoIntimo className={s.logoIntimo} />
+        </motion.div>
         <TextShopTimelessDuck className={s.textDuck} />
         <div className={s.content}>
           <div className={s.contentBody}>
