@@ -10,7 +10,7 @@
 .columnLeft {
   &:hover {
     & .content {
-      @apply block;
+      @apply flex;
     }
   }
 }
@@ -42,7 +42,15 @@
 /* Content */
 .content {
   @apply absolute hidden top-0 -right-full w-full h-full bg-lbsGreen;
-  @apply border-secondary border-solid;
+  @apply border-secondary border-solid px-10 py-12;
+  @apply flex-col;
   border-width: 1px;
   z-index: 1;
+}
+
+.contentBody {
+  @apply text-4xl flex-grow;
+}
+.contentfooter {
+  @apply text-xl pb-4;
 }
