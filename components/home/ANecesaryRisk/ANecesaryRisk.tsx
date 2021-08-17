@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import Image from 'next/image'
 import s from './ANecesaryRisk.module.css'
 import { LogoGusPena, LogoHorizontal, LogoANecesaryRisk } from '@components/svg'
+import { SwitchButton } from '@components/ui'
 
 const ANecesaryRisk: FC = () => {
   return (
@@ -19,6 +20,7 @@ const ANecesaryRisk: FC = () => {
           height={1377}
           layout="responsive"
         />
+        <SwitchButton />
         <div className={s.cardLogoContainer}>
           <LogoANecesaryRisk className={s.cardLogo} />
         </div>

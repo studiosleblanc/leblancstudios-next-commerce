@@ -1,0 +1,23 @@
+.switch {
+  @apply absolute top-1/2 right-8;
+  @apply cursor-pointer w-24 h-14 rounded-full;
+  /* width: 170px; */
+  /* height: 100px; */
+  /* border-radius: 100px; */
+  /* padding: 10px; */
+  /* display: flex; */
+  /* cursor: pointer; */
+  &.on {
+  }
+  &.off {
+  }
+}
+
+.switch div {
+  @apply absolute w-12 h-12 top-1 bg-white rounded-full shadow-sm;
+  /* width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  border-radius: 200px; */
+  /* box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.02); */
+}
