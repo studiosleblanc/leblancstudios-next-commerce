@@ -7,8 +7,9 @@ interface TextArchivesProps {
 const TextArchives: FC<TextArchivesProps> = props => {
   return (
     <svg
-      width="1693"
-      height="1119"
+      // width="1693"
+      // height="1119"
+      viewBox="0 0 1693 1119"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}>

@@ -10,7 +10,6 @@ const FeaturedRow: FC = () => {
 
   const handleHover = () => {
     toggleHover(!isHover)
-    console.log('enter!')
   }
 
   const contentAnimate = {
