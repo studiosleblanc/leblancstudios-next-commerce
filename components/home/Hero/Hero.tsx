@@ -13,7 +13,8 @@ const Hero: FC = () => {
       </div>
       <div className={s.imageContainer}>
         <Image
-          quality="85"
+          priority
+          unoptimized
           src="/assets/home/banner-1.jpg"
           alt="Leblanc Studios"
           width={1920}

@@ -13,7 +13,8 @@ const ANecesaryRisk: FC = () => {
       </div>
       <div className={s.card}>
         <Image
-          src="/assets/home/aNecesaryRisk_socks.png"
+          unoptimized
+          src="/assets/home/aNecessaryRisk_socks.png"
           alt="A Necesary Risk"
           className={s.cardImage}
           width={1920}

@@ -40,6 +40,7 @@ const LBSFooter: FC<Props> = ({ pages }) => {
               ))} */}
       <div className={s.imageContainer}>
         <Image
+          unoptimized
           src="/assets/images/footer_img.jpg"
           alt="footer image"
           width={1139}

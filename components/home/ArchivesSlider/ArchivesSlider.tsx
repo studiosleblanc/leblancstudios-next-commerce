@@ -43,7 +43,7 @@ const ArchivesSlider: FC = () => {
             return (
               <>
                 <Image
-                  quality={85}
+                  unoptimized
                   src="/assets/home/archive-1.jpg"
                   layout="responsive"
                   width={1920}
@@ -69,7 +69,7 @@ const ArchivesSlider: FC = () => {
         </SwiperSlide>
         <SwiperSlide className={s.swiperSlide}>
           <Image
-            quality={85}
+            unoptimized
             src="/assets/home/archive-2.jpg"
             layout="responsive"
             width={1920}
@@ -84,7 +84,7 @@ const ArchivesSlider: FC = () => {
         </SwiperSlide>
         <SwiperSlide className={s.swiperSlide}>
           <Image
-            quality={85}
+            unoptimized
             src="/assets/home/archive-3.jpg"
             layout="responsive"
             width={1920}

@@ -10,15 +10,14 @@ const MenWomen: FC = () => {
       <div className={s.column}>
         <div className={s.card}>
           <Image
-            quality="85"
+            priority
+            unoptimized
             src="/assets/home/mens.jpg"
             alt="Leblanc Studios"
             width={963}
             height={1443}
             layout="responsive"
-            // objectFit="cover"
             className={s.image}
-            // layout="fill"
           />
           <div className={s.cardContent}>
             <div className={s.cardHeader}>
@@ -51,15 +50,14 @@ const MenWomen: FC = () => {
       <div className={s.column}>
         <div className={s.card}>
           <Image
-            quality="85"
+            priority
+            unoptimized
             src="/assets/home/womens.jpg"
             alt="Leblanc Studios"
             width={964}
             height={1440}
             layout="responsive"
-            // objectFit="cover"
             className={s.image}
-            // layout="fill"
           />
           <div className={s.cardContent}>
             <div className={s.cardHeader}>
