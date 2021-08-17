@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import cn from 'classnames'
 import Image from 'next/image'
 import s from './MenWomen.module.css'
@@ -18,6 +18,9 @@ const MenWomen: FC = () => {
             height={1443}
             layout="responsive"
             className={s.image}
+            placeholder="empty"
+            // onLoadingCompleted={}
+            // onLoad={() => console.log('loaded!')}
           />
           <div className={s.cardContent}>
             <div className={s.cardHeader}>
@@ -30,6 +33,7 @@ const MenWomen: FC = () => {
             </div>
 
             <Tooltip
+              appear={true}
               top="34%"
               left="11%"
               width="20.6%"
@@ -37,6 +41,7 @@ const MenWomen: FC = () => {
               text="Shirt [NMI]"
             />
             <Tooltip
+              appear={true}
               bottom="30%"
               right="15%"
               align="right"
@@ -58,6 +63,7 @@ const MenWomen: FC = () => {
             height={1440}
             layout="responsive"
             className={s.image}
+            placeholder="empty"
           />
           <div className={s.cardContent}>
             <div className={s.cardHeader}>
@@ -70,6 +76,7 @@ const MenWomen: FC = () => {
             </div>
 
             <Tooltip
+              appear={true}
               top="8%"
               right="17%"
               align="right"
@@ -78,6 +85,7 @@ const MenWomen: FC = () => {
               text="Bucket Hat [TDS]"
             />
             <Tooltip
+              appear={true}
               top="36%"
               left="11%"
               width="26.5%"
@@ -85,6 +93,7 @@ const MenWomen: FC = () => {
               text="Shirt Jacket [TDS]"
             />
             <Tooltip
+              appear={true}
               bottom="29%"
               right="7%"
               align="right"
@@ -93,6 +102,7 @@ const MenWomen: FC = () => {
               text="Skirt [TDS]"
             />
             <Tooltip
+              appear={true}
               bottom="25.5%"
               left="2.5%"
               width="26%"
