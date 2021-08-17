@@ -14,6 +14,7 @@ const ANecesaryRisk: FC = () => {
         transition={{ duration: 0.35 }}
         className={s.bgImageWrapper}>
         <Image
+          priority
           unoptimized
           src="/assets/home/aNecessaryRisk_bg.jpg"
           alt="A Necesary Risk BG"
