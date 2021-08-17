@@ -1,20 +1,21 @@
-import React from 'react'
+import React, { FC } from 'react'
 import cn from 'classnames'
 import s from './SwitchButton.module.css'
 import { useState } from 'react'
 import { motion, AnimateSharedLayout } from 'framer-motion'
 
-const SwitchButton = () => {
-  const [toggle, setToggle] = useState(false)
-  const root = cn(s.switch, toggle ? s.on : s.off)
+interface SwitchButtonProps {
+  toggle: boolean
+  setToggle: Function
+}
 
-  const handleToggle = () => {
-    setToggle(!toggle)
-  }
+const SwitchButton: FC<SwitchButtonProps> = ({ toggle, setToggle }) => {
+  // const [toggle, setToggle] = useState(false)
+  const root = cn(s.switch, toggle ? s.on : s.off)
 
   const switchAnimate = {
     on: {
-      backgroundColor: '#22cc88',
+      backgroundColor: '#14FF00',
     },
     off: {
       backgroundColor: '#dddddd',
@@ -39,7 +40,7 @@ const SwitchButton = () => {
       transition={{ duration: 0.4 }}
       variants={switchAnimate}
       className={root}
-      onClick={handleToggle}>
+      onClick={() => setToggle(!toggle)}>
       <motion.div
         animate={toggle ? 'on' : 'off'}
         variants={ballAnimate}

@@ -27,3 +27,13 @@
 .cardImage {
   @apply w-full;
 }
+
+.bgImageWrapper {
+  @apply absolute top-0 left-0 w-full h-full;
+  & > div {
+    @apply h-full;
+  }
+}
+.bgImage {
+  @apply w-full;
+}
