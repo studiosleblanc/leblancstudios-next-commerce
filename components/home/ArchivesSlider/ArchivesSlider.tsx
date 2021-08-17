@@ -24,7 +24,7 @@ const ArchivesSlider: FC = () => {
     },
     exit: {
       opacity: 0,
-      y: -50,
+      y: -100,
       transition: {
         duration: 0.5,
         // delay: 2,
