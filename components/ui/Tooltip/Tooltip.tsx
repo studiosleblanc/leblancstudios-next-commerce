@@ -40,7 +40,7 @@ const Tooltip: FC<TooltipProps> = ({
         className={s.tooltipLine}
         // initial={{ width: 0 }}
         animate={{ width: inView ? '100%' : 0 }}
-        transition={{ duration: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
       />
       <motion.span
         ref={ref}
@@ -51,7 +51,7 @@ const Tooltip: FC<TooltipProps> = ({
         )}
         // initial={{ height: 0 }}
         animate={{ height: inView ? 'auto' : 0 }}
-        transition={{ delay: 1, duration: 0.5 }}>
+        transition={{ delay: 1.5, duration: 0.5 }}>
         {text}
       </motion.span>
     </div>

@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import cn from 'classnames'
 import Image from 'next/image'
@@ -6,9 +6,41 @@ import s from './FeaturedCollection.module.css'
 import { LogoIntimo, TextShopTimelessDuck } from '@components/svg'
 
 const FeaturedRow: FC = () => {
+  const [isHover, toggleHover] = useState(false)
+
+  const handleHover = () => {
+    toggleHover(!isHover)
+    console.log('enter!')
+  }
+
+  const contentAnimate = {
+    enter: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5,
+      },
+      display: 'flex',
+    },
+    exit: {
+      opacity: 0,
+      x: -50,
+      transition: {
+        duration: 0.5,
+        delay: 0.15,
+      },
+      transitionEnd: {
+        display: 'none',
+      },
+    },
+  }
+
   return (
     <div className={s.root}>
-      <div className={cn(s.column, s.columnLeft)}>
+      <div
+        className={cn(s.column, s.columnLeft)}
+        onMouseEnter={handleHover}
+        onMouseLeave={handleHover}>
         <div className={s.imgContainer}>
           <Image
             quality="85"
@@ -22,14 +54,21 @@ const FeaturedRow: FC = () => {
             // layout="fill"
           />
         </div>
+
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 10, ease: 'linear' }}
           className={s.logoIntimoWrapper}>
           <LogoIntimo className={s.logoIntimo} />
         </motion.div>
+
         <TextShopTimelessDuck className={s.textDuck} />
-        <div className={s.content}>
+
+        <motion.div
+          className={s.content}
+          initial="exit"
+          animate={isHover ? 'enter' : 'exit'}
+          variants={contentAnimate}>
           <div className={s.contentBody}>
             <p>
               SS21: <b>Timeless Duck Shirt: [Intimo y Personal]</b> belongs to the
@@ -57,7 +96,7 @@ const FeaturedRow: FC = () => {
             The collection was developed in Santo Domingo, Dominican Republic and
             produced in Peru, Turkey, China, and the Dominican Republic in 2021.
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className={s.column}>
         <div className={s.imgContainer}>

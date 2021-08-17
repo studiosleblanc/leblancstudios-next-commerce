@@ -8,11 +8,11 @@
 
 /* column Left */
 .columnLeft {
-  &:hover {
+  /* &:hover {
     & .content {
       @apply flex;
     }
-  }
+  } */
 }
 
 /* Image */
@@ -43,7 +43,7 @@
 
 /* Content */
 .content {
-  @apply absolute hidden top-0 -right-full w-full h-full bg-lbsGreen;
+  @apply absolute top-0 -right-full w-full h-full bg-lbsGreen;
   @apply border-secondary border-solid px-10 py-12;
   @apply flex-col;
   border-width: 1px;
