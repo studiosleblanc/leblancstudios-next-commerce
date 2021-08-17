@@ -1,0 +1,14 @@
+.swiperSlide {
+}
+.slideCaption {
+  @apply absolute w-full bottom-0 left-0 bg-primary;
+  @apply px-8 py-7 text-right text-lg;
+}
+
+.slideSvgWrapper {
+  @apply absolute top-0 left-0 w-full p-6;
+  @apply flex justify-center;
+}
+.slideSvgText {
+  @apply w-4/5 h-auto;
+}

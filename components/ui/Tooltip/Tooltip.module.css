@@ -5,13 +5,20 @@
     @apply block w-full px-1 tracking-wider;
     margin-top: 2px;
   }
+  &.left {
+    @apply text-left;
+  }
+  &.right {
+    @apply text-right;
+  }
 }
 .tooltipLine {
-  @apply block w-full border-t-2  border-solid;
+  @apply inline-block border-t-2  border-solid;
   border-color: inherit;
 }
 .tooltipText {
   @apply cursor-default whitespace-nowrap;
+  @apply overflow-hidden;
   &.left {
     @apply text-left;
   }
