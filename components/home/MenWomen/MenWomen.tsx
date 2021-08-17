@@ -5,6 +5,8 @@ import s from './MenWomen.module.css'
 import { Tooltip } from '@components/ui'
 
 const MenWomen: FC = () => {
+  const [menLoaded, setMenLoaded] = useState(false)
+  const [womenLoaded, setWomenLoaded] = useState(false)
   return (
     <div className={s.root}>
       <div className={s.column}>
@@ -19,8 +21,7 @@ const MenWomen: FC = () => {
             layout="responsive"
             className={s.image}
             placeholder="empty"
-            // onLoadingCompleted={}
-            // onLoad={() => console.log('loaded!')}
+            onLoadingComplete={() => setMenLoaded(true)}
           />
           <div className={s.cardContent}>
             <div className={s.cardHeader}>
@@ -33,7 +34,7 @@ const MenWomen: FC = () => {
             </div>
 
             <Tooltip
-              appear={true}
+              appear={menLoaded}
               top="34%"
               left="11%"
               width="20.6%"
@@ -41,7 +42,7 @@ const MenWomen: FC = () => {
               text="Shirt [NMI]"
             />
             <Tooltip
-              appear={true}
+              appear={menLoaded}
               bottom="30%"
               right="15%"
               align="right"
@@ -64,6 +65,7 @@ const MenWomen: FC = () => {
             layout="responsive"
             className={s.image}
             placeholder="empty"
+            onLoadingComplete={() => setWomenLoaded(true)}
           />
           <div className={s.cardContent}>
             <div className={s.cardHeader}>
@@ -76,7 +78,7 @@ const MenWomen: FC = () => {
             </div>
 
             <Tooltip
-              appear={true}
+              appear={womenLoaded}
               top="8%"
               right="17%"
               align="right"
@@ -85,7 +87,7 @@ const MenWomen: FC = () => {
               text="Bucket Hat [TDS]"
             />
             <Tooltip
-              appear={true}
+              appear={womenLoaded}
               top="36%"
               left="11%"
               width="26.5%"
@@ -93,7 +95,7 @@ const MenWomen: FC = () => {
               text="Shirt Jacket [TDS]"
             />
             <Tooltip
-              appear={true}
+              appear={womenLoaded}
               bottom="29%"
               right="7%"
               align="right"
@@ -102,7 +104,7 @@ const MenWomen: FC = () => {
               text="Skirt [TDS]"
             />
             <Tooltip
-              appear={true}
+              appear={womenLoaded}
               bottom="25.5%"
               left="2.5%"
               width="26%"
