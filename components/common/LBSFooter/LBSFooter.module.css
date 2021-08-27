@@ -27,7 +27,7 @@
     @apply uppercase;
   }
   & li {
-    @apply mb-1;
+    @apply mb-3;
   }
   & a {
   }

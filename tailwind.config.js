@@ -14,6 +14,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      // fontFamily: {
+      //   massimo: '"Massimo Display"',
+      // },
       maxWidth: {
         '8xl': '1920px',
       },
