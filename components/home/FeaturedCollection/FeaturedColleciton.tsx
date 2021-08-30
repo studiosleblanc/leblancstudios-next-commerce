@@ -76,10 +76,13 @@ const FeaturedRow: FC = () => {
               the Caribbean masculinity and femininity. Creating a character based on
               traditional clothing typologies of our country and interpreting the
               sillhouettes and colors that typically define Caribbean casualwear in a
-              new way. We expanded our range of products, developing denim shirts,
-              skirts bucket hats, tote bags, and more featured products. With patches
-              and embroidery motifs with messages like “Federación de Mujeres
-              Dominicanas 1962”, “Federación de Mujeres Puertorriquenas 1975”,
+              new way.
+            </p>
+            <p>
+              We expanded our range of products, developing denim shirts, skirts
+              bucket hats, tote bags, and more featured products. With patches and
+              embroidery motifs with messages like “Federación de Mujeres Dominicanas
+              1962”, “Federación de Mujeres Puertorriquenas 1975”,
               “African-Caribbean-Pacific”, that explore and encourage cultural
               dialogues within the Caribbean region and the rest of the world.
             </p>
