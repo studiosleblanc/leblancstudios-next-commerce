@@ -10,7 +10,7 @@ import {
   FeaturedCollection,
   ArchivesSlider,
   ANecesaryRisk,
-} from '@components/home'
+} from '@leblanc/components/home'
 
 export async function getStaticProps({
   preview,

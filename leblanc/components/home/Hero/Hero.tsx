@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import s from './Hero.module.css'
 import Image from 'next/image'
 import { Logo } from '@components/svg'
-import { Navbar } from '@components/home'
+import { Navbar } from '@leblanc/components/home'
 
 const Hero: FC = () => {
   return (

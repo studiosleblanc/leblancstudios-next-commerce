@@ -8,8 +8,7 @@ import getSlug from '@lib/get-slug'
 import { Github, Vercel } from '@components/icons'
 import { Logo, Container } from '@components/ui'
 import { LogoAfricanCaribeanPacific, LogoHorizontal } from '@components/svg'
-import { I18nWidget } from '@components/common'
-import s from './LBSFooter.module.css'
+import s from './Footer.module.css'
 
 interface Props {
   className?: string
@@ -17,27 +16,9 @@ interface Props {
   pages?: Page[]
 }
 
-// const links = [
-//   {
-//     name: 'Home',
-//     url: '/',
-//   },
-// ]
-
-const LBSFooter: FC<Props> = ({ pages }) => {
-  // const { sitePages } = usePages(pages)
-
+const LBSFooter: FC<Props> = () => {
   return (
     <footer className={s.root}>
-      {/* {[...links, ...sitePages].map(page => (
-                <span key={page.url} className="py-3 md:py-0 md:pb-4">
-                  <Link href={page.url!}>
-                    <a className="text-accent-9 hover:text-accent-6 transition ease-in-out duration-150">
-                      {page.name}
-                    </a>
-                  </Link>
-                </span>
-              ))} */}
       <div className={s.imageContainer}>
         <Image
           unoptimized
@@ -117,28 +98,5 @@ const LBSFooter: FC<Props> = ({ pages }) => {
     </footer>
   )
 }
-
-// function usePages(pages?: Page[]) {
-//   const { locale } = useRouter()
-//   const sitePages: Page[] = []
-
-//   if (pages) {
-//     pages.forEach((page) => {
-//       const slug = page.url && getSlug(page.url)
-//       if (!slug) return
-//       if (locale && !slug.startsWith(`${locale}/`)) return
-//       sitePages.push(page)
-//     })
-//   }
-
-//   return {
-//     sitePages: sitePages.sort(bySortOrder),
-//   }
-// }
-
-// Sort pages by the sort order assigned in the BC dashboard
-// function bySortOrder(a: Page, b: Page) {
-//   return (a.sort_order ?? 0) - (b.sort_order ?? 0)
-// }
 
 export default LBSFooter
