@@ -3,7 +3,7 @@ import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 // import { ProductCard } from '@components/product'
 // import { Grid, Marquee, Hero } from '@components/ui'
 // import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
-import { Layout } from '@leblanc/layouts'
+import { Layout, MainLayout } from '@leblanc/layouts'
 import {
   Hero,
   MenWomen,
@@ -91,11 +91,13 @@ export default function Home({
         brands={brands}
       /> */}
 
-      <Hero />
-      <MenWomen />
-      <ANecesaryRisk />
-      <FeaturedCollection />
-      <ArchivesSlider />
+      <MainLayout noHeader>
+        <Hero />
+        <MenWomen />
+        <ANecesaryRisk />
+        <FeaturedCollection />
+        <ArchivesSlider />
+      </MainLayout>
     </>
   )
 }
