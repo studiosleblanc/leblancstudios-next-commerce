@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import Image from 'next/image'
 import cn from 'classnames'
 import s from './Header.module.css'
-import { CartIcon } from '@leblanc/svg'
+import { CartIcon } from '@leblanc/icons'
 
 const Header: FC = () => {
   return (

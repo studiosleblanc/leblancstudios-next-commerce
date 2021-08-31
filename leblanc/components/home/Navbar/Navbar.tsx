@@ -1,4 +1,4 @@
-import { Search } from '@components/icons'
+import { SearchIcon } from '@leblanc/icons'
 import React, { FC } from 'react'
 import s from './Navbar.module.css'
 
@@ -36,7 +36,7 @@ const Navbar: FC = () => {
                     className={s.searchInput}
                   />
                   <button type="submit" className={s.searchButton}>
-                    <Search />
+                    <SearchIcon />
                   </button>
                 </div>
               </form>

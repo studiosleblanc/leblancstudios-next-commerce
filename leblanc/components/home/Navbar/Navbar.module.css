@@ -11,9 +11,9 @@
 }
 
 .topRow {
-  @apply flex items-end border-secondary border-solid pb-1;
+  @apply flex items-end border-secondary border-solid pb-2;
   border-bottom-width: 1px;
-  min-height: 48px;
+  min-height: 46px;
 }
 
 .toolbar {
@@ -21,14 +21,14 @@
 }
 
 .menu {
-  @apply flex items-center uppercase px-2;
+  @apply flex items-center uppercase text-lg px-6;
   & li {
-    @apply mx-2;
+    @apply mx-4;
   }
 }
 
 .bottomRow {
-  min-height: 48px;
+  min-height: 46px;
 }
 
 .search {
@@ -37,7 +37,7 @@
   @apply relative ml-3 mb-1;
 }
 .searchInput {
-  @apply bg-lbsGray border-secondary border-solid outline-none px-2;
+  @apply h-12 bg-lbsGray border-secondary uppercase border-solid outline-none px-4;
   border-width: 1px;
   width: 200px;
 }

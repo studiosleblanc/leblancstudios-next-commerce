@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-const Search: FC = props => {
+const SearchIcon: FC = props => {
   return (
     <svg
       width="17"
@@ -19,4 +19,4 @@ const Search: FC = props => {
   )
 }
 
-export default Search
+export default SearchIcon
