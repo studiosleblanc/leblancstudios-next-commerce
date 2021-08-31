@@ -44,19 +44,19 @@
 /* Content */
 .content {
   @apply absolute top-0 -right-full w-full h-full bg-lbsGreen;
-  @apply border-secondary border-solid px-10 py-12;
+  @apply border-secondary border-solid px-16 py-24;
   @apply flex-col;
   border-width: 1px;
   z-index: 1;
 }
 
 .contentBody {
-  @apply text-4xl flex-grow;
+  @apply text-5xl flex-grow;
   line-height: 2;
   & p {
     @apply mb-12;
   }
 }
 .contentfooter {
-  @apply text-2xl pb-4;
+  @apply text-[1.75rem] pb-4;
 }
