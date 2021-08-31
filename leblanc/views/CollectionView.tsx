@@ -28,6 +28,7 @@ import {
   useSearchMeta,
 } from '@lib/search'
 import { CollectionGrid } from '@leblanc/components/collection'
+import { FeaturedSection } from '@leblanc/components/collection'
 
 export default function CollectionView({ categories, brands }: SearchPropsType) {
   const [activeFilter, setActiveFilter] = useState('')
@@ -67,6 +68,7 @@ export default function CollectionView({ categories, brands }: SearchPropsType) 
   return (
     <MainLayout>
       <CollectionGrid products={data.products} />
+      <FeaturedSection />
     </MainLayout>
   )
 }

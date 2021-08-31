@@ -1,0 +1,23 @@
+.root {
+  @apply flex;
+  & > div:first-child {
+    @apply w-2/5;
+  }
+  & > div:last-child {
+    @apply w-3/5;
+  }
+}
+
+.imgContainer {
+  @apply relative w-full h-full;
+  & > div {
+    @apply w-full h-full;
+  }
+}
+
+.rte {
+  @apply py-16 px-16 bg-lbsGreen;
+  & > p {
+    @apply text-2xl pb-10 tracking-widest;
+  }
+}
