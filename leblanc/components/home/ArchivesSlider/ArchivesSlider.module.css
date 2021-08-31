@@ -2,11 +2,11 @@
 }
 .slideCaption {
   @apply absolute w-full bottom-0 left-0 bg-primary;
-  @apply px-7 py-4 text-right;
+  @apply px-14 py-8 text-right text-lg;
 }
 
 .slideSvgWrapper {
-  @apply absolute top-0 left-0 w-full p-6;
+  @apply absolute top-0 left-0 w-full p-12;
   @apply flex justify-center;
 }
 .slideSvgText {

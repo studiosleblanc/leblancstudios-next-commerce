@@ -16,18 +16,18 @@ const ArchivesSlider: FC = () => {
   const sliderSvgAnimate = {
     enter: {
       opacity: 1,
-      y: 0,
+      // y: 0,
       transition: {
         duration: 0.5,
+        delay: 0.3,
       },
       display: 'flex',
     },
     exit: {
       opacity: 0,
-      y: -100,
+      // y: -100,
       transition: {
         duration: 0.5,
-        // delay: 2,
       },
     },
   }
