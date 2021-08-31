@@ -6,7 +6,7 @@ interface Props {
   noHeader?: boolean
 }
 
-const MainLayout: FC<Props> = ({ children, noHeader = true }) => {
+const MainLayout: FC<Props> = ({ children, noHeader = false }) => {
   return (
     <div>
       {!noHeader && <Header />}
