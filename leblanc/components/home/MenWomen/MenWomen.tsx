@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react'
 import cn from 'classnames'
 import Image from 'next/image'
 import s from './MenWomen.module.css'
-import { Tooltip } from '@components/ui'
+import { Tooltip } from '@leblanc/components/ui'
 
 const MenWomen: FC = () => {
   const [menLoaded, setMenLoaded] = useState(false)

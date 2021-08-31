@@ -16,7 +16,7 @@
       filter: none;
     }
     & .tooltip {
-      @apply text-primary border-black;
+      @apply text-black  border-black;
     }
   }
 }
@@ -28,15 +28,17 @@
   top: 4%;
 }
 .cardFooter {
-  @apply absolute bottom-6 w-full;
+  @apply absolute bottom-12 w-full;
 }
 .headerCaption {
-  @apply border-t-2 border-secondary pt-1 pr-3 text-right uppercase text-xs whitespace-nowrap;
+  @apply border-t-2 border-secondary pt-2 pr-4;
+  @apply text-right uppercase text-sm whitespace-nowrap;
   width: 357px;
   max-width: 50%;
 }
 .footerCaption {
-  @apply border-t-2 border-secondary pt-1 text-right uppercase;
+  @apply border-t-2 border-secondary pt-4;
+  @apply text-right text-lg uppercase;
   width: 100px;
 }
 
