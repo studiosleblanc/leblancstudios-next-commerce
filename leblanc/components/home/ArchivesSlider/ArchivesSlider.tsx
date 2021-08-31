@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Autoplay, EffectFade } from 'swiper/core'
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
-import { TextArchives } from '@components/svg'
+import { TextArchives } from '@leblanc/svg'
 
 // install Swiper modules
 SwiperCore.use([Autoplay, EffectFade])

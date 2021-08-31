@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import cn from 'classnames'
 import Image from 'next/image'
 import s from './FeaturedCollection.module.css'
-import { LogoIntimo, TextShopTimelessDuck } from '@components/svg'
+import { LogoIntimo, TextShopTimelessDuck } from '@leblanc/svg'
 
 const FeaturedRow: FC = () => {
   const [isHover, toggleHover] = useState(false)

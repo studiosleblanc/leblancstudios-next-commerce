@@ -63,7 +63,7 @@ export default function CollectionView({ categories, brands }: SearchPropsType) 
     setActiveFilter(filter)
   }
 
-  return <MainLayout></MainLayout>
+  return <MainLayout>...</MainLayout>
 }
 
 CollectionView.Layout = Layout

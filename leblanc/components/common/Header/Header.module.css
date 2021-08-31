@@ -1,0 +1,72 @@
+.root {
+  @apply w-full pr-12;
+}
+
+.topRow {
+  @apply flex justify-between items-center;
+  @apply w-full px-6 pt-6 pb-3 border-b-[1px] border-black;
+  & .toolbar {
+    @apply flex items-end text-lg font-bold;
+    & > li:not(first-child) {
+      @apply ml-8;
+    }
+  }
+}
+
+.cartContainer {
+  @apply flex;
+}
+.cartItemsCounter {
+  @apply absolute bottom-[1px] w-full text-center text-sm;
+}
+.totalPrice {
+  @apply ml-4 flex items-end;
+}
+
+.bottomRow {
+  @apply pl-6 pt-5;
+}
+
+/* navbar */
+.navbar {
+  @apply flex bg-aqua;
+  @apply w-full border-[1px] border-black uppercase;
+}
+
+.breadcrumbs {
+  @apply font-bold uppercase text-lg pb-2;
+}
+
+.position {
+  @apply bg-lbsGreen text-5xl px-12 py-8 h-full;
+  @apply border-r-[1px] border-black;
+}
+
+.navigation {
+  @apply flex flex-col flex-grow justify-between;
+}
+
+.navigationTop {
+  @apply w-full flex justify-end;
+}
+.navigationTopBox {
+  @apply py-2;
+  @apply border-l-[1px] border-b-[1px] border-black;
+}
+.navigationBottom {
+}
+
+.menu {
+  @apply flex px-4;
+  & > li {
+    @apply mx-3;
+  }
+}
+.menuTop {
+  & > li {
+    @apply mx-4;
+  }
+}
+.menuBottom {
+  @apply px-5 pb-3;
+}

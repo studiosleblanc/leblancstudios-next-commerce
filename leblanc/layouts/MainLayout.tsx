@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Footer } from '@leblanc/components/common'
+import { Footer, Header } from '@leblanc/components/common'
 
 interface Props {
   children: React.ReactNode | string
@@ -8,6 +8,7 @@ interface Props {
 const MainLayout: FC<Props> = ({ children }) => {
   return (
     <div>
+      <Header />
       {children}
       <Footer />
     </div>

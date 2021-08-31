@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react'
 import Image from 'next/image'
 import s from './ANecesaryRisk.module.css'
 import { motion } from 'framer-motion'
-import { LogoGusPena, LogoHorizontal, LogoANecesaryRisk } from '@components/svg'
+import { LogoGusPena, LogoHorizontal, LogoANecesaryRisk } from '@leblanc/svg'
 import { SwitchButton } from '@components/ui'
 
 const ANecesaryRisk: FC = () => {

@@ -7,7 +7,7 @@ import type { Page } from '@commerce/types/page'
 import getSlug from '@lib/get-slug'
 import { Github, Vercel } from '@components/icons'
 import { Logo, Container } from '@components/ui'
-import { LogoAfricanCaribeanPacific, LogoHorizontal } from '@components/svg'
+import { LogoAfricanCaribeanPacific, LogoHorizontal } from '@leblanc/svg'
 import s from './Footer.module.css'
 
 interface Props {

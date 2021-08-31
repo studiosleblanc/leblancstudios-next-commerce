@@ -6,3 +6,4 @@ export { default as LogoAfricanCaribeanPacific } from './LogoAfricanCaribeanPaci
 export { default as LogoIntimo } from './LogoIntimo'
 export { default as TextShopTimelessDuck } from './TextShopTimelessDuck'
 export { default as TextArchives } from './TextArchives'
+export { default as CartIcon } from './CartIcon'
