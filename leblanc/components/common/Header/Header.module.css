@@ -4,7 +4,7 @@
 
 .topRow {
   @apply flex justify-between items-center;
-  @apply w-full px-6 pt-6 pb-3 border-b-[1px] border-black;
+  @apply w-full px-6 pl-8 pt-6 pb-3 border-b-[1px] border-black;
   & .toolbar {
     @apply flex items-end text-lg font-bold;
     & > li:not(first-child) {
@@ -24,7 +24,7 @@
 }
 
 .bottomRow {
-  @apply pl-6 pt-5;
+  @apply pl-8 pt-5;
 }
 
 /* navbar */
