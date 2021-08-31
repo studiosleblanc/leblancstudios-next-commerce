@@ -32,6 +32,7 @@ const CollectionGrid: FC<Props> = ({ products }) => {
                   item.colors.map(color => (
                     <div
                       className={s.swatch}
+                      key={color}
                       style={{ backgroundColor: color }}></div>
                   ))}
               </div>
