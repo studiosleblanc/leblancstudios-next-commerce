@@ -1,9 +1,10 @@
 .root {
-  @apply relative pt-6 pb-8;
+  @apply relative pt-10 pb-10;
 }
 /* Top Bar */
 .topBar {
-  @apply absolute w-full flex justify-between items-center py-3 px-6;
+  @apply absolute w-full flex justify-between items-center;
+  @apply py-6 px-12;
 }
 .logoGus {
   width: 255px;
@@ -12,13 +13,13 @@
 
 /* Card */
 .card {
-  @apply px-6;
+  @apply px-12;
 }
 
 .cardImageContainer {
 }
 .cardLogoContainer {
-  @apply absolute bottom-8 px-4;
+  @apply absolute bottom-20 px-14;
 }
 .cardLogo {
   @apply w-full max-w-full h-auto;

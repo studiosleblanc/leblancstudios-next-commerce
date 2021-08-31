@@ -1,0 +1,13 @@
+.switch {
+  @apply absolute top-1/2 right-16;
+  @apply cursor-pointer w-40 h-20 rounded-full p-2;
+  @apply border-[1px] border-black;
+  &.on {
+  }
+  &.off {
+  }
+}
+
+.switch div {
+  @apply absolute w-[3.75rem] h-[3.75rem] top-2 bg-white rounded-full shadow-sm;
+}

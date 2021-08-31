@@ -3,7 +3,7 @@ import Image from 'next/image'
 import s from './ANecesaryRisk.module.css'
 import { motion } from 'framer-motion'
 import { LogoGusPena, LogoHorizontal, LogoANecesaryRisk } from '@leblanc/svg'
-import { SwitchButton } from '@components/ui'
+import { SwitchButton } from '@leblanc/components/ui'
 
 const ANecesaryRisk: FC = () => {
   const [toggle, setToggle] = useState(false)
