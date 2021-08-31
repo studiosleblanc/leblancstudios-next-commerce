@@ -30,9 +30,9 @@ const Header: FC = () => {
         </ul>
       </div>
       <div className={s.bottomRow}>
-        <div className={s.breadcrumbs}>new arrivals {'>'} men</div>
+        <div className={s.breadcrumbs}>new arrivals {'>'} mens</div>
         <div className={s.navbar}>
-          <div className={s.position}>Mens - All</div>
+          <div className={s.position}>Mens {'>'} All</div>
           <div className={s.navigation}>
             <div className={s.navigationTop}>
               <div className={s.navigationTopBox}>

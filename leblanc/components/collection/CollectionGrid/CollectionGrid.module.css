@@ -1,0 +1,59 @@
+.root {
+  @apply flex flex-wrap overflow-hidden;
+}
+
+.item {
+  @apply w-1/3 relative;
+  &:nth-child(3n + 0) {
+    @apply text-white;
+  }
+}
+
+.imageContainer {
+  @apply w-full h-full;
+  & > div {
+    @apply w-full h-full;
+  }
+}
+
+.details {
+  @apply absolute bottom-1/4 right-0;
+  @apply flex flex-col;
+}
+.detailsContent {
+  @apply flex flex-col text-right pr-8;
+  & > span {
+    @apply mb-3;
+  }
+}
+.price {
+  @apply font-semibold;
+}
+.sizes {
+  @apply list-none p-0 m-0;
+  @apply uppercase mb-[2px];
+  @apply flex justify-end;
+  & > li {
+    @apply ml-3;
+  }
+}
+.colors {
+  @apply flex flex-col items-end;
+  @apply mb-2;
+}
+.swatch {
+  @apply w-10 h-10 border-[1px] border-black;
+  @apply mb-5;
+}
+
+.squeezeContainer {
+  @apply flex justify-end;
+}
+.squeeze {
+  @apply w-[132px] pt-1 border-t-[1px] border-black;
+  @apply text-lbsGreen font-light;
+}
+
+.caption {
+  @apply absolute w-full bottom-14 text-center;
+}

@@ -27,6 +27,7 @@ import {
   getDesignerPath,
   useSearchMeta,
 } from '@lib/search'
+import { CollectionGrid } from '@leblanc/components/collection'
 
 export default function CollectionView({ categories, brands }: SearchPropsType) {
   const [activeFilter, setActiveFilter] = useState('')
@@ -63,7 +64,11 @@ export default function CollectionView({ categories, brands }: SearchPropsType) 
     setActiveFilter(filter)
   }
 
-  return <MainLayout>...</MainLayout>
+  return (
+    <MainLayout>
+      <CollectionGrid products={data.products} />
+    </MainLayout>
+  )
 }
 
 CollectionView.Layout = Layout
