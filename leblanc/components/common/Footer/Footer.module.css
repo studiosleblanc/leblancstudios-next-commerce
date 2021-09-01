@@ -27,24 +27,24 @@
     @apply uppercase;
   }
   & li {
-    @apply mb-3;
+    @apply mb-4;
   }
   & a {
   }
 }
 
 .logoLBSContainer {
-  @apply px-3;
+  @apply px-4;
 }
 .logoLBS {
-  @apply ml-auto;
+  @apply ml-auto mb-1;
 }
 
 /* Copyright */
 .copy {
-  @apply px-3 py-3 cursor-default;
+  @apply px-4 py-7 cursor-default;
   & p {
-    @apply text-right mb-2 text-lg tracking-wider;
+    @apply text-right mb-4 text-2xl tracking-widest;
   }
 }
 .acpLogo {
