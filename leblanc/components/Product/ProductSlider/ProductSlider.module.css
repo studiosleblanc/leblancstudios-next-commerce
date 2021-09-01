@@ -4,3 +4,14 @@
     @apply w-full;
   }
 }
+
+.chevron {
+  @apply absolute top-1/2 transform -translate-y-1/2 cursor-pointer;
+  z-index: 1;
+}
+.chevronLeft {
+  @apply left-[3%];
+}
+.chevronRight {
+  @apply right-[3%];
+}

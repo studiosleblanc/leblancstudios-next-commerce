@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import cn from 'classnames'
 import Image from 'next/image'
 import SwiperCore, { Autoplay, EffectFade, Navigation } from 'swiper/core'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -21,7 +22,7 @@ const ProductSlider: FC = () => {
       autoHeight
       autoplay={{ delay: 4000 }}
       navigation={navOptions}>
-      <ChevronLeft className="lbs-chevron-left" />
+      <ChevronLeft className={cn('lbs-chevron-left', s.chevron, s.chevronLeft)} />
       <SwiperSlide>
         <div className={s.imageContainer}>
           <Image
@@ -48,7 +49,7 @@ const ProductSlider: FC = () => {
           src="/assets/product/product_slide_3.jpg"
         />
       </SwiperSlide>
-      <ChevronRight className="lbs-chevron-right" />
+      <ChevronRight className={cn('lbs-chevron-right', s.chevron, s.chevronRight)} />
     </Swiper>
   )
 }
