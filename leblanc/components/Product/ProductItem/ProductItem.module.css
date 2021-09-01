@@ -5,6 +5,9 @@
   }
   &.asCard {
     @apply w-full;
+    & .detailsContent {
+      @apply text-red;
+    }
   }
 }
 
