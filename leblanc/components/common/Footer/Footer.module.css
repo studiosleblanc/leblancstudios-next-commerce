@@ -44,7 +44,7 @@
 .copy {
   @apply px-4 py-7 cursor-default;
   & p {
-    @apply text-right mb-4 text-2xl tracking-widest;
+    @apply text-right mb-4 text-lg tracking-widest;
   }
 }
 .acpLogo {
