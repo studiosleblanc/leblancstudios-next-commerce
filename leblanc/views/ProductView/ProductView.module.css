@@ -1,0 +1,10 @@
+.gridRow {
+  @apply flex w-full;
+}
+
+.imageCol {
+  @apply w-[55%];
+}
+.metaCol {
+  @apply w-[45%];
+}
