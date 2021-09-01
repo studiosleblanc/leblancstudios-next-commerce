@@ -15,7 +15,7 @@ export const collection: CollectionItem[] = [
   {
     name: 'Black Graphic T-Shirt',
     image: {
-      src: '/assets/products/product1.jpg',
+      src: '/assets/collection/product1.jpg',
       width: 559,
       height: 745,
     },
@@ -27,7 +27,7 @@ export const collection: CollectionItem[] = [
   {
     name: 'Black Graphic T-Shirt',
     image: {
-      src: '/assets/products/product2.jpg',
+      src: '/assets/collection/product2.jpg',
       width: 558,
       height: 745,
     },
@@ -39,7 +39,7 @@ export const collection: CollectionItem[] = [
   {
     name: 'Cognac Embroidered Bucket Hat',
     image: {
-      src: '/assets/products/product3.jpg',
+      src: '/assets/collection/product3.jpg',
       width: 559,
       height: 749,
     },
@@ -51,7 +51,7 @@ export const collection: CollectionItem[] = [
   {
     name: 'Black Embroidered Patch Shirt',
     image: {
-      src: '/assets/products/product4.jpg',
+      src: '/assets/collection/product4.jpg',
       width: 561,
       height: 745,
     },
@@ -63,7 +63,7 @@ export const collection: CollectionItem[] = [
   {
     name: 'White Embroidered T-Shirt',
     image: {
-      src: '/assets/products/product5.jpg',
+      src: '/assets/collection/product5.jpg',
       width: 559,
       height: 745,
     },
@@ -75,7 +75,7 @@ export const collection: CollectionItem[] = [
   {
     name: 'Black Embroidered Patch Bucket Hat',
     image: {
-      src: '/assets/products/product6.jpg',
+      src: '/assets/collection/product6.jpg',
       width: 559,
       height: 745,
     },
@@ -89,7 +89,7 @@ export const collection: CollectionItem[] = [
 export const sigleSock: CollectionItem = {
   name: 'Yellow Knitted Logo Socks',
   image: {
-    src: '/assets/products/featured_sock.jpg',
+    src: '/assets/collection/featured_sock.jpg',
     width: 517,
     height: 657,
   },

@@ -1,0 +1,6 @@
+.root {
+  @apply w-full;
+  & > div {
+    @apply max-w-full;
+  }
+}
