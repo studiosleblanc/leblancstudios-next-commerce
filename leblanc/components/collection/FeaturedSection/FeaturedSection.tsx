@@ -16,21 +16,20 @@ const FeaturedSection: FC = () => {
           </p>
           <TextANRxGusPena />
         </div>
-        <div className={s.imgContainer}>
+        <div className={s.leftImage}>
           <Image
             src="/assets/images/gus_pena_road.jpg"
             width={664}
             height={699}
-            objectPosition="right"
-            objectFit="cover"
+            layout="responsive"
           />
         </div>
       </div>
       <div className={s.rightCol}>
-        <div className={s.imgContainer}>
+        <div className={s.bgContainer}>
           <Image
             src="/assets/images/art_gallery.jpg"
-            width={1134}
+            width={1012}
             height={901}
             objectFit="cover"
           />

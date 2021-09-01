@@ -7,9 +7,12 @@
     @apply w-3/5;
   }
 }
+.leftImage {
+  @apply w-full;
+}
 
-.imgContainer {
-  @apply relative w-full h-full;
+.bgContainer {
+  @apply w-full h-full;
   & > div {
     @apply w-full h-full;
   }
