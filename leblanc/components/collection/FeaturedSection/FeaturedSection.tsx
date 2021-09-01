@@ -2,6 +2,8 @@ import React, { FC } from 'react'
 import Image from 'next/image'
 import s from './FeaturedSection.module.css'
 import { TextANRxGusPena } from '@leblanc/svg'
+import { ProductItem } from '@leblanc/components/Product'
+import { sigleSock } from '@leblanc/data/collection'
 
 const FeaturedSection: FC = () => {
   return (
@@ -26,6 +28,9 @@ const FeaturedSection: FC = () => {
         </div>
       </div>
       <div className={s.rightCol}>
+        <div className={s.productCardContainer}>
+          <ProductItem item={sigleSock} asCard />
+        </div>
         <div className={s.bgContainer}>
           <Image
             src="/assets/images/art_gallery.jpg"

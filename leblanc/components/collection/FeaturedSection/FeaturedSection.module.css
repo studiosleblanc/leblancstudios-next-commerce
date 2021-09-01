@@ -24,3 +24,13 @@
     @apply text-2xl pb-10 tracking-widest;
   }
 }
+
+.rightCol {
+  @apply relative;
+}
+
+.productCardContainer {
+  @apply absolute bottom-0 left-0;
+  @apply w-[520px];
+  z-index: 1;
+}

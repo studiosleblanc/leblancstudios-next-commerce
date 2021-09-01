@@ -85,3 +85,16 @@ export const collection: CollectionItem[] = [
     collection: 'Federación De Mujeres Dominicanas 1962 [FMD]',
   },
 ]
+
+export const sigleSock: CollectionItem = {
+  name: 'Yellow Knitted Logo Socks',
+  image: {
+    src: '/assets/products/featured_sock.jpg',
+    width: 517,
+    height: 657,
+  },
+  colors: ['#000', '#FAB300', '#85B3F0'],
+  sizes: ['Onesize'],
+  price: '$33',
+  collection: 'A Necessary Risk x Gus Peña [ANR]',
+}
