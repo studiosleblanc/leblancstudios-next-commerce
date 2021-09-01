@@ -1,6 +1,6 @@
 .root {
   @apply flex;
-  border-top: 2px solid #000;
+  @apply border-t-[1px] border-black;
 }
 
 .imageContainer {
@@ -8,7 +8,7 @@
 }
 
 .content {
-  @apply w-5/12 border-l-2 border-secondary border-solid;
+  @apply w-5/12 border-l-[1px] border-secondary border-solid;
   @apply flex flex-col;
 }
 .menuRow {
@@ -16,7 +16,7 @@
   flex-grow: 0.9;
 }
 .copyRow {
-  @apply border-t-2 border-secondary border-solid;
+  @apply border-t-[1px] border-secondary border-solid;
   flex-grow: 3;
 }
 
