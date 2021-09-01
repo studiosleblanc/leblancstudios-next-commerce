@@ -1,5 +1,9 @@
 import type { Product } from '@commerce/types/product'
-import { ProductImage, ProductMeta } from '@leblanc/components/Product'
+import {
+  ProductImage,
+  ProductMeta,
+  ProductSlider,
+} from '@leblanc/components/Product'
 import { MainLayout } from '@leblanc/layouts'
 import React, { FC } from 'react'
 import s from './ProductView.module.css'
@@ -20,7 +24,7 @@ const ProductView: FC<Props> = ({ product, relatedProducts }) => {
           <ProductMeta />
         </div>
       </div>
-      <div>slider row</div>
+      <ProductSlider />
       <div>description row</div>
       <div>related products row</div>
     </MainLayout>
