@@ -8,3 +8,13 @@
 .metaCol {
   @apply w-[45%];
 }
+
+.descriptionRow {
+  @apply px-20 py-16;
+  & > h2 {
+    @apply text-4xl font-bold mb-6;
+  }
+  & > p {
+    @apply text-3xl text-justify leading-loose;
+  }
+}
