@@ -1,0 +1,21 @@
+.root {
+  @apply mt-6;
+}
+
+.title {
+  @apply inline-block;
+  @apply bg-lbsGreen border-[1px] border-secondary;
+  @apply px-20 py-12;
+  @apply text-6xl uppercase font-light;
+}
+
+.productsContainer {
+  @apply flex;
+}
+
+.product {
+  @apply w-1/3;
+  & > div {
+    @apply w-full h-full;
+  }
+}

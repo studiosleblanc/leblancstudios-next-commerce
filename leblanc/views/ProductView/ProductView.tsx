@@ -3,6 +3,7 @@ import {
   ProductImage,
   ProductMeta,
   ProductSlider,
+  RelatedProducts,
 } from '@leblanc/components/Product'
 import { MainLayout } from '@leblanc/layouts'
 import React, { FC } from 'react'
@@ -39,7 +40,7 @@ const ProductView: FC<Props> = ({ product, relatedProducts }) => {
           conversations.
         </p>
       </div>
-      <div>related products row</div>
+      <RelatedProducts />
     </MainLayout>
   )
 }
