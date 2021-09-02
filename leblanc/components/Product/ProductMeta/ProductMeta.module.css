@@ -67,6 +67,9 @@
 
 .quantityCol {
   @apply flex flex-col justify-end;
+  & > div {
+    @apply flex justify-end;
+  }
 }
 
 .sizeGuideBtn {

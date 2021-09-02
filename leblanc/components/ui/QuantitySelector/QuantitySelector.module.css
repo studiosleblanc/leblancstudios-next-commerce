@@ -1,0 +1,17 @@
+.root {
+  @apply flex flex-col mb-10;
+}
+
+.button {
+  @apply w-[36px] h-[30px];
+  @apply flex justify-center items-center py-4;
+  @apply font-bold text-2xl;
+  @apply border-[1px] border-secondary;
+}
+
+.counter {
+  @apply w-[36px] h-[30px];
+  @apply flex justify-center items-center py-4;
+  @apply font-bold text-2xl select-none;
+  @apply border-l-[1px] border-r-[1px] border-secondary;
+}

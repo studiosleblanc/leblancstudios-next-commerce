@@ -1,5 +1,6 @@
 import React from 'react'
 import s from './ProductMeta.module.css'
+import { QuantitySelector } from '@leblanc/components/ui'
 
 const ProductMeta = () => {
   return (
@@ -48,8 +49,12 @@ const ProductMeta = () => {
               </div>
             </div>
             <div className={s.quantityCol}>
-              <div>quantity selector</div>
-              <button className={s.sizeGuideBtn}>Size Guide</button>
+              <div>
+                <QuantitySelector />
+              </div>
+              <div>
+                <button className={s.sizeGuideBtn}>Size Guide</button>
+              </div>
             </div>
           </div>
         </div>
