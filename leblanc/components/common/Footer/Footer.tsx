@@ -16,7 +16,8 @@ interface Props {
   pages?: Page[]
 }
 
-const LBSFooter: FC<Props> = () => {
+const LBSFooter: FC<Props> = ({ pages }) => {
+  console.log(pages)
   return (
     <footer className={s.root}>
       <div className={s.imageContainer}>
