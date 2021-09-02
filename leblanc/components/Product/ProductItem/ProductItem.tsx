@@ -42,7 +42,7 @@ const ProductItem: FC<Props> = ({ item, asCard = false }) => {
           </ul>
         </div>
         <div className={s.squeezeContainer}>
-          <div className={s.squeeze}>Squeze Out!</div>
+          <div className={s.squeeze}>Squeeze Out!</div>
         </div>
       </div>
       <div className={s.caption}>{item.collection}</div>
