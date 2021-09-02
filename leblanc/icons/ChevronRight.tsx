@@ -16,7 +16,7 @@ const ChevronRight: FC<Props> = ({ ...props }) => {
       <path
         d="M2 2l40 73.5L2 149"
         stroke="#272727"
-        strokeWidth="2"
+        strokeWidth="1"
         strokeLinecap="square"
       />
     </svg>
