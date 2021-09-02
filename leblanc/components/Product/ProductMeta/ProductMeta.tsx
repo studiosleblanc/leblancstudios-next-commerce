@@ -1,6 +1,7 @@
 import React from 'react'
 import s from './ProductMeta.module.css'
 import { QuantitySelector } from '@leblanc/components/ui'
+import StyleWith from '../StyleWith'
 
 const ProductMeta = () => {
   return (
@@ -75,13 +76,7 @@ const ProductMeta = () => {
           conversations.
         </p>
       </div>
-      <div className={s.recomendations}>
-        <div>
-          <div>product 1</div>
-          <div>product 2</div>
-        </div>
-        <div>style with</div>
-      </div>
+      <StyleWith />
     </div>
   )
 }

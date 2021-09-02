@@ -1,0 +1,24 @@
+.root {
+  @apply mt-12 pb-4;
+}
+
+.wrapper {
+  @apply inline-block;
+}
+
+.caption {
+  @apply border-[1px] border-secondary bg-lbsGreen;
+  @apply text-2xl uppercase;
+  @apply py-2 px-5;
+}
+
+.productsContainer {
+  @apply flex;
+}
+
+.product {
+  @apply max-w-[250px];
+  & > div {
+    @apply w-full h-full;
+  }
+}
