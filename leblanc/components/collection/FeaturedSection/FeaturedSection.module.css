@@ -35,3 +35,7 @@
   @apply w-[520px];
   z-index: 1;
 }
+
+.textxGusPena {
+  @apply max-w-full;
+}

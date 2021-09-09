@@ -16,7 +16,7 @@ const FeaturedSection: FC = () => {
             efectiva (que no efectista) capacidad de mezclar recursos: gráficos y
             gestuales.
           </p>
-          <TextANRxGusPena />
+          <TextANRxGusPena className={s.textxGusPena} />
         </div>
         <div className={s.leftImage}>
           <Image

@@ -1,6 +1,10 @@
 import React, { FC } from 'react'
 
-const TextANRxGusPena: FC = ({ ...props }) => {
+interface Props {
+  className?: string
+}
+
+const TextANRxGusPena: FC<Props> = ({ ...props }) => {
   return (
     <svg
       width="100%"
