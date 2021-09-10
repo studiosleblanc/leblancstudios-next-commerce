@@ -10,7 +10,7 @@
 }
 
 .heroContent {
-  @apply absolute w-full h-full px-8 pt-6;
+  @apply absolute w-full px-8 pt-6;
   z-index: 2;
 }
 

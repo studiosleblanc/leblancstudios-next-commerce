@@ -1,18 +1,19 @@
 .root {
-  @apply relative w-auto;
-  top: -18%;
+  @apply absolute w-full;
+  @apply bottom-[18%] left-0
+  /* @apply relative; */
+  /* top: -18%; */;
 }
 
 .navbar {
-  @apply bg-aqua border-secondary border-solid;
-  width: 60%;
-  border-width: 1px;
-  margin-left: 20%;
+  @apply inline-block relative;
+  @apply min-w-[60%] ml-[20%];
 }
 
 .topRow {
-  @apply flex items-end border-secondary border-solid pb-2;
-  border-bottom-width: 1px;
+  @apply flex items-end pb-2;
+  @apply bg-aqua border-secondary border-solid border-[1px];
+  @apply border-b-0;
   min-height: 46px;
 }
 
@@ -28,6 +29,8 @@
 }
 
 .bottomRow {
+  @apply absolute w-full left-0;
+  @apply bg-aqua border-secondary border-solid border-[1px];
   min-height: 46px;
 }
 
