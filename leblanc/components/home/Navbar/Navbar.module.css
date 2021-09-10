@@ -8,7 +8,6 @@
 .navbar {
   @apply inline-block relative;
   @apply min-w-[60%] ml-[20%];
-  @apply w-[77%]; /* Expanded */
 }
 
 .topRow {
@@ -16,7 +15,6 @@
   @apply bg-aqua border-secondary border-solid border-[1px];
   @apply border-b-0;
   min-height: 46px;
-  @apply h-[55vh]; /* Expanded */
 }
 
 .toolbar {
@@ -34,7 +32,6 @@
   @apply absolute w-full left-0;
   @apply bg-aqua border-secondary border-solid border-[1px];
   min-height: 46px;
-  @apply h-[30vh]; /* Expanded */
 }
 
 .search {
@@ -51,7 +48,52 @@
   @apply absolute right-0 h-full pr-2 pl-1;
 }
 
-.collapseTop {
+.collapse {
   @apply w-[32%] h-full;
+  @apply border-solid border-secondary;
+  @apply border-l-[1px];
+}
+.collapseTop {
+  @apply flex;
+  & .rightBar {
+    @apply flex items-end justify-center;
+  }
+}
+.collapseBottom {
+  @apply ml-auto;
+  @apply flex justify-end;
+  & .rightBar {
+    height: calc(100% - 38px);
+  }
+}
+.collapseTopContent {
+  @apply flex-grow;
+}
+.breadcrumbs {
+  @apply pb-8 text-lg uppercase;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.bottomRowFooter {
+  @apply absolute bottom-0 left-0;
+  @apply w-full h-[38px];
+  @apply border-t-[1px] border-solid border-secondary;
+  @apply flex justify-end items-center;
+  @apply px-6;
+}
+
+.rightBar {
+  @apply w-[38px] h-full;
   @apply border-l-[1px] border-solid border-secondary;
+}
+
+/* submenu Content */
+.menuChild {
+  @apply w-full h-full;
+  @apply px-12 pt-20;
+  @apply text-lg;
+  & li {
+    @apply mb-8;
+  }
 }

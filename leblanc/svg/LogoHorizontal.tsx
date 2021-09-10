@@ -2,13 +2,16 @@ import React, { FC } from 'react'
 
 interface LogoHorizontalProps {
   className?: string
+  width?: number | string
+  height?: number | string
 }
 
 const LogoHorizontal: FC<LogoHorizontalProps> = props => {
   return (
     <svg
-      width="346"
-      height="27"
+      width={props.width || '346'}
+      height={props.height || '27'}
+      viewBox="0 0 346 27"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}>
