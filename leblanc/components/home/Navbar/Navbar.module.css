@@ -8,17 +8,19 @@
 .navbar {
   @apply inline-block relative;
   @apply min-w-[60%] ml-[20%];
+  @apply w-[77%]; /* Expanded */
 }
 
 .topRow {
-  @apply flex items-end pb-2;
+  @apply flex items-end justify-between;
   @apply bg-aqua border-secondary border-solid border-[1px];
   @apply border-b-0;
   min-height: 46px;
+  @apply h-[55vh]; /* Expanded */
 }
 
 .toolbar {
-  @apply flex items-end;
+  @apply flex items-end pb-2;
 }
 
 .menu {
@@ -32,6 +34,7 @@
   @apply absolute w-full left-0;
   @apply bg-aqua border-secondary border-solid border-[1px];
   min-height: 46px;
+  @apply h-[30vh]; /* Expanded */
 }
 
 .search {
@@ -46,4 +49,9 @@
 }
 .searchButton {
   @apply absolute right-0 h-full pr-2 pl-1;
+}
+
+.collapseTop {
+  @apply w-[32%] h-full;
+  @apply border-l-[1px] border-solid border-secondary;
 }
