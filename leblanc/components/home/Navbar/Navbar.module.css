@@ -87,13 +87,3 @@
   @apply w-[38px] h-full;
   @apply border-l-[1px] border-solid border-secondary;
 }
-
-/* submenu Content */
-.menuChild {
-  @apply w-full h-full;
-  @apply px-12 pt-20;
-  @apply text-lg;
-  & li {
-    @apply mb-8;
-  }
-}

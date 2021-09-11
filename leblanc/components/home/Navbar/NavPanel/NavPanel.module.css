@@ -1,0 +1,8 @@
+.root {
+  @apply w-full h-full;
+  @apply px-12 pt-20;
+  @apply text-lg;
+  & li {
+    @apply mb-8;
+  }
+}

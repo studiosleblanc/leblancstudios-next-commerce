@@ -1,14 +1,19 @@
 import React, { FC, useState, useEffect } from 'react'
 import cn from 'classnames'
+import NextLink from 'next/link'
 import { motion } from 'framer-motion'
 import { SearchIcon } from '@leblanc/icons'
 import { LogoHorizontal } from '@leblanc/svg'
 import s from './Navbar.module.css'
 import animation from './animations'
 import ClickOutside from '@lib/click-outside'
+import { homeNavigation } from '@leblanc/data/home-navigation'
+import type { NavItem } from '@leblanc/data/home-navigation'
+import { NavPanel } from '@leblanc/components/home'
 
 const Navbar: FC = () => {
   const [activeItem, setActiveItem] = useState('')
+  // const [activeChilds, setActiveChilds] = useState<NavItem>(null)
 
   const handleActiveItem = (event: React.MouseEvent, target: string) => {
     event.preventDefault()
@@ -16,7 +21,13 @@ const Navbar: FC = () => {
   }
 
   useEffect(() => {
-    console.log(activeItem)
+    // console.log(activeItem)
+    // const currentChilds = homeNavigation.find(
+    //   parentItem => parentItem.id === activeItem
+    // )
+    // if (currentChilds) {
+    //   setActiveChilds(currentChilds)
+    // }
   }, [activeItem])
 
   return (
@@ -36,31 +47,19 @@ const Navbar: FC = () => {
             variants={animation.topRow}>
             <div className={s.toolbar}>
               <ul className={s.menu}>
-                <li>
-                  <a href="#" onClick={e => handleActiveItem(e, 'tab-1')}>
-                    New Arrivals
-                  </a>
-                </li>
-                <li>
-                  <a href="#" onClick={e => handleActiveItem(e, 'tab-2')}>
-                    Womens
-                  </a>
-                </li>
-                <li>
-                  <a href="#" onClick={e => handleActiveItem(e, 'tab-3')}>
-                    Mens
-                  </a>
-                </li>
-                <li>
-                  <a href="#" onClick={e => handleActiveItem(e, 'tab-4')}>
-                    History
-                  </a>
-                </li>
-                <li>
-                  <a href="#" onClick={e => handleActiveItem(e, 'tab-5')}>
-                    Archives
-                  </a>
-                </li>
+                {homeNavigation.map((navItem: NavItem) => (
+                  <li key={navItem.label}>
+                    {navItem.childs ? (
+                      <a href="#" onClick={e => handleActiveItem(e, navItem.id)}>
+                        {navItem.label}
+                      </a>
+                    ) : (
+                      <NextLink href={navItem.href || ''}>
+                        <a>{navItem.label}</a>
+                      </NextLink>
+                    )}
+                  </li>
+                ))}
               </ul>
               <div className={s.search}>
                 <form>
@@ -84,36 +83,9 @@ const Navbar: FC = () => {
               animate={activeItem ? 'enter' : 'exit'}
               variants={animation.collapse}
               className={cn(s.collapse, s.collapseTop)}>
-              <motion.div
-                initial="exit"
-                animate={activeItem ? 'enter' : 'exit'}
-                variants={animation.collapseTopContent}
-                className={s.collapseTopContent}>
-                <ul className={s.menuChild}>
-                  <li>
-                    <a href="#">Womens</a>
-                  </li>
-                  <li>
-                    <a href="#">Mens</a>
-                  </li>
-                  <li>
-                    <a href="#">All</a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      A Necessary Risk <b>x Gus Pena</b>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      SS21 <b>[Timeless Duck Shirt: Intimo y Personal]</b>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">White Nacked Duck</a>
-                  </li>
-                </ul>
-              </motion.div>
+              <div className={s.collapseTopContent}>
+                <NavPanel navItems={homeNavigation} />
+              </div>
               <motion.div
                 initial="exit"
                 animate={activeItem ? 'enter' : 'exit'}
@@ -124,7 +96,7 @@ const Navbar: FC = () => {
                   animate={activeItem ? 'enter' : 'exit'}
                   variants={animation.breadcrumbs}
                   className={s.breadcrumbs}>
-                  New Arrivals
+                  {homeNavigation.find(item => item.id === activeItem)?.label}
                 </motion.span>
               </motion.div>
             </motion.div>
