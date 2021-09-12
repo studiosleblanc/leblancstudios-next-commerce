@@ -28,7 +28,7 @@
     @apply mx-4;
     & a,
     & button {
-      @apply py-2;
+      @apply py-2 uppercase whitespace-nowrap;
     }
   }
 }
