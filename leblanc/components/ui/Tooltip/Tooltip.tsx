@@ -39,12 +39,14 @@ const Tooltip: FC<TooltipProps> = ({
   }
   const tooltipTextAnimate = {
     enter: {
-      height: 'auto',
+      // height: 'auto',
       opacity: 1,
+      y: 0,
     },
     hidden: {
-      height: 0,
+      // height: 0,
       opacity: 0,
+      y: -10,
     },
   }
 
@@ -60,6 +62,7 @@ const Tooltip: FC<TooltipProps> = ({
       <motion.div
         ref={ref}
         className={s.tooltipLine}
+        style={{ marginLeft: align === 'left' ? 'auto' : 0 }}
         initial="hidden"
         animate={inView && appear ? 'enter' : 'hidden'}
         variants={tooltipLineAnimate}
@@ -67,11 +70,8 @@ const Tooltip: FC<TooltipProps> = ({
       />
       <motion.span
         ref={ref}
-        className={cn(
-          s.tooltipText,
-          { 'text-left': align === 'left' },
-          { 'text-right': align === 'right' }
-        )}
+        className={s.tooltipText}
+        style={{ textAlign: align }}
         initial="hidden"
         animate={inView && appear ? 'enter' : 'hidden'}
         variants={tooltipTextAnimate}

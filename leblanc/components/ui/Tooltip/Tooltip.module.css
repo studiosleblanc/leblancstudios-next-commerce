@@ -1,9 +1,10 @@
 .root {
   @apply absolute text-white z-10 font-bold border-white;
+  @apply flex flex-col;
   @apply transition-all duration-300 ease-in;
   & > span {
     @apply block w-full px-1 tracking-wider;
-    margin-top: 1px;
+    @apply mt-3;
   }
   &.left {
     @apply text-left;
@@ -16,9 +17,15 @@
   @apply inline-block border-t-2  border-solid;
   border-color: inherit;
 }
+.fromRight {
+  @apply ml-auto;
+}
+
 .tooltipText {
   @apply cursor-default whitespace-nowrap;
   @apply overflow-hidden;
+  @apply h-[12px];
+
   &.left {
     @apply text-left;
   }
