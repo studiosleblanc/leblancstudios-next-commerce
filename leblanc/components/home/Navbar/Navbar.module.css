@@ -26,6 +26,9 @@
   @apply flex items-center uppercase text-lg px-6;
   & li {
     @apply mx-4;
+    & a {
+      @apply py-2;
+    }
   }
 }
 

@@ -4,5 +4,8 @@
   @apply text-lg;
   & li {
     @apply mb-8;
+    & a {
+      @apply py-1;
+    }
   }
 }

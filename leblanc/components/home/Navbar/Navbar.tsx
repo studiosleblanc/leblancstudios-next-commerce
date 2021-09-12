@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react'
+import React, { FC, useState } from 'react'
 import cn from 'classnames'
 import NextLink from 'next/link'
 import { motion } from 'framer-motion'
@@ -19,16 +19,6 @@ const Navbar: FC = () => {
     event.preventDefault()
     setActiveItem(target)
   }
-
-  useEffect(() => {
-    // console.log(activeItem)
-    // const currentChilds = homeNavigation.find(
-    //   parentItem => parentItem.id === activeItem
-    // )
-    // if (currentChilds) {
-    //   setActiveChilds(currentChilds)
-    // }
-  }, [activeItem])
 
   return (
     <div className={s.root}>
