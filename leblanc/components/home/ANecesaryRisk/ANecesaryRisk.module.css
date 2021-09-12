@@ -1,6 +1,5 @@
 .root {
   @apply relative pt-10 pb-10;
-  @apply bg-primary;
 }
 /* Top Bar */
 .topBar {
