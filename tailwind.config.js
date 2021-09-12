@@ -39,6 +39,15 @@ module.exports = {
         'accent-7': '#eaeaea',
         'accent-8': '#fafafa',
         'accent-9': '#fff',
+        violet: 'var(--violet)',
+        'violet-light': 'var(--violet-light)',
+        'violet-dark': 'var(--violet-dark)',
+        pink: 'var(--pink)',
+        'pink-light': 'var(--pink-light)',
+        cyan: 'var(--cyan)',
+        blue: 'var(--blue)',
+        green: 'var(--green)',
+        red: 'var(--red)',
 
         // LBS Setup
         aqua: '#A0DFC5',
