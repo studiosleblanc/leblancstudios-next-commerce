@@ -6,30 +6,14 @@
     @apply block w-full px-1 tracking-wider;
     @apply mt-3;
   }
-  &.left {
-    @apply text-left;
-  }
-  &.right {
-    @apply text-right;
-  }
 }
 .tooltipLine {
   @apply inline-block border-t-2  border-solid;
   border-color: inherit;
-}
-.fromRight {
-  @apply ml-auto;
 }
 
 .tooltipText {
   @apply cursor-default whitespace-nowrap;
   @apply overflow-hidden;
   @apply h-[12px];
-
-  &.left {
-    @apply text-left;
-  }
-  &.right {
-    @apply text-right;
-  }
 }

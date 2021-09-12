@@ -39,12 +39,10 @@ const Tooltip: FC<TooltipProps> = ({
   }
   const tooltipTextAnimate = {
     enter: {
-      // height: 'auto',
       opacity: 1,
       y: 0,
     },
     hidden: {
-      // height: 0,
       opacity: 0,
       y: -10,
     },
