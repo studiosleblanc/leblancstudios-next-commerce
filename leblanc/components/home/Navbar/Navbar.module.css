@@ -68,7 +68,7 @@
   }
 }
 .collapseTopContent {
-  @apply flex-grow;
+  width: calc(100% - 38px);
 }
 .breadcrumbs {
   @apply pb-8 text-lg uppercase;

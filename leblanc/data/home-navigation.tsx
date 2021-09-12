@@ -64,7 +64,7 @@ const newArrivalsChilds: NavItem[] = [
     id: 'A-Necessary-Risk-x-Gus-Pena',
     label: (
       <>
-        A Necessary Risk <b>x Gus Pena</b>
+        A Necessary Risk <b>x Gus Peña</b>
       </>
     ),
     href: '#',
