@@ -48,7 +48,7 @@ const Navbar: FC = () => {
             <div className={s.toolbar}>
               <ul className={s.menu}>
                 {homeNavigation.map((navItem: NavItem) => (
-                  <li key={navItem.label}>
+                  <li key={navItem.id}>
                     {navItem.childs ? (
                       <a href="#" onClick={e => handleActiveItem(e, navItem.id)}>
                         {navItem.label}
