@@ -84,7 +84,7 @@ const Navbar: FC = () => {
               variants={animation.collapse}
               className={cn(s.collapse, s.collapseTop)}>
               <div className={s.collapseTopContent}>
-                <NavPanel navItems={homeNavigation} />
+                <NavPanel navItems={homeNavigation} activeItem={activeItem} />
               </div>
               <motion.div
                 initial="exit"

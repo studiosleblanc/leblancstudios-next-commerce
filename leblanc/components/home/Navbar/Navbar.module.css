@@ -1,8 +1,9 @@
 .root {
   @apply absolute w-full;
-  @apply bottom-[18%] left-0
+  @apply bottom-[18%] left-0;
+  @apply select-none;
   /* @apply relative; */
-  /* top: -18%; */;
+  /* top: -18%; */
 }
 
 .navbar {
