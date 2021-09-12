@@ -7,7 +7,7 @@ export type NavItem = {
   childs?: NavItem[]
 }
 
-const mensChilds: NavItem[] = [
+const newArrrivals_mens: NavItem[] = [
   {
     id: 'all',
     label: 'All',
@@ -53,7 +53,7 @@ const newArrivalsChilds: NavItem[] = [
   {
     id: 'men',
     label: 'Mens',
-    childs: [...mensChilds],
+    childs: newArrrivals_mens,
   },
   {
     id: 'all',
@@ -89,7 +89,7 @@ export const homeNavigation: NavItem[] = [
   {
     id: 'new-arrivals',
     label: 'New Arrivals',
-    childs: [...newArrivalsChilds],
+    childs: newArrivalsChilds,
   },
   {
     id: 'womens',
@@ -99,7 +99,7 @@ export const homeNavigation: NavItem[] = [
   {
     id: 'mens',
     label: 'Mens',
-    childs: [...mensChilds],
+    href: '#',
   },
   {
     id: 'history',

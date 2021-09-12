@@ -2,6 +2,7 @@ import React, { FC, useState } from 'react'
 import s from './NavPanel.module.css'
 import type { NavItem } from '@leblanc/data/home-navigation'
 import { motion } from 'framer-motion'
+import { NavDropdown } from '@leblanc/components/home'
 
 interface Props {
   navItems: NavItem[]
@@ -22,7 +23,13 @@ const menuAnimation = {
 }
 
 const NavPanel: FC<Props> = ({ navItems, activeItem }) => {
+  const [activeChild, setActiveChild] = useState('')
   // console.log(navItems)
+  const handleActiveItem = (event: React.MouseEvent, target: string) => {
+    event.preventDefault()
+    setActiveChild(target)
+  }
+
   return (
     <div>
       {navItems
@@ -37,7 +44,15 @@ const NavPanel: FC<Props> = ({ navItems, activeItem }) => {
             {item.childs?.map(childItem => (
               <li key={childItem.id}>
                 {childItem.childs ? (
-                  <a href={childItem.href}>{childItem.label}</a>
+                  <span>
+                    <button onClick={e => handleActiveItem(e, childItem.id)}>
+                      {childItem.label}
+                    </button>
+                    <NavDropdown
+                      grandChilds={childItem.childs}
+                      active={childItem.id === activeChild}
+                    />
+                  </span>
                 ) : (
                   <a href={childItem.href}>{childItem.label}</a>
                 )}

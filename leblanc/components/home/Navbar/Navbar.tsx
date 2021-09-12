@@ -40,9 +40,9 @@ const Navbar: FC = () => {
                 {homeNavigation.map((navItem: NavItem) => (
                   <li key={navItem.id}>
                     {navItem.childs ? (
-                      <a href="#" onClick={e => handleActiveItem(e, navItem.id)}>
+                      <button onClick={e => handleActiveItem(e, navItem.id)}>
                         {navItem.label}
-                      </a>
+                      </button>
                     ) : (
                       <NextLink href={navItem.href || ''}>
                         <a>{navItem.label}</a>

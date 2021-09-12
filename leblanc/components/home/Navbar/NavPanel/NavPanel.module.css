@@ -4,7 +4,11 @@
   @apply text-lg;
   & li {
     @apply mb-8;
-    & a {
+    & span {
+      @apply relative;
+    }
+    & a,
+    & button {
       @apply py-1;
     }
   }

@@ -1,0 +1,8 @@
+.root {
+  @apply absolute top-0 left-full;
+  @apply bg-aqua;
+}
+
+.arrowContainer {
+  @apply px-6;
+}
