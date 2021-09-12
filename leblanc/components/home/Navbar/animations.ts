@@ -1,6 +1,6 @@
 const navbar = {
   enter: {
-    width: '70%',
+    width: '78%',
   },
   exit: {
     width: '60%',

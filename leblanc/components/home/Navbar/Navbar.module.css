@@ -50,7 +50,7 @@
 }
 
 .collapse {
-  @apply w-[32%] h-full;
+  @apply w-[35%] h-full;
   @apply border-solid border-secondary;
   @apply border-l-[1px];
 }
