@@ -13,6 +13,7 @@ import { NavPanel } from '@leblanc/components/home'
 
 const Navbar: FC = () => {
   const [activeItem, setActiveItem] = useState('')
+  const [activeItemChild, setActiveItemChild] = useState('')
   // const [activeChilds, setActiveChilds] = useState<NavItem>(null)
 
   const handleActiveItem = (event: React.MouseEvent, target: string) => {
@@ -20,11 +21,16 @@ const Navbar: FC = () => {
     setActiveItem(target)
   }
 
+  const handleClickOutside = () => {
+    setActiveItem('')
+    setActiveItemChild('')
+  }
+
   return (
     <div className={s.root}>
       <ClickOutside
         active={activeItem === '' ? false : true}
-        onClick={() => setActiveItem('')}>
+        onClick={handleClickOutside}>
         <motion.div
           initial="exit"
           animate={activeItem ? 'enter' : 'exit'}
@@ -40,9 +46,9 @@ const Navbar: FC = () => {
                 {homeNavigation.map((navItem: NavItem) => (
                   <li key={navItem.id}>
                     {navItem.childs ? (
-                      <button onClick={e => handleActiveItem(e, navItem.id)}>
+                      <a href="#" onClick={e => handleActiveItem(e, navItem.id)}>
                         {navItem.label}
-                      </button>
+                      </a>
                     ) : (
                       <NextLink href={navItem.href || ''}>
                         <a>{navItem.label}</a>
@@ -74,7 +80,12 @@ const Navbar: FC = () => {
               variants={animation.collapse}
               className={cn(s.collapse, s.collapseTop)}>
               <div className={s.collapseTopContent}>
-                <NavPanel navItems={homeNavigation} activeItem={activeItem} />
+                <NavPanel
+                  navItems={homeNavigation}
+                  activeItem={activeItem}
+                  activeItemChild={activeItemChild}
+                  setActiveItemChild={setActiveItemChild}
+                />
               </div>
               <motion.div
                 initial="exit"
