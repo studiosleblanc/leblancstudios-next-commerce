@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useState, useEffect } from 'react'
 import cn from 'classnames'
 import NextLink from 'next/link'
 import { motion } from 'framer-motion'
@@ -10,21 +10,34 @@ import ClickOutside from '@lib/click-outside'
 import { homeNavigation } from '@leblanc/data/home-navigation'
 import type { NavItem } from '@leblanc/data/home-navigation'
 import { NavPanel } from '@leblanc/components/home'
+import { BsChevronDown } from 'react-icons/bs'
 
 const Navbar: FC = () => {
   const [activeItem, setActiveItem] = useState('')
   const [activeItemChild, setActiveItemChild] = useState('')
-  // const [activeChilds, setActiveChilds] = useState<NavItem>(null)
 
-  const handleActiveItem = (event: React.MouseEvent, target: string) => {
+  const [label, setLabel] = useState<React.ReactNode | string>('')
+  const [childLabel, setChildLabel] = useState<React.ReactNode | string>('')
+
+  const handleActiveItem = (event: React.MouseEvent, target: NavItem) => {
     event.preventDefault()
-    setActiveItem(target)
+    setActiveItem(target.id)
+    setLabel(target.label)
   }
 
   const handleClickOutside = () => {
     setActiveItem('')
     setActiveItemChild('')
   }
+
+  useEffect(() => {
+    if (activeItem === '') {
+      setLabel('')
+    }
+    if (activeItemChild === '') {
+      setChildLabel('')
+    }
+  }, [activeItem, activeItemChild])
 
   return (
     <div className={s.root}>
@@ -46,7 +59,7 @@ const Navbar: FC = () => {
                 {homeNavigation.map((navItem: NavItem) => (
                   <li key={navItem.id}>
                     {navItem.childs ? (
-                      <a href="#" onClick={e => handleActiveItem(e, navItem.id)}>
+                      <a href="#" onClick={e => handleActiveItem(e, navItem)}>
                         {navItem.label}
                       </a>
                     ) : (
@@ -85,6 +98,7 @@ const Navbar: FC = () => {
                   activeItem={activeItem}
                   activeItemChild={activeItemChild}
                   setActiveItemChild={setActiveItemChild}
+                  setChildLabel={setChildLabel}
                 />
               </div>
               <motion.div
@@ -97,7 +111,13 @@ const Navbar: FC = () => {
                   animate={activeItem ? 'enter' : 'exit'}
                   variants={animation.breadcrumbs}
                   className={s.breadcrumbs}>
-                  {homeNavigation.find(item => item.id === activeItem)?.label}
+                  {label}
+                  {childLabel && (
+                    <span className={s.chevronDown}>
+                      <BsChevronDown size={10} />
+                    </span>
+                  )}
+                  {childLabel}
                 </motion.span>
               </motion.div>
             </motion.div>

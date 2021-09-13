@@ -30,6 +30,9 @@ const NavDropdown: FC<Props> = ({
   activeItemChild,
   setActiveItemChild,
 }) => {
+  const handleBack = () => {
+    setActiveItemChild('')
+  }
   return (
     <motion.div
       initial={false}
@@ -37,7 +40,7 @@ const NavDropdown: FC<Props> = ({
       variants={dropdownAnimation}
       className={s.root}>
       <div className={s.arrowContainer}>
-        <button className={s.backButton} onClick={() => setActiveItemChild('')}>
+        <button className={s.backButton} onClick={handleBack}>
           <VscArrowLeft size={16} />
         </button>
       </div>

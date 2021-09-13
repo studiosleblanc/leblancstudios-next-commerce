@@ -9,6 +9,7 @@ interface Props {
   activeItem: string
   activeItemChild: string
   setActiveItemChild: React.Dispatch<React.SetStateAction<string>>
+  setChildLabel: React.Dispatch<React.SetStateAction<React.ReactNode | string>>
 }
 
 const menuAnimation = {
@@ -31,10 +32,12 @@ const NavPanel: FC<Props> = ({
   activeItem,
   activeItemChild,
   setActiveItemChild,
+  setChildLabel,
 }) => {
-  const handleActiveItem = (e: React.MouseEvent, target: string) => {
+  const handleActiveItem = (e: React.MouseEvent, target: NavItem) => {
     e.preventDefault()
-    setActiveItemChild(target)
+    setActiveItemChild(target.id)
+    setChildLabel(target.label)
   }
 
   return (
@@ -52,7 +55,7 @@ const NavPanel: FC<Props> = ({
               <li key={childItem.id}>
                 {childItem.childs ? (
                   <>
-                    <a href="#" onClick={e => handleActiveItem(e, childItem.id)}>
+                    <a href="#" onClick={e => handleActiveItem(e, childItem)}>
                       {childItem.label}
                     </a>
                     <NavDropdown
