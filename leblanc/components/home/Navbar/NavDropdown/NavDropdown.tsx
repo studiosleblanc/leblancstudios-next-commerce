@@ -2,10 +2,12 @@ import React, { FC } from 'react'
 import s from './NavDropdown.module.css'
 import { motion } from 'framer-motion'
 import type { NavItem } from '@leblanc/data/home-navigation'
+import { VscArrowLeft } from 'react-icons/vsc'
 
 interface Props {
   grandChilds: NavItem[]
-  active: boolean
+  activeItemChild: string
+  setActiveItemChild: React.Dispatch<React.SetStateAction<string>>
 }
 
 const dropdownAnimation = {
@@ -15,20 +17,33 @@ const dropdownAnimation = {
     x: 0,
   },
   exit: {
-    display: 'none',
     opacity: 0,
     x: 30,
+    transitionEnd: {
+      display: 'none',
+    },
   },
 }
 
-const NavDropdown: FC<Props> = ({ grandChilds, active }) => {
+const NavDropdown: FC<Props> = ({
+  grandChilds,
+  activeItemChild,
+  setActiveItemChild,
+}) => {
+  const handleBack = () => {
+    setActiveItemChild('')
+  }
   return (
     <motion.div
-      initial="exit"
-      animate={active ? 'enter' : 'exit'}
+      initial={false}
+      animate={activeItemChild ? 'enter' : 'exit'}
       variants={dropdownAnimation}
       className={s.root}>
-      <div className={s.arrowContainer}>{'>'}</div>
+      <div className={s.arrowContainer}>
+        <button className={s.backButton} onClick={handleBack}>
+          <VscArrowLeft size={16} />
+        </button>
+      </div>
       <ul className={s.menu}>
         {grandChilds.map(item => (
           <li key={item.id}>

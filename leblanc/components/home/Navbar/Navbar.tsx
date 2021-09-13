@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useState, useEffect } from 'react'
 import cn from 'classnames'
 import NextLink from 'next/link'
 import { motion } from 'framer-motion'
@@ -10,21 +10,40 @@ import ClickOutside from '@lib/click-outside'
 import { homeNavigation } from '@leblanc/data/home-navigation'
 import type { NavItem } from '@leblanc/data/home-navigation'
 import { NavPanel } from '@leblanc/components/home'
+import { BsChevronDown } from 'react-icons/bs'
 
 const Navbar: FC = () => {
   const [activeItem, setActiveItem] = useState('')
-  // const [activeChilds, setActiveChilds] = useState<NavItem>(null)
+  const [activeItemChild, setActiveItemChild] = useState('')
 
-  const handleActiveItem = (event: React.MouseEvent, target: string) => {
+  const [label, setLabel] = useState<React.ReactNode | string>('')
+  const [childLabel, setChildLabel] = useState<React.ReactNode | string>('')
+
+  const handleActiveItem = (event: React.MouseEvent, target: NavItem) => {
     event.preventDefault()
-    setActiveItem(target)
+    setActiveItem(target.id)
+    setLabel(target.label)
   }
+
+  const handleClickOutside = () => {
+    setActiveItem('')
+    setActiveItemChild('')
+  }
+
+  useEffect(() => {
+    if (activeItem === '') {
+      setLabel('')
+    }
+    if (activeItemChild === '') {
+      setChildLabel('')
+    }
+  }, [activeItem, activeItemChild])
 
   return (
     <div className={s.root}>
       <ClickOutside
         active={activeItem === '' ? false : true}
-        onClick={() => setActiveItem('')}>
+        onClick={handleClickOutside}>
         <motion.div
           initial="exit"
           animate={activeItem ? 'enter' : 'exit'}
@@ -40,9 +59,9 @@ const Navbar: FC = () => {
                 {homeNavigation.map((navItem: NavItem) => (
                   <li key={navItem.id}>
                     {navItem.childs ? (
-                      <button onClick={e => handleActiveItem(e, navItem.id)}>
+                      <a href="#" onClick={e => handleActiveItem(e, navItem)}>
                         {navItem.label}
-                      </button>
+                      </a>
                     ) : (
                       <NextLink href={navItem.href || ''}>
                         <a>{navItem.label}</a>
@@ -74,7 +93,13 @@ const Navbar: FC = () => {
               variants={animation.collapse}
               className={cn(s.collapse, s.collapseTop)}>
               <div className={s.collapseTopContent}>
-                <NavPanel navItems={homeNavigation} activeItem={activeItem} />
+                <NavPanel
+                  navItems={homeNavigation}
+                  activeItem={activeItem}
+                  activeItemChild={activeItemChild}
+                  setActiveItemChild={setActiveItemChild}
+                  setChildLabel={setChildLabel}
+                />
               </div>
               <motion.div
                 initial="exit"
@@ -86,7 +111,13 @@ const Navbar: FC = () => {
                   animate={activeItem ? 'enter' : 'exit'}
                   variants={animation.breadcrumbs}
                   className={s.breadcrumbs}>
-                  {homeNavigation.find(item => item.id === activeItem)?.label}
+                  {label}
+                  {childLabel && (
+                    <span className={s.chevronDown}>
+                      <BsChevronDown size={10} />
+                    </span>
+                  )}
+                  {childLabel}
                 </motion.span>
               </motion.div>
             </motion.div>

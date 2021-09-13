@@ -7,6 +7,9 @@ import { NavDropdown } from '@leblanc/components/home'
 interface Props {
   navItems: NavItem[]
   activeItem: string
+  activeItemChild: string
+  setActiveItemChild: React.Dispatch<React.SetStateAction<string>>
+  setChildLabel: React.Dispatch<React.SetStateAction<React.ReactNode | string>>
 }
 
 const menuAnimation = {
@@ -16,22 +19,29 @@ const menuAnimation = {
     x: 0,
   },
   exit: {
-    display: 'none',
     opacity: 0,
     x: 30,
+    transitionEnd: {
+      display: 'none',
+    },
   },
 }
 
-const NavPanel: FC<Props> = ({ navItems, activeItem }) => {
-  const [activeChild, setActiveChild] = useState('')
-  // console.log(navItems)
-  const handleActiveItem = (event: React.MouseEvent, target: string) => {
-    event.preventDefault()
-    setActiveChild(target)
+const NavPanel: FC<Props> = ({
+  navItems,
+  activeItem,
+  activeItemChild,
+  setActiveItemChild,
+  setChildLabel,
+}) => {
+  const handleActiveItem = (e: React.MouseEvent, target: NavItem) => {
+    e.preventDefault()
+    setActiveItemChild(target.id)
+    setChildLabel(target.label)
   }
 
   return (
-    <div>
+    <div className={s.root}>
       {navItems
         .filter(i => i.childs)
         .map((item: NavItem) => (
@@ -39,20 +49,21 @@ const NavPanel: FC<Props> = ({ navItems, activeItem }) => {
             initial="exit"
             animate={activeItem === item.id ? 'enter' : 'exit'}
             variants={menuAnimation}
-            className={s.root}
+            className={s.menu}
             key={item.id}>
             {item.childs?.map(childItem => (
               <li key={childItem.id}>
                 {childItem.childs ? (
-                  <span>
-                    <button onClick={e => handleActiveItem(e, childItem.id)}>
+                  <>
+                    <a href="#" onClick={e => handleActiveItem(e, childItem)}>
                       {childItem.label}
-                    </button>
+                    </a>
                     <NavDropdown
                       grandChilds={childItem.childs}
-                      active={childItem.id === activeChild}
+                      activeItemChild={activeItemChild}
+                      setActiveItemChild={setActiveItemChild}
                     />
-                  </span>
+                  </>
                 ) : (
                   <a href={childItem.href}>{childItem.label}</a>
                 )}

@@ -28,7 +28,7 @@
     @apply mx-4;
     & a,
     & button {
-      @apply py-2;
+      @apply py-2 uppercase whitespace-nowrap;
     }
   }
 }
@@ -72,12 +72,17 @@
   }
 }
 .collapseTopContent {
+  @apply overflow-hidden;
   width: calc(100% - 38px);
 }
 .breadcrumbs {
+  @apply flex items-center justify-between;
   @apply pb-8 text-lg uppercase;
   writing-mode: vertical-rl;
   text-orientation: mixed;
+}
+.chevronDown {
+  @apply py-5;
 }
 
 .bottomRowFooter {

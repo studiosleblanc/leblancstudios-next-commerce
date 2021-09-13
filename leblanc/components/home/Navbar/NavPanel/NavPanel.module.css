@@ -1,15 +1,17 @@
 .root {
+  @apply relative w-full h-full;
+}
+
+.menu {
   @apply w-full h-full;
   @apply px-12 pt-20;
   @apply text-lg;
+
   & li {
-    @apply mb-8;
-    & span {
-      @apply relative;
-    }
+    @apply mb-10;
     & a,
     & button {
-      @apply py-1;
+      @apply p-2;
     }
   }
 }

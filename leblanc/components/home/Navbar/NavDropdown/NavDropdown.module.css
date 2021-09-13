@@ -1,8 +1,24 @@
 .root {
-  @apply absolute top-0 left-full;
+  @apply absolute top-0 left-0;
+  @apply w-full h-full;
+  @apply px-12 pt-20;
   @apply bg-aqua;
+  z-index: 1;
 }
 
 .arrowContainer {
-  @apply px-6;
+  @apply pl-4 pr-8;
+}
+
+.menu {
+  @apply pt-4;
+  & li {
+    & a {
+      @apply p-2;
+    }
+  }
+}
+
+.backButton {
+  @apply p-1;
 }
