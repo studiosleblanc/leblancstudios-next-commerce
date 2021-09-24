@@ -1,4 +1,5 @@
 import React from 'react'
+import newArrivalsItems from './new-arrivals'
 
 export type NavItem = {
   id: string
@@ -7,53 +8,16 @@ export type NavItem = {
   childs?: NavItem[]
 }
 
-const newArrrivals_mens: NavItem[] = [
-  {
-    id: 'all',
-    label: 'All',
-    href: '#',
-  },
-  {
-    id: 'shirts',
-    label: 'Shirts',
-    href: '#',
-  },
-  {
-    id: 't-Shirt',
-    label: 'T-Shirt',
-    href: '#',
-  },
-  {
-    id: 'trousers',
-    label: 'Trousers',
-    href: '#',
-  },
-  {
-    id: 'accesories',
-    label: 'Accesories',
-    href: '#',
-  },
-  {
-    id: 'caps',
-    label: 'Caps',
-    href: '#',
-  },
-  {
-    id: 'leather-Goods',
-    label: 'Leather Goods',
-    href: '#',
-  },
-]
-const newArrivalsChilds: NavItem[] = [
+const newArrivals: NavItem[] = [
   {
     id: 'women',
     label: 'Womens',
-    href: '#',
+    childs: newArrivalsItems.womens,
   },
   {
     id: 'men',
     label: 'Mens',
-    childs: newArrrivals_mens,
+    childs: newArrivalsItems.mens,
   },
   {
     id: 'all',
@@ -67,7 +31,7 @@ const newArrivalsChilds: NavItem[] = [
         A Necessary Risk <b>x Gus Peña</b>
       </>
     ),
-    href: '#',
+    childs: newArrivalsItems.aNecessaryRisk,
   },
   {
     id: 'ss21-timeless-duck-shirt-intimo-y-personal',
@@ -76,12 +40,12 @@ const newArrivalsChilds: NavItem[] = [
         'SS21 '<b>[Timeless Duck Shirt: Intimo y Personal]</b>
       </>
     ),
-    href: '#',
+    childs: newArrivalsItems.ss21,
   },
   {
     id: 'white-nacked-duck',
     label: 'White Naked Duck',
-    href: '#',
+    childs: newArrivalsItems.whiteNakedDuck,
   },
 ]
 
@@ -89,7 +53,7 @@ export const homeNavigation: NavItem[] = [
   {
     id: 'new-arrivals',
     label: 'New Arrivals',
-    childs: newArrivalsChilds,
+    childs: newArrivals,
   },
   {
     id: 'womens',
