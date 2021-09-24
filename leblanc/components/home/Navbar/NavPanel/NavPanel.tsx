@@ -40,7 +40,7 @@ const NavPanel: FC<Props> = ({
   const handleActiveItem = (e: React.MouseEvent, target: NavItem) => {
     e.preventDefault()
     setActiveItemChild(target.id)
-    setChildLabel(target.label)
+    setChildLabel(target.abbr ? target.abbr : target.label)
   }
 
   return (
@@ -64,6 +64,7 @@ const NavPanel: FC<Props> = ({
                     <NavDropdown
                       grandChilds={childItem.childs}
                       activeItemChild={activeItemChild}
+                      childItemId={childItem.id}
                       setActiveItemChild={setActiveItemChild}
                     />
                   </>

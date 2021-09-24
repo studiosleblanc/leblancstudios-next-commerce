@@ -7,6 +7,7 @@ import { VscArrowLeft } from 'react-icons/vsc'
 interface Props {
   grandChilds: NavItem[]
   activeItemChild: string
+  childItemId: string
   setActiveItemChild: React.Dispatch<React.SetStateAction<string>>
 }
 
@@ -28,6 +29,7 @@ const dropdownAnimation = {
 const NavDropdown: FC<Props> = ({
   grandChilds,
   activeItemChild,
+  childItemId,
   setActiveItemChild,
 }) => {
   const handleBack = () => {
@@ -36,7 +38,7 @@ const NavDropdown: FC<Props> = ({
   return (
     <motion.div
       initial={false}
-      animate={activeItemChild ? 'enter' : 'exit'}
+      animate={activeItemChild === childItemId ? 'enter' : 'exit'}
       variants={dropdownAnimation}
       className={s.root}>
       <div className={s.arrowContainer}>
