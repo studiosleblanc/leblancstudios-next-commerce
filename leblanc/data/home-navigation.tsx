@@ -80,7 +80,7 @@ const newArrivalsChilds: NavItem[] = [
   },
   {
     id: 'white-nacked-duck',
-    label: 'White Nacked Duck',
+    label: 'White Naked Duck',
     href: '#',
   },
 ]
