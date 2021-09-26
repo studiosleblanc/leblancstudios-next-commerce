@@ -1,18 +1,3 @@
-import React, { FC, useEffect } from 'react'
-import { useTheme } from 'next-themes'
-import { MainLayout } from '@leblanc/layouts'
+import HistoryView from '@leblanc/views/HistoryView'
 
-const history: FC = () => {
-  // const { setTheme } = useTheme()
-
-  // useEffect(() => {
-  //   setTheme('light') // dark
-  //   return () => {
-  //     setTheme('light')
-  //   }
-  // }, [])
-
-  return <MainLayout>history page</MainLayout>
-}
-
-export default history
+export default HistoryView
