@@ -30,7 +30,7 @@ export const homeNavigation: NavItem[] = [
   {
     id: 'history',
     label: 'History',
-    href: '#',
+    href: '/history',
   },
   {
     id: 'archives',
