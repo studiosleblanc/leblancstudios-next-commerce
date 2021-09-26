@@ -12,6 +12,7 @@ module.exports = {
       },
     },
   },
+  darkMode: 'class',
   theme: {
     extend: {
       // fontFamily: {
@@ -26,6 +27,9 @@ module.exports = {
         'primary-2': '#f1f3f5',
         secondary: '#000000',
         'secondary-2': '#111',
+        'text-base': '#000000',
+        'text-primary': '#000000',
+        'text-secondary': '#fff',
         hover: 'rgba(0, 0, 0, 0.075)',
         'hover-1': 'rgba(0, 0, 0, 0.15)',
         'hover-2': 'rgba(0, 0, 0, 0.25)',
@@ -49,10 +53,12 @@ module.exports = {
         green: 'var(--green)',
         red: 'var(--red)',
 
-        // LBS Setup
+        // LBS Colors
         aqua: '#A0DFC5',
         lbsGray: '#C4C4C4',
         lbsGreen: '#14FF00',
+        // LBS Dark Colors
+        lbsDarkGray: '#292929',
       },
       textColor: {
         base: 'var(--text-base)',
