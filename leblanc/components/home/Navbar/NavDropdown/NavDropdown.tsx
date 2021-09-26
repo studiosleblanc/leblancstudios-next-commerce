@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import s from './NavDropdown.module.css'
 import { motion } from 'framer-motion'
-import type { NavItem } from '@leblanc/data/navigation/home-navigation'
+import type { NavItem } from '@leblanc/data/navigation'
 import { VscArrowLeft } from 'react-icons/vsc'
 
 interface Props {

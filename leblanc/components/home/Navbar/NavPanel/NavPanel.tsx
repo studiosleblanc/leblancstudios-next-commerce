@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react'
 import s from './NavPanel.module.css'
-import type { NavItem } from '@leblanc/data/navigation/home-navigation'
+import type { NavItem } from '@leblanc/data/navigation'
 import { motion } from 'framer-motion'
 import { NavDropdown } from '@leblanc/components/home'
 
