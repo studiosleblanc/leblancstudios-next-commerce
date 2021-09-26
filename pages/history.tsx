@@ -3,16 +3,16 @@ import { useTheme } from 'next-themes'
 import { MainLayout } from '@leblanc/layouts'
 
 const history: FC = () => {
-  const { setTheme } = useTheme()
+  // const { setTheme } = useTheme()
 
-  useEffect(() => {
-    setTheme('dark')
-    return () => {
-      setTheme('light')
-    }
-  }, [])
+  // useEffect(() => {
+  //   setTheme('light') // dark
+  //   return () => {
+  //     setTheme('light')
+  //   }
+  // }, [])
 
-  return <div>history page</div>
+  return <MainLayout>history page</MainLayout>
 }
 
 export default history
