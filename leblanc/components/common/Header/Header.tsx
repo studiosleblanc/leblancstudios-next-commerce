@@ -1,21 +1,25 @@
 import React, { FC } from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 import cn from 'classnames'
 import s from './Header.module.css'
 import { CartIcon } from '@leblanc/icons'
+import { homeNavigation } from '@leblanc/data/navigation'
 
 const Header: FC = () => {
   return (
     <header className={s.root}>
       <div className={s.topRow}>
-        <div>
-          <Image
-            width={308}
-            height={26}
-            layout="intrinsic"
-            src="/assets/images/remain_silent.png"
-          />
-        </div>
+        <Link href="/">
+          <a>
+            <Image
+              width={308}
+              height={26}
+              layout="intrinsic"
+              src="/assets/images/remain_silent.png"
+            />
+          </a>
+        </Link>
         <ul className={s.toolbar}>
           <li>My Account</li>
           <li className="flex">
@@ -37,11 +41,17 @@ const Header: FC = () => {
             <div className={s.navigationTop}>
               <div className={s.navigationTopBox}>
                 <ul className={cn(s.menu, s.menuTop)}>
-                  <li>womens</li>
-                  <li>mens</li>
-                  <li>archives</li>
-                  <li>history</li>
-                  <li>stores</li>
+                  {homeNavigation.map(navItem => (
+                    <li key={navItem.id}>
+                      {navItem.href ? (
+                        <Link href={navItem.href}>
+                          <a>{navItem.label}</a>
+                        </Link>
+                      ) : (
+                        <a>{navItem.label}</a>
+                      )}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
