@@ -35,5 +35,5 @@ html,
 body {
   font-family: 'Massimo Display';
   letter-spacing: 0.07rem;
-  @apply dark:text-text-primary;
+  @apply bg-white dark:bg-black dark:text-white;
 }

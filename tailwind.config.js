@@ -4,15 +4,16 @@ module.exports = {
     applyComplexClasses: true,
   },
   mode: 'jit',
+  darkMode: 'class',
   purge: {
     content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
     options: {
-      safelist: {
-        standard: ['outline-none'],
-      },
+      safelist: ['dark'],
+      // safelist: {
+      //   standard: ['outline-none'],
+      // },
     },
   },
-  darkMode: 'class',
   theme: {
     extend: {
       // fontFamily: {

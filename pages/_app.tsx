@@ -21,13 +21,13 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head />
-      <ThemeProvider attribute="class">
-        <ManagedUIContext>
+      <ManagedUIContext>
+        <ThemeProvider attribute="class">
           <Layout pageProps={pageProps}>
             <Component {...pageProps} />
           </Layout>
-        </ManagedUIContext>
-      </ThemeProvider>
+        </ThemeProvider>
+      </ManagedUIContext>
     </>
   )
 }

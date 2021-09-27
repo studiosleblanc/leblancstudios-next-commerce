@@ -1,12 +1,21 @@
-import React, { FC } from 'react'
+import React, { FC, useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import Image from 'next/image'
 import cn from 'classnames'
 import s from './Header.module.css'
 import { CartIcon } from '@leblanc/icons'
 import { homeNavigation } from '@leblanc/data/navigation'
+import { useBreadcrumbs } from '@leblanc/hooks/useBreadcrumbs'
+import { GoChevronRight } from 'react-icons/go'
 
 const Header: FC = () => {
+  const router = useRouter()
+  const { asPath } = router
+  const { theme, setTheme } = useTheme()
+  const breadcrumbs = useBreadcrumbs(asPath)
+
   return (
     <header className={s.root}>
       <div className={s.topRow}>
@@ -21,6 +30,11 @@ const Header: FC = () => {
           </a>
         </Link>
         <ul className={s.toolbar}>
+          <li>
+            <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+              darkmode
+            </button>
+          </li>
           <li>My Account</li>
           <li className="flex">
             <span className="relative">
@@ -34,9 +48,26 @@ const Header: FC = () => {
         </ul>
       </div>
       <div className={s.bottomRow}>
-        <div className={s.breadcrumbs}>new arrivals {'>'} mens</div>
+        {breadcrumbs.length >= 3 && (
+          <div className={s.breadcrumbs}>
+            {breadcrumbs[0]}
+            <span>
+              <GoChevronRight size={14} />
+            </span>
+            {breadcrumbs[1]}
+          </div>
+        )}
         <div className={s.navbar}>
-          <div className={s.position}>Mens {'>'} All</div>
+          <div className={s.position}>
+            {breadcrumbs.length >= 2 && (
+              <>
+                {breadcrumbs[breadcrumbs.length - 2]}
+                <span>{'>'}</span>
+                {breadcrumbs[breadcrumbs.length - 1]}
+              </>
+            )}
+            {breadcrumbs.length === 1 && <>{breadcrumbs[0]}</>}
+          </div>
           <div className={s.navigation}>
             <div className={s.navigationTop}>
               <div className={s.navigationTopBox}>

@@ -30,18 +30,26 @@
 
 /* navbar */
 .navbar {
-  @apply flex bg-aqua;
+  @apply flex bg-aqua dark:bg-lbsDarkGray;
   @apply w-full border-[1px] border-black;
 }
 
 .breadcrumbs {
   @apply font-bold uppercase text-2xl pb-2;
+  @apply flex items-center cursor-default;
+  & span {
+    @apply mx-2;
+  }
 }
 
 .position {
-  @apply bg-lbsGreen px-[4.8rem] py-11 h-full;
-  @apply text-7xl uppercase font-light;
+  @apply bg-lbsGreen px-[4.5rem] py-11 h-full;
+  @apply text-6xl uppercase font-light;
   @apply border-r-[1px] border-black;
+  @apply whitespace-nowrap cursor-default;
+  & span {
+    @apply mx-3;
+  }
 }
 
 .navigation {
@@ -72,4 +80,20 @@
 }
 .menuBottom {
   @apply px-5 pb-5;
+}
+
+/* DARK MODE */
+:global(.dark) {
+  & .navbar {
+    @apply bg-lbsDarkGray border-white;
+  }
+  & .topRow {
+    @apply border-white;
+  }
+  & .position {
+    @apply text-text-primary border-white;
+  }
+  & .navigationTopBox {
+    @apply border-white;
+  }
 }
