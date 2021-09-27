@@ -4,17 +4,20 @@ const whiteNakedDuck: NavItem[] = [
   {
     id: 'shirts-j89y8r',
     label: 'Shirts',
-    href: '#',
+    handle: 'shirts',
+    href: '/new-arrivals/white-naked-duck/shirts',
   },
   {
     id: 't-Shirt-m098h879h9',
     label: 'T-Shirt',
-    href: '#',
+    handle: 't-shirt',
+    href: '/new-arrivals/white-naked-duck/t-shirt',
   },
   {
     id: 'hoodies-7g87r6',
     label: 'Hoodies',
-    href: '#',
+    handle: 'hoodies',
+    href: '/new-arrivals/white-naked-duck/hoodies',
   },
 ]
 

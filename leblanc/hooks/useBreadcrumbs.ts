@@ -7,7 +7,7 @@ export function useBreadcrumbs(asPath: string) {
     const cleanPath = asPath.split('#')[0]
     const path = cleanPath.split('?')[0]
     let items = path.split('/').slice(1)
-    items = items.map(item => item.replace('-', ' '))
+    // items = items.map(item => item.replace('-', ' '))
     setPathItems(items)
   }, [asPath])
 

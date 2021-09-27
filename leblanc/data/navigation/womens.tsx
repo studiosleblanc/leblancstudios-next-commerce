@@ -4,42 +4,50 @@ const womens: NavItem[] = [
   {
     id: 'all-eda32fzdg',
     label: 'All',
-    href: '#',
+    handle: 'all',
+    href: '/womens/all',
   },
   {
     id: 'shirts-dsa2356daA',
     label: 'Shirts',
-    href: '#',
+    handle: 'shirts',
+    href: '/womens/shirts',
   },
   {
     id: 't-Shirt-fsndf87gs',
     label: 'T-Shirt',
-    href: '#',
+    handle: 't-shirts',
+    href: '/womens/t-shirts',
   },
   {
     id: 'dresses-887tq6f734',
     label: 'Dresses',
-    href: '#',
+    handle: 'dresses',
+    href: '/womens/dresses',
   },
   {
     id: 'trousers-ygfw77g8',
     label: 'Trousers',
-    href: '#',
+    handle: 'trousers',
+    href: '/womens/trousers',
   },
   {
     id: 'accesories-dkuq22d',
     label: 'Accesories',
-    href: '#',
+    handle: 'accesories',
+    href: '/womens/accesories',
   },
   {
     id: 'caps-62a8S99dh6',
     label: 'Caps',
-    href: '#',
+    handle: 'caps',
+    href: '/womens/caps',
   },
   {
     id: 'leather-Goods-90h894qggsjkfs',
     label: 'Leather Goods',
-    href: '#',
+    handle: 'leather-goods',
+    href: '/womens/leather-goods',
   },
 ]
 

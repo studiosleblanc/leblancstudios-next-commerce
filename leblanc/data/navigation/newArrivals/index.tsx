@@ -9,16 +9,19 @@ const newArrivals: NavItem[] = [
   {
     id: 'women-iojewi33',
     label: 'Womens',
+    handle: 'womens',
     childs: womens,
   },
   {
     id: 'men-43789hd',
     label: 'Mens',
+    handle: 'mens',
     childs: mens,
   },
   {
     id: 'all-d78ga',
     label: 'All',
+    handle: 'all',
     href: '#',
   },
   {
@@ -28,6 +31,7 @@ const newArrivals: NavItem[] = [
         A Necessary Risk <b>x Gus Peña</b>
       </>
     ),
+    handle: 'a-necessary-risk-x-gus-pena',
     abbr: 'ANR',
     childs: aNecessaryRisk,
   },
@@ -38,12 +42,14 @@ const newArrivals: NavItem[] = [
         'SS21 '<b>[Timeless Duck Shirt: Intimo y Personal]</b>
       </>
     ),
+    handle: 'ss21',
     abbr: 'SS21',
     childs: ss21,
   },
   {
     id: 'white-nacked-duck-da78t',
     label: 'White Naked Duck',
+    handle: 'white-naked-duck',
     abbr: 'WND',
     childs: whiteNakedDuck,
   },

@@ -59,7 +59,7 @@ const Header: FC<Props> = ({ history }) => {
         <div className={s.breadcrumbs}>
           {breadcrumbs.length >= 3 && (
             <>
-              {breadcrumbs[0]}
+              {breadcrumbs[0].replace('-', ' ')}
               <span>
                 <GoChevronRight size={14} />
               </span>
@@ -98,14 +98,35 @@ const Header: FC<Props> = ({ history }) => {
             </div>
             <div className={s.navigationBottom}>
               <ul className={cn(s.menu, s.menuBottom)}>
-                <li>Shirts</li>
-                <li>T-Shirts</li>
-                <li>Trousers</li>
-                <li>Accesories</li>
-                <li>Knitwear</li>
-                <li>Caps</li>
-                <li>Leathergoods</li>
-                <li>Gifts</li>
+                {breadcrumbs.length === 3 &&
+                  homeNavigation
+                    .find(i => i.handle === breadcrumbs[0])
+                    ?.childs?.find(child => child.handle === breadcrumbs[1])
+                    ?.childs?.map(navItem => (
+                      <li>
+                        {navItem.href ? (
+                          <Link href={navItem.href}>
+                            <a>{navItem.label}</a>
+                          </Link>
+                        ) : (
+                          <a>{navItem.label}</a>
+                        )}
+                      </li>
+                    ))}
+                {breadcrumbs.length === 2 &&
+                  homeNavigation
+                    .find(i => i.handle === breadcrumbs[0])
+                    ?.childs?.map(navItem => (
+                      <li>
+                        {navItem.href ? (
+                          <Link href={navItem.href}>
+                            <a>{navItem.label}</a>
+                          </Link>
+                        ) : (
+                          <a>{navItem.label}</a>
+                        )}
+                      </li>
+                    ))}
               </ul>
             </div>
           </div>
