@@ -22,7 +22,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head />
       <ManagedUIContext>
-        <ThemeProvider attribute="class">
+        <ThemeProvider
+          attribute="class"
+          forcedTheme={(Component as any).theme || null}>
           <Layout pageProps={pageProps}>
             <Component {...pageProps} />
           </Layout>

@@ -7,4 +7,5 @@ const HistoryView = () => {
   return <HistoryLayout>history page</HistoryLayout>
 }
 
+HistoryView.theme = 'dark'
 export default HistoryView
