@@ -8,7 +8,7 @@ interface Props {
 const HistoryLayout: FC<Props> = ({ children }) => {
   return (
     <div>
-      <Header />
+      <Header history />
       {children}
     </div>
   )

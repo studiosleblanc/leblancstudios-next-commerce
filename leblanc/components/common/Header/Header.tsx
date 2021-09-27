@@ -9,8 +9,13 @@ import { CartIcon } from '@leblanc/icons'
 import { homeNavigation } from '@leblanc/data/navigation'
 import { useBreadcrumbs } from '@leblanc/hooks/useBreadcrumbs'
 import { GoChevronRight } from 'react-icons/go'
+import ElPuebloCuestiona from '@leblanc/svg/ElPuebloCuestiona'
 
-const Header: FC = () => {
+interface Props {
+  history?: boolean
+}
+
+const Header: FC<Props> = ({ history }) => {
   const router = useRouter()
   const { asPath } = router
   const { theme, setTheme } = useTheme()
@@ -20,13 +25,16 @@ const Header: FC = () => {
     <header className={s.root}>
       <div className={s.topRow}>
         <Link href="/">
-          <a>
-            <Image
-              width={308}
-              height={26}
-              layout="intrinsic"
-              src="/assets/images/remain_silent.png"
-            />
+          <a className={s.logoContainer}>
+            {history && <ElPuebloCuestiona />}
+            {!history && (
+              <Image
+                width={308}
+                height={26}
+                layout="intrinsic"
+                src="/assets/images/remain_silent.png"
+              />
+            )}
           </a>
         </Link>
         <ul className={s.toolbar}>
@@ -39,7 +47,7 @@ const Header: FC = () => {
           <li className="flex">
             <span className="relative">
               <span className={s.cartItemsCounter}>4</span>
-              <CartIcon width={28} />
+              <CartIcon width={28} className={s.cartIcon} />
             </span>
             <span className={s.totalPrice}>
               <span> $835.00</span>
@@ -48,15 +56,17 @@ const Header: FC = () => {
         </ul>
       </div>
       <div className={s.bottomRow}>
-        {breadcrumbs.length >= 3 && (
-          <div className={s.breadcrumbs}>
-            {breadcrumbs[0]}
-            <span>
-              <GoChevronRight size={14} />
-            </span>
-            {breadcrumbs[1]}
-          </div>
-        )}
+        <div className={s.breadcrumbs}>
+          {breadcrumbs.length >= 3 && (
+            <>
+              {breadcrumbs[0]}
+              <span>
+                <GoChevronRight size={14} />
+              </span>
+              {breadcrumbs[1]}
+            </>
+          )}
+        </div>
         <div className={s.navbar}>
           <div className={s.position}>
             {breadcrumbs.length >= 2 && (
