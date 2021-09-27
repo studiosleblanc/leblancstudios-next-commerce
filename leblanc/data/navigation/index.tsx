@@ -18,18 +18,21 @@ export const homeNavigation: NavItem[] = [
     label: 'New Arrivals',
     handle: 'new-arrivals',
     childs: newArrivals,
+    href: '/new-arrivals/all',
   },
   {
     id: 'womens',
     label: 'Womens',
     handle: 'womens',
     childs: womens,
+    href: '/womens/all',
   },
   {
     id: 'mens',
     label: 'Mens',
     handle: 'mens',
     childs: mens,
+    href: '/mens/all',
   },
   {
     id: 'history',
