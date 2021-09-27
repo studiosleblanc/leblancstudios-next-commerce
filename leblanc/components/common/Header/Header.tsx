@@ -127,10 +127,10 @@ const Header: FC<Props> = ({ history }) => {
                       <li>
                         {navItem.href ? (
                           <Link href={navItem.href}>
-                            <a>{navItem.label}</a>
+                            <a>{navItem.abbr ? navItem.abbr : navItem.label}</a>
                           </Link>
                         ) : (
-                          <a>{navItem.label}</a>
+                          <a>{navItem.abbr ? navItem.abbr : navItem.label}</a>
                         )}
                       </li>
                     ))}
