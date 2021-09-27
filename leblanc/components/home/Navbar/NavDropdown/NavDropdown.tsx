@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import Link from 'next/link'
 import s from './NavDropdown.module.css'
 import { motion } from 'framer-motion'
 import type { NavItem } from '@leblanc/data/navigation'
@@ -49,7 +50,13 @@ const NavDropdown: FC<Props> = ({
       <ul className={s.menu}>
         {grandChilds.map(item => (
           <li key={item.id}>
-            <a href={item.href}>{item.label}</a>
+            {item.href ? (
+              <Link href={item.href}>
+                <a>{item.label}</a>
+              </Link>
+            ) : (
+              <a>{item.label}</a>
+            )}
           </li>
         ))}
       </ul>
