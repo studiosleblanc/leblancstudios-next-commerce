@@ -23,6 +23,8 @@ const Navbar: FC = () => {
     event.preventDefault()
     setActiveItem(target.id)
     setLabel(target.label)
+    setActiveItemChild('') // provisional fixing
+    setChildLabel('') // provisional fixing
   }
 
   const handleClickOutside = () => {
