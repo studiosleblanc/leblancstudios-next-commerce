@@ -17,7 +17,7 @@ export default function usePositionText(breadcrumbs: NavItem[]) {
 
   const getBreadcrumbText = (i: number) => {
     if (length > 1 && length > 0) {
-      return breadcrumbs[length - i].abbr ?? breadcrumbs[length - i].label
+      return breadcrumbs[length - i].abbr || breadcrumbs[length - i].label
     }
     if (length === 1) {
       return breadcrumbs[0].label

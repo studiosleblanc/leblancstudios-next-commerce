@@ -60,7 +60,7 @@
   @apply border-r-[1px] border-black;
   @apply whitespace-nowrap cursor-default;
   & span {
-    @apply mx-3;
+    @apply mx-1;
   }
 }
 

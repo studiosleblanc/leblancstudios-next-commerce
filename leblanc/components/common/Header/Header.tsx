@@ -9,6 +9,7 @@ import { CartIcon } from '@leblanc/icons'
 import { homeNavigation } from '@leblanc/data/navigation'
 import { useBreadcrumbs } from '@leblanc/hooks/useBreadcrumbs'
 import { GoChevronRight } from 'react-icons/go'
+import { VscChevronRight } from 'react-icons/vsc'
 import ElPuebloCuestiona from '@leblanc/svg/ElPuebloCuestiona'
 import usePositionText from '@leblanc/hooks/usePositionText'
 
@@ -22,6 +23,17 @@ const Header: FC<Props> = ({ history }) => {
   const { theme, setTheme } = useTheme()
   const breadcrumbs = useBreadcrumbs(asPath)
   const positionItems = usePositionText(breadcrumbs)
+
+  const getFitFontStyles = (items: string[] | React.ReactNode[]) => {
+    let length: number = 0
+    items.forEach(i => {
+      length += String(i).length
+    })
+    return {
+      fontSize: `${300 / (length * 10)}rem`,
+      fontWeight: length > 14 ? 400 : 300,
+    }
+  }
 
   return (
     <header className={s.root}>
@@ -70,12 +82,16 @@ const Header: FC<Props> = ({ history }) => {
           )}
         </div>
         <div className={s.navbar}>
-          <div className={s.position}>
+          <div style={getFitFontStyles(positionItems)} className={s.position}>
             {positionItems.map((pItem, i) => (
-              <div key={i}>
-                {i >= 1 && <span>{'>'}</span>}
-                {pItem}
-              </div>
+              <React.Fragment key={i}>
+                {i >= 1 && (
+                  <span>
+                    <VscChevronRight />
+                  </span>
+                )}
+                <div>{pItem}</div>
+              </React.Fragment>
             ))}
           </div>
           <div className={s.navigation}>
