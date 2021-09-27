@@ -16,7 +16,7 @@ const mens: NavItem[] = [
   {
     id: 't-Shirt-6e326d45s',
     label: 'T-Shirt',
-    handle: 'shirt',
+    handle: 't-shirt',
     href: '/mens/t-shirt',
   },
   {
