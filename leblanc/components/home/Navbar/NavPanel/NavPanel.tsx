@@ -1,4 +1,5 @@
 import React, { FC, useState } from 'react'
+import Link from 'next/link'
 import s from './NavPanel.module.css'
 import type { NavItem } from '@leblanc/data/navigation'
 import { motion } from 'framer-motion'
@@ -69,7 +70,13 @@ const NavPanel: FC<Props> = ({
                     />
                   </>
                 ) : (
-                  <a href={childItem.href}>{childItem.label}</a>
+                  <>
+                    {childItem.href && (
+                      <Link href={childItem.href}>
+                        <a>{childItem.label}</a>
+                      </Link>
+                    )}
+                  </>
                 )}
               </li>
             ))}

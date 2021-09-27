@@ -22,7 +22,7 @@ const newArrivals: NavItem[] = [
     id: 'all-d78ga',
     label: 'All',
     handle: 'all',
-    href: '#',
+    href: '/new-arrivals/all',
   },
   {
     id: 'A-Necessary-Risk-x-Gus-Pena-da89',
