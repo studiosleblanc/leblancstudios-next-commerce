@@ -39,7 +39,7 @@ const newArrivals: NavItem[] = [
     id: 'ss21-timeless-duck-shirt-intimo-y-personal-ad78tf',
     label: (
       <>
-        'SS21 '<b>[Timeless Duck Shirt: Intimo y Personal]</b>
+        SS21 <b>[Timeless Duck Shirt: Intimo y Personal]</b>
       </>
     ),
     handle: 'ss21',

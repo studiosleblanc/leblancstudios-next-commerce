@@ -47,6 +47,9 @@
   & span {
     @apply mx-2;
   }
+  & b {
+    @apply ml-2;
+  }
 }
 
 .position {

@@ -59,24 +59,31 @@ const Header: FC<Props> = ({ history }) => {
         <div className={s.breadcrumbs}>
           {breadcrumbs.length >= 3 && (
             <>
-              {breadcrumbs[0].replace('-', ' ')}
+              {breadcrumbs[0].label}
               <span>
                 <GoChevronRight size={14} />
               </span>
-              {breadcrumbs[1]}
+              {breadcrumbs[1].label}
             </>
           )}
         </div>
         <div className={s.navbar}>
           <div className={s.position}>
-            {breadcrumbs.length >= 2 && (
+            {breadcrumbs.length === 3 && (
               <>
-                {breadcrumbs[breadcrumbs.length - 2]}
+                {breadcrumbs[1].abbr ? breadcrumbs[1].abbr : breadcrumbs[1].label}
                 <span>{'>'}</span>
-                {breadcrumbs[breadcrumbs.length - 1]}
+                {breadcrumbs[2].handle}
               </>
             )}
-            {breadcrumbs.length === 1 && <>{breadcrumbs[0]}</>}
+            {breadcrumbs.length === 2 && (
+              <>
+                {breadcrumbs[0].abbr ? breadcrumbs[0].abbr : breadcrumbs[0].label}
+                <span>{'>'}</span>
+                {breadcrumbs[1].handle}
+              </>
+            )}
+            {breadcrumbs.length === 1 && <>{breadcrumbs[0].label}</>}
           </div>
           <div className={s.navigation}>
             <div className={s.navigationTop}>
@@ -100,8 +107,8 @@ const Header: FC<Props> = ({ history }) => {
               <ul className={cn(s.menu, s.menuBottom)}>
                 {breadcrumbs.length === 3 &&
                   homeNavigation
-                    .find(i => i.handle === breadcrumbs[0])
-                    ?.childs?.find(child => child.handle === breadcrumbs[1])
+                    .find(i => i.handle === breadcrumbs[0].handle)
+                    ?.childs?.find(child => child.handle === breadcrumbs[1].handle)
                     ?.childs?.map(navItem => (
                       <li>
                         {navItem.href ? (
@@ -115,7 +122,7 @@ const Header: FC<Props> = ({ history }) => {
                     ))}
                 {breadcrumbs.length === 2 &&
                   homeNavigation
-                    .find(i => i.handle === breadcrumbs[0])
+                    .find(i => i.handle === breadcrumbs[0].handle)
                     ?.childs?.map(navItem => (
                       <li>
                         {navItem.href ? (
