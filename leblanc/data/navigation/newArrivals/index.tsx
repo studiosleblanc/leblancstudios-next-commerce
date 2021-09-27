@@ -11,12 +11,14 @@ const newArrivals: NavItem[] = [
     label: 'Womens',
     handle: 'womens',
     childs: womens,
+    href: '/new-arrivals/womens/all',
   },
   {
     id: 'men-43789hd',
     label: 'Mens',
     handle: 'mens',
     childs: mens,
+    href: '/new-arrivals/mens/all',
   },
   {
     id: 'all-d78ga',
@@ -34,6 +36,7 @@ const newArrivals: NavItem[] = [
     handle: 'a-necessary-risk-x-gus-pena',
     abbr: 'ANR',
     childs: aNecessaryRisk,
+    href: '/new-arrivals/a-necessary-risk-x-gus-pena/shirts',
   },
   {
     id: 'ss21-timeless-duck-shirt-intimo-y-personal-ad78tf',
@@ -45,6 +48,7 @@ const newArrivals: NavItem[] = [
     handle: 'ss21',
     abbr: 'SS21',
     childs: ss21,
+    href: '/new-arrivals/ss21/shirts',
   },
   {
     id: 'white-nacked-duck-da78t',
@@ -52,6 +56,7 @@ const newArrivals: NavItem[] = [
     handle: 'white-naked-duck',
     abbr: 'WND',
     childs: whiteNakedDuck,
+    href: '/new-arrivals/white-naked-duck/shirts',
   },
 ]
 
