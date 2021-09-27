@@ -53,7 +53,9 @@
 }
 
 .position {
-  @apply bg-lbsGreen px-[4.5rem] py-11 h-full;
+  @apply w-[300px] h-[75px];
+  @apply flex items-center justify-center;
+  @apply bg-lbsGreen px-[4.5rem];
   @apply text-6xl uppercase font-light;
   @apply border-r-[1px] border-black;
   @apply whitespace-nowrap cursor-default;

@@ -10,6 +10,7 @@ import { homeNavigation } from '@leblanc/data/navigation'
 import { useBreadcrumbs } from '@leblanc/hooks/useBreadcrumbs'
 import { GoChevronRight } from 'react-icons/go'
 import ElPuebloCuestiona from '@leblanc/svg/ElPuebloCuestiona'
+import usePositionText from '@leblanc/hooks/usePositionText'
 
 interface Props {
   history?: boolean
@@ -20,6 +21,7 @@ const Header: FC<Props> = ({ history }) => {
   const { asPath } = router
   const { theme, setTheme } = useTheme()
   const breadcrumbs = useBreadcrumbs(asPath)
+  const positionItems = usePositionText(breadcrumbs)
 
   return (
     <header className={s.root}>
@@ -69,21 +71,12 @@ const Header: FC<Props> = ({ history }) => {
         </div>
         <div className={s.navbar}>
           <div className={s.position}>
-            {breadcrumbs.length === 3 && (
-              <>
-                {breadcrumbs[1].abbr ? breadcrumbs[1].abbr : breadcrumbs[1].label}
-                <span>{'>'}</span>
-                {breadcrumbs[2].handle}
-              </>
-            )}
-            {breadcrumbs.length === 2 && (
-              <>
-                {breadcrumbs[0].abbr ? breadcrumbs[0].abbr : breadcrumbs[0].label}
-                <span>{'>'}</span>
-                {breadcrumbs[1].handle}
-              </>
-            )}
-            {breadcrumbs.length === 1 && <>{breadcrumbs[0].label}</>}
+            {positionItems.map((pItem, i) => (
+              <div key={i}>
+                {i >= 1 && <span>{'>'}</span>}
+                {pItem}
+              </div>
+            ))}
           </div>
           <div className={s.navigation}>
             <div className={s.navigationTop}>
