@@ -46,7 +46,7 @@
     }
   }
 } */
-.section3 {
+/* .section3 {
   & .cardImageContent {
     @apply max-w-[43%] left-12 right-auto;
   }
@@ -62,7 +62,7 @@
   & .thumb_3_c {
     @apply w-1/3;
   }
-}
+} */
 .section4 {
   /* & .imgContainer */
   & .cardImage {
