@@ -1,0 +1,40 @@
+.title {
+  @apply w-full lg:max-w-[70%] 2xl:max-w-screen-xl mx-auto py-20;
+  & h2 {
+    @apply text-4xl 2xl:text-[2.5rem] text-center uppercase leading-loose;
+    @screen 2xl {
+      letter-spacing: 0.6rem;
+    }
+  }
+}
+.imgContainer {
+  @apply w-full;
+}
+
+.section {
+  &:not(:first-child) {
+    @apply py-28;
+  }
+}
+.section1 {
+  & .imgContainer {
+    @apply max-w-[1762px] mx-auto;
+  }
+}
+.section2 {
+  & .imgContainer {
+    @apply max-w-[1770px] mx-auto;
+  }
+}
+
+.cardImage {
+  @apply relative;
+  @apply w-[92%] mx-auto;
+}
+.cardImageContent {
+  @apply absolute bottom-4 right-12;
+  @apply max-w-screen-sm;
+  & p {
+    @apply text-right text-2xl mb-10 leading-extra-loose;
+  }
+}
