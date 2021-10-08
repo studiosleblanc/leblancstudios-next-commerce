@@ -9,6 +9,7 @@ import {
   HistorySectionB,
   HistorySectionC,
   HistorySectionD,
+  HistorySectionE,
 } from '@leblanc/components/history'
 
 const HistoryView = () => {
@@ -23,25 +24,8 @@ const HistoryView = () => {
         <HistorySectionC />
         {/* Section D */}
         <HistorySectionD />
-        {/* Section D-2 */}
-        <div className={cn(s.section, s.section5)}>
-          <div className={s.cardImage}>
-            <div className={s.imgContainer}>
-              <Image
-                src="/assets/history/history-4-B.jpg"
-                width={1497}
-                height={998}
-                layout="responsive"
-              />
-            </div>
-          </div>
-          <div className={s.title}>
-            <h2>
-              <b>READY-MADE OBJECTS</b> <br /> LAUNCHING EVENT AT DISTRITO, <br />
-              SANTO DOMINGO.
-            </h2>
-          </div>
-        </div>
+        {/* Section E */}
+        <HistorySectionE />
       </div>
     </HistoryLayout>
   )

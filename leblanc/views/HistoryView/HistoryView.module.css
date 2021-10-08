@@ -63,8 +63,7 @@
     @apply w-1/3;
   }
 } */
-.section4 {
-  /* & .imgContainer */
+/* .section4 {
   & .cardImage {
     @apply w-[98%];
   }
@@ -81,12 +80,12 @@
   & .cardImageContent {
     @apply max-w-[42%] left-12 right-auto;
   }
-}
-.section5 {
+} */
+/* .section5 {
   & .cardImage {
     @apply w-[98%];
   }
   & .imgContainer {
     @apply w-[60%] mx-auto;
   }
-}
+} */

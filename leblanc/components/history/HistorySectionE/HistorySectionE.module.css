@@ -1,0 +1,8 @@
+.root {
+  & .cardImage {
+    @apply w-[98%];
+  }
+  & .imgContainer {
+    @apply w-[60%] mx-auto;
+  }
+}
