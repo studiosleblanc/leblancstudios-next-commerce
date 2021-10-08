@@ -1,0 +1,4 @@
+.root {
+  @apply relative;
+  @apply w-[92%] mx-auto;
+}

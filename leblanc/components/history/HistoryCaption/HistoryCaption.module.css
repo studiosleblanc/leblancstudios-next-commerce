@@ -1,0 +1,7 @@
+.root {
+  @apply absolute bottom-4 right-12;
+  @apply max-w-screen-sm;
+  & p {
+    @apply text-2xl mb-10 leading-extra-loose;
+  }
+}

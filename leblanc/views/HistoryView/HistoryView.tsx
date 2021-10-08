@@ -4,14 +4,14 @@ import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import { HistoryLayout } from '@leblanc/layouts'
 import s from './HistoryView.module.css'
-import HistorySectionA from '@leblanc/components/history/HistorySectionA'
+import { HistorySectionA } from '@leblanc/components/history'
 
 const HistoryView = () => {
   return (
     <HistoryLayout>
       <div className={s.container}>
         {/* Section A */}
-        <div className={cn(s.section, s.section1)}>
+        {/* <div className={cn(s.section, s.section1)}>
           <div className={s.title}>
             <h2>
               <b>LEBLANCSTUDIOS</b> IS A CULTURAL AGITATOR COMMITED TO PRODUCE
@@ -29,7 +29,8 @@ const HistoryView = () => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
+        <HistorySectionA />
         {/* Section B */}
         <div className={cn(s.section, s.section2)}>
           <div className={s.title}>

@@ -1,0 +1,5 @@
+.root {
+  & .imgContainer {
+    @apply max-w-[1762px] mx-auto;
+  }
+}

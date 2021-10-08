@@ -1,0 +1,12 @@
+.root {
+  @apply w-full lg:max-w-[70%] 2xl:max-w-screen-xl mx-auto py-20;
+  & h2 {
+    @apply text-4xl 2xl:text-[2.5rem] text-center uppercase leading-loose;
+    @screen lg {
+      letter-spacing: 0.35rem;
+    }
+    @screen 2xl {
+      letter-spacing: 0.6rem;
+    }
+  }
+}
