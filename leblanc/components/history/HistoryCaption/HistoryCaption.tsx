@@ -4,7 +4,7 @@ import s from './HistoryCaption.module.css'
 
 interface Props {
   children: React.ReactNode
-  className: string
+  className?: string
 }
 
 const HistoryCard: FC<Props> = ({ children, className }) => {

@@ -31,11 +31,11 @@
     @apply py-28;
   }
 }
-.section1 {
+/* .section1 {
   & .imgContainer {
     @apply max-w-[1762px] mx-auto;
   }
-}
+} */
 .section2 {
   & .imgContainer {
     @apply max-w-[1770px] mx-auto;
