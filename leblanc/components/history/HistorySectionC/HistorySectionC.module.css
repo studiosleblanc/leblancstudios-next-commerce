@@ -1,0 +1,19 @@
+.root {
+  @apply mt-40;
+  & .caption {
+    @apply max-w-[43%] left-12 right-auto;
+  }
+}
+
+.thumb_container {
+  @apply absolute top-0 left-0;
+  @apply w-full h-full;
+  @apply flex justify-end;
+  @apply pr-16 pt-16;
+}
+.thumb_b {
+  @apply w-1/2 ml-14;
+}
+.thumb_c {
+  @apply w-1/3;
+}

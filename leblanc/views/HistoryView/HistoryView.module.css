@@ -36,7 +36,7 @@
     @apply max-w-[1762px] mx-auto;
   }
 } */
-.section2 {
+/* .section2 {
   & .imgContainer {
     @apply max-w-[1770px] mx-auto;
   }
@@ -45,7 +45,7 @@
       @apply text-right;
     }
   }
-}
+} */
 .section3 {
   & .cardImageContent {
     @apply max-w-[43%] left-12 right-auto;
