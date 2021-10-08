@@ -5,6 +5,7 @@ import s from './HistoryTitle.module.css'
 interface Props {
   children: React.ReactNode
   className?: string
+  id?: string
 }
 
 const HistoryTitle: FC<Props> = ({ children, className }) => {
