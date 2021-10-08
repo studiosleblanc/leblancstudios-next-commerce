@@ -1,0 +1,18 @@
+.root {
+  & .cardImage {
+    @apply w-[98%];
+  }
+  & .bgImg {
+    @apply w-[68%];
+  }
+  & .cardImageMiddleContent {
+    @apply absolute right-12 top-1/2 w-[60%];
+    @apply -translate-y-1/2;
+    & .title {
+      @apply max-w-none;
+    }
+  }
+  & .cardImageContent {
+    @apply max-w-[42%] left-12 right-auto;
+  }
+}
