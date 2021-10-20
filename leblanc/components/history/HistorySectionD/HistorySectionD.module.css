@@ -8,6 +8,7 @@
   & .cardImageMiddleContent {
     @apply absolute right-12 top-1/2 w-[60%];
     @apply -translate-y-1/2;
+    transform: translateY(calc(-50% + 100px));
     & .title {
       @apply max-w-none;
     }

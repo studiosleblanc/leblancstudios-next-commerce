@@ -83,13 +83,26 @@ const HistorySectionC = () => {
           }}
         </Scene>
       </Controller>
-      <HistoryTitle>
-        <h2>
-          <b>KAPUTT’S</b> EARN THEM A PLACE IN THE FINALS OF THE SAN PELLEGRINO YOUNG
-          TALENTS AWARD. AFTERWARDS YAMIL ARBAJE BEGAN STUDYING FASHION DESIGN AT THE
-          CHAVÓN SCHOOL OF DESIGN.
-        </h2>
-      </HistoryTitle>
+      <div id="scene-C-2"></div>
+      <Controller>
+        <Scene
+          triggerElement="#scene-C-2"
+          duration={280}
+          triggerHook={0.7}
+          indicators={true}>
+          {(progress: number) => (
+            <div style={{ opacity: progress }}>
+              <HistoryTitle>
+                <h2>
+                  <b>KAPUTT’S</b> EARN THEM A PLACE IN THE FINALS OF THE SAN
+                  PELLEGRINO YOUNG TALENTS AWARD. AFTERWARDS YAMIL ARBAJE BEGAN
+                  STUDYING FASHION DESIGN AT THE CHAVÓN SCHOOL OF DESIGN.
+                </h2>
+              </HistoryTitle>
+            </div>
+          )}
+        </Scene>
+      </Controller>
     </div>
   )
 }

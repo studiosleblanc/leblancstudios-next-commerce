@@ -7,6 +7,7 @@ import {
   HistoryCaption,
   HistoryTitle,
 } from '@leblanc/components/history'
+import { Controller, Scene } from 'react-scrollmagic'
 
 const HistorySectionD = () => {
   return (
@@ -21,15 +22,33 @@ const HistorySectionD = () => {
           />
         </div>
         <div className={s.cardImageMiddleContent}>
-          <HistoryTitle className={s.title}>
-            <h2>
-              AS THE FUNDAMENTALS OF THE CONCEPTUAL ART HAS BEEN ALWAYS PRESENT IN
-              OUR WORK,
-              <br /> <b>READY-MADE OBJECTS</b> EXPLORES THE WORK OF THE DADAISTS. WE
-              DECIDED TO INCORPORATE ICONIC DADA PIECES BY MAKING IMPERFECT DOODLES
-              THAT REPRESENTED THE INTERESTS OF OUR COLLABORATOR RODOLFO DIETSCH.
-            </h2>
-          </HistoryTitle>
+          <div id="scene-D-1"></div>
+          <Controller>
+            <Scene
+              triggerElement="#scene-D-1"
+              duration={280}
+              triggerHook={0.85}
+              indicators={true}>
+              {(progress: number) => (
+                <div
+                  style={{
+                    opacity: progress * 1.5,
+                    transform: `translateY(-${progress * 100}px)`,
+                  }}>
+                  <HistoryTitle className={s.title}>
+                    <h2>
+                      AS THE FUNDAMENTALS OF THE CONCEPTUAL ART HAS BEEN ALWAYS
+                      PRESENT IN OUR WORK,
+                      <br /> <b>READY-MADE OBJECTS</b> EXPLORES THE WORK OF THE
+                      DADAISTS. WE DECIDED TO INCORPORATE ICONIC DADA PIECES BY
+                      MAKING IMPERFECT DOODLES THAT REPRESENTED THE INTERESTS OF OUR
+                      COLLABORATOR RODOLFO DIETSCH.
+                    </h2>
+                  </HistoryTitle>
+                </div>
+              )}
+            </Scene>
+          </Controller>
         </div>
         <HistoryCaption className={s.cardImageContent}>
           <p>
