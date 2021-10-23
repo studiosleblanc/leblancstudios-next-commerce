@@ -10,6 +10,7 @@ import {
   HistorySectionC,
   HistorySectionD,
   HistorySectionE,
+  HistorySectionF,
 } from '@leblanc/components/history'
 
 const HistoryView = () => {
@@ -26,6 +27,8 @@ const HistoryView = () => {
         <HistorySectionD />
         {/* Section E */}
         <HistorySectionE />
+        {/* Section F */}
+        <HistorySectionF />
       </div>
     </HistoryLayout>
   )

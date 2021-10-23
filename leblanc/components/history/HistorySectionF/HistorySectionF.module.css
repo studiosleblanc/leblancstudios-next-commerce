@@ -1,0 +1,31 @@
+.root {
+  @apply pt-28;
+  & .title {
+    @apply max-w-none;
+    & h2 {
+      @apply text-justify;
+    }
+  }
+}
+
+.cardInner {
+  @apply h-screen;
+  @apply flex;
+}
+.cardCol {
+  @apply w-1/2;
+  @apply relative;
+}
+
+.fullHeightImgContainer {
+  @apply absolute top-0 left-0;
+  @apply w-full h-full;
+  @apply flex items-center;
+}
+.fullHeightImg {
+  @apply w-auto h-full max-h-full;
+}
+
+.fullWidthImg {
+  @apply w-full max-w-full;
+}

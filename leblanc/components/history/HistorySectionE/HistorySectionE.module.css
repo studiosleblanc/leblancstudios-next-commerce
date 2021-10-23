@@ -1,4 +1,5 @@
 .root {
+  @apply py-28;
   & .cardImage {
     @apply w-[98%];
   }
