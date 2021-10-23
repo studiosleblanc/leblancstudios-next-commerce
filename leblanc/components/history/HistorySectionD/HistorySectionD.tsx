@@ -33,7 +33,7 @@ const HistorySectionD = () => {
                 <div
                   style={{
                     opacity: progress * 1.5,
-                    transform: `translateY(-${progress * 100}px)`,
+                    transform: `translateY(-${progress * 120}px)`,
                   }}>
                   <HistoryTitle className={s.title}>
                     <h2>
