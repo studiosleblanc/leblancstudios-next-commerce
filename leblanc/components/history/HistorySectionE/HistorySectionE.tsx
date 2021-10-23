@@ -13,6 +13,7 @@ const HistorySectionE = () => {
             width={1497}
             height={998}
             layout="responsive"
+            priority
           />
         </div>
       </HistoryCard>

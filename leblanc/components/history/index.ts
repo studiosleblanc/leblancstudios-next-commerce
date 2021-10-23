@@ -4,6 +4,7 @@ export { default as HistorySectionC } from './HistorySectionC'
 export { default as HistorySectionD } from './HistorySectionD'
 export { default as HistorySectionE } from './HistorySectionE'
 export { default as HistorySectionF } from './HistorySectionF'
+export { default as HistorySectionG } from './HistorySectionG'
 
 export { default as HistoryTitle } from './HistoryTitle'
 export { default as HistoryCaption } from './HistoryCaption'

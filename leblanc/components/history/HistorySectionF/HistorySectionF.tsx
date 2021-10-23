@@ -40,7 +40,8 @@ const HistorySectionF = () => {
           // classToggle="visible"
           // offset="-200%"
           triggerHook="onLeave"
-          indicators={true}>
+          // indicators={true}
+          >
           {(progress: number, scene: any) => {
             console.log(scene)
             return (

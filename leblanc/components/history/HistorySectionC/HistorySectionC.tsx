@@ -22,7 +22,8 @@ const HistorySectionC = () => {
           // classToggle="visible"
           // offset="-200%"
           triggerHook="onLeave"
-          indicators={true}>
+          // indicators={true}
+        >
           {(progress: number) => {
             // let thumb_a_Y = progress > 0.5 ? -100 + progress * 100 : -100
             let thumb_a_Y = -100 + Math.round(progress * 100)
@@ -36,6 +37,7 @@ const HistorySectionC = () => {
                       width={1781}
                       height={1188}
                       layout="responsive"
+                      priority
                     />
                   </div>
                   <HistoryCaption className={s.caption}>
@@ -62,6 +64,7 @@ const HistorySectionC = () => {
                         width={604}
                         height={763}
                         layout="responsive"
+                        priority
                       />
                     </div>
                     <div
@@ -74,6 +77,7 @@ const HistorySectionC = () => {
                         width={859}
                         height={1087}
                         layout="responsive"
+                        priority
                       />
                     </div>
                   </div>
@@ -89,7 +93,8 @@ const HistorySectionC = () => {
           triggerElement="#scene-C-2"
           duration={280}
           triggerHook={0.7}
-          indicators={true}>
+          // indicators={true}
+        >
           {(progress: number) => (
             <div style={{ opacity: progress }}>
               <HistoryTitle>

@@ -19,6 +19,7 @@ const HistorySectionD = () => {
             width={1278}
             height={1913}
             layout="responsive"
+            priority
           />
         </div>
         <div className={s.cardImageMiddleContent}>
@@ -28,7 +29,8 @@ const HistorySectionD = () => {
               triggerElement="#scene-D-1"
               duration={280}
               triggerHook={0.85}
-              indicators={true}>
+              // indicators={true}
+            >
               {(progress: number) => (
                 <div
                   style={{

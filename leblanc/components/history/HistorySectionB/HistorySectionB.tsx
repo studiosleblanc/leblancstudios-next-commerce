@@ -21,7 +21,8 @@ const HistorySectionB = () => {
           // classToggle="visible"
           // offset="-200%"
           triggerHook={0.7}
-          indicators={true}>
+          // indicators={true}
+        >
           {(progress: number) => (
             <div style={{ opacity: progress }}>
               <HistoryTitle>
@@ -41,7 +42,8 @@ const HistorySectionB = () => {
           triggerElement="#scene-B-2"
           duration={200}
           triggerHook="onLeave"
-          indicators={true}>
+          // indicators={true}
+        >
           {(progress: number) => (
             <div className={s.cardsContainer}>
               <HistoryCard>
@@ -51,6 +53,7 @@ const HistorySectionB = () => {
                     width={1772}
                     height={1182}
                     layout="responsive"
+                    priority
                   />
                 </div>
                 <HistoryCaption>
@@ -75,6 +78,7 @@ const HistorySectionB = () => {
                       width={1772}
                       height={1182}
                       layout="responsive"
+                      priority
                     />
                   </div>
                   <HistoryCaption>

@@ -1,0 +1,25 @@
+.root {
+  @apply pb-80;
+  & .title {
+    @apply max-w-none;
+    & h2 {
+      @apply text-justify;
+    }
+  }
+}
+
+.cardInner {
+  /* @apply h-screen; */
+  @apply flex;
+}
+.cardCol {
+  @apply w-1/2;
+  @apply relative;
+}
+
+/* .imgContainer {
+  @apply w-full h-full;
+  & > div {
+    @apply w-full h-full;
+  }
+} */

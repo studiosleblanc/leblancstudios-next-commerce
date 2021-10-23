@@ -18,6 +18,7 @@ const HistorySectionA = () => {
             width={1762}
             height={1570}
             layout="responsive"
+            priority
           />
         </div>
       </HistoryCard>
