@@ -15,9 +15,12 @@ const CollectionGrid: FC<Props> = ({ products }) => {
   // console.log(products)
   return (
     <div className={s.root}>
-      {collection.map((item: CollectionItem) => (
+      {products.map((item: Product) => (
         <ProductItem key={item.name} item={item} />
       ))}
+      {/* {products.map(product => (
+        <h1 key={product.slug}>{product.name}</h1>
+      ))} */}
     </div>
   )
 }
