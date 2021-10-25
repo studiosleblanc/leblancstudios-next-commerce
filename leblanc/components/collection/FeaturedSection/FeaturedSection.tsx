@@ -29,7 +29,7 @@ const FeaturedSection: FC = () => {
       </div>
       <div className={s.rightCol}>
         <div className={s.productCardContainer}>
-          <ProductItem item={sigleSock} asCard />
+          {/* <ProductItem item={sigleSock} asCard /> */}
         </div>
         <div className={s.bgContainer}>
           <Image
