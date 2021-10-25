@@ -1,6 +1,10 @@
 export type ProductImage = {
   url: string
   alt?: string
+  // Custom props
+  width?: number | string
+  height?: number | string
+  altText?: string
 }
 
 export type ProductPrice = {

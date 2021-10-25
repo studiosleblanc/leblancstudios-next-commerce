@@ -13,7 +13,7 @@ const mens: NavItem[] = [
     label: 'Shirts',
     handle: 'shirts',
     href: '/mens/shirts',
-    slug: 'shirts-mens',
+    slug: 'shirts-man-1',
   },
   {
     id: 't-Shirt-6e326d45s',
