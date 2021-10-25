@@ -7,7 +7,7 @@ import cn from 'classnames'
 import s from './Header.module.css'
 import { CartIcon } from '@leblanc/icons'
 import { homeNavigation } from '@leblanc/data/navigation'
-import { useBreadcrumbs } from '@leblanc/hooks/useBreadcrumbs'
+import { usePathItems } from '@leblanc/hooks/usePathItems'
 import { GoChevronRight } from 'react-icons/go'
 import { VscChevronRight } from 'react-icons/vsc'
 import ElPuebloCuestiona from '@leblanc/svg/ElPuebloCuestiona'
@@ -21,8 +21,10 @@ const Header: FC<Props> = ({ history }) => {
   const router = useRouter()
   const { asPath } = router
   const { theme, setTheme } = useTheme()
-  const breadcrumbs = useBreadcrumbs(asPath)
+  const breadcrumbs = usePathItems(asPath)
   const positionItems = usePositionText(breadcrumbs)
+
+  console.log(breadcrumbs)
 
   const getFitFontStyles = (items: string[] | React.ReactNode[]) => {
     let length: number = 0

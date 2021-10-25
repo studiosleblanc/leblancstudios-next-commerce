@@ -1,7 +1,7 @@
 import { homeNavigation, NavItem } from '@leblanc/data/navigation'
 import { useState, useEffect } from 'react'
 
-export function useBreadcrumbs(asPath: string) {
+export function usePathItems(asPath: string) {
   const [pathItems, setPathItems] = useState<string[]>([])
   const [navItems, setNavItems] = useState<NavItem[]>([])
 
