@@ -119,7 +119,7 @@ const Header: FC<Props> = ({ history }) => {
                     .find(i => i.handle === breadcrumbs[0].handle)
                     ?.childs?.find(child => child.handle === breadcrumbs[1].handle)
                     ?.childs?.map(navItem => (
-                      <li>
+                      <li key={navItem.id}>
                         {navItem.href ? (
                           <Link href={navItem.href}>
                             <a>{navItem.label}</a>
@@ -133,7 +133,7 @@ const Header: FC<Props> = ({ history }) => {
                   homeNavigation
                     .find(i => i.handle === breadcrumbs[0].handle)
                     ?.childs?.map(navItem => (
-                      <li>
+                      <li key={navItem.id}>
                         {navItem.href ? (
                           <Link href={navItem.href}>
                             <a>{navItem.abbr ? navItem.abbr : navItem.label}</a>
