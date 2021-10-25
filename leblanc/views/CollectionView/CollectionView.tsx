@@ -69,12 +69,12 @@ export default function CollectionView({ categories, brands }: SearchPropsType) 
 
   return (
     <MainLayout>
-      {isLoading && <h1 className="text-center py-20 text-4xl">Loading...</h1>}
+      {isLoading && <h1 className="text-center py-20 text-4xl block">Loading...</h1>}
       {!isLoading &&
         (data?.found ? (
           <CollectionGrid products={data?.products || []} />
         ) : (
-          <h1 className="text-center py-20 text-2xl">Collection Empty</h1>
+          <h1 className="text-center py-20 text-2xl block">Collection Empty</h1>
         ))}
       <FeaturedSection />
     </MainLayout>
