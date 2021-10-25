@@ -10,6 +10,7 @@ export type NavItem = {
   abbr?: string
   href?: string
   childs?: NavItem[]
+  slug?: string
 }
 
 export const homeNavigation: NavItem[] = [
