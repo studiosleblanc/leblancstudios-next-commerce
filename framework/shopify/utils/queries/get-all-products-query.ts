@@ -42,12 +42,7 @@ const getAllProductsQuery = /* GraphQL */ `
     $sortKey: ProductSortKeys = RELEVANCE
     $reverse: Boolean = false
   ) {
-    products(
-      first: $first
-      sortKey: $sortKey
-      reverse: $reverse
-      query: $query
-    ) {
+    products(first: $first, sortKey: $sortKey, reverse: $reverse, query: $query) {
       ...productConnection
     }
   }

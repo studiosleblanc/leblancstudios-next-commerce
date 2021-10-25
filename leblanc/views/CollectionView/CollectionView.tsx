@@ -29,45 +29,53 @@ import {
 } from '@lib/search'
 import { CollectionGrid } from '@leblanc/components/collection'
 import { FeaturedSection } from '@leblanc/components/collection'
+import { usePathItems } from '@leblanc/hooks/usePathItems'
 
 export default function CollectionView({ categories, brands }: SearchPropsType) {
   const [activeFilter, setActiveFilter] = useState('')
   const [toggleFilter, setToggleFilter] = useState(false)
 
+  // console.log(categories)
+
   const router = useRouter()
   const { asPath, locale } = router
-  const { q, sort } = router.query
+  const pathItems = usePathItems(asPath)
+  const collection = pathItems[pathItems.length - 1]
+  // const { q, sort } = router.query
   // `q` can be included but because categories and designers can't be searched
   // in the same way of products, it's better to ignore the search input if one
   // of those is selected
-  const query = filterQuery({ sort })
+  // const query = filterQuery({ sort })
 
-  const { pathname, category, brand } = useSearchMeta(asPath)
-  const activeCategory = categories.find((cat: any) => cat.slug === category)
-  const activeBrand = brands.find(
-    (b: any) => getSlug(b.node.path) === `brands/${brand}`
-  )?.node
+  // console.log(pathItems)
+  // console.log(collection)
 
-  const { data } = useSearch({
-    search: typeof q === 'string' ? q : '',
-    categoryId: activeCategory?.id,
-    brandId: (activeBrand as any)?.entityId,
-    sort: typeof sort === 'string' ? sort : '',
+  // const { pathname, category, brand } = useSearchMeta(asPath)
+
+  const activeCollection = categories.find(
+    (cat: any) => cat.slug === collection?.slug
+  )
+  // const activeBrand = brands.find(
+  //   (b: any) => getSlug(b.node.path) === `brands/${brand}`
+  // )?.node
+
+  const { data, isLoading } = useSearch({
+    // search: typeof q === 'string' ? q : '',
+    categoryId: activeCollection?.id,
+    // brandId: (activeBrand as any)?.entityId,
+    // sort: typeof sort === 'string' ? sort : '',
     locale,
   })
 
-  const handleClick = (event: any, filter: string) => {
-    if (filter !== activeFilter) {
-      setToggleFilter(true)
-    } else {
-      setToggleFilter(!toggleFilter)
-    }
-    setActiveFilter(filter)
-  }
-
   return (
     <MainLayout>
-      <CollectionGrid products={data.products} />
+      {isLoading && <h1 className="text-center py-20 text-4xl">Loading...</h1>}
+      {!isLoading &&
+        (data?.found ? (
+          <CollectionGrid products={data?.products || []} />
+        ) : (
+          <h1 className="text-center py-20 text-2xl">Collection Empty</h1>
+        ))}
       <FeaturedSection />
     </MainLayout>
   )
