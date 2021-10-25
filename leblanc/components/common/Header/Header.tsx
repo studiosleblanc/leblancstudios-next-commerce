@@ -24,8 +24,6 @@ const Header: FC<Props> = ({ history }) => {
   const breadcrumbs = usePathItems(asPath)
   const positionItems = usePositionText(breadcrumbs)
 
-  console.log(breadcrumbs)
-
   const getFitFontStyles = (items: string[] | React.ReactNode[]) => {
     let length: number = 0
     items.forEach(i => {
