@@ -34,7 +34,7 @@ const normalizeProductOption = ({
     __typename: 'MultipleChoiceOption',
     id,
     displayName: displayName.toLowerCase(),
-    values: values.map((value) => {
+    values: values.map(value => {
       let output: any = {
         label: value,
       }
@@ -53,7 +53,7 @@ const normalizeProductOption = ({
 }
 
 const normalizeProductImages = ({ edges }: ImageConnection) =>
-  edges?.map(({ node: { originalSrc: url, ...rest } }) => ({
+  edges?.map(({ node: { transformedSrc: url, ...rest } }) => ({
     url,
     ...rest,
   }))
@@ -119,8 +119,8 @@ export function normalizeProduct({
     variants: variants ? normalizeProductVariants(variants) : [],
     options: options
       ? options
-          .filter((o) => o.name !== 'Title') // By default Shopify adds a 'Title' name when there's only one option. We don't need it. https://community.shopify.com/c/Shopify-APIs-SDKs/Adding-new-product-variant-is-automatically-adding-quot-Default/td-p/358095
-          .map((o) => normalizeProductOption(o))
+          .filter(o => o.name !== 'Title') // By default Shopify adds a 'Title' name when there's only one option. We don't need it. https://community.shopify.com/c/Shopify-APIs-SDKs/Adding-new-product-variant-is-automatically-adding-quot-Default/td-p/358095
+          .map(o => normalizeProductOption(o))
       : [],
     ...(description && { description }),
     ...(descriptionHtml && { descriptionHtml }),
@@ -161,7 +161,7 @@ function normalizeLineItem({
       sku: variant?.sku ?? '',
       name: variant?.title!,
       image: {
-        url: variant?.image?.originalSrc || '/product-img-placeholder.svg',
+        url: variant?.image?.transformedSrc || '/product-img-placeholder.svg',
       },
       requiresShipping: variant?.requiresShipping ?? false,
       price: variant?.priceV2?.amount,
@@ -183,7 +183,7 @@ export const normalizePage = (
 })
 
 export const normalizePages = (edges: PageEdge[], locale?: string): Page[] =>
-  edges?.map((edge) => normalizePage(edge.node, locale))
+  edges?.map(edge => normalizePage(edge.node, locale))
 
 export const normalizeCategory = ({
   title: name,

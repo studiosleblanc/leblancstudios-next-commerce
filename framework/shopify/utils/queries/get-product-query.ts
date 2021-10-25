@@ -58,7 +58,7 @@ const getProductQuery = /* GraphQL */ `
         }
         edges {
           node {
-            originalSrc
+            transformedSrc(maxWidth: 1920)
             altText
             width
             height
