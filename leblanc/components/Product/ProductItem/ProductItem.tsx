@@ -2,24 +2,32 @@ import React, { FC } from 'react'
 import cn from 'classnames'
 import Image from 'next/image'
 import s from './ProductItem.module.css'
+import usePrice from '@framework/product/use-price'
 import type { CollectionItem } from '@leblanc/data/collection'
 import { Product } from '@commerce/types/product'
 
+const placeholderImg = '/product-img-placeholder.svg'
 interface Props {
   item: Product
   asCard?: boolean
 }
 
 const ProductItem: FC<Props> = ({ item, asCard = false }) => {
+  const { price } = usePrice({
+    amount: item.price.value,
+    baseAmount: item.price.retailPrice,
+    currencyCode: item.price.currencyCode!,
+  })
+
   return (
     <div className={cn(s.item, { [s.asCard]: asCard })} key={item.name}>
       <div className={s.imageContainer}>
-        {item.images && (
+        {item?.images && (
           <Image
             quality="85"
-            src={item.images[0].url}
-            width={item.images[0].width}
-            height={item.images[0].height}
+            src={item.images[0]?.url || placeholderImg}
+            width={item.images[0]?.width || 800}
+            height={item.images[0]?.height || 800}
             objectFit="cover"
             layout="responsive"
           />
@@ -36,7 +44,7 @@ const ProductItem: FC<Props> = ({ item, asCard = false }) => {
                   style={{ backgroundColor: color }}></div>
               ))} */}
           </div>
-          <span className={s.price}>price</span>
+          <span className={s.price}>{price}</span>
           <span>{item.name}</span>
           <span>Available Sizes:</span>
           <ul className={s.sizes}>

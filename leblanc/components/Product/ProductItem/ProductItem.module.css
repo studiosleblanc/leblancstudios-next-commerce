@@ -1,5 +1,7 @@
 .item {
   @apply w-1/3 relative;
+  @apply select-none;
+
   &:nth-child(3n + 0) {
     @apply text-white;
   }
@@ -15,6 +17,9 @@
   @apply w-full h-full;
   & > div {
     @apply w-full h-full;
+  }
+  & > img {
+    user-drag: none;
   }
 }
 
