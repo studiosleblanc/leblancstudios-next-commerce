@@ -4,7 +4,7 @@
 
 .title {
   @apply inline-block;
-  @apply bg-lbsGreen border-[1px] border-secondary;
+  @apply bg-lbsGreen border-[1px] border-secondary border-solid;
   @apply px-20 py-12;
   @apply text-6xl uppercase font-light;
 }

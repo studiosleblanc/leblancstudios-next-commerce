@@ -1,7 +1,7 @@
 .switch {
   @apply absolute top-1/2 right-16;
   @apply cursor-pointer w-40 h-20 rounded-full p-2;
-  @apply border-[1px] border-black;
+  @apply border-[1px] border-black border-solid;
   &.on {
   }
   &.off {

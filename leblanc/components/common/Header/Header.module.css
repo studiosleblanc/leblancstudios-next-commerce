@@ -1,11 +1,11 @@
 .root {
   @apply w-full pr-12;
-  @apply border-b-[1px] border-black;
+  @apply border-b-[1px] border-black border-solid;
 }
 
 .topRow {
   @apply flex justify-between items-center;
-  @apply w-full px-6 pl-8 pt-10 pb-3 border-b-[1px] border-black;
+  @apply w-full px-6 pl-8 pt-10 pb-3 border-b-[1px] border-black border-solid;
   & .toolbar {
     @apply flex items-end text-2xl font-bold;
     & > li:not(first-child) {
@@ -37,7 +37,7 @@
 /* navbar */
 .navbar {
   @apply flex bg-aqua dark:bg-lbsDarkGray;
-  @apply w-full border-[1px] border-black;
+  @apply w-full border-[1px] border-black border-solid;
 }
 
 .breadcrumbs {
@@ -57,7 +57,7 @@
   @apply flex items-center justify-center;
   @apply bg-lbsGreen px-[4.5rem];
   @apply text-6xl uppercase font-light;
-  @apply border-r-[1px] border-black;
+  @apply border-r-[1px] border-black border-solid;
   @apply whitespace-nowrap cursor-default;
   & span {
     @apply mx-1;
@@ -73,7 +73,7 @@
 }
 .navigationTopBox {
   @apply py-4;
-  @apply border-l-[1px] border-b-[1px] border-black;
+  @apply border-l-[1px] border-b-[1px] border-black border-solid;
 }
 .navigationBottom {
   @apply pl-10;
@@ -96,6 +96,7 @@
 
 .cartIcon {
 }
+
 /* DARK MODE */
 :global(.dark) {
   & .navbar {

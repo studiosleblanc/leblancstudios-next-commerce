@@ -20,7 +20,7 @@
 
 .rte {
   @apply py-16 px-16 bg-lbsGreen;
-  @apply border-b-[1px] border-black;
+  @apply border-b-[1px] border-black border-solid;
   & > p {
     @apply text-2xl pb-10 tracking-widest;
   }

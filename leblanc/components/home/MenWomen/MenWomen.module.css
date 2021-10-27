@@ -16,7 +16,7 @@
       filter: none;
     }
     & .tooltip {
-      @apply text-black  border-black;
+      @apply text-black  border-black border-solid;
     }
   }
 }
@@ -31,13 +31,13 @@
   @apply absolute bottom-12 w-full;
 }
 .headerCaption {
-  @apply border-t-2 border-secondary pt-2 pr-4;
+  @apply border-t-2 border-secondary border-solid pt-2 pr-4;
   @apply text-right uppercase text-sm whitespace-nowrap;
   width: 357px;
   max-width: 50%;
 }
 .footerCaption {
-  @apply border-t-2 border-secondary pt-4;
+  @apply border-t-2 border-secondary border-solid pt-4;
   @apply text-right text-lg uppercase;
   width: 100px;
 }

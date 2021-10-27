@@ -1,5 +1,5 @@
 .root {
-  @apply absolute text-white z-10 font-bold border-white;
+  @apply absolute text-white z-10 font-bold border-white border-solid;
   @apply flex flex-col;
   @apply transition-all duration-300 ease-in;
   & > span {

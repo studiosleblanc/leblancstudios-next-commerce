@@ -1,6 +1,6 @@
 .root {
   @apply flex;
-  @apply border-t-[1px] border-black;
+  @apply border-t-[1px] border-black border-solid;
 }
 
 .imageContainer {

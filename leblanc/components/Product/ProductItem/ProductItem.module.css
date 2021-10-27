@@ -49,7 +49,7 @@
   @apply mb-2;
 }
 .swatch {
-  @apply w-10 h-10 border-[1px] border-black;
+  @apply w-10 h-10 border-[1px] border-black border-solid;
   @apply mb-5;
 }
 
@@ -57,7 +57,7 @@
   @apply flex justify-end;
 }
 .squeeze {
-  @apply w-[132px] pt-1 border-t-[1px] border-black;
+  @apply w-[132px] pt-1 border-t-[1px] border-black border-solid;
   @apply text-lbsGreen font-light;
 }
 

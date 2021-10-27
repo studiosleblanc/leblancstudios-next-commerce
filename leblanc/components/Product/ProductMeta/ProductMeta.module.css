@@ -3,7 +3,7 @@
 }
 
 .card {
-  @apply w-full border-[1px] border-secondary py-10;
+  @apply w-full border-[1px] border-secondary border-solid py-10;
 }
 
 .details {
@@ -19,7 +19,7 @@
 }
 
 .colorSwatch {
-  @apply w-11 h-11 border-[1px] border-secondary;
+  @apply w-11 h-11 border-[1px] border-secondary border-solid;
   @apply bg-yellow-900;
   &:not(:last-child) {
     @apply mr-4;
@@ -82,7 +82,7 @@
 }
 .fullButton {
   @apply w-full py-2;
-  @apply border-t-[1px] border-b-[1px] border-secondary;
+  @apply border-t-[1px] border-b-[1px] border-secondary border-solid;
   @apply text-center text-2xl uppercase;
 }
 .or {
