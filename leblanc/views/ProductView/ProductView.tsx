@@ -19,7 +19,7 @@ const ProductView: FC<Props> = ({ product, relatedProducts }) => {
     <MainLayout>
       <div className={s.gridRow}>
         <div className={s.imageCol}>
-          <ProductImage />
+          <ProductImage images={product.images} />
         </div>
         <div className={s.metaCol}>
           <ProductMeta />
@@ -27,18 +27,8 @@ const ProductView: FC<Props> = ({ product, relatedProducts }) => {
       </div>
       <ProductSlider />
       <div className={s.descriptionRow}>
-        <h2>Black World Mass Observers T-Shirt</h2>
-        <p>
-          World Mass Observers t-shirt belongs to our latest collection No Medium
-          Inserted F/W 2022, presented at the Dominican Republic. It features and
-          reassambles the story of LEBLANCSTUDIOS a movement founded by two kids in
-          the 2014. The Mass-Observation project of United Kingdom which conducted a
-          series of human behaviour at work, on the street and many public spaces. We
-          use this graphic as an analogy of how nowadays we are being watched and
-          tracked by big corporations, same as The Mass-Observation Project did in
-          the 1937-1960 with paid investigators and anonymously recording
-          conversations.
-        </p>
+        <h2>{product.name}</h2>
+        <p>{product.description}</p>
       </div>
       <RelatedProducts />
     </MainLayout>
