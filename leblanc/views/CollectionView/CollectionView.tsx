@@ -69,7 +69,13 @@ export default function CollectionView({ categories, brands }: SearchPropsType) 
 
   return (
     <MainLayout>
-      {isLoading && <h1 className="text-center py-20 text-4xl block">Loading...</h1>}
+      {isLoading && (
+        <h1
+          className="text-center py-20 text-4xl block
+      ">
+          Loading...
+        </h1>
+      )}
       {!isLoading &&
         (data?.found ? (
           <CollectionGrid products={data?.products || []} />
