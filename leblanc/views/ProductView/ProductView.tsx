@@ -30,7 +30,7 @@ const ProductView: FC<Props> = ({ product, relatedProducts }) => {
         <h2>{product.name}</h2>
         <p>{product.description}</p>
       </div>
-      <RelatedProducts />
+      <RelatedProducts relatedProducts={relatedProducts} />
     </MainLayout>
   )
 }
