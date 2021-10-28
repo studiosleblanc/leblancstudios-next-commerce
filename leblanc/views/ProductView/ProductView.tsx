@@ -25,7 +25,7 @@ const ProductView: FC<Props> = ({ product, relatedProducts }) => {
           <ProductMeta />
         </div>
       </div>
-      <ProductSlider />
+      <ProductSlider images={product.images} />
       <div className={s.descriptionRow}>
         <h2>{product.name}</h2>
         <p>{product.description}</p>
