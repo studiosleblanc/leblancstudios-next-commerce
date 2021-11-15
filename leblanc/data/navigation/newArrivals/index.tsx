@@ -25,6 +25,7 @@ const newArrivals: NavItem[] = [
     label: 'All',
     handle: 'all',
     href: '/new-arrivals/all',
+    slug: 'new-arrivals-all'
   },
   {
     id: 'A-Necessary-Risk-x-Gus-Pena-da89',
