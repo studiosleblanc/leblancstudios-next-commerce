@@ -22,7 +22,7 @@ const ProductView: FC<Props> = ({ product, relatedProducts }) => {
           <ProductImage images={product.images} />
         </div>
         <div className={s.metaCol}>
-          <ProductMeta />
+          <ProductMeta product={product} />
         </div>
       </div>
       <ProductSlider images={product.images} />

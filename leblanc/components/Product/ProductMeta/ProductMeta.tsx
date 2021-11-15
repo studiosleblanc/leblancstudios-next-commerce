@@ -1,19 +1,31 @@
-import React from 'react'
+import React, { FC } from 'react'
 import s from './ProductMeta.module.css'
 import { QuantitySelector } from '@leblanc/components/ui'
 import StyleWith from '../StyleWith'
+import type { Product } from '@commerce/types/product'
+import usePrice from '@commerce/product/use-price'
 
-const ProductMeta = () => {
+interface Props {
+  product: Product
+}
+
+const ProductMeta: FC<Props> = ({ product }) => {
+  const { price } = usePrice({
+    amount: product.price.value,
+    baseAmount: product.price.retailPrice,
+    currencyCode: product.price.currencyCode!,
+  })
+
   return (
     <div className={s.root}>
       <div className={s.card}>
         <div className={s.details}>
-          <h3 className={s.price}>$175</h3>
+          <h3 className={s.price}>{price}</h3>
           <div className={s.colorsContainer}>
             <button className={s.colorSwatch}></button>
             <button className={s.colorSwatch}></button>
           </div>
-          <h1 className={s.title}>Black World Mass Observers T-Shirt</h1>
+          <h1 className={s.title}>{product.name}</h1>
           <p className={s.shortDescription}>
             LEBLANCSTUDIOS’ black t-shirt is made of combed cotton with an oversized
             fit. Screen printed graphic with an embroidery in Lissajous in green.
@@ -64,17 +76,7 @@ const ProductMeta = () => {
           <div className={s.or}>or</div>
           <button className={s.fullButton}>steal from us</button>
         </div>
-        <p className={s.fullDescription}>
-          World Mass Observers t-shirt belongs to our latest collection No Medium
-          Inserted F/W 2022, presented at the Dominican Republic. It features and
-          reassambles the story of LEBLANCSTUDIOS a movement founded by two kids in
-          the 2014. The Mass-Observation project of United Kingdom which conducted a
-          series of human behaviour at work, on the street and many public spaces. We
-          use this graphic as an analogy of how nowadays we are being watched and
-          tracked by big corporations, same as The Mass-Observation Project did in
-          the 1937-1960 with paid investigators and anonymously recording
-          conversations.
-        </p>
+        <p className={s.fullDescription}>{product.description}</p>
       </div>
       <StyleWith />
     </div>
