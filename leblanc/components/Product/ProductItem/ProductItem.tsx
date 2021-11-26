@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import Link from 'next/link'
 import cn from 'classnames'
 import Image from 'next/image'
 import s from './ProductItem.module.css'
@@ -21,18 +22,20 @@ const ProductItem: FC<Props> = ({ item, asCard = false }) => {
 
   return (
     <div className={cn(s.item, { [s.asCard]: asCard })} key={item.name}>
-      <div className={s.imageContainer}>
-        {item?.images && (
-          <Image
-            quality="85"
-            src={item.images[0]?.url || placeholderImg}
-            width={item.images[0]?.width || 800}
-            height={item.images[0]?.height || 800}
-            objectFit="cover"
-            layout="responsive"
-          />
-        )}
-      </div>
+      <Link href={`/product/${item.slug}`}>
+        <a className={s.imageContainer}>
+          {item?.images && (
+            <Image
+              quality="85"
+              src={item.images[0]?.url || placeholderImg}
+              width={item.images[0]?.width || 800}
+              height={item.images[0]?.height || 800}
+              objectFit="cover"
+              layout="responsive"
+            />
+          )}
+        </a>
+      </Link>
       <div className={s.details}>
         <div className={s.detailsContent}>
           <div className={s.colors}>
