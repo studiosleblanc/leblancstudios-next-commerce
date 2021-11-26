@@ -12,7 +12,7 @@ interface Props {
 const RelatedProducts: FC<Props> = ({ relatedProducts }) => {
   return (
     <div className={s.root}>
-      <div>
+      <div className={s.titleContainer}>
         <h3 className={s.title}>Accessories {'>'} Bucket Hats</h3>
       </div>
       <div className={s.productsContainer}>
