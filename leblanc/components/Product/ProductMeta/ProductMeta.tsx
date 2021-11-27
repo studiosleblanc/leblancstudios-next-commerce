@@ -1,15 +1,45 @@
-import React, { FC } from 'react'
+import React, { FC, useState, useEffect } from 'react'
 import s from './ProductMeta.module.css'
 import { QuantitySelector } from '@leblanc/components/ui'
+import { AddToCart } from '@leblanc/components/Product'
 import StyleWith from '../StyleWith'
 import type { Product } from '@commerce/types/product'
 import usePrice from '@commerce/product/use-price'
+import { useAddItem } from '@framework/cart'
+import {
+  getProductVariant,
+  selectDefaultOptionFromProduct,
+  SelectedOptions,
+} from '@components/product/helpers'
 
 interface Props {
   product: Product
 }
 
 const ProductMeta: FC<Props> = ({ product }) => {
+  const addItem = useAddItem()
+  const [loading, setLoading] = useState(false)
+  const [selectedOptions, setSelectedOptions] = useState<SelectedOptions>({})
+
+  useEffect(() => {
+    selectDefaultOptionFromProduct(product, setSelectedOptions)
+  }, [product])
+
+  const variant = getProductVariant(product, selectedOptions)
+  const addToCart = async () => {
+    // setLoading(true)
+    try {
+      await addItem({
+        productId: String(product.id),
+        variantId: String(variant ? variant.id : product.variants[0].id),
+      })
+      // setCartOpen(true)
+      // setLoading(false)
+    } catch (err) {
+      // setLoading(false)
+    }
+  }
+
   const { price } = usePrice({
     amount: product.price.value,
     baseAmount: product.price.retailPrice,
@@ -72,7 +102,14 @@ const ProductMeta: FC<Props> = ({ product }) => {
           </div>
         </div>
         <div className={s.buttonsContainer}>
-          <button className={s.fullButton}>add to bag</button>
+          {variant && (
+            <AddToCart
+              addToCart={addToCart}
+              variant={variant}
+              loading={loading}
+              text="add to bag"
+            />
+          )}
           <div className={s.or}>or</div>
           <button className={s.fullButton}>steal from us</button>
         </div>
