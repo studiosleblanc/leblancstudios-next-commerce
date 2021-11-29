@@ -39,30 +39,6 @@
   @apply pt-5 pb-6;
 }
 
-/* Sizes col */
-
-.sizesCol {
-  @apply flex flex-col justify-between;
-}
-.sizeTitle {
-  @apply text-xl font-bold mb-5;
-}
-
-.sizesContainer {
-  @apply list-none;
-  & > li {
-    @apply mb-6;
-  }
-}
-
-.sizeSwatch {
-  @apply text-lg font-bold uppercase;
-}
-
-.madeIn {
-  @apply pt-5;
-}
-
 /* Quantity col */
 
 .quantityCol {

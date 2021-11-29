@@ -1,8 +1,12 @@
 import React, { FC, useState, useEffect } from 'react'
 import s from './ProductMeta.module.css'
+// components
 import { QuantitySelector } from '@leblanc/components/ui'
-import { AddToCart } from '@leblanc/components/Product'
-import StyleWith from '../StyleWith'
+import {
+  AddToCart,
+  StyleWith,
+  ProductSizeSelector,
+} from '@leblanc/components/Product'
 import type { Product } from '@commerce/types/product'
 import usePrice from '@commerce/product/use-price'
 import { useAddItem } from '@framework/cart'
@@ -62,36 +66,7 @@ const ProductMeta: FC<Props> = ({ product }) => {
             fit. Screen printed graphic with an embroidery in Lissajous in green.
           </p>
           <div className={s.centerContainer}>
-            <div className={s.sizesCol}>
-              <div>
-                <h4 className={s.sizeTitle}>Select Size:</h4>
-                <ul className={s.sizesContainer}>
-                  <li>
-                    <button className={s.sizeSwatch}>xs</button>
-                  </li>
-                  <li>
-                    <button className={s.sizeSwatch}>s</button>
-                  </li>
-                  <li>
-                    <button className={s.sizeSwatch}>m</button>
-                  </li>
-                  <li>
-                    <button className={s.sizeSwatch}>l</button>
-                  </li>
-                  <li>
-                    <button className={s.sizeSwatch}>xl</button>
-                  </li>
-                  <li>
-                    <button className={s.sizeSwatch}>xxl</button>
-                  </li>
-                </ul>
-              </div>
-              <div className={s.madeIn}>
-                <p>
-                  Made In Portugal <br /> 100% Cotton
-                </p>
-              </div>
-            </div>
+            <ProductSizeSelector />
             <div className={s.quantityCol}>
               <div>
                 <QuantitySelector />
