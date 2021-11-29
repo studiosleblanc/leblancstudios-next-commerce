@@ -13,6 +13,7 @@ import { VscChevronRight } from 'react-icons/vsc'
 import ElPuebloCuestiona from '@leblanc/svg/ElPuebloCuestiona'
 import usePositionText from '@leblanc/hooks/usePositionText'
 import useCart from '@framework/cart/use-cart'
+import usePrice from '@commerce/product/use-price'
 
 interface Props {
   history?: boolean
@@ -39,6 +40,13 @@ const Header: FC<Props> = ({ history }) => {
       fontWeight: length > 14 ? 400 : 300,
     }
   }
+
+  // totalPrice
+  const { price: totalPrice } = usePrice({
+    amount: data?.lineItemsSubtotalPrice || 0,
+    baseAmount: data?.lineItemsSubtotalPrice || 0,
+    currencyCode: data?.currency.code!,
+  })
 
   return (
     <header className={s.root}>
@@ -73,7 +81,7 @@ const Header: FC<Props> = ({ history }) => {
               <CartIcon width={28} className={s.cartIcon} />
             </span>
             <span className={s.totalPrice}>
-              <span> $835.00</span>
+              <span> {totalPrice}</span>
             </span>
           </li>
         </ul>
