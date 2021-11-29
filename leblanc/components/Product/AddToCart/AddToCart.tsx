@@ -10,7 +10,21 @@ interface Props {
 }
 
 const AddToCart: FC<Props> = ({ addToCart, variant, loading, text }) => {
-  return <button className={s.root}>{text}</button>
+  return (
+    <>
+      {loading ? (
+        <span>loadding...</span>
+      ) : (
+        <button
+          onClick={addToCart}
+          aria-label="Add to Cart"
+          className={s.root}
+          disabled={variant?.availableForSale === false}>
+          {text}
+        </button>
+      )}
+    </>
+  )
 }
 
 export default AddToCart

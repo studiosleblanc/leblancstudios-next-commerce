@@ -18,7 +18,7 @@ interface Props {
 
 const ProductMeta: FC<Props> = ({ product }) => {
   const addItem = useAddItem()
-  const [loading, setLoading] = useState(false)
+  const [cartLoading, setCartLoading] = useState(false)
   const [selectedOptions, setSelectedOptions] = useState<SelectedOptions>({})
 
   useEffect(() => {
@@ -27,16 +27,17 @@ const ProductMeta: FC<Props> = ({ product }) => {
 
   const variant = getProductVariant(product, selectedOptions)
   const addToCart = async () => {
-    // setLoading(true)
+    setCartLoading(true)
     try {
       await addItem({
         productId: String(product.id),
         variantId: String(variant ? variant.id : product.variants[0].id),
       })
       // setCartOpen(true)
-      // setLoading(false)
+      setCartLoading(false)
     } catch (err) {
-      // setLoading(false)
+      setCartLoading(false)
+      console.error
     }
   }
 
@@ -106,7 +107,7 @@ const ProductMeta: FC<Props> = ({ product }) => {
             <AddToCart
               addToCart={addToCart}
               variant={variant}
-              loading={loading}
+              loading={cartLoading}
               text="add to bag"
             />
           )}
