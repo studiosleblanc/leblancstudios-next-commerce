@@ -15,9 +15,14 @@
 }
 
 .sizeSwatch {
-  @apply text-lg font-bold uppercase;
+  @apply text-lg font-bold uppercase pt-1 pb-1;
+  @apply min-w-[30px] text-left;
 }
 
 .madeIn {
   @apply pt-5;
+}
+
+.active {
+  @apply bg-gray-300;
 }

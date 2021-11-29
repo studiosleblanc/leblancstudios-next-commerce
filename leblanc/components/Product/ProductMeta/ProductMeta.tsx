@@ -51,6 +51,8 @@ const ProductMeta: FC<Props> = ({ product }) => {
     currencyCode: product.price.currencyCode!,
   })
 
+  console.log(selectedOptions)
+
   return (
     <div className={s.root}>
       <div className={s.card}>
@@ -66,7 +68,17 @@ const ProductMeta: FC<Props> = ({ product }) => {
             fit. Screen printed graphic with an embroidery in Lissajous in green.
           </p>
           <div className={s.centerContainer}>
-            <ProductSizeSelector />
+            {product.options?.map(opt => (
+              <>
+                {opt.displayName.includes('size') && (
+                  <ProductSizeSelector
+                    option={opt}
+                    selectedOptions={selectedOptions}
+                    setSelectedOptions={setSelectedOptions}
+                  />
+                )}
+              </>
+            ))}
             <div className={s.quantityCol}>
               <div>
                 <QuantitySelector />
