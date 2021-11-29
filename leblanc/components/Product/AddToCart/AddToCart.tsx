@@ -20,7 +20,7 @@ const AddToCart: FC<Props> = ({ addToCart, variant, loading, text }) => {
           aria-label="Add to Cart"
           className={s.root}
           disabled={variant?.availableForSale === false}>
-          {text}
+          {variant?.availableForSale === false ? 'Not Available' : text}
         </button>
       )}
     </>

@@ -12,6 +12,7 @@ import { GoChevronRight } from 'react-icons/go'
 import { VscChevronRight } from 'react-icons/vsc'
 import ElPuebloCuestiona from '@leblanc/svg/ElPuebloCuestiona'
 import usePositionText from '@leblanc/hooks/usePositionText'
+import useCart from '@framework/cart/use-cart'
 
 interface Props {
   history?: boolean
@@ -23,8 +24,10 @@ const Header: FC<Props> = ({ history }) => {
   const { theme, setTheme } = useTheme()
   const breadcrumbs = usePathItems(asPath)
   const positionItems = usePositionText(breadcrumbs)
+  const { data } = useCart()
 
-  console.log(breadcrumbs)
+  // console.log(breadcrumbs)
+  console.log(data)
 
   const getFitFontStyles = (items: string[] | React.ReactNode[]) => {
     let length: number = 0
@@ -62,7 +65,11 @@ const Header: FC<Props> = ({ history }) => {
           <li>My Account</li>
           <li className="flex">
             <span className="relative">
-              <span className={s.cartItemsCounter}>4</span>
+              <span className={s.cartItemsCounter}>
+                {data && data.lineItems && data.lineItems.length > 0
+                  ? data.lineItems.length
+                  : 0}
+              </span>
               <CartIcon width={28} className={s.cartIcon} />
             </span>
             <span className={s.totalPrice}>

@@ -96,7 +96,12 @@ const Layout: FC<Props> = ({
     href: `/search/${c.slug}`,
   }))
 
-  return <CommerceProvider locale={locale}>{children}</CommerceProvider>
+  return (
+    <CommerceProvider locale={locale}>
+      {children}
+      <SidebarUI />
+    </CommerceProvider>
+  )
 }
 
 export default Layout

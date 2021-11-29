@@ -124,7 +124,7 @@ function uiReducer(state: State, action: Action) {
   }
 }
 
-export const UIProvider: FC = (props) => {
+export const UIProvider: FC = props => {
   const [state, dispatch] = React.useReducer(uiReducer, initialState)
 
   const openSidebar = useCallback(
@@ -156,14 +156,8 @@ export const UIProvider: FC = (props) => {
     [dispatch]
   )
 
-  const openModal = useCallback(
-    () => dispatch({ type: 'OPEN_MODAL' }),
-    [dispatch]
-  )
-  const closeModal = useCallback(
-    () => dispatch({ type: 'CLOSE_MODAL' }),
-    [dispatch]
-  )
+  const openModal = useCallback(() => dispatch({ type: 'OPEN_MODAL' }), [dispatch])
+  const closeModal = useCallback(() => dispatch({ type: 'CLOSE_MODAL' }), [dispatch])
 
   const setUserAvatar = useCallback(
     (value: string) => dispatch({ type: 'SET_USER_AVATAR', value }),
@@ -211,6 +205,7 @@ export const useUI = () => {
 
 export const ManagedUIContext: FC = ({ children }) => (
   <UIProvider>
-    <ThemeProvider>{children}</ThemeProvider>
+    {/* <ThemeProvider>{children}</ThemeProvider> */}
+    {children}
   </UIProvider>
 )

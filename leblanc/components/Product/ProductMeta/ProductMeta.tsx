@@ -10,6 +10,7 @@ import {
 import type { Product } from '@commerce/types/product'
 import usePrice from '@commerce/product/use-price'
 import { useAddItem } from '@framework/cart'
+import { useUI } from '@components/ui'
 import {
   getProductVariant,
   selectDefaultOptionFromProduct,
@@ -22,6 +23,7 @@ interface Props {
 
 const ProductMeta: FC<Props> = ({ product }) => {
   const addItem = useAddItem()
+  const { openSidebar, setSidebarView } = useUI()
   const [cartLoading, setCartLoading] = useState(false)
   const [selectedOptions, setSelectedOptions] = useState<SelectedOptions>({})
 
@@ -37,11 +39,12 @@ const ProductMeta: FC<Props> = ({ product }) => {
         productId: String(product.id),
         variantId: String(variant ? variant.id : product.variants[0].id),
       })
-      // setCartOpen(true)
+      openSidebar()
+      setSidebarView('CART_VIEW')
       setCartLoading(false)
     } catch (err) {
       setCartLoading(false)
-      console.error
+      console.error(err)
     }
   }
 
@@ -51,7 +54,9 @@ const ProductMeta: FC<Props> = ({ product }) => {
     currencyCode: product.price.currencyCode!,
   })
 
-  console.log(selectedOptions)
+  const openMiniCart = () => {
+    openSidebar()
+  }
 
   return (
     <div className={s.root}>
@@ -69,7 +74,7 @@ const ProductMeta: FC<Props> = ({ product }) => {
           </p>
           <div className={s.centerContainer}>
             {product.options?.map(opt => (
-              <>
+              <React.Fragment key={opt.id}>
                 {opt.displayName.includes('size') && (
                   <ProductSizeSelector
                     option={opt}
@@ -77,7 +82,7 @@ const ProductMeta: FC<Props> = ({ product }) => {
                     setSelectedOptions={setSelectedOptions}
                   />
                 )}
-              </>
+              </React.Fragment>
             ))}
             <div className={s.quantityCol}>
               <div>
@@ -90,7 +95,12 @@ const ProductMeta: FC<Props> = ({ product }) => {
           </div>
         </div>
         <div className={s.buttonsContainer}>
-          {variant && (
+          <button
+            className="p-2 border-solid border-black border-2"
+            onClick={openMiniCart}>
+            open cart
+          </button>
+          {process.env.COMMERCE_CART_ENABLED && variant && (
             <AddToCart
               addToCart={addToCart}
               variant={variant}
