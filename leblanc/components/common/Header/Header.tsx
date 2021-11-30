@@ -17,10 +17,13 @@ import usePositionText from '@leblanc/hooks/usePositionText'
 import useCart from '@framework/cart/use-cart'
 import usePrice from '@commerce/product/use-price'
 import { useUI } from '@components/ui/context'
+import type { LineItem } from '@commerce/types/cart'
 
 interface Props {
   history?: boolean
 }
+
+const countItem = (count: number, item: LineItem) => count + item.quantity
 
 const Header: FC<Props> = ({ history }) => {
   const router = useRouter()
@@ -30,6 +33,8 @@ const Header: FC<Props> = ({ history }) => {
   const positionItems = usePositionText(breadcrumbs)
   const { toggleSidebar, closeSidebarIfPresent, openModal } = useUI()
   const { data } = useCart()
+
+  const itemsCount = data?.lineItems.reduce(countItem, 0) ?? 0
 
   // console.log(breadcrumbs)
   // console.log(data)
@@ -89,9 +94,7 @@ const Header: FC<Props> = ({ history }) => {
               aria-label="open cart">
               <span className="relative">
                 <span className={s.cartItemsCounter}>
-                  {data && data.lineItems && data.lineItems.length > 0
-                    ? data.lineItems.length
-                    : 0}
+                  {itemsCount > 0 ? itemsCount : 0}
                 </span>
                 <CartIcon width={28} className={s.cartIcon} />
               </span>
