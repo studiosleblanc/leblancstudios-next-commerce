@@ -6,6 +6,7 @@ import {
   AddToCart,
   StyleWith,
   ProductSizeSelector,
+  ProductColorSelector,
 } from '@leblanc/components/Product'
 import type { Product } from '@commerce/types/product'
 import usePrice from '@commerce/product/use-price'
@@ -65,10 +66,17 @@ const ProductMeta: FC<Props> = ({ product }) => {
       <div className={s.card}>
         <div className={s.details}>
           <h3 className={s.price}>{price}</h3>
-          <div className={s.colorsContainer}>
-            <button className={s.colorSwatch}></button>
-            <button className={s.colorSwatch}></button>
-          </div>
+          {product.options?.map(opt => (
+            <React.Fragment key={opt.id}>
+              {opt.displayName.includes('color') && (
+                <ProductColorSelector
+                  option={opt}
+                  selectedOptions={selectedOptions}
+                  setSelectedOptions={setSelectedOptions}
+                />
+              )}
+            </React.Fragment>
+          ))}
           <h1 className={s.title}>{product.name}</h1>
           <p className={s.shortDescription}>
             LEBLANCSTUDIOS’ black t-shirt is made of combed cotton with an oversized
