@@ -10,20 +10,21 @@ interface Props {
 }
 
 const AddToCart: FC<Props> = ({ addToCart, variant, loading, text }) => {
+  const disabled =
+    (loading || variant?.availableForSale === false) === false ? false : true
   return (
-    <>
-      {loading ? (
-        <span>loadding...</span>
-      ) : (
-        <button
-          onClick={addToCart}
-          aria-label="Add to Cart"
-          className={s.root}
-          disabled={variant?.availableForSale === false}>
-          {variant?.availableForSale === false ? 'Not Available' : text}
-        </button>
-      )}
-    </>
+    <button
+      onClick={addToCart}
+      aria-label="Add to Cart"
+      className={s.root}
+      disabled={disabled}>
+      {!loading
+        ? variant?.availableForSale === false
+          ? 'Not Available'
+          : text
+        : 'loading...'}
+      {}
+    </button>
   )
 }
 

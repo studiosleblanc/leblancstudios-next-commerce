@@ -3,4 +3,7 @@
   @apply border-t-[1px] border-b-[1px] border-secondary border-solid;
   @apply text-center text-2xl uppercase;
   @apply select-none;
+  &[disabled=''] {
+    @apply text-gray-500;
+  }
 }

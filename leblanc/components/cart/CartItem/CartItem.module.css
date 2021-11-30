@@ -1,0 +1,45 @@
+.root {
+  @apply flex flex-col py-4 text-white;
+}
+
+.root:first-child {
+  padding-top: 0;
+}
+
+.quantity {
+  appearance: textfield;
+  @apply w-8 border-accent-2 border mx-3 rounded text-center text-sm text-black;
+}
+
+.quantity::-webkit-outer-spin-button,
+.quantity::-webkit-inner-spin-button {
+  @apply appearance-none m-0;
+}
+
+.imageContainer {
+  @apply w-1/5 h-auto bg-violet relative overflow-hidden cursor-pointer z-0;
+}
+
+.productImage {
+  /* position: absolute; */
+  /* width: 100%; */
+  /* height: 100%; */
+  z-index: 1;
+}
+
+.productName {
+  @apply text-lg cursor-pointer pb-1 mb-2;
+  margin-top: -4px;
+}
+
+.optionsContainter {
+  @apply flex flex-col items-start pb-1;
+}
+
+.itemCol2 {
+  @apply flex-1 flex flex-col text-lg pt-[1px];
+}
+
+.quantityContainer {
+  @apply mt-auto;
+}

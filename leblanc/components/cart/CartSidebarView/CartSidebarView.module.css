@@ -1,0 +1,27 @@
+.root {
+  @apply text-white;
+  min-height: 100vh;
+}
+
+.root.empty {
+  @apply bg-secondary text-secondary;
+}
+
+.lineItemsList {
+  @apply py-4 space-y-6 sm:py-0 sm:space-y-0 sm:divide-y sm:divide-accent-2 border-accent-2;
+}
+
+.bottomContainer {
+  @apply flex-shrink-0 px-6 py-6 sm:px-6 sticky z-20 bottom-0 w-full right-0 left-0 bg-accent-0 border-t text-lg;
+}
+
+.bottomData {
+  @apply pb-2;
+  & li {
+    @apply flex justify-between py-1 text-white;
+  }
+}
+
+.total {
+  @apply flex justify-between border-t border-accent-2 py-3 font-bold mb-2 text-white;
+}
