@@ -36,7 +36,7 @@ const Header: FC<Props> = ({ history }) => {
 
   const itemsCount = data?.lineItems.reduce(countItem, 0) ?? 0
 
-  // console.log(breadcrumbs)
+  console.log(breadcrumbs)
   // console.log(data)
 
   const getFitFontStyles = (items: string[] | React.ReactNode[]) => {

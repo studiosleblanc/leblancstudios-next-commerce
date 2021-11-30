@@ -37,5 +37,5 @@ const HistoryView = () => {
   )
 }
 
-HistoryView.theme = 'dark'
+// HistoryView.theme = 'dark'
 export default HistoryView
