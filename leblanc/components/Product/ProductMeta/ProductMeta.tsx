@@ -25,6 +25,7 @@ const ProductMeta: FC<Props> = ({ product }) => {
   const addItem = useAddItem()
   const { openSidebar, setSidebarView } = useUI()
   const [cartLoading, setCartLoading] = useState(false)
+  const [quantity, setQuantity] = useState<number>(1)
   const [selectedOptions, setSelectedOptions] = useState<SelectedOptions>({})
 
   useEffect(() => {
@@ -38,6 +39,7 @@ const ProductMeta: FC<Props> = ({ product }) => {
       await addItem({
         productId: String(product.id),
         variantId: String(variant ? variant.id : product.variants[0].id),
+        quantity,
       })
       openSidebar()
       setSidebarView('CART_VIEW')
@@ -86,7 +88,7 @@ const ProductMeta: FC<Props> = ({ product }) => {
             ))}
             <div className={s.quantityCol}>
               <div>
-                <QuantitySelector />
+                <QuantitySelector quantity={quantity} setQuantity={setQuantity} />
               </div>
               <div>
                 <button className={s.sizeGuideBtn}>Size Guide</button>
@@ -95,11 +97,6 @@ const ProductMeta: FC<Props> = ({ product }) => {
           </div>
         </div>
         <div className={s.buttonsContainer}>
-          <button
-            className="p-2 border-solid border-black border-2"
-            onClick={openMiniCart}>
-            open cart
-          </button>
           {process.env.COMMERCE_CART_ENABLED && variant && (
             <AddToCart
               addToCart={addToCart}
