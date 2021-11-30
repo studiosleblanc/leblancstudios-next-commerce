@@ -79,7 +79,7 @@ const Header: FC<Props> = ({ history }) => {
               className={s.darkModeButton}
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               aria-label="dark mode">
-              {theme === 'light' || undefined ? (
+              {theme === 'light' ? (
                 <IoSunnyOutline size={22} />
               ) : (
                 <IoMoonOutline size={20} />
