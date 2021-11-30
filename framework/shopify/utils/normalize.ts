@@ -161,7 +161,7 @@ function normalizeLineItem({
       sku: variant?.sku ?? '',
       name: variant?.title!,
       image: {
-        url: variant?.image?.transformedSrc || '/product-img-placeholder.svg',
+        url: variant?.image?.originalSrc || '/product-img-placeholder.svg',
       },
       requiresShipping: variant?.requiresShipping ?? false,
       price: variant?.priceV2?.amount,
