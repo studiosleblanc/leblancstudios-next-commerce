@@ -10,10 +10,13 @@ import { homeNavigation } from '@leblanc/data/navigation'
 import { usePathItems } from '@leblanc/hooks/usePathItems'
 import { GoChevronRight } from 'react-icons/go'
 import { VscChevronRight } from 'react-icons/vsc'
+import { IoSunnyOutline } from 'react-icons/io5'
+import { IoMoonOutline } from 'react-icons/io5'
 import ElPuebloCuestiona from '@leblanc/svg/ElPuebloCuestiona'
 import usePositionText from '@leblanc/hooks/usePositionText'
 import useCart from '@framework/cart/use-cart'
 import usePrice from '@commerce/product/use-price'
+import { useUI } from '@components/ui/context'
 
 interface Props {
   history?: boolean
@@ -25,10 +28,11 @@ const Header: FC<Props> = ({ history }) => {
   const { theme, setTheme } = useTheme()
   const breadcrumbs = usePathItems(asPath)
   const positionItems = usePositionText(breadcrumbs)
+  const { toggleSidebar, closeSidebarIfPresent, openModal } = useUI()
   const { data } = useCart()
 
   // console.log(breadcrumbs)
-  console.log(data)
+  // console.log(data)
 
   const getFitFontStyles = (items: string[] | React.ReactNode[]) => {
     let length: number = 0
@@ -66,23 +70,35 @@ const Header: FC<Props> = ({ history }) => {
         </Link>
         <ul className={s.toolbar}>
           <li>
-            <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-              darkmode
+            <button
+              className={s.darkModeButton}
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              aria-label="dark mode">
+              {theme === 'light' || undefined ? (
+                <IoSunnyOutline size={22} />
+              ) : (
+                <IoMoonOutline size={20} />
+              )}
             </button>
           </li>
-          <li>My Account</li>
-          <li className="flex">
-            <span className="relative">
-              <span className={s.cartItemsCounter}>
-                {data && data.lineItems && data.lineItems.length > 0
-                  ? data.lineItems.length
-                  : 0}
+          <li className="pb-1">My Account</li>
+          <li>
+            <button
+              className={s.cartButton}
+              onClick={toggleSidebar}
+              aria-label="open cart">
+              <span className="relative">
+                <span className={s.cartItemsCounter}>
+                  {data && data.lineItems && data.lineItems.length > 0
+                    ? data.lineItems.length
+                    : 0}
+                </span>
+                <CartIcon width={28} className={s.cartIcon} />
               </span>
-              <CartIcon width={28} className={s.cartIcon} />
-            </span>
-            <span className={s.totalPrice}>
-              <span> {totalPrice}</span>
-            </span>
+              <span className={s.totalPrice}>
+                <span> {totalPrice}</span>
+              </span>
+            </button>
           </li>
         </ul>
       </div>

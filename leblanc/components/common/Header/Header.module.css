@@ -5,7 +5,7 @@
 
 .topRow {
   @apply flex justify-between items-center;
-  @apply w-full px-6 pl-8 pt-10 pb-3 border-b-[1px] border-black border-solid;
+  @apply w-full px-6 pl-8 pt-10 pb-2 border-b-[1px] border-black border-solid;
   & .toolbar {
     @apply flex items-end text-2xl font-bold;
     & > li:not(first-child) {
@@ -24,7 +24,7 @@
   @apply flex;
 }
 .cartItemsCounter {
-  @apply absolute bottom-[2px] w-full text-center text-base;
+  @apply absolute left-0 bottom-[2px] w-full text-center text-base;
 }
 .totalPrice {
   @apply ml-4 flex items-end;
@@ -96,6 +96,13 @@
 
 .cartIcon {
 }
+.cartButton {
+  @apply flex font-bold p-1;
+}
+
+.darkModeButton {
+  @apply p-1 focus:ring-1 ring-black relative bottom-[-1px];
+}
 
 /* DARK MODE */
 :global(.dark) {
@@ -115,5 +122,8 @@
     & path {
       stroke: white;
     }
+  }
+  & .darkModeButton {
+    @apply ring-white;
   }
 }
