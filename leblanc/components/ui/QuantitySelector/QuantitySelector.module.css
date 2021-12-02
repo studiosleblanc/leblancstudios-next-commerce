@@ -15,3 +15,13 @@
   @apply font-bold text-2xl select-none;
   @apply border-l-[1px] border-r-[1px] border-secondary border-solid;
 }
+
+:global(.dark) {
+  & .button {
+    @apply border-primary;
+  }
+
+  & .counter {
+    @apply border-primary;
+  }
+}

@@ -25,3 +25,12 @@
     @apply w-full h-full;
   }
 }
+
+:global(.dark) {
+  & .title {
+    @apply border-primary text-secondary-2;
+  }
+  & .titleContainer {
+    @apply border-primary;
+  }
+}

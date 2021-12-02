@@ -62,3 +62,12 @@
   @apply px-10 pt-6 pb-1;
   @apply text-[1.5rem] text-justify;
 }
+
+:global(.dark) {
+  & .fullButton {
+    @apply border-primary;
+  }
+  & .card {
+    @apply border-primary bg-lbsDarkGray;
+  }
+}
