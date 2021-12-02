@@ -14,12 +14,6 @@
   }
 }
 
-.logoContainer {
-  & svg {
-    @apply mb-1;
-  }
-}
-
 .cartContainer {
   @apply flex;
 }

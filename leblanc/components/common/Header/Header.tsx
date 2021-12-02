@@ -18,6 +18,7 @@ import useCart from '@framework/cart/use-cart'
 import usePrice from '@commerce/product/use-price'
 import { useUI } from '@components/ui/context'
 import type { LineItem } from '@commerce/types/cart'
+import { HeaderLogos } from '@leblanc/components/common'
 
 interface Props {
   history?: boolean
@@ -36,7 +37,7 @@ const Header: FC<Props> = ({ history }) => {
 
   const itemsCount = data?.lineItems.reduce(countItem, 0) ?? 0
 
-  console.log(breadcrumbs)
+  // console.log(breadcrumbs)
   // console.log(data)
 
   const getFitFontStyles = (items: string[] | React.ReactNode[]) => {
@@ -60,19 +61,7 @@ const Header: FC<Props> = ({ history }) => {
   return (
     <header className={s.root}>
       <div className={s.topRow}>
-        <Link href="/">
-          <a className={s.logoContainer}>
-            {history && <ElPuebloCuestiona />}
-            {!history && (
-              <Image
-                width={308}
-                height={26}
-                layout="intrinsic"
-                src="/assets/images/remain_silent.png"
-              />
-            )}
-          </a>
-        </Link>
+        <HeaderLogos />
         <ul className={s.toolbar}>
           <li>
             <button
