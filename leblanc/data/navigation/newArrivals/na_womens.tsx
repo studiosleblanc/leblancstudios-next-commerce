@@ -17,9 +17,9 @@ const womens: NavItem[] = [
   },
   {
     id: 't-Shirt-DJHYTDFJYH',
-    label: 'T-Shirt',
-    handle: 't-shirt',
-    href: '/new-arrivals/womens/t-shirt',
+    label: 'T-Shirts',
+    handle: 't-shirts',
+    href: '/new-arrivals/womens/t-shirts',
     slug: 'new-arrivals-womens-t-shirts'
   },
   {
@@ -38,9 +38,9 @@ const womens: NavItem[] = [
   },
   {
     id: 'accesories-yku45d',
-    label: 'Accesories',
-    handle: 'accesories',
-    href: '/new-arrivals/womens/accesories',
+    label: 'Accessories',
+    handle: 'accessories',
+    href: '/new-arrivals/womens/accessories',
     slug: 'new-arrivals-womens-accessories'
   },
   {

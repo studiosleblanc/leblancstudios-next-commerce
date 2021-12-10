@@ -9,9 +9,9 @@ const ss21: NavItem[] = [
   },
   {
     id: 't-Shirt-b8g67566',
-    label: 'T-Shirt',
-    handle: 't-shirt',
-    href: '/new-arrivals/ss21/t-shirt',
+    label: 'T-Shirts',
+    handle: 't-shirts',
+    href: '/new-arrivals/ss21/t-shirts',
   },
   {
     id: 'trousers-98g745w',

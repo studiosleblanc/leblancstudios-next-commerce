@@ -10,9 +10,9 @@ const whiteNakedDuck: NavItem[] = [
   },
   {
     id: 't-Shirt-m098h879h9',
-    label: 'T-Shirt',
-    handle: 't-shirt',
-    href: '/new-arrivals/white-naked-duck/t-shirt',
+    label: 'T-Shirts',
+    handle: 't-shirts',
+    href: '/new-arrivals/white-naked-duck/t-shirts',
     slug: 'new-arrivals-white-naked-duck-t-shirts'
   },
   {

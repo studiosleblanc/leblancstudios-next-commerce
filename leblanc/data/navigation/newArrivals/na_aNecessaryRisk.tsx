@@ -10,9 +10,9 @@ const aNecessaryRisk: NavItem[] = [
   },
   {
     id: 't-Shirt-908h78f',
-    label: 'T-Shirt',
-    handle: 't-shirt',
-    href: '/new-arrivals/a-necessary-risk-x-gus-pena/t-shirt',
+    label: 'T-Shirts',
+    handle: 't-shirts',
+    href: '/new-arrivals/a-necessary-risk-x-gus-pena/t-shirts',
     slug: 'new-arrivals-a-necessary-risk-x-gus-pena-t-shirts'
   },
   {

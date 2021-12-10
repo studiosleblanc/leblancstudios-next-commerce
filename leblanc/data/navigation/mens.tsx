@@ -17,9 +17,9 @@ const mens: NavItem[] = [
   },
   {
     id: 't-Shirt-6e326d45s',
-    label: 'T-Shirt',
-    handle: 't-shirt',
-    href: '/mens/t-shirt',
+    label: 'T-Shirts',
+    handle: 't-shirts',
+    href: '/mens/t-shirts',
     slug: 'mens-t-shirts',
   },
   {
@@ -31,7 +31,7 @@ const mens: NavItem[] = [
   },
   {
     id: 'accessories-6r433sd',
-    label: 'Accesories',
+    label: 'Accessories',
     handle: 'accessories',
     href: '/mens/accessories',
     slug: 'mens-accessories',
