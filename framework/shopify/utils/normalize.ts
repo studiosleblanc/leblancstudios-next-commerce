@@ -15,6 +15,7 @@ import {
   Page as ShopifyPage,
   PageEdge,
   Collection,
+  MetafieldConnection,
 } from '../schema'
 import { colorMap } from '@lib/colors'
 
@@ -57,6 +58,15 @@ const normalizeProductImages = ({ edges }: ImageConnection) =>
     url,
     ...rest,
   }))
+
+const normalizeMetafields = ({edges}: MetafieldConnection) => 
+  edges?.map(({node: { id, key, namespace, value   }}) => ({
+    id,
+    key,
+    namespace,
+    value
+  }))
+
 
 const normalizeProductVariants = ({ edges }: ProductVariantConnection) => {
   return edges?.map(
@@ -112,6 +122,7 @@ export function normalizeProduct({
     id,
     name,
     vendor,
+    metafields: metafields ? normalizeMetafields(metafields) : [],
     path: `/${handle}`,
     slug: handle?.replace(/^\/+|\/+$/g, ''),
     price: money(priceRange?.minVariantPrice),
