@@ -64,16 +64,18 @@ const Header: FC<Props> = ({ history }) => {
         <HeaderLogos />
         <ul className={s.toolbar}>
           <li>
-            <button
-              className={s.darkModeButton}
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              aria-label="dark mode">
-              {theme === 'light' ? (
-                <IoSunnyOutline size={22} />
-              ) : (
-                <IoMoonOutline size={20} />
-              )}
-            </button>
+            {theme && (
+              <button
+                className={s.darkModeButton}
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                aria-label="dark mode">
+                {theme === 'light' ? (
+                  <IoSunnyOutline size={22} />
+                ) : (
+                  <IoMoonOutline size={20} />
+                )}
+              </button>
+            )}
           </li>
           <li className="pb-1">My Account</li>
           <li>
