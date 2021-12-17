@@ -17,17 +17,21 @@ import {
   selectDefaultOptionFromProduct,
   SelectedOptions,
 } from '@components/product/helpers'
+import useProductMetafields from '@leblanc/hooks/useProductMetafields'
 
 interface Props {
   product: Product
 }
 
 const ProductMeta: FC<Props> = ({ product }) => {
+
   const addItem = useAddItem()
   const { openSidebar, setSidebarView } = useUI()
   const [cartLoading, setCartLoading] = useState(false)
   const [quantity, setQuantity] = useState<number>(1)
   const [selectedOptions, setSelectedOptions] = useState<SelectedOptions>({})
+
+  const shortDescription = useProductMetafields(product.metafields, 'short_description')
 
   useEffect(() => {
     selectDefaultOptionFromProduct(product, setSelectedOptions)
@@ -79,8 +83,7 @@ const ProductMeta: FC<Props> = ({ product }) => {
           ))}
           <h1 className={s.title}>{product.name}</h1>
           <p className={s.shortDescription}>
-            LEBLANCSTUDIOS’ black t-shirt is made of combed cotton with an oversized
-            fit. Screen printed graphic with an embroidery in Lissajous in green.
+            {shortDescription}
           </p>
           <div className={s.centerContainer}>
             {product.options?.map(opt => (
