@@ -24,5 +24,13 @@
 }
 
 .active {
-  @apply bg-gray-300;
+  @apply border-solid border-2 border-secondary text-center;
+  margin-left: -5px;
+}
+
+
+:global(.dark) {
+  & .active {
+    @apply border-lbsGreen;
+  }
 }
