@@ -8,6 +8,7 @@ import {
   ProductSizeSelector,
   ProductColorSelector,
 } from '@leblanc/components/Product'
+import parse from 'html-react-parser'
 import type { Product } from '@commerce/types/product'
 import usePrice from '@commerce/product/use-price'
 import { useAddItem } from '@framework/cart'
@@ -24,6 +25,8 @@ interface Props {
 }
 
 const ProductMeta: FC<Props> = ({ product }) => {
+
+  console.log(product)
 
   const addItem = useAddItem()
   const { openSidebar, setSidebarView } = useUI()
@@ -119,7 +122,7 @@ const ProductMeta: FC<Props> = ({ product }) => {
           <div className={s.or}>or</div>
           <button className={s.fullButton}>steal from us</button>
         </div>
-        <p className={s.fullDescription}>{product.description}</p>
+        <div className={s.fullDescription}>{parse(product?.descriptionHtml || '')}</div>
       </div>
       <StyleWith />
     </div>
