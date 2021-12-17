@@ -5,6 +5,7 @@ import {
   ProductSlider,
   RelatedProducts,
 } from '@leblanc/components/Product'
+import parse from 'html-react-parser'
 import { MainLayout } from '@leblanc/layouts'
 import React, { FC } from 'react'
 import s from './ProductView.module.css'
@@ -28,7 +29,7 @@ const ProductView: FC<Props> = ({ product, relatedProducts }) => {
       <ProductSlider images={product.images} />
       <div className={s.descriptionRow}>
         <h2>{product.name}</h2>
-        <p>{product.description}</p>
+        <p>{parse(product?.descriptionHtml || '')}</p>
       </div>
       <RelatedProducts relatedProducts={relatedProducts} />
     </MainLayout>
