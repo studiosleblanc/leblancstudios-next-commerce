@@ -24,10 +24,10 @@
 }
 
 .active {
-  @apply border-solid border-2 border-secondary text-center;
+  @apply border-solid border-secondary text-center;
+  border-width: 1px;
   margin-left: -5px;
 }
-
 
 :global(.dark) {
   & .active {

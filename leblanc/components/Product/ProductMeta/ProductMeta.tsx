@@ -25,16 +25,16 @@ interface Props {
 }
 
 const ProductMeta: FC<Props> = ({ product }) => {
-
-  console.log(product)
-
   const addItem = useAddItem()
   const { openSidebar, setSidebarView } = useUI()
   const [cartLoading, setCartLoading] = useState(false)
   const [quantity, setQuantity] = useState<number>(1)
   const [selectedOptions, setSelectedOptions] = useState<SelectedOptions>({})
 
-  const shortDescription = useProductMetafields(product.metafields, 'short_description')
+  const shortDescription = useProductMetafields(
+    product.metafields,
+    'short_description'
+  )
 
   useEffect(() => {
     selectDefaultOptionFromProduct(product, setSelectedOptions)
@@ -85,9 +85,7 @@ const ProductMeta: FC<Props> = ({ product }) => {
             </React.Fragment>
           ))}
           <h1 className={s.title}>{product.name}</h1>
-          <p className={s.shortDescription}>
-            {shortDescription}
-          </p>
+          <p className={s.shortDescription}>{shortDescription}</p>
           <div className={s.centerContainer}>
             {product.options?.map(opt => (
               <React.Fragment key={opt.id}>
@@ -122,7 +120,9 @@ const ProductMeta: FC<Props> = ({ product }) => {
           <div className={s.or}>or</div>
           <button className={s.fullButton}>steal from us</button>
         </div>
-        <div className={s.fullDescription}>{parse(product?.descriptionHtml || '')}</div>
+        <div className={s.fullDescription}>
+          {parse(product?.descriptionHtml || '')}
+        </div>
       </div>
       <StyleWith />
     </div>
