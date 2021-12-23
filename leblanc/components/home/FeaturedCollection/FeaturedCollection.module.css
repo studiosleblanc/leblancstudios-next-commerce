@@ -51,7 +51,7 @@
 }
 
 .contentBody {
-  @apply text-5xl flex-grow;
+  @apply text-xl lg:text-2xl xl:text-4xl 3xl:text-5xl flex-grow;
   line-height: 2;
   & p {
     @apply mb-12;

@@ -62,5 +62,5 @@
 }
 
 .caption {
-  @apply absolute w-full bottom-14 text-center;
+  @apply absolute w-full bottom-6 text-center;
 }
