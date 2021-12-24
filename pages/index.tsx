@@ -102,4 +102,5 @@ export default function Home({
   )
 }
 
+Home.theme = 'light'
 Home.Layout = Layout
