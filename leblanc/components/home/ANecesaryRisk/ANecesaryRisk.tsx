@@ -26,7 +26,7 @@ const ANecesaryRisk: FC = () => {
         />
       </motion.div>
       <div className={s.topBar}>
-        <LogoHorizontal />
+        <LogoHorizontal className={s.logoLeblanc} />
         <LogoGusPena className={s.logoGus} />
       </div>
       <div className={s.card}>

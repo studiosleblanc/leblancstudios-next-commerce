@@ -10,6 +10,7 @@ const LogoGusPena: FC<LogoGusPenaProps> = props => {
       width="255"
       height="65"
       fill="none"
+      viewBox="0 0 255 65"
       xmlns="http://www.w3.org/2000/svg"
       {...props}>
       <path

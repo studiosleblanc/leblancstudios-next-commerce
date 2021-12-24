@@ -3,7 +3,7 @@
 }
 
 .column {
-  @apply w-1/2;
+  @apply w-full lg:w-1/2;
 }
 .card {
   @apply relative h-full;

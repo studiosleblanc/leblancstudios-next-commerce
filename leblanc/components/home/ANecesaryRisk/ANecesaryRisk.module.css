@@ -1,25 +1,29 @@
 .root {
-  @apply relative pt-10 pb-10;
+  @apply relative pt-16 md:pt-12 lg:pt-10 2xl:pt-10 pb-10;
 }
 /* Top Bar */
 .topBar {
   @apply absolute w-full flex justify-between items-center;
-  @apply py-6 px-12;
+  @apply py-4 sm:py-6 px-6 sm:px-12;
+  @apply top-0 xl:top-10;
+}
+.logoLeblanc {
+  @apply w-[150px] sm:w-[250px] md:w-[320px] lg:w-[346px];
 }
 .logoGus {
-  width: 255px;
+  @apply w-[85px] sm:w-[140px] md:w-[160px] lg:w-[255px];
   height: auto;
 }
 
 /* Card */
 .card {
-  @apply px-12;
+  @apply px-2 md:px-12;
 }
 
 .cardImageContainer {
 }
 .cardLogoContainer {
-  @apply absolute bottom-20 px-14;
+  @apply absolute bottom-10 lg:bottom-20 px-8 sm:px-14;
 }
 .cardLogo {
   @apply w-full max-w-full h-auto;
