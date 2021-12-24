@@ -39,24 +39,27 @@
   left: 6%;
 }
 .logoIntimo {
+  @apply w-[100px] md:w-[186px];
+  @apply h-auto md:h-[188px];
 }
 
 /* Content */
 .content {
-  @apply absolute top-0 -right-full w-full h-full bg-lbsGreen;
-  @apply border-secondary border-solid px-16 py-24;
+  @apply absolute top-0 right-0 lg:-right-full w-full h-full bg-lbsGreen;
+  @apply border-secondary border-solid;
+  @apply px-6 md:px-16 py-8 md:py-24;
   @apply flex-col;
   border-width: 1px;
   z-index: 1;
 }
 
 .contentBody {
-  @apply text-xl lg:text-2xl xl:text-4xl 3xl:text-5xl flex-grow;
+  @apply text-lg sm:text-3xl md:text-4xl lg:text-2xl xl:text-4xl 3xl:text-5xl flex-grow;
   line-height: 2;
   & p {
     @apply mb-12;
   }
 }
 .contentfooter {
-  @apply text-[1.75rem] pb-4;
+  @apply text-base sm:text-lg md:text-xl xl:text-2xl pb-4;
 }

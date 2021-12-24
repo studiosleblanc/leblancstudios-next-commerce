@@ -9,6 +9,7 @@ const LogoIntimo: FC<LogoIntimoProps> = props => {
     <svg
       width="186"
       height="188"
+      viewBox="0 0 186 188"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}>
