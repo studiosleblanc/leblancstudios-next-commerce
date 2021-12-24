@@ -4,6 +4,9 @@
 
 .column {
   @apply relative w-full lg:w-1/2;
+  &:last-child {
+    @apply hidden lg:block;
+  }
 }
 
 /* column Left */
