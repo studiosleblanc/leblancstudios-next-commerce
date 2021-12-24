@@ -69,7 +69,7 @@ const LBSFooter: FC<Props> = ({ pages }) => {
                 <a href="">E-Mail</a>
               </li>
             </ul>
-            <ul>
+            <ul className={s.social}>
               <li>
                 <a href="">Facebook</a>
               </li>
