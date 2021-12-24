@@ -1,5 +1,6 @@
 .root {
   @apply relative w-full bg-secondary;
+  @apply hidden lg:block;
 }
 
 .imageContainer {

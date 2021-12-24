@@ -3,7 +3,6 @@ import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 // import { ProductCard } from '@components/product'
 // import { Grid, Marquee, Hero } from '@components/ui'
 // import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
-import { useMediaQuery } from 'react-responsive'
 import { Layout, MainLayout } from '@leblanc/layouts'
 import {
   Hero,
@@ -46,7 +45,6 @@ export async function getStaticProps({
 export default function Home({
   products,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' })
   return (
     <>
       {/* <Grid variant="filled">
@@ -94,7 +92,7 @@ export default function Home({
       /> */}
 
       <MainLayout noHeader>
-        {isDesktop && <Hero />}
+        <Hero />
         <MenWomen />
         <ANecesaryRisk />
         <FeaturedCollection />
