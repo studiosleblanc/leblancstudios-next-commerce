@@ -2,7 +2,6 @@
   @apply absolute w-full;
   @apply bottom-[18%] left-0;
   @apply select-none;
-  @apply hidden lg:block;
   /* @apply relative; */
   /* top: -18%; */
 }
