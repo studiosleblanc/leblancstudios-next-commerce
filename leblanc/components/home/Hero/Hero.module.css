@@ -1,5 +1,5 @@
 .root {
-  @apply relative min-h-screen w-full bg-secondary;
+  @apply relative w-full bg-secondary;
 }
 
 .imageContainer {

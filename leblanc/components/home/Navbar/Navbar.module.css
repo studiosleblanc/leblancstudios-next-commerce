@@ -2,13 +2,14 @@
   @apply absolute w-full;
   @apply bottom-[18%] left-0;
   @apply select-none;
+  @apply hidden lg:block;
   /* @apply relative; */
   /* top: -18%; */
 }
 
 .navbar {
   @apply inline-block relative;
-  @apply min-w-[60%] ml-[20%];
+  @apply min-w-[70%] xl:min-w-[60%] ml-[18%] xl:ml-[20%];
 }
 
 .topRow {
