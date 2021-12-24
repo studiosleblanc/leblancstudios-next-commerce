@@ -49,6 +49,7 @@
     "react-icons": "^4.2.0",
     "react-intersection-observer": "^8.32.0",
     "react-merge-refs": "^1.1.0",
+    "react-responsive": "^9.0.0-beta.5",
     "react-scrollmagic": "^2.3.0",
     "react-sticky-el": "^2.0.9",
     "react-textfit": "^1.1.1",
