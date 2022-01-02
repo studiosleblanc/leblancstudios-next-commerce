@@ -48,7 +48,7 @@ const ProductItem: FC<Props> = ({ item, asCard = false }) => {
               ))} */}
           </div>
           <span className={s.price}>{price}</span>
-          <span>{item.name}</span>
+          <span>common name</span>
           <span>Available Sizes:</span>
           <ul className={s.sizes}>
             {/* {item.sizes.map(size => (
@@ -60,7 +60,7 @@ const ProductItem: FC<Props> = ({ item, asCard = false }) => {
           <div className={s.squeeze}>Squeeze Out!</div>
         </div>
       </div>
-      <div className={s.caption}>item collection</div>
+      <div className={s.caption}>{item.name}</div>
     </div>
   )
 }
