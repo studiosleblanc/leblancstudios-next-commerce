@@ -31,7 +31,7 @@ const Sidebar: FC<SidebarProps> = ({ children, onClose }) => {
     <div className={cn(s.root)}>
       <div className="absolute inset-0 overflow-hidden">
         <div className={s.backdrop} onClick={onClose} />
-        <section className="absolute inset-y-0 right-0 max-w-full flex outline-none pl-10">
+        <section className={s.sidebarOuter}>
           <div className={s.sidebarContainer}>
             <div className={s.sidebar} ref={ref}>
               {children}

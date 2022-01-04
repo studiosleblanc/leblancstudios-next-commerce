@@ -2,6 +2,10 @@
   @apply fixed inset-0 h-full z-50 box-border;
 }
 
+.sidebarOuter {
+  @apply absolute inset-y-0 right-0 max-w-full w-full md:w-auto flex outline-none md:pl-10;
+}
+
 .sidebarContainer {
   @apply h-full w-full md:w-screen md:max-w-[380px];
 }
