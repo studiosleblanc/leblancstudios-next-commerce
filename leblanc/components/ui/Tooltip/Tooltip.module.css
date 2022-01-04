@@ -4,7 +4,7 @@
   @apply transition-all duration-300 ease-in;
   & > span {
     @apply block w-full px-1 tracking-wider;
-    @apply mt-3;
+    @apply mt-2 md:mt-3;
   }
 }
 .tooltipLine {
@@ -16,4 +16,5 @@
   @apply cursor-default whitespace-nowrap;
   @apply overflow-hidden;
   @apply h-[12px];
+  @apply text-xs md:text-base;
 }

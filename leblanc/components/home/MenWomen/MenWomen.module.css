@@ -25,19 +25,20 @@
 }
 .cardHeader {
   @apply absolute w-full;
-  top: 4%;
+  @apply top-[1.8%] md:top-[4%];
 }
 .cardFooter {
-  @apply absolute bottom-12 w-full;
+  @apply absolute bottom-6 md:bottom-12 w-full;
 }
 .headerCaption {
-  @apply border-t-2 border-secondary border-solid pt-2 pr-4;
-  @apply text-right uppercase text-sm whitespace-nowrap;
+  @apply inline;
+  @apply border-t-2 border-secondary border-solid pt-2 px-4;
+  @apply text-right uppercase text-xs md:text-sm whitespace-nowrap;
   width: 357px;
   max-width: 50%;
 }
 .footerCaption {
-  @apply border-t-2 border-secondary border-solid pt-4;
+  @apply border-t-2 border-secondary border-solid pt-2 md:pt-4;
   @apply text-right text-lg uppercase;
   width: 100px;
 }
