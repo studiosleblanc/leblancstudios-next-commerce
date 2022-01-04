@@ -1,12 +1,12 @@
 .wrapper {
   @apply block lg:hidden;
-  @apply w-full h-[30px];
+  @apply w-full h-[40px];
 }
 .root {
   @apply fixed top-0 left-0;
   @apply flex items-center;
   @apply px-6;
-  @apply w-full h-[30px];
+  @apply w-full h-[40px];
   @apply shadow-sm bg-white;
   @apply z-50;
 }
