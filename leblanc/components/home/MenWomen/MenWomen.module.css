@@ -33,13 +33,13 @@
 .headerCaption {
   @apply inline;
   @apply border-t-2 border-secondary border-solid pt-2 px-4;
-  @apply text-right uppercase text-xs md:text-sm whitespace-nowrap;
+  @apply text-right text-primary uppercase text-xs md:text-sm whitespace-nowrap;
   width: 357px;
   max-width: 50%;
 }
 .footerCaption {
   @apply border-t-2 border-secondary border-solid pt-2 md:pt-4;
-  @apply text-right text-lg uppercase;
+  @apply text-right text-primary text-lg uppercase;
   width: 100px;
 }
 
