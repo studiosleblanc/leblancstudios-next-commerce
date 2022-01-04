@@ -52,6 +52,7 @@
     "react-responsive": "^9.0.0-beta.5",
     "react-scrollmagic": "^2.3.0",
     "react-sticky-el": "^2.0.9",
+    "react-swipeable": "^6.2.0",
     "react-textfit": "^1.1.1",
     "react-truncate": "^2.4.0",
     "react-use-measure": "^2.0.4",
