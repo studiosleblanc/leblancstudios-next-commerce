@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { HeaderLogos } from '..'
 import { CartIcon, MenuIcon } from '@leblanc/icons'
 import { useUI } from '@components/ui/context'
 import s from './HeaderMobile.module.css'
 import { DarkModeSwitcher } from '@leblanc/components/ui'
 
-const HeaderMobile = () => {
+interface Props {
+  noDMSwitcher?: boolean
+}
+
+const HeaderMobile: FC<Props> = ({ noDMSwitcher = false }) => {
   const { toggleSidebar, closeSidebarIfPresent, openModal } = useUI()
   return (
     <div className={s.wrapper}>
@@ -14,9 +18,11 @@ const HeaderMobile = () => {
           <HeaderLogos />
         </div>
         <ul className={s.toolbar}>
-          <li>
-            <DarkModeSwitcher />
-          </li>
+          {!noDMSwitcher && (
+            <li>
+              <DarkModeSwitcher />
+            </li>
+          )}
           <li>
             <button onClick={toggleSidebar} aria-label="open cart">
               <CartIcon className={s.cartIcon} />

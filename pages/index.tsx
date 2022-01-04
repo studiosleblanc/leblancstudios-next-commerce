@@ -91,7 +91,7 @@ export default function Home({
         brands={brands}
       /> */}
 
-      <MainLayout noHeader>
+      <MainLayout noHeader noDMSwitcher>
         <Hero />
         <MenWomen />
         <ANecesaryRisk />
