@@ -1,6 +1,7 @@
 .root {
   @apply w-full pr-12;
   @apply border-b-[1px] border-black border-solid;
+  @apply hidden lg:block;
 }
 
 .topRow {
