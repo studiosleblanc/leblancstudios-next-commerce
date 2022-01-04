@@ -1,6 +1,6 @@
 .switch {
   @apply absolute top-1/2 right-16;
-  @apply cursor-pointer w-40 h-20 rounded-full p-2;
+  @apply cursor-pointer w-32 h-16 md:w-40 md:h-20 rounded-full p-2;
   @apply border-[1px] border-black border-solid;
   &.on {
   }
@@ -9,5 +9,5 @@
 }
 
 .switch div {
-  @apply absolute w-[3.75rem] h-[3.75rem] top-2 bg-white rounded-full shadow-sm;
+  @apply absolute w-11 h-11 md:w-[3.75rem] md:h-[3.75rem] top-2 bg-white rounded-full shadow-sm;
 }
