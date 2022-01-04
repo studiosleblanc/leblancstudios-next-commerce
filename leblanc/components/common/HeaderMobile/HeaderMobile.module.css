@@ -1,0 +1,22 @@
+.wrapper {
+  @apply w-full h-[30px];
+}
+.root {
+  @apply fixed top-0 left-0;
+  @apply flex lg:hidden;
+  @apply items-center;
+  @apply px-6;
+  @apply w-full h-[30px];
+  @apply shadow-sm bg-white;
+  @apply z-50;
+}
+.leftCol {
+  @apply w-2/3;
+}
+.rightCol {
+  @apply w-1/3;
+}
+
+.logosContainer {
+  @apply max-w-sm;
+}

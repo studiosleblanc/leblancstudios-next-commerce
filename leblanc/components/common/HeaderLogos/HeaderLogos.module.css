@@ -1,14 +1,12 @@
-.root {
-  @apply max-w-[50%];
-}
 .logoContainer {
-  @apply relative block h-[30px];
+  @apply relative block h-5 lg:h-[30px];
   & svg {
     @apply mb-1;
+    @apply w-auto h-5;
   }
 }
 .logoItem {
-  @apply absolute left-0 top-1;
+  @apply absolute left-0 top-0 lg:top-1;
 }
 
 :global(.dark) {
