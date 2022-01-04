@@ -1,15 +1,29 @@
 import React from 'react'
 import { HeaderLogos } from '..'
+import { CartIcon, MenuIcon } from '@leblanc/icons'
+import { useUI } from '@components/ui/context'
 import s from './HeaderMobile.module.css'
 
 const HeaderMobile = () => {
+  const { toggleSidebar, closeSidebarIfPresent, openModal } = useUI()
   return (
     <div className={s.wrapper}>
       <div className={s.root}>
-        <div className={s.leftCol}>
+        <div className={s.logosContainer}>
           <HeaderLogos />
         </div>
-        <div className={s.rightCol}>toolbar</div>
+        <ul className={s.toolbar}>
+          <li>
+            <button onClick={toggleSidebar} aria-label="open cart">
+              <CartIcon className={s.cartIcon} />
+            </button>
+          </li>
+          <li>
+            <button aria-label="open menu">
+              <MenuIcon className={s.menuIcon} />
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
   )
