@@ -1,4 +1,5 @@
 .root {
+  @apply hidden lg:block;
   @apply mt-2;
 }
 
