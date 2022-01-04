@@ -26,6 +26,7 @@
 .menu {
   @apply flex flex-wrap lg:flex-nowrap justify-around;
   @apply mt-8 lg:mt-14;
+  @apply text-primary;
   & ul {
     @apply uppercase;
   }
