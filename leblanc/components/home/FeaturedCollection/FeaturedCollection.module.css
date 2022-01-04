@@ -45,7 +45,7 @@
 
 /* Content */
 .content {
-  @apply absolute top-0 right-0 lg:-right-full w-full h-full bg-lbsGreen;
+  @apply absolute top-0 right-0 lg:-right-full w-full min-h-full bg-lbsGreen;
   @apply border-secondary border-solid;
   @apply px-6 md:px-16 py-8 md:py-24;
   @apply flex-col;
