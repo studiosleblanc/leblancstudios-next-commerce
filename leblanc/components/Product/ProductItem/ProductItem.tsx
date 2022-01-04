@@ -60,7 +60,11 @@ const ProductItem: FC<Props> = ({ item, asCard = false }) => {
           <div className={s.squeeze}>Squeeze Out!</div>
         </div>
       </div>
-      <div className={s.caption}>{item.name}</div>
+      <div className={cn(s.caption, s.captionDesktop)}>{item.name}</div>
+      <div className={cn(s.caption, s.captionMobile)}>
+        <div className={s.captionPrice}>{price}</div>
+        <div className={s.captionCommonName}>common name</div>
+      </div>
     </div>
   )
 }

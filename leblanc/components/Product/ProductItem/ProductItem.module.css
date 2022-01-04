@@ -25,7 +25,7 @@
 
 .details {
   @apply absolute bottom-1/4 right-0;
-  @apply flex flex-col;
+  @apply hidden lg:flex flex-col;
 }
 .detailsContent {
   @apply flex flex-col text-right pr-8;
@@ -62,5 +62,21 @@
 }
 
 .caption {
-  @apply absolute w-full bottom-6 text-center;
+  @apply absolute w-full bottom-2 lg:bottom-6 text-center;
+}
+
+.captionDesktop {
+  @apply hidden lg:block;
+}
+.captionMobile {
+  @apply block lg:hidden;
+  @apply text-xs md:text-base;
+}
+
+.captionPrice {
+  @apply absolute left-0;
+  @apply font-bold pl-5;
+}
+.captionCommonName {
+  @apply px-4;
 }
