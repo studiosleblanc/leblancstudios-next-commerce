@@ -14,9 +14,9 @@ const MenuIcon: FC<Props> = ({ width, ...props }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}>
-      <path d="M0 1H9" stroke="black" strokeWidth="0.3" />
-      <path d="M0 4H9" stroke="black" strokeWidth="0.3" />
-      <path d="M0 7H9" stroke="black" strokeWidth="0.3" />
+      <path d="M0 1H9" stroke="black" strokeWidth="0.6" />
+      <path d="M0 4H9" stroke="black" strokeWidth="0.6" />
+      <path d="M0 7H9" stroke="black" strokeWidth="0.6" />
     </svg>
   )
 }
