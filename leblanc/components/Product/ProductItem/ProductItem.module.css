@@ -31,6 +31,7 @@
   @apply flex flex-col text-right pr-8;
   & > span {
     @apply mb-3;
+    @apply text-text-primary;
   }
 }
 .price {
@@ -63,6 +64,7 @@
 
 .caption {
   @apply absolute w-full bottom-2 lg:bottom-6 text-center;
+  @apply text-text-primary;
 }
 
 .captionDesktop {
@@ -80,3 +82,11 @@
 .captionCommonName {
   @apply px-4;
 }
+/* 
+:global(.dark) {
+  & .detailsContent {
+    & > span {
+      @apply text-text-primary;
+    }
+  }
+} */

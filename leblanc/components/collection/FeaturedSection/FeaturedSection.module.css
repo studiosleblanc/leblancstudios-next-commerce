@@ -22,7 +22,7 @@
   @apply p-8 md:p-16 bg-lbsGreen;
   @apply border-b-[1px] border-black border-solid;
   & > p {
-    @apply text-lg md:text-2xl pb-10 tracking-widest;
+    @apply text-text-primary text-lg md:text-2xl pb-10 tracking-widest;
   }
 }
 
