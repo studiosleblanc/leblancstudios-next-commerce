@@ -2,7 +2,7 @@
   @apply relative block h-5 lg:h-[30px];
   & svg {
     @apply mb-1;
-    @apply w-auto h-5;
+    @apply w-auto h-5 lg:h-auto;
   }
 }
 .logoItem {
