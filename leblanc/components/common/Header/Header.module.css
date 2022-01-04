@@ -95,10 +95,6 @@
   @apply flex font-bold p-1;
 }
 
-.darkModeButton {
-  @apply p-1 focus:ring-1 ring-black relative bottom-[-1px];
-}
-
 /* DARK MODE */
 :global(.dark) {
   & .navbar {

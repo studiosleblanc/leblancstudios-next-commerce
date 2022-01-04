@@ -16,25 +16,27 @@ const items_transition = {
 const HeaderLogos: FC = () => {
   return (
     <Link href="/">
-      <a className={s.logoContainer} aria-label="Leblanc Studios Logo">
-        <motion.span
-          animate={{ opacity: item_1 }}
-          transition={items_transition}
-          className={s.logoItem}>
-          <LeblancStudios />
-        </motion.span>
-        <motion.span
-          animate={{ opacity: item_2 }}
-          transition={items_transition}
-          className={s.logoItem}>
-          <RemainSilent />
-        </motion.span>
-        <motion.span
-          animate={{ opacity: item_3 }}
-          transition={items_transition}
-          className={s.logoItem}>
-          <ElPuebloCuestiona />
-        </motion.span>
+      <a aria-label="Leblanc Studios Logo">
+        <div className={s.logoContainer}>
+          <motion.span
+            animate={{ opacity: item_1 }}
+            transition={items_transition}
+            className={s.logoItem}>
+            <LeblancStudios />
+          </motion.span>
+          <motion.span
+            animate={{ opacity: item_2 }}
+            transition={items_transition}
+            className={s.logoItem}>
+            <RemainSilent />
+          </motion.span>
+          <motion.span
+            animate={{ opacity: item_3 }}
+            transition={items_transition}
+            className={s.logoItem}>
+            <ElPuebloCuestiona />
+          </motion.span>
+        </div>
       </a>
     </Link>
   )

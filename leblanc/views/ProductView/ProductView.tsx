@@ -29,7 +29,7 @@ const ProductView: FC<Props> = ({ product, relatedProducts }) => {
       <ProductSlider images={product.images} />
       <div className={s.descriptionRow}>
         <h2>{product.name}</h2>
-        <p>{parse(product?.descriptionHtml || '')}</p>
+        <div className={s.rte}>{parse(product?.descriptionHtml || '')}</div>
       </div>
       <RelatedProducts relatedProducts={relatedProducts} />
     </MainLayout>

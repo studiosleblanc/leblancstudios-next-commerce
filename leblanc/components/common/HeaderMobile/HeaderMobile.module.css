@@ -20,7 +20,8 @@
     @apply mx-2;
   }
   & button {
-    @apply py-1 px-2;
+    @apply p-2;
+    @apply focus:ring-1 ring-black;
   }
 }
 
@@ -29,4 +30,16 @@
 }
 .menuIcon {
   @apply w-10;
+}
+
+:global(.dark) {
+  & .root {
+    @apply bg-text-primary border-white;
+    & button {
+      @apply ring-white;
+      & svg path {
+        stroke: #fff;
+      }
+    }
+  }
 }

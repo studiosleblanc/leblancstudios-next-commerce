@@ -1,6 +1,5 @@
 import React, { FC, useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import Image from 'next/image'
 import cn from 'classnames'
@@ -10,8 +9,6 @@ import { homeNavigation } from '@leblanc/data/navigation'
 import { usePathItems } from '@leblanc/hooks/usePathItems'
 import { GoChevronRight } from 'react-icons/go'
 import { VscChevronRight } from 'react-icons/vsc'
-import { IoSunnyOutline } from 'react-icons/io5'
-import { IoMoonOutline } from 'react-icons/io5'
 import ElPuebloCuestiona from '@leblanc/svg/ElPuebloCuestiona'
 import usePositionText from '@leblanc/hooks/usePositionText'
 import useCart from '@framework/cart/use-cart'
@@ -19,6 +16,7 @@ import usePrice from '@commerce/product/use-price'
 import { useUI } from '@components/ui/context'
 import type { LineItem } from '@commerce/types/cart'
 import { HeaderLogos } from '@leblanc/components/common'
+import { DarkModeSwitcher } from '@leblanc/components/ui'
 
 interface Props {
   history?: boolean
@@ -29,7 +27,6 @@ const countItem = (count: number, item: LineItem) => count + item.quantity
 const Header: FC<Props> = ({ history }) => {
   const router = useRouter()
   const { asPath } = router
-  const { theme, setTheme } = useTheme()
   const breadcrumbs = usePathItems(asPath)
   const positionItems = usePositionText(breadcrumbs)
   const { toggleSidebar, closeSidebarIfPresent, openModal } = useUI()
@@ -64,18 +61,7 @@ const Header: FC<Props> = ({ history }) => {
         <HeaderLogos />
         <ul className={s.toolbar}>
           <li>
-            {theme && (
-              <button
-                className={s.darkModeButton}
-                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                aria-label="dark mode">
-                {theme === 'light' ? (
-                  <IoSunnyOutline size={22} />
-                ) : (
-                  <IoMoonOutline size={20} />
-                )}
-              </button>
-            )}
+            <DarkModeSwitcher />
           </li>
           <li className="pb-1">My Account</li>
           <li>

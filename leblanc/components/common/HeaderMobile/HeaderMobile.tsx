@@ -3,6 +3,7 @@ import { HeaderLogos } from '..'
 import { CartIcon, MenuIcon } from '@leblanc/icons'
 import { useUI } from '@components/ui/context'
 import s from './HeaderMobile.module.css'
+import { DarkModeSwitcher } from '@leblanc/components/ui'
 
 const HeaderMobile = () => {
   const { toggleSidebar, closeSidebarIfPresent, openModal } = useUI()
@@ -13,6 +14,9 @@ const HeaderMobile = () => {
           <HeaderLogos />
         </div>
         <ul className={s.toolbar}>
+          <li>
+            <DarkModeSwitcher />
+          </li>
           <li>
             <button onClick={toggleSidebar} aria-label="open cart">
               <CartIcon className={s.cartIcon} />
