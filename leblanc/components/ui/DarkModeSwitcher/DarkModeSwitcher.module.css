@@ -1,0 +1,9 @@
+.root {
+  @apply p-1 focus:ring-1 ring-black relative bottom-[-1px];
+}
+
+:global(.dark) {
+  & .root {
+    @apply ring-white;
+  }
+}
