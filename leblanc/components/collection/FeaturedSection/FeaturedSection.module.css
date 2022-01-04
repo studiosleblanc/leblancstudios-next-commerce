@@ -1,10 +1,10 @@
 .root {
   @apply flex;
   & > div:first-child {
-    @apply w-2/5;
+    @apply w-full lg:w-2/5;
   }
   & > div:last-child {
-    @apply w-3/5;
+    @apply w-3/5 hidden lg:block;
   }
 }
 .leftImage {
@@ -19,7 +19,7 @@
 }
 
 .rte {
-  @apply py-16 px-16 bg-lbsGreen;
+  @apply p-8 md:p-16 bg-lbsGreen;
   @apply border-b-[1px] border-black border-solid;
   & > p {
     @apply text-2xl pb-10 tracking-widest;
