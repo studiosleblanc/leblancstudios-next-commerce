@@ -4,6 +4,8 @@ import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
 import { CommerceProvider } from '@framework'
 import { useUI } from '@components/ui/context'
+import NextNprogress from 'nextjs-progressbar'
+import { useTheme } from 'next-themes'
 import type { Page } from '@commerce/types/page'
 import type { Category } from '@commerce/types/site'
 import ShippingView from '@components/checkout/ShippingView'
@@ -97,9 +99,16 @@ const Layout: FC<Props> = ({
     label: c.name,
     href: `/search/${c.slug}`,
   }))
+  const { theme } = useTheme()
 
   return (
     <CommerceProvider locale={locale}>
+      <NextNprogress
+        color={theme === 'dark' ? '#fff' : '#000'}
+        startPosition={0.3}
+        stopDelayMs={500}
+        height={2}
+      />
       {children}
       <SidebarUI />
       <SidebarMobile />
