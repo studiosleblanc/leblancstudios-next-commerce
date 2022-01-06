@@ -12,6 +12,7 @@
 }
 .logosContainer {
   @apply w-2/3;
+  @apply mt-[2px];
 }
 .toolbar {
   @apply w-1/3;
