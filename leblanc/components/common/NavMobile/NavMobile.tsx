@@ -94,7 +94,9 @@ const NavMobile = () => {
               <li key={item.id}>
                 {item.href && (
                   <NextLink href={item.href || ''}>
-                    <a className={s.navItem}>{item.label}</a>
+                    <a className={s.navItem} onClick={handleLinkClick}>
+                      {item.label}
+                    </a>
                   </NextLink>
                 )}
               </li>
