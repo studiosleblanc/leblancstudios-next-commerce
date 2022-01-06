@@ -13,9 +13,32 @@ const NavMobile = () => {
   const [activeItem, setActiveItem] = useState<NavItem | null>(null)
   const [activeChildItem, setActiveChildItem] = useState<NavItem | null>(null)
 
+  const [parentLabel, setParentLabel] = useState<React.ReactNode | string>('')
+  const [childLabel, setChildLabel] = useState<React.ReactNode | string>('')
+
   const handleLinkClick = () => {
     closeMobileSidebarIfPresent()
   }
+
+  const handleParentBack = () => {
+    setActiveItem(null)
+    setParentLabel('')
+  }
+  const handleGrandChildBack = () => {
+    setActiveChildItem(null)
+    setChildLabel('')
+  }
+
+  useEffect(() => {
+    if (activeItem) {
+      setParentLabel(activeItem.label)
+    }
+    if (activeChildItem) {
+      setChildLabel(
+        activeChildItem.abbr ? activeChildItem.abbr : activeChildItem.label
+      )
+    }
+  }, [activeItem, activeChildItem])
 
   return (
     <nav className={s.nav}>
@@ -49,10 +72,10 @@ const NavMobile = () => {
         <div className={s.childPanel}>
           <ul className={s.menu}>
             <li className={cn(s.navItem, s.childHeader)}>
-              <button onClick={() => setActiveItem(null)}>
+              <button onClick={handleParentBack}>
                 <VscClose size={14} />
               </button>
-              <span>{activeItem.label}</span>
+              <span>{parentLabel}</span>
             </li>
             {activeItem.childs.map((item: NavItem) => (
               <li key={item.id}>
@@ -85,10 +108,14 @@ const NavMobile = () => {
         <div className={s.childPanel}>
           <ul className={s.menu}>
             <li className={cn(s.navItem, s.childHeader)}>
-              <button onClick={() => setActiveChildItem(null)}>
+              <button onClick={handleGrandChildBack}>
                 <VscClose size={14} />
               </button>
-              <span>{activeChildItem.label}</span>
+              <span className={s.childHeaderTitle}>
+                <span>{parentLabel}</span>
+                <GoChevronRight size={11} />
+                <span>{childLabel}</span>
+              </span>
             </li>
             {activeChildItem.childs.map((item: NavItem) => (
               <li key={item.id}>

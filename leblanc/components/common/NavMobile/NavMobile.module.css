@@ -33,3 +33,10 @@
     @apply mr-4;
   }
 }
+
+.childHeaderTitle {
+  @apply flex items-center;
+  & svg {
+    @apply mx-3;
+  }
+}
