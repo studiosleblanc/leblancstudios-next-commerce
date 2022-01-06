@@ -175,7 +175,7 @@ export const UIProvider: FC = props => {
       state.displayMobileSidebar
         ? dispatch({ type: 'CLOSE_MOBILE_SIDEBAR' })
         : dispatch({ type: 'OPEN_MOBILE_SIDEBAR' }),
-    [dispatch, state.displaySidebar]
+    [dispatch, state.displayMobileSidebar]
   )
   const closeSidebarIfPresent = useCallback(
     () => state.displaySidebar && dispatch({ type: 'CLOSE_SIDEBAR' }),
@@ -183,7 +183,7 @@ export const UIProvider: FC = props => {
   )
   const closeMobileSidebarIfPresent = useCallback(
     () => state.displayMobileSidebar && dispatch({ type: 'CLOSE_MOBILE_SIDEBAR' }),
-    [dispatch, state.displaySidebar]
+    [dispatch, state.displayMobileSidebar]
   )
 
   const openDropdown = useCallback(
