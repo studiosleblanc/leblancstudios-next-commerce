@@ -1,0 +1,35 @@
+/* nav */
+.menu {
+  & > li {
+    @apply border-b-[1px] border-secondary;
+  }
+}
+.navItem {
+  @apply w-full h-16;
+  @apply flex items-center;
+  @apply px-5;
+  @apply uppercase text-left;
+  line-height: 1;
+  & span {
+    @apply leading-normal;
+  }
+}
+.navItemChevron {
+  @apply ml-4;
+}
+
+/* nav child */
+.childPanel {
+  & .navItem {
+    @apply normal-case;
+  }
+}
+.childHeader {
+  @apply font-bold pl-0;
+  & button {
+    @apply flex items-center justify-center;
+    @apply border-r-[1px] border-secondary;
+    @apply w-16 h-full;
+    @apply mr-4;
+  }
+}

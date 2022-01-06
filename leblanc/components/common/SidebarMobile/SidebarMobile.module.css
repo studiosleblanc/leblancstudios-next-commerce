@@ -9,6 +9,7 @@
 
 .navCol {
   @apply w-[60%] h-full;
+  @apply relative;
 }
 .searchCol {
   @apply w-[40%] h-full;
@@ -26,6 +27,7 @@
 }
 .searchInput {
   @apply w-full;
+  @apply appearance-none;
   @apply h-10 bg-lbsGray border-[1px] border-secondary uppercase border-solid outline-none pl-3 pr-10;
   @apply text-xs;
 }
@@ -36,23 +38,8 @@
   }
 }
 
-/* nav */
-.menu {
-  & > li {
-    @apply border-b-[1px] border-secondary;
+:global(.dark) {
+  & .root {
+    @apply text-text-primary;
   }
-}
-.navItem {
-  @apply w-full;
-  @apply flex items-center;
-  @apply p-5;
-  @apply uppercase;
-  line-height: 1;
-}
-.navItemChevron {
-  @apply ml-4;
-}
-
-.menuChild {
-  @apply hidden;
 }

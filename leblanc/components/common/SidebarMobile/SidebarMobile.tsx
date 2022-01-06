@@ -1,47 +1,15 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import s from './SidebarMobile.module.css'
 import { useUI } from '@components/ui/context'
 import { SearchIcon } from '@leblanc/icons'
-import { homeNavigation, NavItem } from '@leblanc/data/navigation'
-import { GoChevronRight } from 'react-icons/go'
-import { VscChevronRight } from 'react-icons/vsc'
+import NavMobile from '../NavMobile'
 
 const SidebarMobile = () => {
   const { displayMobileSidebar } = useUI()
   return displayMobileSidebar ? (
     <div className={s.root}>
       <div className={s.navCol}>
-        <nav className={s.nav}>
-          <ul className={s.menu}>
-            {homeNavigation.map((item: NavItem) => (
-              <li>
-                <button className={s.navItem}>
-                  {item.label}
-                  {item.childs && (
-                    <VscChevronRight size={11} className={s.navItemChevron} />
-                  )}
-                </button>
-                {item.childs && (
-                  <ul className={s.menuChild}>
-                    {item.childs.map((childItem: NavItem) => (
-                      <li>
-                        <button className={s.navItem}>
-                          {childItem.label}
-                          {childItem.childs && (
-                            <VscChevronRight
-                              size={11}
-                              className={s.navItemChevron}
-                            />
-                          )}
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <NavMobile />
       </div>
       <div className={s.searchCol}>
         <div className={s.search}>
