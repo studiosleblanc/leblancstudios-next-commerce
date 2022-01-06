@@ -10,7 +10,13 @@ interface Props {
 }
 
 const HeaderMobile: FC<Props> = ({ noDMSwitcher = false }) => {
-  const { toggleSidebar, toggleMobileSidebar } = useUI()
+  const { toggleSidebar, toggleMobileSidebar, closeMobileSidebarIfPresent } = useUI()
+
+  const handleOpenCart = () => {
+    closeMobileSidebarIfPresent()
+    toggleSidebar()
+  }
+
   return (
     <div className={s.wrapper}>
       <div className={s.root}>
@@ -24,7 +30,7 @@ const HeaderMobile: FC<Props> = ({ noDMSwitcher = false }) => {
             </li>
           )}
           <li>
-            <button onClick={toggleSidebar} aria-label="open cart">
+            <button onClick={handleOpenCart} aria-label="open cart">
               <CartIcon className={s.cartIcon} />
             </button>
           </li>
