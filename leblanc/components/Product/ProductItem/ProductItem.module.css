@@ -71,16 +71,19 @@
   @apply hidden lg:block;
 }
 .captionMobile {
-  @apply block lg:hidden;
+  @apply flex lg:hidden;
+  @apply items-center;
+  @apply min-h-[1.25rem];
   @apply text-xs md:text-base;
+  @apply px-3;
 }
 
 .captionPrice {
-  @apply absolute left-0;
-  @apply font-bold pl-5;
+  /* @apply absolute left-0; */
+  @apply font-bold;
 }
 .captionCommonName {
-  @apply px-4;
+  @apply pl-3;
 }
 /* 
 :global(.dark) {
