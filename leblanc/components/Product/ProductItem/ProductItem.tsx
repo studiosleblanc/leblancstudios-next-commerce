@@ -6,6 +6,7 @@ import s from './ProductItem.module.css'
 import usePrice from '@framework/product/use-price'
 import type { CollectionItem } from '@leblanc/data/collection'
 import { Product } from '@commerce/types/product'
+import useProductMetafields from '@leblanc/hooks/useProductMetafields'
 
 const placeholderImg = '/product-img-placeholder.svg'
 interface Props {
@@ -14,6 +15,10 @@ interface Props {
 }
 
 const ProductItem: FC<Props> = ({ item, asCard = false }) => {
+  console.log(item)
+
+  const commonName = useProductMetafields(item.metafields, 'common_name')
+
   const { price } = usePrice({
     amount: item.price.value,
     baseAmount: item.price.retailPrice,
@@ -48,7 +53,7 @@ const ProductItem: FC<Props> = ({ item, asCard = false }) => {
               ))} */}
           </div>
           <span className={s.price}>{price}</span>
-          <span>common name</span>
+          <span>{commonName}</span>
           <span>Available Sizes:</span>
           <ul className={s.sizes}>
             {/* {item.sizes.map(size => (
@@ -63,7 +68,7 @@ const ProductItem: FC<Props> = ({ item, asCard = false }) => {
       <div className={cn(s.caption, s.captionDesktop)}>{item.name}</div>
       <div className={cn(s.caption, s.captionMobile)}>
         <div className={s.captionPrice}>{price}</div>
-        <div className={s.captionCommonName}>common name</div>
+        <div className={s.captionCommonName}>{commonName}</div>
       </div>
     </div>
   )
