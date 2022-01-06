@@ -32,6 +32,18 @@
 .menuIcon {
   @apply w-10;
 }
+.menuButton {
+  @apply relative;
+  @apply flex items-center justify-around flex-col;
+  @apply w-[30px] h-[30px];
+  @apply py-5;
+
+  & span {
+    @apply block;
+    @apply bg-text-primary;
+    @apply w-[22px] h-[1px];
+  }
+}
 
 :global(.dark) {
   & .root {
@@ -41,6 +53,12 @@
       & svg path {
         stroke: #fff;
       }
+    }
+  }
+
+  &.menuButton {
+    & span {
+      @apply bg-primary;
     }
   }
 }
