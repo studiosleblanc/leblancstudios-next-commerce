@@ -1,6 +1,7 @@
 .root {
   @apply flex;
   @apply lg:border-t-[1px] border-black border-solid;
+  @apply text-text-primary;
 }
 
 .imageContainer {
@@ -76,4 +77,10 @@
 }
 .acpLogo {
   @apply ml-auto;
+}
+
+:global(.dark) {
+  & .root {
+    @apply text-primary-2;
+  }
 }
