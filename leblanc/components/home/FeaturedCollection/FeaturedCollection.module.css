@@ -63,3 +63,9 @@
 .contentfooter {
   @apply text-base sm:text-lg md:text-xl xl:text-2xl pb-4;
 }
+
+:global(.dark) {
+  & .content {
+    @apply text-text-primary;
+  }
+}
