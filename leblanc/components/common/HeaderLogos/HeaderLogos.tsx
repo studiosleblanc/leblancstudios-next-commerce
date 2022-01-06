@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
 import s from './HeaderLogos.module.css'
+import { useUI } from '@components/ui/context'
 import { ElPuebloCuestiona, LeblancStudios, RemainSilent } from '@leblanc/svg'
 import { motion } from 'framer-motion'
 
@@ -14,9 +15,15 @@ const items_transition = {
 }
 
 const HeaderLogos: FC = () => {
+  const { closeMobileSidebarIfPresent } = useUI()
+
+  const handleLinkClick = () => {
+    closeMobileSidebarIfPresent()
+  }
+
   return (
     <Link href="/">
-      <a aria-label="Leblanc Studios Logo">
+      <a aria-label="Leblanc Studios Logo" onClick={handleLinkClick}>
         <div className={s.logoContainer}>
           <motion.span
             animate={{ opacity: item_1 }}
