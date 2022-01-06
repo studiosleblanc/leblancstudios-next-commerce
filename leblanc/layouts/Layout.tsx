@@ -15,6 +15,7 @@ import PaymentMethodView from '@components/checkout/PaymentMethodView'
 import CheckoutSidebarView from '@components/checkout/CheckoutSidebarView'
 
 import LoginView from '@components/auth/LoginView'
+import { SidebarMobile } from '@leblanc/components/common'
 
 const Loading = () => (
   <div className="w-80 h-80 flex items-center text-center justify-center p-3">
@@ -101,6 +102,7 @@ const Layout: FC<Props> = ({
     <CommerceProvider locale={locale}>
       {children}
       <SidebarUI />
+      <SidebarMobile />
     </CommerceProvider>
   )
 }

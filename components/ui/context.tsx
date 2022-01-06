@@ -3,6 +3,7 @@ import { ThemeProvider } from 'next-themes'
 
 export interface State {
   displaySidebar: boolean
+  displayMobileSidebar: boolean
   displayDropdown: boolean
   displayModal: boolean
   sidebarView: string
@@ -12,6 +13,7 @@ export interface State {
 
 const initialState = {
   displaySidebar: false,
+  displayMobileSidebar: false,
   displayDropdown: false,
   displayModal: false,
   modalView: 'LOGIN_VIEW',
@@ -24,7 +26,13 @@ type Action =
       type: 'OPEN_SIDEBAR'
     }
   | {
+      type: 'OPEN_MOBILE_SIDEBAR'
+    }
+  | {
       type: 'CLOSE_SIDEBAR'
+    }
+  | {
+      type: 'CLOSE_MOBILE_SIDEBAR'
     }
   | {
       type: 'OPEN_DROPDOWN'
@@ -72,10 +80,22 @@ function uiReducer(state: State, action: Action) {
         displaySidebar: true,
       }
     }
+    case 'OPEN_MOBILE_SIDEBAR': {
+      return {
+        ...state,
+        displayMobileSidebar: true,
+      }
+    }
     case 'CLOSE_SIDEBAR': {
       return {
         ...state,
         displaySidebar: false,
+      }
+    }
+    case 'CLOSE_MOBILE_SIDEBAR': {
+      return {
+        ...state,
+        displayMobileSidebar: false,
       }
     }
     case 'OPEN_DROPDOWN': {
@@ -131,8 +151,16 @@ export const UIProvider: FC = props => {
     () => dispatch({ type: 'OPEN_SIDEBAR' }),
     [dispatch]
   )
+  const openMobileSidebar = useCallback(
+    () => dispatch({ type: 'OPEN_MOBILE_SIDEBAR' }),
+    [dispatch]
+  )
   const closeSidebar = useCallback(
     () => dispatch({ type: 'CLOSE_SIDEBAR' }),
+    [dispatch]
+  )
+  const closeMobileSidebar = useCallback(
+    () => dispatch({ type: 'CLOSE_MOBILE_SIDEBAR' }),
     [dispatch]
   )
   const toggleSidebar = useCallback(
@@ -142,8 +170,19 @@ export const UIProvider: FC = props => {
         : dispatch({ type: 'OPEN_SIDEBAR' }),
     [dispatch, state.displaySidebar]
   )
+  const toggleMobileSidebar = useCallback(
+    () =>
+      state.displayMobileSidebar
+        ? dispatch({ type: 'CLOSE_MOBILE_SIDEBAR' })
+        : dispatch({ type: 'OPEN_MOBILE_SIDEBAR' }),
+    [dispatch, state.displaySidebar]
+  )
   const closeSidebarIfPresent = useCallback(
     () => state.displaySidebar && dispatch({ type: 'CLOSE_SIDEBAR' }),
+    [dispatch, state.displaySidebar]
+  )
+  const closeMobileSidebarIfPresent = useCallback(
+    () => state.displayMobileSidebar && dispatch({ type: 'CLOSE_MOBILE_SIDEBAR' }),
     [dispatch, state.displaySidebar]
   )
 
@@ -178,9 +217,13 @@ export const UIProvider: FC = props => {
     () => ({
       ...state,
       openSidebar,
+      openMobileSidebar,
       closeSidebar,
+      closeMobileSidebar,
       toggleSidebar,
+      toggleMobileSidebar,
       closeSidebarIfPresent,
+      closeMobileSidebarIfPresent,
       openDropdown,
       closeDropdown,
       openModal,

@@ -10,7 +10,7 @@ interface Props {
 }
 
 const HeaderMobile: FC<Props> = ({ noDMSwitcher = false }) => {
-  const { toggleSidebar, closeSidebarIfPresent, openModal } = useUI()
+  const { toggleSidebar, toggleMobileSidebar } = useUI()
   return (
     <div className={s.wrapper}>
       <div className={s.root}>
@@ -29,7 +29,7 @@ const HeaderMobile: FC<Props> = ({ noDMSwitcher = false }) => {
             </button>
           </li>
           <li>
-            <button aria-label="open menu">
+            <button onClick={toggleMobileSidebar} aria-label="open menu">
               <MenuIcon className={s.menuIcon} />
             </button>
           </li>
