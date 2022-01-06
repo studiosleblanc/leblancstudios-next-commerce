@@ -56,7 +56,7 @@
     }
   }
 
-  &.menuButton {
+  & .menuButton {
     & span {
       @apply bg-primary;
     }
