@@ -25,6 +25,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <ManagedUIContext>
         <ThemeProvider
           attribute="class"
+          defaultTheme="light"
           forcedTheme={(Component as any).theme || null}>
           <Layout pageProps={pageProps}>
             <NextNprogress
