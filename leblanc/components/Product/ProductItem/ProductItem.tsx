@@ -15,8 +15,6 @@ interface Props {
 }
 
 const ProductItem: FC<Props> = ({ item, asCard = false }) => {
-  console.log(item)
-
   const commonName = useProductMetafields(item.metafields, 'common_name')
 
   const { price } = usePrice({
