@@ -1,0 +1,9 @@
+.root {
+  @apply w-1/2 lg:w-auto;
+}
+.productImage {
+  @apply max-w-[100%] lg:max-w-[150px] xl:max-w-[180px] 2xl:max-w-[250px] h-full;
+  & > div {
+    @apply w-full h-full;
+  }
+}

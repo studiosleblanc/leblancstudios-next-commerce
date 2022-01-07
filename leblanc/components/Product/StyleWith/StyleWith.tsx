@@ -1,28 +1,24 @@
-import React from 'react'
+import React, { FC } from 'react'
 import Image from 'next/image'
 import s from './StyleWith.module.css'
+import useProductMetafields from '@leblanc/hooks/useProductMetafields'
+import type { Product } from '@commerce/types/product'
+import StyleWithCard from './StyleWithCard'
 
-const StyleWith = () => {
+interface Props {
+  product: Product
+}
+
+const StyleWith: FC<Props> = ({ product }) => {
+  const handle_1 = useProductMetafields(product.metafields, 'style_with_handle_1')
+  const handle_2 = useProductMetafields(product.metafields, 'style_with_handle_2')
+
   return (
     <div className={s.root}>
       <div className={s.wrapper}>
         <div className={s.productsContainer}>
-          <div className={s.product}>
-            <Image
-              width={268}
-              height={356}
-              src="/assets/product/style_with_1.jpg"
-              objectFit="cover"
-            />
-          </div>
-          <div className={s.product}>
-            <Image
-              width={267}
-              height={356}
-              src="/assets/product/style_with_2.jpg"
-              objectFit="cover"
-            />
-          </div>
+          {handle_1 && <StyleWithCard handle={handle_1} />}
+          {handle_2 && <StyleWithCard handle={handle_2} />}
         </div>
         <div className={s.caption}>style with</div>
       </div>

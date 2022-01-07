@@ -16,13 +16,6 @@
   @apply flex;
 }
 
-.product {
-  @apply max-w-[250px];
-  & > div {
-    @apply w-full h-full;
-  }
-}
-
 :global(.dark) {
   & .caption {
     @apply border-primary text-secondary-2;
