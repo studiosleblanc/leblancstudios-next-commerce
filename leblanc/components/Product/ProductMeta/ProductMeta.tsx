@@ -130,7 +130,7 @@ const ProductMeta: FC<Props> = ({ product }) => {
           {parse(product?.descriptionHtml || '')}
         </div>
       </div>
-      <StyleWith />
+      <StyleWith product={product} />
     </div>
   )
 }
