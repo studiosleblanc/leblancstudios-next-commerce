@@ -7,7 +7,7 @@
 }
 
 .details {
-  @apply px-10 sm:px-16 md:px-24;
+  @apply px-10 sm:px-16 md:px-20 2xl:px-24;
 }
 
 .price {
@@ -19,12 +19,17 @@
 }
 
 .shortDescription {
-  @apply text-xl sm:text-2xl mb-4;
+  @apply text-xl sm:text-xl 2xl:text-2xl mb-4;
 }
 
 .centerContainer {
   @apply flex justify-between;
-  @apply pt-5 pb-6;
+  @apply pt-5;
+}
+
+.bottomContainer {
+  @apply flex items-end justify-between;
+  @apply pb-6;
 }
 
 /* Quantity col */
@@ -60,7 +65,7 @@
 /* Full description row */
 .fullDescription {
   @apply px-10 pt-6 pb-1;
-  @apply text-lg sm:text-[1.5rem] text-justify;
+  @apply text-lg sm:text-xl text-justify;
   & p {
     @apply mb-4;
   }

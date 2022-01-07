@@ -44,11 +44,6 @@ const ProductSizeSelector: FC<Props> = ({
             })}
         </ul>
       </div>
-      <div className={s.madeIn}>
-        <p>
-          Made In Portugal <br /> 100% Cotton
-        </p>
-      </div>
     </div>
   )
 }

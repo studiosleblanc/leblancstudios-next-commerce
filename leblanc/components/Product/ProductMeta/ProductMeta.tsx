@@ -7,6 +7,7 @@ import {
   StyleWith,
   ProductSizeSelector,
   ProductColorSelector,
+  ProductSpecs,
 } from '@leblanc/components/Product'
 import parse from 'html-react-parser'
 import type { Product } from '@commerce/types/product'
@@ -102,9 +103,14 @@ const ProductMeta: FC<Props> = ({ product }) => {
               <div>
                 <QuantitySelector quantity={quantity} setQuantity={setQuantity} />
               </div>
-              <div>
-                <button className={s.sizeGuideBtn}>Size Guide</button>
-              </div>
+            </div>
+          </div>
+          <div className={s.bottomContainer}>
+            <div>
+              <ProductSpecs product={product} />
+            </div>
+            <div>
+              <button className={s.sizeGuideBtn}>Size Guide</button>
             </div>
           </div>
         </div>
