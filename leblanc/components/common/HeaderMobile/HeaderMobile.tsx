@@ -76,11 +76,11 @@ const HeaderMobile: FC<Props> = ({ noDMSwitcher = false }) => {
                 animate={displayMobileSidebar ? 'enter' : 'exit'}
                 variants={topBar}></motion.span>
               <motion.span
-                className={displayMobileSidebar && 'absolute'}
+                className={displayMobileSidebar ? 'absolute' : ''}
                 animate={displayMobileSidebar ? 'hide' : 'show'}
                 variants={middleBar}></motion.span>
               <motion.span
-                className={displayMobileSidebar && 'absolute'}
+                className={displayMobileSidebar ? 'absolute' : ''}
                 animate={displayMobileSidebar ? 'enter' : 'exit'}
                 variants={bottomBar}></motion.span>
             </button>
