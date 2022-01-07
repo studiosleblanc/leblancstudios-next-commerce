@@ -30,6 +30,7 @@ import {
 import { CollectionGrid } from '@leblanc/components/collection'
 import { FeaturedSection } from '@leblanc/components/collection'
 import { usePathItems } from '@leblanc/hooks/usePathItems'
+import CollectionEmpty from '@leblanc/components/collection/CollectionEmpty'
 
 export default function CollectionView({ categories, brands }: SearchPropsType) {
   const [activeFilter, setActiveFilter] = useState('')
@@ -80,7 +81,7 @@ export default function CollectionView({ categories, brands }: SearchPropsType) 
         (data?.found ? (
           <CollectionGrid products={data?.products || []} />
         ) : (
-          <h1 className="text-center py-20 text-2xl block">Collection Empty</h1>
+          <CollectionEmpty />
         ))}
       <FeaturedSection />
     </MainLayout>
