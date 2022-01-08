@@ -16,7 +16,6 @@ const StyleWithCard: FC<Props> = ({ handle }) => {
     search: handle,
     locale,
   })
-  console.log(data)
   return (
     <div className={s.root}>
       {data?.found && (
