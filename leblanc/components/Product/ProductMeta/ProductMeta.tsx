@@ -81,6 +81,7 @@ const ProductMeta: FC<Props> = ({ product }) => {
                   option={opt}
                   selectedOptions={selectedOptions}
                   setSelectedOptions={setSelectedOptions}
+                  product={product}
                 />
               )}
             </React.Fragment>
