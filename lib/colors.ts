@@ -204,3 +204,22 @@ export function isDark(color: string = ''): boolean {
   const res = (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000
   return res < 128
 }
+
+export const checkHexAndColors = (value: string) => {
+  let hexcolors: string[] = []
+  value
+    .trim()
+    .split(' ')
+    .map((word, i) => {
+      // is HEX
+      if (word.match(/^#([0-9A-F]{3}){1,2}$/i)) {
+        hexcolors.push(word.toUpperCase())
+      }
+      // is PLAIN
+      const mapedColor = colorMap[word.toLowerCase()]
+      if (mapedColor) {
+        hexcolors.push(mapedColor)
+      }
+    })
+  return hexcolors
+}

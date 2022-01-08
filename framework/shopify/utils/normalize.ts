@@ -17,7 +17,10 @@ import {
   Collection,
   MetafieldConnection,
 } from '../schema'
-import { colorMap } from '@lib/colors'
+import {
+  // colorMap,
+  checkHexAndColors,
+} from '@lib/colors'
 
 const money = ({ amount, currencyCode }: MoneyV2) => {
   return {
@@ -40,7 +43,8 @@ const normalizeProductOption = ({
         label: value,
       }
       if (displayName.match(/colou?r/gi)) {
-        const mapedColor = colorMap[value.toLowerCase().replace(/ /g, '')]
+        // const mapedColor = colorMap[value.toLowerCase().replace(/ /g, '')]
+        const mapedColor = checkHexAndColors(value.toLowerCase())
         if (mapedColor) {
           output = {
             ...output,
@@ -59,14 +63,14 @@ const normalizeProductImages = ({ edges }: ImageConnection) =>
     ...rest,
   }))
 
-const normalizeMetafields = ({edges}: MetafieldConnection) => 
-  edges?.map(({node: { id, key, namespace, value   }}) => ({
+const normalizeMetafields = ({ edges }: MetafieldConnection) =>
+  edges?.map(({ node: { id, key, namespace, value } }) => ({
     id,
     key,
     namespace,
-    value
+    value,
+    hexColors: key.includes('color') ? [checkHexAndColors(value.toLowerCase())] : [],
   }))
-
 
 const normalizeProductVariants = ({ edges }: ProductVariantConnection) => {
   return edges?.map(
