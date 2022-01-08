@@ -55,6 +55,7 @@ export type ProductMetafield = {
   namespace: string
   key: string
   value: any
+  hexColors: string[]
 }
 
 export type SearchProductsBody = {
