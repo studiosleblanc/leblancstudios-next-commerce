@@ -1,4 +1,5 @@
 .root {
+  @apply relative;
   @apply p-6 pt-10 sm:pt-16 sm:px-24 md:pt-20 md:px-28;
 }
 

@@ -10,6 +10,7 @@ import type {
 import { SelectedOptions } from '@components/product/helpers'
 import { setBgColor, setLabel } from '@leblanc/utils/colors'
 import { getColoVariantsFromMetafields } from '@leblanc/utils/colorMetafields'
+import { ProductBackdrop } from '@leblanc/components/Product'
 
 interface Props {
   option: ProductOption
@@ -45,55 +46,58 @@ const ProductColorSelector: FC<Props> = ({
   }, [])
 
   return (
-    <ul className={s.root}>
-      {option.values &&
-        option.values.map((v, i: number) => {
-          const active = selectedOptions[option.displayName.toLowerCase()]
-          return (
-            <li key={`${option.id}-${v.label}-${i}`}>
+    <>
+      <ul className={s.root}>
+        {option.values &&
+          option.values.map((v, i: number) => {
+            const active = selectedOptions[option.displayName.toLowerCase()]
+            return (
+              <li key={`${option.id}-${v.label}-${i}`}>
+                <button
+                  // className={cn(s.colorSwatch, {
+                  //   [s.active]: v.label.toLowerCase() === active,
+                  // })}
+                  className={s.colorSwatch}
+                  style={{
+                    backgroundColor: v.hexColors
+                      ? setBgColor(v.hexColors)
+                      : 'transparent',
+                  }}
+                  onClick={() => {
+                    setSelectedOptions(selectedOptions => {
+                      return {
+                        ...selectedOptions,
+                        [option.displayName.toLowerCase()]: v.label.toLowerCase(),
+                      }
+                    })
+                  }}
+                  aria-label={v.label.toLowerCase()}>
+                  {/* {v.label.toLowerCase()} */}
+                </button>
+              </li>
+            )
+          })}
+
+        {/* Metafiled color options */}
+        {colorVariants &&
+          colorVariants.map(opt => (
+            <li key={opt.color}>
               <button
-                // className={cn(s.colorSwatch, {
-                //   [s.active]: v.label.toLowerCase() === active,
-                // })}
                 className={s.colorSwatch}
                 style={{
-                  backgroundColor: v.hexColors
-                    ? setBgColor(v.hexColors)
+                  backgroundColor: opt.hexColors
+                    ? setBgColor(opt.hexColors)
                     : 'transparent',
                 }}
-                onClick={() => {
-                  setSelectedOptions(selectedOptions => {
-                    return {
-                      ...selectedOptions,
-                      [option.displayName.toLowerCase()]: v.label.toLowerCase(),
-                    }
-                  })
-                }}
-                aria-label={v.label.toLowerCase()}>
-                {/* {v.label.toLowerCase()} */}
+                onClick={() => openBackdrop(opt.page || '/')}
+                aria-label={setLabel(opt.color || '')}>
+                {opt.hexColors ? '' : setLabel(opt.color || '')}
               </button>
             </li>
-          )
-        })}
-
-      {/* Metafiled color options */}
-      {colorVariants &&
-        colorVariants.map(opt => (
-          <li key={opt.color}>
-            <button
-              className={s.colorSwatch}
-              style={{
-                backgroundColor: opt.hexColors
-                  ? setBgColor(opt.hexColors)
-                  : 'transparent',
-              }}
-              onClick={() => openBackdrop(opt.page || '/')}
-              aria-label={setLabel(opt.color || '')}>
-              {opt.hexColors ? '' : setLabel(opt.color || '')}
-            </button>
-          </li>
-        ))}
-    </ul>
+          ))}
+      </ul>
+      <ProductBackdrop open={backdrop} />
+    </>
   )
 }
 

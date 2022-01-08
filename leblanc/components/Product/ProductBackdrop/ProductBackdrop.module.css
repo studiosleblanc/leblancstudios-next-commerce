@@ -1,0 +1,6 @@
+.root {
+  @apply absolute top-0 left-0;
+  @apply w-full h-full;
+  @apply opacity-40;
+  @apply z-40;
+}
