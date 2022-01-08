@@ -15,18 +15,17 @@ const StyleWith: FC<Props> = ({ product }) => {
 
   return (
     <>
-      {handle_1 ||
-        (handle_2 && (
-          <div className={s.root}>
-            <div className={s.wrapper}>
-              <div className={s.productsContainer}>
-                {handle_1 && <StyleWithCard handle={handle_1} />}
-                {handle_2 && <StyleWithCard handle={handle_2} />}
-              </div>
-              <div className={s.caption}>style with</div>
+      {(handle_1 || handle_2) && (
+        <div className={s.root}>
+          <div className={s.wrapper}>
+            <div className={s.productsContainer}>
+              {handle_1 && <StyleWithCard handle={handle_1} />}
+              {handle_2 && <StyleWithCard handle={handle_2} />}
             </div>
+            <div className={s.caption}>style with</div>
           </div>
-        ))}
+        </div>
+      )}
     </>
   )
 }
