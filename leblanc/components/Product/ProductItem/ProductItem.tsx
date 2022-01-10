@@ -8,6 +8,7 @@ import type { CollectionItem } from '@leblanc/data/collection'
 import { Product } from '@commerce/types/product'
 import useProductMetafields from '@leblanc/hooks/useProductMetafields'
 import ProductItemSizes from './ProductItemSizes'
+import ProductItemColors from './ProductItemColors'
 
 const placeholderImg = '/product-img-placeholder.svg'
 interface Props {
@@ -24,7 +25,7 @@ const ProductItem: FC<Props> = ({ item, asCard = false }) => {
     currencyCode: item.price.currencyCode!,
   })
 
-  console.log(item)
+  // console.log(item)
 
   return (
     <div className={cn(s.item, { [s.asCard]: asCard })} key={item.name}>
@@ -44,15 +45,13 @@ const ProductItem: FC<Props> = ({ item, asCard = false }) => {
       </Link>
       <div className={s.details}>
         <div className={s.detailsContent}>
-          <div className={s.colors}>
-            {/* {item.colors &&
-              item.colors.map(color => (
-                <div
-                  className={s.swatch}
-                  key={color}
-                  style={{ backgroundColor: color }}></div>
-              ))} */}
-          </div>
+          {item.options?.map(opt => (
+            <React.Fragment key={opt.id}>
+              {opt.displayName.includes('color') && (
+                <ProductItemColors product={item} option={opt} />
+              )}
+            </React.Fragment>
+          ))}
           <span className={s.price}>{price}</span>
           <span>{commonName}</span>
           <ProductItemSizes options={item.options} />

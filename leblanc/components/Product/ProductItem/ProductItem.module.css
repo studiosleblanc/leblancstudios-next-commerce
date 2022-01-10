@@ -38,15 +38,6 @@
   @apply font-semibold;
 }
 
-.colors {
-  @apply flex flex-col items-end;
-  @apply mb-2;
-}
-.swatch {
-  @apply w-10 h-10 border-[1px] border-black border-solid;
-  @apply mb-5;
-}
-
 .squeezeContainer {
   @apply flex justify-end;
 }

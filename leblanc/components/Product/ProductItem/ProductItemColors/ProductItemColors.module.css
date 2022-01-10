@@ -1,0 +1,9 @@
+.colors {
+  @apply flex flex-col items-end;
+  @apply mb-2;
+}
+.swatch {
+  @apply block;
+  @apply w-10 h-10 border-[1px] border-black border-solid;
+  @apply mb-5;
+}
