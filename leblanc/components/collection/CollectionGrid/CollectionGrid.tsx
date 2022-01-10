@@ -18,9 +18,6 @@ const CollectionGrid: FC<Props> = ({ products }) => {
       {products.slice(0, 12).map((item: Product) => (
         <ProductItem key={item.name} item={item} />
       ))}
-      {/* {products.map(product => (
-        <h1 key={product.slug}>{product.name}</h1>
-      ))} */}
     </div>
   )
 }
