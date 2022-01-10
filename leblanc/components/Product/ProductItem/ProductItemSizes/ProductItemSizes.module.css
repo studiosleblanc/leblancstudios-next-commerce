@@ -4,5 +4,6 @@
   @apply flex justify-end;
   & > li {
     @apply ml-3;
+    @apply text-text-primary;
   }
 }
