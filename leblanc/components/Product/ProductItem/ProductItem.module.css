@@ -1,4 +1,5 @@
 .item {
+  @apply relative;
   @apply w-1/2 lg:w-1/3 relative;
   @apply select-none;
 
@@ -40,10 +41,11 @@
 
 .squeezeContainer {
   @apply flex justify-end;
-}
-.squeeze {
   @apply w-[132px] pt-1 border-t-[1px] border-black border-solid;
+}
+.squeezeButton {
   @apply text-lbsGreen font-light;
+  @apply appearance-none;
 }
 
 .caption {

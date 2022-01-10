@@ -1,0 +1,5 @@
+.root {
+  @apply absolute top-0 right-0;
+  @apply bg-primary;
+  @apply w-full h-full;
+}

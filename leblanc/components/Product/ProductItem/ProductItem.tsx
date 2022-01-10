@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import Link from 'next/link'
 import cn from 'classnames'
 import Image from 'next/image'
@@ -9,6 +9,7 @@ import { Product } from '@commerce/types/product'
 import useProductMetafields from '@leblanc/hooks/useProductMetafields'
 import ProductItemSizes from './ProductItemSizes'
 import ProductItemColors from './ProductItemColors'
+import { SqueezeOut } from '..'
 
 const placeholderImg = '/product-img-placeholder.svg'
 interface Props {
@@ -17,6 +18,7 @@ interface Props {
 }
 
 const ProductItem: FC<Props> = ({ item, asCard = false }) => {
+  const [squeezeOut, setSqueezeOut] = useState(false)
   const commonName = useProductMetafields(item.metafields, 'common_name')
 
   const { price } = usePrice({
@@ -24,6 +26,10 @@ const ProductItem: FC<Props> = ({ item, asCard = false }) => {
     baseAmount: item.price.retailPrice,
     currencyCode: item.price.currencyCode!,
   })
+
+  const toggleSqueezeOut = () => {
+    setSqueezeOut(!squeezeOut)
+  }
 
   // console.log(item)
 
@@ -57,7 +63,9 @@ const ProductItem: FC<Props> = ({ item, asCard = false }) => {
           <ProductItemSizes options={item.options} />
         </div>
         <div className={s.squeezeContainer}>
-          <div className={s.squeeze}>Squeeze Out!</div>
+          <button className={s.squeezeButton} onClick={toggleSqueezeOut}>
+            Squeeze Out!
+          </button>
         </div>
       </div>
       <div className={cn(s.caption, s.captionDesktop)}>{item.name}</div>
@@ -65,6 +73,9 @@ const ProductItem: FC<Props> = ({ item, asCard = false }) => {
         <div className={s.captionPrice}>{price}</div>
         <div className={s.captionCommonName}>{commonName}</div>
       </div>
+      {squeezeOut && item && (
+        <SqueezeOut product={item} open={squeezeOut} setOpen={setSqueezeOut} />
+      )}
     </div>
   )
 }
