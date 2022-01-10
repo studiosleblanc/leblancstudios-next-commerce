@@ -10,6 +10,11 @@ export const productConnectionFragment = /* GraphQL */ `
         title
         vendor
         handle
+        options {
+          id
+          name
+          values
+        }
         priceRange {
           minVariantPrice {
             amount
@@ -30,6 +35,29 @@ export const productConnectionFragment = /* GraphQL */ `
             }
           }
         }
+        # variants(first: 250) {
+        #   edges {
+        #     node {
+        #       id
+        #       title
+        #       sku
+        #       availableForSale
+        #       requiresShipping
+        #       selectedOptions {
+        #         name
+        #         value
+        #       }
+        #       priceV2 {
+        #         amount
+        #         currencyCode
+        #       }
+        #       compareAtPriceV2 {
+        #         amount
+        #         currencyCode
+        #       }
+        #     }
+        #   }
+        # }
         metafields(first: 100) {
           edges {
             node {

@@ -1,0 +1,8 @@
+.sizes {
+  @apply list-none p-0 m-0;
+  @apply uppercase mb-[2px];
+  @apply flex justify-end;
+  & > li {
+    @apply ml-3;
+  }
+}

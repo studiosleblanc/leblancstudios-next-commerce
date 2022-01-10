@@ -7,6 +7,7 @@ import usePrice from '@framework/product/use-price'
 import type { CollectionItem } from '@leblanc/data/collection'
 import { Product } from '@commerce/types/product'
 import useProductMetafields from '@leblanc/hooks/useProductMetafields'
+import ProductItemSizes from './ProductItemSizes'
 
 const placeholderImg = '/product-img-placeholder.svg'
 interface Props {
@@ -22,6 +23,8 @@ const ProductItem: FC<Props> = ({ item, asCard = false }) => {
     baseAmount: item.price.retailPrice,
     currencyCode: item.price.currencyCode!,
   })
+
+  console.log(item)
 
   return (
     <div className={cn(s.item, { [s.asCard]: asCard })} key={item.name}>
@@ -52,12 +55,7 @@ const ProductItem: FC<Props> = ({ item, asCard = false }) => {
           </div>
           <span className={s.price}>{price}</span>
           <span>{commonName}</span>
-          <span>Available Sizes:</span>
-          <ul className={s.sizes}>
-            {/* {item.sizes.map(size => (
-              <li key={size}>{size}</li>
-            ))} */}
-          </ul>
+          <ProductItemSizes options={item.options} />
         </div>
         <div className={s.squeezeContainer}>
           <div className={s.squeeze}>Squeeze Out!</div>
