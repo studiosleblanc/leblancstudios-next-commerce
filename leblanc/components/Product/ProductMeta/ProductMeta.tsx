@@ -1,5 +1,6 @@
 import React, { FC, useState, useEffect } from 'react'
 import s from './ProductMeta.module.css'
+import cn from 'classnames'
 // components
 import { QuantitySelector } from '@leblanc/components/ui'
 import {
@@ -20,12 +21,14 @@ import {
   SelectedOptions,
 } from '@components/product/helpers'
 import useProductMetafields from '@leblanc/hooks/useProductMetafields'
+import { Scrollbars } from 'react-custom-scrollbars'
 
 interface Props {
   product: Product
+  asCard?: boolean
 }
 
-const ProductMeta: FC<Props> = ({ product }) => {
+const ProductMeta: FC<Props> = ({ product, asCard = false }) => {
   const addItem = useAddItem()
   const { openSidebar, setSidebarView } = useUI()
   const [cartLoading, setCartLoading] = useState(false)
@@ -70,7 +73,7 @@ const ProductMeta: FC<Props> = ({ product }) => {
   }
 
   return (
-    <div className={s.root}>
+    <div className={cn(s.root, { [s.asCard]: asCard })}>
       <div className={s.card}>
         <div className={s.details}>
           <h3 className={s.price}>{price}</h3>
@@ -127,11 +130,17 @@ const ProductMeta: FC<Props> = ({ product }) => {
           <div className={s.or}>or</div>
           <button className={s.fullButton}>steal from us</button>
         </div>
-        <div className={s.fullDescription}>
-          {parse(product?.descriptionHtml || '')}
-        </div>
+        <Scrollbars
+          autoHeight
+          autoHeightMin={0}
+          autoHeightMax="100%"
+          style={{ height: '100%' }}>
+          <div className={s.fullDescription}>
+            {parse(product?.descriptionHtml || '')}
+          </div>
+        </Scrollbars>
       </div>
-      <StyleWith product={product} />
+      {!asCard && <StyleWith product={product} />}
     </div>
   )
 }
