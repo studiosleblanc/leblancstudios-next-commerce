@@ -7,9 +7,12 @@ export const productConnectionFragment = /* GraphQL */ `
     edges {
       node {
         id
+        handle
+        availableForSale
         title
         vendor
-        handle
+        description
+        descriptionHtml
         options {
           id
           name
@@ -19,6 +22,33 @@ export const productConnectionFragment = /* GraphQL */ `
           minVariantPrice {
             amount
             currencyCode
+          }
+        }
+        variants(first: 250) {
+          pageInfo {
+            hasNextPage
+            hasPreviousPage
+          }
+          edges {
+            node {
+              id
+              title
+              sku
+              availableForSale
+              requiresShipping
+              selectedOptions {
+                name
+                value
+              }
+              priceV2 {
+                amount
+                currencyCode
+              }
+              compareAtPriceV2 {
+                amount
+                currencyCode
+              }
+            }
           }
         }
         images(first: 1) {
@@ -35,29 +65,6 @@ export const productConnectionFragment = /* GraphQL */ `
             }
           }
         }
-        # variants(first: 250) {
-        #   edges {
-        #     node {
-        #       id
-        #       title
-        #       sku
-        #       availableForSale
-        #       requiresShipping
-        #       selectedOptions {
-        #         name
-        #         value
-        #       }
-        #       priceV2 {
-        #         amount
-        #         currencyCode
-        #       }
-        #       compareAtPriceV2 {
-        #         amount
-        #         currencyCode
-        #       }
-        #     }
-        #   }
-        # }
         metafields(first: 100) {
           edges {
             node {
