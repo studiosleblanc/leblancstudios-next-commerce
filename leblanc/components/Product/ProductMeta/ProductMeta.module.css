@@ -79,6 +79,11 @@
     @apply mb-4;
   }
 }
+.scrolbars {
+  & > div {
+    overflow-x: auto !important;
+  }
+}
 
 :global(.dark) {
   & .fullButton {

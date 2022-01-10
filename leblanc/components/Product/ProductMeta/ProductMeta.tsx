@@ -21,7 +21,7 @@ import {
   SelectedOptions,
 } from '@components/product/helpers'
 import useProductMetafields from '@leblanc/hooks/useProductMetafields'
-import { Scrollbars } from 'react-custom-scrollbars'
+import { Scrollbars } from 'react-custom-scrollbars-2'
 
 interface Props {
   product: Product
@@ -134,7 +134,8 @@ const ProductMeta: FC<Props> = ({ product, asCard = false }) => {
           autoHeight
           autoHeightMin={0}
           autoHeightMax="100%"
-          style={{ height: '100%' }}>
+          style={{ height: '100%', width: '100%' }}
+          className={s.scrolbars}>
           <div className={s.fullDescription}>
             {parse(product?.descriptionHtml || '')}
           </div>
