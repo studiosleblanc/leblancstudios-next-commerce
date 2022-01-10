@@ -4,3 +4,7 @@
   @apply w-full h-full;
   @apply z-40;
 }
+
+.cardWrapper {
+  @apply h-full;
+}

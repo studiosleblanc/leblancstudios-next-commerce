@@ -41,11 +41,14 @@
 
 .squeezeContainer {
   @apply flex justify-end;
-  @apply w-[132px] pt-1 border-t-[1px] border-black border-solid;
+  @apply w-[132px] pt-2 mt-1 border-t-[1px] border-black border-solid;
 }
 .squeezeButton {
-  @apply text-lbsGreen font-light;
+  @apply text-lbsGreen text-lg;
+  /* @apply font-light; */
   @apply appearance-none;
+  @apply hover:underline;
+  text-underline-offset: 2px;
 }
 
 .caption {

@@ -15,8 +15,8 @@ const CollectionGrid: FC<Props> = ({ products }) => {
   // console.log(products)
   return (
     <div className={s.root}>
-      {products.slice(0, 12).map((item: Product) => (
-        <ProductItem key={item.name} item={item} />
+      {products.slice(0, 12).map((item: Product, i) => (
+        <ProductItem key={item.name} item={item} i={i} />
       ))}
     </div>
   )

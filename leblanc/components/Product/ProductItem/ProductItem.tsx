@@ -15,9 +15,10 @@ const placeholderImg = '/product-img-placeholder.svg'
 interface Props {
   item: Product
   asCard?: boolean
+  i: number
 }
 
-const ProductItem: FC<Props> = ({ item, asCard = false }) => {
+const ProductItem: FC<Props> = ({ item, asCard = false, i }) => {
   const [squeezeOut, setSqueezeOut] = useState(false)
   const commonName = useProductMetafields(item.metafields, 'common_name')
 
@@ -74,7 +75,7 @@ const ProductItem: FC<Props> = ({ item, asCard = false }) => {
         <div className={s.captionCommonName}>{commonName}</div>
       </div>
       {squeezeOut && item && (
-        <SqueezeOut product={item} open={squeezeOut} setOpen={setSqueezeOut} />
+        <SqueezeOut product={item} open={squeezeOut} setOpen={setSqueezeOut} i={i} />
       )}
     </div>
   )
