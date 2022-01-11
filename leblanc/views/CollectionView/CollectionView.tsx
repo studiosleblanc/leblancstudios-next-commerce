@@ -40,8 +40,8 @@ export default function CollectionView({ categories, brands }: SearchPropsType) 
 
   const router = useRouter()
   const { asPath, locale } = router
-  const pathItems = usePathItems(asPath)
-  const collection = pathItems[pathItems.length - 1]
+  const { navItems } = usePathItems(asPath)
+  const collection = navItems[navItems.length - 1]
   // const { q, sort } = router.query
   // `q` can be included but because categories and designers can't be searched
   // in the same way of products, it's better to ignore the search input if one

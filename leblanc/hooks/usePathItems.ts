@@ -34,5 +34,5 @@ export function usePathItems(asPath: string) {
     return items
   }
 
-  return navItems
+  return { navItems, pathItems }
 }

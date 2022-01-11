@@ -27,14 +27,14 @@ const countItem = (count: number, item: LineItem) => count + item.quantity
 const Header: FC<Props> = ({ history }) => {
   const router = useRouter()
   const { asPath } = router
-  const breadcrumbs = usePathItems(asPath)
+  const { navItems: breadcrumbs, pathItems } = usePathItems(asPath)
   const positionItems = usePositionText(breadcrumbs)
   const { toggleSidebar, closeSidebarIfPresent, openModal } = useUI()
   const { data } = useCart()
 
   const itemsCount = data?.lineItems.reduce(countItem, 0) ?? 0
 
-  // console.log(breadcrumbs)
+  console.log(pathItems)
   // console.log(data)
 
   const getFitFontStyles = (items: string[] | React.ReactNode[]) => {
@@ -96,16 +96,18 @@ const Header: FC<Props> = ({ history }) => {
         </div>
         <div className={s.navbar}>
           <div style={getFitFontStyles(positionItems)} className={s.position}>
-            {positionItems.map((pItem, i) => (
-              <React.Fragment key={i}>
-                {i >= 1 && (
-                  <span>
-                    <VscChevronRight />
-                  </span>
-                )}
-                <div>{pItem}</div>
-              </React.Fragment>
-            ))}
+            {breadcrumbs.length > 0
+              ? positionItems.map((pItem, i) => (
+                  <React.Fragment key={i}>
+                    {i >= 1 && (
+                      <span>
+                        <VscChevronRight />
+                      </span>
+                    )}
+                    <div>{pItem}</div>
+                  </React.Fragment>
+                ))
+              : pathItems[0]}
           </div>
           <div className={s.navigation}>
             <div className={s.navigationTop}>
