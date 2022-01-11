@@ -130,16 +130,22 @@ const ProductMeta: FC<Props> = ({ product, asCard = false }) => {
           <div className={s.or}>or</div>
           <button className={s.fullButton}>steal from us</button>
         </div>
-        <Scrollbars
-          autoHeight
-          autoHeightMin={0}
-          autoHeightMax="100%"
-          style={{ height: '100%', width: '100%' }}
-          className={s.scrolbars}>
+        {asCard ? (
+          <Scrollbars
+            autoHeight
+            autoHeightMin={0}
+            autoHeightMax="100%"
+            style={{ height: '100%', width: '100%' }}
+            className={s.scrolbars}>
+            <div className={s.fullDescription}>
+              {parse(product?.descriptionHtml || '')}
+            </div>
+          </Scrollbars>
+        ) : (
           <div className={s.fullDescription}>
             {parse(product?.descriptionHtml || '')}
           </div>
-        </Scrollbars>
+        )}
       </div>
       {!asCard && <StyleWith product={product} />}
     </div>
