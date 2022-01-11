@@ -38,7 +38,9 @@ const LBSFooter: FC<Props> = ({ pages }) => {
                 <a href="">Wholesale</a>
               </li>
               <li>
-                <a href="">About Us</a>
+                <Link href="/history">
+                  <a>About Us</a>
+                </Link>
               </li>
               <li>
                 <a href="">Returns</a>
@@ -60,27 +62,30 @@ const LBSFooter: FC<Props> = ({ pages }) => {
             </ul>
             <ul>
               <li>
-                <a href="">Contact Us</a>
+                <a href="mailto:info@leblancstudios.com">Contact Us</a>
               </li>
               <li>
                 <a href="">WhatsApp Business</a>
               </li>
               <li>
-                <a href="">E-Mail</a>
+                <a href="mailto:info@leblancstudios.com">E-Mail</a>
               </li>
             </ul>
             <ul className={s.social}>
               <li>
-                <a href="">Facebook</a>
+                <a
+                  href="https://open.spotify.com/user/la1my6jfhjhxpbqhk2xdxb5vk?si=6VrMFCCKRNOqvlLh75MFyA"
+                  target="_blank">
+                  Spotify
+                </a>
               </li>
               <li>
-                <a href="">Instagram</a>
+                <a href="https://www.instagram.com/LEBLANCSTUDIOS/">Instagram</a>
               </li>
               <li>
-                <a href="">Youtube</a>
-              </li>
-              <li>
-                <a href="">Twitter</a>
+                <a href="https://youtube.com/channel/UCpfWlAx9UUJqwZHdij-ybhA">
+                  Youtube
+                </a>
               </li>
             </ul>
           </div>
