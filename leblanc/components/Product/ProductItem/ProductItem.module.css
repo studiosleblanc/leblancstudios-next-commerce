@@ -61,6 +61,9 @@
 .caption {
   @apply absolute w-full bottom-2 lg:bottom-6 text-center;
   @apply text-text-primary;
+  &.lightTheme {
+    @apply text-text-secondary;
+  }
 }
 
 .captionDesktop {

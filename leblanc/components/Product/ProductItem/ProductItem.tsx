@@ -70,8 +70,20 @@ const ProductItem: FC<Props> = ({ item, asCard = false, i }) => {
           </button>
         </div>
       </div>
-      <div className={cn(s.caption, s.captionDesktop)}>{item.name}</div>
-      <div className={cn(s.caption, s.captionMobile)}>
+      <div
+        className={cn(
+          s.caption,
+          { [s.lightTheme]: cardLightText === 'true' },
+          s.captionDesktop
+        )}>
+        {item.name}
+      </div>
+      <div
+        className={cn(
+          s.caption,
+          { [s.lightTheme]: cardLightText === 'true' },
+          s.captionMobile
+        )}>
         <div className={s.captionPrice}>{price}</div>
         {/* <div className={s.captionCommonName}>{commonName}</div> */}
       </div>
