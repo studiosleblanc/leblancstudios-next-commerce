@@ -27,13 +27,19 @@
 .details {
   @apply absolute bottom-1/4 right-0;
   @apply pr-8;
-  @apply hidden lg:flex flex-col;
+  @apply hidden lg:flex flex-col items-end;
+  @apply text-text-primary;
+  &.lightTheme {
+    @apply text-text-secondary;
+    & .squeezeContainer {
+      @apply border-primary;
+    }
+  }
 }
 .detailsContent {
   @apply flex flex-col text-right;
   & > span {
     @apply mb-3;
-    @apply text-text-primary;
   }
 }
 .price {

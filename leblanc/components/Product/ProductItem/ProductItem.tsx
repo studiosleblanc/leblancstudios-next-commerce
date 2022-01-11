@@ -21,6 +21,7 @@ interface Props {
 const ProductItem: FC<Props> = ({ item, asCard = false, i }) => {
   const [squeezeOut, setSqueezeOut] = useState(false)
   const commonName = useProductMetafields(item.metafields, 'common_name')
+  const cardLightText = useProductMetafields(item.metafields, 'card_light_text')
 
   const { price } = usePrice({
     amount: item.price.value,
@@ -32,7 +33,7 @@ const ProductItem: FC<Props> = ({ item, asCard = false, i }) => {
     setSqueezeOut(!squeezeOut)
   }
 
-  // console.log(item)
+  // console.log(cardLightText)
 
   return (
     <div className={cn(s.item, { [s.asCard]: asCard })} key={item.name}>
@@ -50,7 +51,7 @@ const ProductItem: FC<Props> = ({ item, asCard = false, i }) => {
           )}
         </a>
       </Link>
-      <div className={s.details}>
+      <div className={cn(s.details, { [s.lightTheme]: cardLightText === 'true' })}>
         <div className={s.detailsContent}>
           {item.options?.map(opt => (
             <React.Fragment key={opt.id}>
