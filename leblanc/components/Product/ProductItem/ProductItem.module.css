@@ -26,10 +26,11 @@
 
 .details {
   @apply absolute bottom-1/4 right-0;
+  @apply pr-8;
   @apply hidden lg:flex flex-col;
 }
 .detailsContent {
-  @apply flex flex-col text-right pr-8;
+  @apply flex flex-col text-right;
   & > span {
     @apply mb-3;
     @apply text-text-primary;
