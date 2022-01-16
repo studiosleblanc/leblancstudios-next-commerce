@@ -31,7 +31,7 @@
 }
 
 .centerContainer {
-  @apply flex justify-between;
+  @apply flex justify-between flex-row-reverse;
   @apply pt-5;
 }
 

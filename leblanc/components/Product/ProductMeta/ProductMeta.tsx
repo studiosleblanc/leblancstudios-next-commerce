@@ -92,6 +92,11 @@ const ProductMeta: FC<Props> = ({ product, asCard = false }) => {
           <h1 className={s.title}>{product.name}</h1>
           <p className={s.shortDescription}>{shortDescription}</p>
           <div className={s.centerContainer}>
+            <div className={s.quantityCol}>
+              <div>
+                <QuantitySelector quantity={quantity} setQuantity={setQuantity} />
+              </div>
+            </div>
             {product.options?.map(opt => (
               <React.Fragment key={opt.id}>
                 {opt.displayName.includes('size') && (
@@ -103,11 +108,6 @@ const ProductMeta: FC<Props> = ({ product, asCard = false }) => {
                 )}
               </React.Fragment>
             ))}
-            <div className={s.quantityCol}>
-              <div>
-                <QuantitySelector quantity={quantity} setQuantity={setQuantity} />
-              </div>
-            </div>
           </div>
           <div className={s.bottomContainer}>
             <div>
