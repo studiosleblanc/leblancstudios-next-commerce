@@ -1,20 +1,20 @@
 {
-  "title": "LEBLANC STUDIOS | OFFICIAL WEBSITE",
-  "titleTemplate": "%s - LEBLANC STUDIOS",
+  "title": "LEBLANCSTUDIOS | OFFICIAL WEBSITE",
+  "titleTemplate": "%s - LEBLANCSTUDIOS",
   "description": "SHOP AND VIEW THE LATEST MENSWEAR AND WOMENSWEAR COLLECTION FROM THE OFFICIAL LEBLANCSTUDIOS WEBSITE",
   "openGraph": {
-    "title": "LEBLANC STUDIOS | OFFICIAL WEBSITE",
+    "title": "LEBLANCSTUDIOS | OFFICIAL WEBSITE",
     "description": "SHOP AND VIEW THE LATEST MENSWEAR AND WOMENSWEAR COLLECTION FROM THE OFFICIAL LEBLANCSTUDIOS WEBSITE",
     "type": "website",
     "locale": "en_IE",
-    "url": "https://nextjs.org/commerce",
-    "site_name": "Next.js Commerce",
+    "url": "https://leblancstudios.com",
+    "site_name": "LEBLANCSTUDIOS",
     "images": [
       {
-        "url": "/card.png",
-        "width": 800,
-        "height": 600,
-        "alt": "LEBLANC STUDIOS"
+        "url": "/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "alt": "LEBLANCSTUDIOS"
       }
     ]
   },
