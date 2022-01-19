@@ -33,9 +33,6 @@
 }
 .searchButton {
   @apply absolute right-0 h-full pl-1 px-2;
-  & svg {
-    @apply w-[14px] h-auto;
-  }
 }
 
 :global(.dark) {

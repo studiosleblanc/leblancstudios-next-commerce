@@ -3,6 +3,7 @@ import s from './SidebarMobile.module.css'
 import { useUI } from '@components/ui/context'
 import { SearchIcon } from '@leblanc/icons'
 import NavMobile from '../NavMobile'
+import { IoIosSearch } from 'react-icons/io'
 
 const SidebarMobile = () => {
   const { displayMobileSidebar } = useUI()
@@ -23,7 +24,7 @@ const SidebarMobile = () => {
                 className={s.searchInput}
               />
               <button type="submit" className={s.searchButton}>
-                <SearchIcon />
+                <IoIosSearch size={14} />
               </button>
             </div>
           </form>
