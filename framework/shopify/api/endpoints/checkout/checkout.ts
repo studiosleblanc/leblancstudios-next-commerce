@@ -29,10 +29,20 @@ const checkout: CheckoutEndpoint['handlers']['checkout'] = async ({
   }
 
   if (checkoutUrl) {
-    res.redirect(checkoutUrl)
-  } else {
-    res.redirect('/cart')
-  }
+		if (
+			process.env.NEXT_PUBLIC_SHOPIFY_STORE_CHECKOUT_DOMAIN &&
+			process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN
+		) {
+			const checkoutDomain = process.env.NEXT_PUBLIC_SHOPIFY_STORE_CHECKOUT_DOMAIN
+			const storeDomain = process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN
+			const newCheckoutUrl = checkoutUrl.replace(storeDomain, checkoutDomain)
+			res.redirect(newCheckoutUrl)
+		} else {
+			res.redirect(checkoutUrl)
+		}
+	} else {
+		res.redirect('/cart')
+	}
 }
 
 export default checkout
