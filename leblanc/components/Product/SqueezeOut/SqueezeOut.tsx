@@ -4,6 +4,7 @@ import ClickOutside from '@lib/click-outside'
 import type { Product } from '@commerce/types/product'
 import { ProductMeta } from '..'
 import { motion } from 'framer-motion'
+import { VscClose } from 'react-icons/vsc'
 
 interface Props {
   product: Product
@@ -13,7 +14,7 @@ interface Props {
 }
 
 const SqueezeOut: FC<Props> = ({ product, open, setOpen, i }) => {
-  const handleClickOutside = () => {
+  const closeSqueezeOut = () => {
     setOpen(false)
   }
 
@@ -41,13 +42,16 @@ const SqueezeOut: FC<Props> = ({ product, open, setOpen, i }) => {
   console.log(i)
 
   return (
-    <ClickOutside active={open} onClick={handleClickOutside}>
+    <ClickOutside active={open} onClick={closeSqueezeOut}>
       <motion.div
         className={s.root}
         initial="exit"
         animate={open ? 'enter' : 'exit'}
         variants={(i + 1) % 3 === 0 ? cardLeftAnimate : cardRightAnimate}>
         <div className={s.cardWrapper}>
+          <button className={s.closeButton} onClick={closeSqueezeOut} aria-label="close squeeze out">
+            <VscClose size={18} className={s.navItemChevron} />
+          </button>
           <ProductMeta product={product} asCard />
         </div>
       </motion.div>
