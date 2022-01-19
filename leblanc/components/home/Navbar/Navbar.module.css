@@ -96,5 +96,6 @@
 
 .rightBar {
   @apply w-[38px] h-full;
-  @apply border-solid border-text-primary border-l-[1px];
+  @apply border-solid border-text-primary;
+  border-left-width: 1px;
 }
