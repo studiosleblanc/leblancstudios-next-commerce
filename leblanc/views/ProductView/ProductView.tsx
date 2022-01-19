@@ -31,7 +31,7 @@ const ProductView: FC<Props> = ({ product, relatedProducts }) => {
         <h2>{product.name}</h2>
         <div className={s.rte}>{parse(product?.descriptionHtml || '')}</div>
       </div>
-      <RelatedProducts relatedProducts={relatedProducts} />
+      {/* <RelatedProducts relatedProducts={relatedProducts} /> */}
     </MainLayout>
   )
 }
