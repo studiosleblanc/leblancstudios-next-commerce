@@ -34,30 +34,30 @@ const LBSFooter: FC<Props> = ({ pages }) => {
         <div className={s.menuRow}>
           <div className={s.menu}>
             <ul>
-              <li>
+              {/* <li>
                 <a href="">Wholesale</a>
-              </li>
+              </li> */}
               <li>
-                <Link href="/history">
+                <Link href="/about-us">
                   <a>About Us</a>
                 </Link>
               </li>
+              {/* <li>
+                <a href="">Shipping & Returns</a>
+              </li> */}
               <li>
-                <a href="">Returns</a>
-              </li>
-              <li>
-                <a href="">Shipping</a>
+                <a href="/privacy-policy">Privacy Policy</a>
               </li>
             </ul>
             <ul>
-              <li>
+              {/* <li>
                 <a href="">Newsletter</a>
+              </li> */}
+              <li>
+                <a href="http://sto-dgo.com/">Santo Domingo</a>
               </li>
               <li>
-                <a href="">Santo Domingo</a>
-              </li>
-              <li>
-                <a href="">Stores</a>
+                <a href="/stores">Stores</a>
               </li>
             </ul>
             <ul>

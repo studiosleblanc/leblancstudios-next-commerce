@@ -1,5 +1,5 @@
 .root {
   @apply flex justify-center items-center;
-  @apply w-full;
+  @apply w-full uppercase;
   height: 60vh;
 }
