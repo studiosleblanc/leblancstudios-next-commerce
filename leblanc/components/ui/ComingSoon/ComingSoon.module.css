@@ -1,0 +1,5 @@
+.root {
+  @apply flex justify-center items-center;
+  @apply w-full;
+  height: 60vh;
+}

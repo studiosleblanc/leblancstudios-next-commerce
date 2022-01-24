@@ -45,6 +45,6 @@ export const homeNavigation: NavItem[] = [
     id: 'archives',
     label: 'Archives',
     handle: 'archives',
-    href: '/',
+    href: '/archives',
   },
 ]

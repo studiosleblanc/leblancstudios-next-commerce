@@ -13,25 +13,27 @@ import {
   HistorySectionF,
   HistorySectionG,
 } from '@leblanc/components/history'
+import { ComingSoon } from '@leblanc/components/ui'
 
 const HistoryView = () => {
   return (
     <HistoryLayout>
       <div className={s.container}>
         {/* Section A */}
-        <HistorySectionA />
+        {/* <HistorySectionA /> */}
         {/* Section B */}
-        <HistorySectionB />
+        {/* <HistorySectionB /> */}
         {/* Section C */}
-        <HistorySectionC />
+        {/* <HistorySectionC /> */}
         {/* Section D */}
-        <HistorySectionD />
+        {/* <HistorySectionD /> */}
         {/* Section E */}
-        <HistorySectionE />
+        {/* <HistorySectionE /> */}
         {/* Section F */}
-        <HistorySectionF />
+        {/* <HistorySectionF /> */}
         {/* Section G */}
-        <HistorySectionG />
+        {/* <HistorySectionG /> */}
+        <ComingSoon />
       </div>
     </HistoryLayout>
   )
