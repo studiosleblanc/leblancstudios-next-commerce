@@ -22,7 +22,7 @@ const ShippingReturnsView = () => {
           available for replacement and the customer do not want to exchange for any
           other item, will proceed to offer a refund.
         </p>
-        <p>Items on FINAL SALE are can not be returned. </p>
+        <p>Items on FINAL SALE cannot be returned. </p>
         <p>
           If you have any questions, concerns, or complaints regarding our return
           policy, we encourage you to contact us using the details below:
