@@ -42,11 +42,15 @@ const LBSFooter: FC<Props> = ({ pages }) => {
                   <a>About Us</a>
                 </Link>
               </li>
-              {/* <li>
-                <a href="">Shipping & Returns</a>
-              </li> */}
               <li>
-                <a href="/privacy-policy">Privacy Policy</a>
+                <Link href="/shipping-and-returns">
+                  <a>Shipping & Returns</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy-policy">
+                  <a>Privacy Policy</a>
+                </Link>
               </li>
             </ul>
             <ul>
@@ -54,19 +58,23 @@ const LBSFooter: FC<Props> = ({ pages }) => {
                 <a href="">Newsletter</a>
               </li> */}
               <li>
-                <a href="http://sto-dgo.com/">Santo Domingo</a>
+                <a href="http://sto-dgo.com/" target="_blank">
+                  Santo Domingo
+                </a>
               </li>
               <li>
-                <a href="/stores">Stores</a>
+                <Link href="/stores">
+                  <a>Stores</a>
+                </Link>
               </li>
             </ul>
             <ul>
               <li>
                 <a href="mailto:info@leblancstudios.com">Contact Us</a>
               </li>
-              <li>
+              {/* <li>
                 <a href="">WhatsApp Business</a>
-              </li>
+              </li> */}
               <li>
                 <a href="mailto:info@leblancstudios.com">E-Mail</a>
               </li>

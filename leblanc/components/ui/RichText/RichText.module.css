@@ -4,4 +4,7 @@
   & h1 {
     @apply font-bold text-xl text-center;
   }
+  & p {
+    @apply mb-6;
+  }
 }
