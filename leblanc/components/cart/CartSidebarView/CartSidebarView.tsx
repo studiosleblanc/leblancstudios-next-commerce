@@ -93,13 +93,13 @@ const CartSidebarView: FC = () => {
                 <span>{subTotal}</span>
               </li>
               <li>
-                <span>Taxes</span>
+                <span>Shipping & Taxes</span>
                 <span>Calculated at checkout</span>
               </li>
-              <li>
+              {/* <li>
                 <span>Shipping</span>
                 <span className="font-bold tracking-wide">FREE</span>
-              </li>
+              </li> */}
             </ul>
             <div className={s.total}>
               <span>TOTAL</span>
