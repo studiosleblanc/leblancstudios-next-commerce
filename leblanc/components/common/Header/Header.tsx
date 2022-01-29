@@ -34,7 +34,7 @@ const Header: FC<Props> = ({ history }) => {
 
   const itemsCount = data?.lineItems.reduce(countItem, 0) ?? 0
 
-  // console.log(pathItems)
+  // console.log(positionItems)
   // console.log(data)
 
   const getFitFontStyles = (items: string[] | React.ReactNode[]) => {
@@ -42,6 +42,15 @@ const Header: FC<Props> = ({ history }) => {
     items.forEach(i => {
       length += String(i).length
     })
+    return {
+      fontSize: `${300 / (length * 10)}rem`,
+      fontWeight: length > 14 ? 400 : 300,
+    }
+  }
+
+  const getStringFitFontStyles = (items: string) => {
+    let length: number = 0
+    length = String(items).length
     return {
       fontSize: `${300 / (length * 10)}rem`,
       fontWeight: length > 14 ? 400 : 300,
@@ -95,7 +104,8 @@ const Header: FC<Props> = ({ history }) => {
           )}
         </div>
         <div className={s.navbar}>
-          <div style={getFitFontStyles(positionItems)} className={s.position}>
+          <div style={positionItems.length > 0 ? getFitFontStyles(positionItems) : pathItems && getStringFitFontStyles(pathItems[0])} className={s.position}>
+          {/* <div style={getFitFontStyles(positionItems)} className={s.position}> */}
             {breadcrumbs.length > 0
               ? positionItems.map((pItem, i) => (
                   <React.Fragment key={i}>
@@ -107,7 +117,7 @@ const Header: FC<Props> = ({ history }) => {
                     <div>{pItem}</div>
                   </React.Fragment>
                 ))
-              : pathItems[0]}
+              : pathItems[0]?.replaceAll('-', ' ')}
           </div>
           <div className={s.navigation}>
             <div className={s.navigationTop}>
