@@ -6,8 +6,8 @@ import { ComingSoon } from '@leblanc/components/ui'
 export async function getStaticProps(context: GetStaticPropsContext) {
   return getSearchStaticProps(context)
 }
-export default function History() {
+export default function AboutUs() {
   return <ComingSoon />
 }
 
-History.Layout = Layout
+AboutUs.Layout = Layout
