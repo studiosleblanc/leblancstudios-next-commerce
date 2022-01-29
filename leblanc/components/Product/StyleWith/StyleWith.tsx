@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import Image from 'next/image'
 import s from './StyleWith.module.css'
-import useProductMetafields from '@leblanc/hooks/useProductMetafields'
+// import useProductMetafields from '@leblanc/hooks/useProductMetafields'
 import type { Product } from '@commerce/types/product'
 import StyleWithCard from './StyleWithCard'
 
@@ -10,8 +10,10 @@ interface Props {
 }
 
 const StyleWith: FC<Props> = ({ product }) => {
-  const handle_1 = useProductMetafields(product.metafields, 'style_with_handle_1')
-  const handle_2 = useProductMetafields(product.metafields, 'style_with_handle_2')
+  // const handle_1 = useProductMetafields(product.metafields, 'style_with_handle_1')
+  // const handle_2 = useProductMetafields(product.metafields, 'style_with_handle_2')
+  const handle_1 = product.metafields?.find(meta => meta.key === 'style_with_handle_1')?.value
+  const handle_2 = product.metafields?.find(meta => meta.key === 'style_with_handle_2')?.value
 
   return (
     <>

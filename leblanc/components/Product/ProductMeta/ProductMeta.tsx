@@ -20,7 +20,7 @@ import {
   selectDefaultOptionFromProduct,
   SelectedOptions,
 } from '@components/product/helpers'
-import useProductMetafields from '@leblanc/hooks/useProductMetafields'
+// import useProductMetafields from '@leblanc/hooks/useProductMetafields'
 import { Scrollbars } from 'react-custom-scrollbars-2'
 
 interface Props {
@@ -29,16 +29,14 @@ interface Props {
 }
 
 const ProductMeta: FC<Props> = ({ product, asCard = false }) => {
+  console.log(product.metafields)
   const addItem = useAddItem()
   const { openSidebar, setSidebarView } = useUI()
   const [cartLoading, setCartLoading] = useState(false)
   const [quantity, setQuantity] = useState<number>(1)
   const [selectedOptions, setSelectedOptions] = useState<SelectedOptions>({})
 
-  const shortDescription = useProductMetafields(
-    product.metafields,
-    'short_description'
-  )
+  const shortDescription  = product.metafields?.find(meta => meta.key === 'short_description')?.value
 
   useEffect(() => {
     selectDefaultOptionFromProduct(product, setSelectedOptions)
@@ -90,7 +88,9 @@ const ProductMeta: FC<Props> = ({ product, asCard = false }) => {
             </React.Fragment>
           ))}
           <h1 className={s.title}>{product.name}</h1>
-          <p className={s.shortDescription}>{shortDescription}</p>
+          <p className={s.shortDescription}>
+            {shortDescription && shortDescription}
+          </p>
           <div className={s.centerContainer}>
             <div className={s.quantityCol}>
               <div>
