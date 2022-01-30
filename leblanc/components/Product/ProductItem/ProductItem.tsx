@@ -41,7 +41,7 @@ const ProductItem: FC<Props> = ({ item, asCard = false, i }) => {
         <a className={s.imageContainer}>
           {item?.images && (
             <Image
-              quality="85"
+              unoptimized
               src={item.images[0]?.url || placeholderImg}
               width={item.images[0]?.width || 800}
               height={item.images[0]?.height || 800}
