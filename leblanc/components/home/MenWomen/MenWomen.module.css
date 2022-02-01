@@ -6,7 +6,7 @@
   @apply w-full lg:w-1/2;
 }
 .card {
-  @apply relative h-full;
+  @apply relative block h-full;
   & > div:first-child {
     /* important to keep image same size */
     @apply h-full;
