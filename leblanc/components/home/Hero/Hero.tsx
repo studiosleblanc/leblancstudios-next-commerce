@@ -15,10 +15,10 @@ const Hero: FC = () => {
         <Image
           priority
           unoptimized
-          src="/assets/home/banner-1.jpg"
+          src="/assets/home/banner-main.jpg"
           alt="Leblanc Studios"
           width={1920}
-          height={1446}
+          height={1080}
           layout="responsive"
           // objectFit="cover"
           // layout="fill"
