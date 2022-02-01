@@ -3,7 +3,7 @@
 }
 
 .column {
-  @apply relative w-full lg:w-1/2;
+  @apply relative block w-full lg:w-1/2;
 }
 
 /* column Left */
