@@ -20,7 +20,7 @@ const ANecesaryRisk: FC = () => {
           alt="A Necesary Risk BG"
           className={s.bgImage}
           width={1920}
-          height={1355}
+          height={1306}
           layout="responsive"
           objectFit="cover"
         />

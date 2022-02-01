@@ -57,65 +57,67 @@ const MenWomen: FC = () => {
         </Link>
       </div>
       <div className={s.column}>
-        <div className={s.card}>
-          <Image
-            priority
-            unoptimized
-            src="/assets/home/womens.jpg"
-            alt="Leblanc Studios"
-            width={964}
-            height={1440}
-            layout="responsive"
-            className={s.image}
-            placeholder="empty"
-            onLoadingComplete={() => setWomenLoaded(true)}
-          />
-          <div className={s.cardContent}>
-            <div className={s.cardHeader}>
-              <div className={s.headerCaption}>
-                ss21: <b>[Timeless Duck Shirt: Intimo y Personal]</b>
+        <Link href="/product/grey-longrace-duck-shirt">
+          <a className={s.card}>
+            <Image
+              priority
+              unoptimized
+              src="/assets/home/womens.jpg"
+              alt="Leblanc Studios"
+              width={964}
+              height={1440}
+              layout="responsive"
+              className={s.image}
+              placeholder="empty"
+              onLoadingComplete={() => setWomenLoaded(true)}
+            />
+            <div className={s.cardContent}>
+              <div className={s.cardHeader}>
+                <div className={s.headerCaption}>
+                  ss21: <b>[Timeless Duck Shirt: Intimo y Personal]</b>
+                </div>
               </div>
-            </div>
-            <div className={s.cardFooter}>
-              <div className={s.footerCaption}>WOMENS</div>
-            </div>
+              <div className={s.cardFooter}>
+                <div className={s.footerCaption}>WOMENS</div>
+              </div>
 
-            <Tooltip
-              appear={womenLoaded}
-              top="8%"
-              right="17%"
-              align="right"
-              width="23%"
-              className={s.tooltip}
-              text="Bucket Hat [TDS]"
-            />
-            <Tooltip
-              appear={womenLoaded}
-              top="36%"
-              left="11%"
-              width="26.5%"
-              className={s.tooltip}
-              text="Shirt Jacket [TDS]"
-            />
-            <Tooltip
-              appear={womenLoaded}
-              bottom="29%"
-              right="7%"
-              align="right"
-              width="23.5%"
-              className={s.tooltip}
-              text="Skirt [TDS]"
-            />
-            <Tooltip
-              appear={womenLoaded}
-              bottom="25.5%"
-              left="2.5%"
-              width="26%"
-              className={s.tooltip}
-              text="Tote Bag [FMP]"
-            />
-          </div>
-        </div>
+              <Tooltip
+                appear={womenLoaded}
+                top="8%"
+                right="17%"
+                align="right"
+                width="23%"
+                className={s.tooltip}
+                text="Bucket Hat [TDS]"
+              />
+              <Tooltip
+                appear={womenLoaded}
+                top="36%"
+                left="11%"
+                width="26.5%"
+                className={s.tooltip}
+                text="Shirt Jacket [TDS]"
+              />
+              <Tooltip
+                appear={womenLoaded}
+                bottom="29%"
+                right="7%"
+                align="right"
+                width="23.5%"
+                className={s.tooltip}
+                text="Skirt [TDS]"
+              />
+              <Tooltip
+                appear={womenLoaded}
+                bottom="25.5%"
+                left="2.5%"
+                width="26%"
+                className={s.tooltip}
+                text="Tote Bag [FMP]"
+              />
+            </div>
+          </a>
+        </Link>
       </div>
     </div>
   )
