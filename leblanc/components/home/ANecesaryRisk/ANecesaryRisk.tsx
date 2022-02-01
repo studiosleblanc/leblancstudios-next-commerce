@@ -19,8 +19,8 @@ const ANecesaryRisk: FC = () => {
           src="/assets/home/aNecessaryRisk_bg.jpg"
           alt="A Necesary Risk BG"
           className={s.bgImage}
-          width={2560}
-          height={1806}
+          width={1920}
+          height={1355}
           layout="responsive"
           objectFit="cover"
         />
@@ -35,8 +35,8 @@ const ANecesaryRisk: FC = () => {
           src="/assets/home/aNecessaryRisk_socks.png"
           alt="A Necesary Risk"
           className={s.cardImage}
-          width={1920}
-          height={1377}
+          width={2560}
+          height={1437}
           layout="responsive"
         />
         <SwitchButton toggle={toggle} setToggle={setToggle} />
