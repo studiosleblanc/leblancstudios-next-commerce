@@ -17,7 +17,7 @@
 
 /* Card */
 .card {
-  @apply px-2 md:px-12;
+  @apply block px-2 md:px-12;
 }
 
 .cardImageContainer {
