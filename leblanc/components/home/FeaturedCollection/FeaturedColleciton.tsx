@@ -72,13 +72,13 @@ const FeaturedRow: FC = () => {
             variants={contentAnimate}>
             <div className={s.contentBody}>
               <p>
-                SS21: <b>Timeless Duck Shirt: [Intimo y Personal]</b> belongs to the
-                line with most recognition of LEBLANCSTUDIOS. For this season, we
-                explored the private sphere of our clients using clothes that reflect
-                the Caribbean masculinity and femininity. Creating a character based
-                on traditional clothing typologies of our country and interpreting
-                the sillhouettes and colors that typically define Caribbean
-                casualwear in a new way.
+                <b>Timeless Duck Shirt: [Intimo y Personal]</b> belongs to the line
+                with most recognition of LEBLANCSTUDIOS. For this season, we explored
+                the private sphere of our clients using clothes that reflect the
+                Caribbean masculinity and femininity. Creating a character based on
+                traditional clothing typologies of our country and interpreting the
+                sillhouettes and colors that typically define Caribbean casualwear in
+                a new way.
               </p>
               <p>
                 We expanded our range of products, developing denim shirts, skirts

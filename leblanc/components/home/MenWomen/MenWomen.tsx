@@ -74,7 +74,7 @@ const MenWomen: FC = () => {
             <div className={s.cardContent}>
               <div className={s.cardHeader}>
                 <div className={s.headerCaption}>
-                  ss21: <b>[Timeless Duck Shirt: Intimo y Personal]</b>
+                  <b>[Timeless Duck Shirt: Intimo y Personal]</b>
                 </div>
               </div>
               <div className={s.cardFooter}>
