@@ -57,6 +57,14 @@ const womens: NavItem[] = [
     href: '/womens/leather-goods',
     slug: 'womens-leather-goods',
   },
+  {
+    id: 'tds-timeless-duck-shirt-intimo-y-personal-addsaw78tf',
+    label: 'Timeless Duck Shirt: Intimo y Personal',
+    handle: 'tds',
+    abbr: 'tds',
+    href: '/womens/womens-tds',
+    slug: 'womens-tds',
+  },
 ]
 
 export default womens

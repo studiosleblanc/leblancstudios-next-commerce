@@ -50,6 +50,14 @@ const mens: NavItem[] = [
     href: '/mens/leather-goods',
     slug: 'mens-leather-goods',
   },
+  {
+    id: 'tds-timeless-duck-shirt-intimo-y-personal-addsaw78tf',
+    label: 'Timeless Duck Shirt: Intimo y Personal',
+    handle: 'tds',
+    abbr: 'tds',
+    href: '/mens/mens-tds',
+    slug: 'mens-tds',
+  },
 ]
 
 export default mens

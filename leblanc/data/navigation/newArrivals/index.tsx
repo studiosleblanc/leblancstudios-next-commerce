@@ -40,18 +40,6 @@ const newArrivals: NavItem[] = [
     href: '/new-arrivals/a-necessary-risk-x-gus-pena/shirts',
   },
   {
-    id: 'ss21-timeless-duck-shirt-intimo-y-personal-ad78tf',
-    label: (
-      <>
-        SS21 <b>[Timeless Duck Shirt: Intimo y Personal]</b>
-      </>
-    ),
-    handle: 'ss21',
-    abbr: 'SS21',
-    childs: ss21,
-    href: '/new-arrivals/ss21/shirts',
-  },
-  {
     id: 'white-nacked-duck-da78t',
     label: 'White Naked Duck',
     handle: 'white-naked-duck',
