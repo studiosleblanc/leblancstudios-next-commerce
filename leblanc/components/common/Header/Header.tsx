@@ -104,8 +104,14 @@ const Header: FC<Props> = ({ history }) => {
           )}
         </div>
         <div className={s.navbar}>
-          <div style={positionItems.length > 0 ? getFitFontStyles(positionItems) : pathItems && getStringFitFontStyles(pathItems[0])} className={s.position}>
-          {/* <div style={getFitFontStyles(positionItems)} className={s.position}> */}
+          <div
+            style={
+              positionItems.length > 0
+                ? getFitFontStyles(positionItems)
+                : pathItems && getStringFitFontStyles(pathItems[0])
+            }
+            className={s.position}>
+            {/* <div style={getFitFontStyles(positionItems)} className={s.position}> */}
             {breadcrumbs.length > 0
               ? positionItems.map((pItem, i) => (
                   <React.Fragment key={i}>
@@ -124,15 +130,19 @@ const Header: FC<Props> = ({ history }) => {
               <div className={s.navigationTopBox}>
                 <ul className={cn(s.menu, s.menuTop)}>
                   {homeNavigation.map(navItem => (
-                    <li key={navItem.id}>
-                      {navItem.href ? (
-                        <Link href={navItem.href}>
-                          <a>{navItem.label}</a>
-                        </Link>
-                      ) : (
-                        <a>{navItem.label}</a>
+                    <React.Fragment key={navItem.id}>
+                      {navItem.noNav ? null : (
+                        <li>
+                          {navItem.href ? (
+                            <Link href={navItem.href}>
+                              <a>{navItem.label}</a>
+                            </Link>
+                          ) : (
+                            <a>{navItem.label}</a>
+                          )}
+                        </li>
                       )}
-                    </li>
+                    </React.Fragment>
                   ))}
                 </ul>
               </div>
@@ -144,29 +154,37 @@ const Header: FC<Props> = ({ history }) => {
                     .find(i => i.handle === breadcrumbs[0].handle)
                     ?.childs?.find(child => child.handle === breadcrumbs[1].handle)
                     ?.childs?.map(navItem => (
-                      <li key={navItem.id}>
-                        {navItem.href ? (
-                          <Link href={navItem.href}>
-                            <a>{navItem.label}</a>
-                          </Link>
-                        ) : (
-                          <a>{navItem.label}</a>
+                      <React.Fragment key={navItem.id}>
+                        {navItem.noNav ? null : (
+                          <li>
+                            {navItem.href ? (
+                              <Link href={navItem.href}>
+                                <a>{navItem.label}</a>
+                              </Link>
+                            ) : (
+                              <a>{navItem.label}</a>
+                            )}
+                          </li>
                         )}
-                      </li>
+                      </React.Fragment>
                     ))}
                 {breadcrumbs.length === 2 &&
                   homeNavigation
                     .find(i => i.handle === breadcrumbs[0].handle)
                     ?.childs?.map(navItem => (
-                      <li key={navItem.id}>
-                        {navItem.href ? (
-                          <Link href={navItem.href}>
-                            <a>{navItem.abbr ? navItem.abbr : navItem.label}</a>
-                          </Link>
-                        ) : (
-                          <a>{navItem.abbr ? navItem.abbr : navItem.label}</a>
+                      <React.Fragment key={navItem.id}>
+                        {navItem.noNav ? null : (
+                          <li>
+                            {navItem.href ? (
+                              <Link href={navItem.href}>
+                                <a>{navItem.abbr ? navItem.abbr : navItem.label}</a>
+                              </Link>
+                            ) : (
+                              <a>{navItem.abbr ? navItem.abbr : navItem.label}</a>
+                            )}
+                          </li>
                         )}
-                      </li>
+                      </React.Fragment>
                     ))}
               </ul>
             </div>

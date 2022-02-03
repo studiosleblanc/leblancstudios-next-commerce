@@ -37,7 +37,7 @@ const FeaturedRow: FC = () => {
 
   return (
     <div className={s.root}>
-      <Link href="/product/white-duck-t-shirt">
+      <Link href="/collection/all-tds">
         <a
           className={cn(s.column, s.columnLeft)}
           onMouseEnter={handleHover}

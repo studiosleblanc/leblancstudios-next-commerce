@@ -59,17 +59,21 @@ const Navbar: FC = () => {
             <div className={s.toolbar}>
               <ul className={s.menu}>
                 {homeNavigation.map((navItem: NavItem) => (
-                  <li key={navItem.id}>
-                    {navItem.childs ? (
-                      <a href="#" onClick={e => handleActiveItem(e, navItem)}>
-                        {navItem.label}
-                      </a>
-                    ) : (
-                      <NextLink href={navItem.href || ''}>
-                        <a>{navItem.label}</a>
-                      </NextLink>
+                  <React.Fragment key={navItem.id}>
+                    {navItem.noNav ? null : (
+                      <li>
+                        {navItem.childs ? (
+                          <a href="#" onClick={e => handleActiveItem(e, navItem)}>
+                            {navItem.label}
+                          </a>
+                        ) : (
+                          <NextLink href={navItem.href || ''}>
+                            <a>{navItem.label}</a>
+                          </NextLink>
+                        )}
+                      </li>
                     )}
-                  </li>
+                  </React.Fragment>
                 ))}
               </ul>
               <div className={s.search}>
