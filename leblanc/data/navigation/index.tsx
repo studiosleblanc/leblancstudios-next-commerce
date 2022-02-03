@@ -2,6 +2,7 @@ import React from 'react'
 import newArrivals from './newArrivals'
 import mens from './mens'
 import womens from './womens'
+import collections from './collections'
 
 export type NavItem = {
   id: string
@@ -11,6 +12,7 @@ export type NavItem = {
   href?: string
   childs?: NavItem[]
   slug?: string
+  noNav?: boolean
 }
 
 export const homeNavigation: NavItem[] = [
@@ -46,5 +48,13 @@ export const homeNavigation: NavItem[] = [
     label: 'Archives',
     handle: 'archives',
     href: '/archives',
+  },
+  {
+    id: 'collection',
+    label: 'Collection',
+    handle: 'collection',
+    href: '/collection/all',
+    childs: collections,
+    noNav: true,
   },
 ]
