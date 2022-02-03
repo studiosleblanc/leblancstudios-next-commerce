@@ -45,24 +45,30 @@ const NavMobile = () => {
       {!activeItem && !activeChildItem && (
         <ul className={s.menu}>
           {homeNavigation.map((item: NavItem) => (
-            <li key={item.id}>
-              {item.childs ? (
-                <button className={s.navItem} onClick={() => setActiveItem(item)}>
-                  <span>{item.label}</span>
-                  {item.childs && (
-                    <VscChevronRight size={11} className={s.navItemChevron} />
+            <React.Fragment key={item.id}>
+              {item.noNav ? null : (
+                <li>
+                  {item.childs ? (
+                    <button
+                      className={s.navItem}
+                      onClick={() => setActiveItem(item)}>
+                      <span>{item.label}</span>
+                      {item.childs && (
+                        <VscChevronRight size={11} className={s.navItemChevron} />
+                      )}
+                    </button>
+                  ) : (
+                    item.href && (
+                      <NextLink href={item.href || ''}>
+                        <a className={s.navItem} onClick={handleLinkClick}>
+                          {item.label}
+                        </a>
+                      </NextLink>
+                    )
                   )}
-                </button>
-              ) : (
-                item.href && (
-                  <NextLink href={item.href || ''}>
-                    <a className={s.navItem} onClick={handleLinkClick}>
-                      {item.label}
-                    </a>
-                  </NextLink>
-                )
+                </li>
               )}
-            </li>
+            </React.Fragment>
           ))}
         </ul>
       )}
@@ -78,26 +84,30 @@ const NavMobile = () => {
               <span>{parentLabel}</span>
             </li>
             {activeItem.childs.map((item: NavItem) => (
-              <li key={item.id}>
-                {item.childs ? (
-                  <button
-                    className={s.navItem}
-                    onClick={() => setActiveChildItem(item)}>
-                    <span>{item.label}</span>
-                    {item.childs && (
-                      <VscChevronRight size={11} className={s.navItemChevron} />
+              <React.Fragment key={item.id}>
+                {item.noNav ? null : (
+                  <li key={item.id}>
+                    {item.childs ? (
+                      <button
+                        className={s.navItem}
+                        onClick={() => setActiveChildItem(item)}>
+                        <span>{item.label}</span>
+                        {item.childs && (
+                          <VscChevronRight size={11} className={s.navItemChevron} />
+                        )}
+                      </button>
+                    ) : (
+                      item.href && (
+                        <NextLink href={item.href || ''}>
+                          <a className={s.navItem} onClick={handleLinkClick}>
+                            {item.label}
+                          </a>
+                        </NextLink>
+                      )
                     )}
-                  </button>
-                ) : (
-                  item.href && (
-                    <NextLink href={item.href || ''}>
-                      <a className={s.navItem} onClick={handleLinkClick}>
-                        {item.label}
-                      </a>
-                    </NextLink>
-                  )
+                  </li>
                 )}
-              </li>
+              </React.Fragment>
             ))}
           </ul>
         </div>
@@ -118,15 +128,19 @@ const NavMobile = () => {
               </span>
             </li>
             {activeChildItem.childs.map((item: NavItem) => (
-              <li key={item.id}>
-                {item.href && (
-                  <NextLink href={item.href || ''}>
-                    <a className={s.navItem} onClick={handleLinkClick}>
-                      {item.label}
-                    </a>
-                  </NextLink>
+              <React.Fragment key={item.id}>
+                {item.noNav ? null : (
+                  <li key={item.id}>
+                    {item.href && (
+                      <NextLink href={item.href || ''}>
+                        <a className={s.navItem} onClick={handleLinkClick}>
+                          {item.label}
+                        </a>
+                      </NextLink>
+                    )}
+                  </li>
                 )}
-              </li>
+              </React.Fragment>
             ))}
           </ul>
         </div>
