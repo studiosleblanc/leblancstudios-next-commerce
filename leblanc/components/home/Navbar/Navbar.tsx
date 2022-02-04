@@ -11,8 +11,10 @@ import { homeNavigation } from '@leblanc/data/navigation'
 import type { NavItem } from '@leblanc/data/navigation'
 import { NavPanel } from '@leblanc/components/home'
 import { BsChevronDown } from 'react-icons/bs'
+import { useMediaQuery } from 'react-responsive'
 
 const Navbar: FC = () => {
+  const isNotebook = useMediaQuery({ query: '(max-width: 1279px)' })
   const [activeItem, setActiveItem] = useState('')
   const [activeItemChild, setActiveItemChild] = useState('')
 
@@ -55,7 +57,7 @@ const Navbar: FC = () => {
             className={s.topRow}
             initial="exit"
             animate={activeItem ? 'enter' : 'exit'}
-            variants={animation.topRow}>
+            variants={isNotebook ? animation.topRowTablet : animation.topRow}>
             <div className={s.toolbar}>
               <ul className={s.menu}>
                 {homeNavigation.map((navItem: NavItem) => (
@@ -131,7 +133,7 @@ const Navbar: FC = () => {
           <motion.div
             initial="exit"
             animate={activeItem ? 'enter' : 'exit'}
-            variants={animation.bottomRow}
+            variants={isNotebook ? animation.bottomRowTablet : animation.bottomRow}
             className={s.bottomRow}>
             <motion.div
               initial="exit"

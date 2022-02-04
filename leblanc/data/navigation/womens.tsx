@@ -60,7 +60,7 @@ const womens: NavItem[] = [
   {
     id: 'tds-timeless-duck-shirt-intimo-y-personal-addsaw78tf',
     label: 'Timeless Duck Shirt: Intimo y Personal',
-    handle: 'tds',
+    handle: 'womens-tds',
     abbr: 'TDS',
     href: '/womens/womens-tds',
     slug: 'womens-tds',

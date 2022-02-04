@@ -22,12 +22,36 @@ const topRow = {
   },
 }
 
+const topRowTablet = {
+  enter: {
+    height: '55vh',
+  },
+  exit: {
+    height: '64px',
+    transition: {
+      delay: 0.5,
+    },
+  },
+}
+
 const bottomRow = {
   enter: {
     height: '30vh',
   },
   exit: {
     height: '46px',
+    transition: {
+      delay: 0.5,
+    },
+  },
+}
+
+const bottomRowTablet = {
+  enter: {
+    height: '30vh',
+  },
+  exit: {
+    height: '64px',
     transition: {
       delay: 0.5,
     },
@@ -91,7 +115,9 @@ const breadcrumbs = {
 export default {
   navbar,
   topRow,
+  topRowTablet,
   bottomRow,
+  bottomRowTablet,
   bottomRowFooter,
   rightBar,
   collapse,
