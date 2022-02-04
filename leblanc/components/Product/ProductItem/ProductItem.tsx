@@ -85,7 +85,7 @@ const ProductItem: FC<Props> = ({ item, asCard = false, i }) => {
           s.captionMobile
         )}>
         <div className={s.captionPrice}>{price}</div>
-        {/* <div className={s.captionCommonName}>{commonName}</div> */}
+        <div className={s.captionCommonName}>{commonName}</div>
       </div>
       {squeezeOut && item && (
         <SqueezeOut product={item} open={squeezeOut} setOpen={setSqueezeOut} i={i} />
