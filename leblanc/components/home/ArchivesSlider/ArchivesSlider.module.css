@@ -6,8 +6,8 @@
 }
 
 .slideSvgWrapper {
-  @apply absolute top-0 left-0 w-full p-12;
-  @apply flex justify-center;
+  @apply absolute top-0 left-0 w-full h-full p-12;
+  @apply flex justify-center items-start;
 }
 .slideSvgText {
   @apply w-4/5 h-auto;
