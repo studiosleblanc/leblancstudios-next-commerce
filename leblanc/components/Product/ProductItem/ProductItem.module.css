@@ -72,11 +72,11 @@
   @apply hidden lg:block;
 }
 .captionMobile {
-  @apply block lg:hidden;
-  @apply items-center;
-  @apply min-h-[1.25rem];
+  @apply flex flex-col lg:hidden;
+  @apply justify-center;
+  @apply h-[36px];
   @apply text-xs md:text-base;
-  @apply px-5 py-4;
+  @apply px-5 py-0;
   @apply text-left;
 }
 
