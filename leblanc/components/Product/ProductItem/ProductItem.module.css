@@ -94,11 +94,9 @@
 .captionCommonName {
   /* @apply pl-3; */
 }
-/* 
+
 :global(.dark) {
-  & .detailsContent {
-    & > span {
-      @apply text-text-primary;
-    }
+  & .captionMobile {
+    @apply text-text-secondary;
   }
-} */
+}
