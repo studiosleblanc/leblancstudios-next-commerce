@@ -96,7 +96,7 @@ const ArchivesSlider: FC = () => {
             />
             <div className={s.slideCaption}>
               <h5>
-                From Archivo General De La Nación, 1975. [Ornalndo Martínez Howley.]
+                From Archivo General De La Nación, 1975. [Orlando Martínez Howley.]
               </h5>
               <h5>Fondo Editora Hoy</h5>
             </div>
