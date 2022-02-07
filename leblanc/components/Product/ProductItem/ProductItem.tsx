@@ -70,6 +70,15 @@ const ProductItem: FC<Props> = ({ item, asCard = false, i }) => {
           </button>
         </div>
       </div>
+      <div className={s.swatchesMobile}>
+        {item.options?.map(opt => (
+          <React.Fragment key={opt.id}>
+            {opt.displayName.includes('color') && (
+              <ProductItemColors product={item} option={opt} />
+            )}
+          </React.Fragment>
+        ))}
+      </div>
       <div
         className={cn(
           s.caption,
