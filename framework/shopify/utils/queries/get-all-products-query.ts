@@ -58,7 +58,7 @@ export const productConnectionFragment = /* GraphQL */ `
           }
           edges {
             node {
-              transformedSrc(maxWidth: 650)
+              transformedSrc(maxWidth: 800)
               altText
               width
               height
