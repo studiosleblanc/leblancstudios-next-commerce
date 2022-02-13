@@ -1,12 +1,12 @@
 
-type ArchiveImage = {
+export type ArchiveImage = {
   src: string
   width: number
   height: number
   caption?: string | React.ReactNode
 }
 
-type Archive = {
+export type Archive = {
   name: string
   handle: string        // handle and slug
   shortText?: string
