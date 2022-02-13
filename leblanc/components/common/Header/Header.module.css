@@ -49,7 +49,7 @@
 }
 
 .position {
-  @apply w-[300px] h-[75px];
+  @apply w-[300px] 2xl:w-[330px] h-[75px];
   @apply flex items-center justify-center;
   @apply bg-lbsGreen px-[4.5rem];
   @apply text-6xl uppercase font-light;
@@ -97,7 +97,14 @@
   }
 }
 .menuBottom {
+  @apply flex-wrap;
   @apply px-5 pt-[14px] pb-5;
+  & li {
+    @apply mt-[14px] mb-[20px];;
+  }
+  & a {
+    word-break: keep-all;
+  }
 }
 
 .linkActive {
