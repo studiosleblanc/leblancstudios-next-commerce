@@ -35,6 +35,7 @@ const Header: FC<Props> = ({ history }) => {
   const itemsCount = data?.lineItems.reduce(countItem, 0) ?? 0
 
   // console.log(positionItems)
+  console.log(pathItems)
   // console.log(data)
 
   const getFitFontStyles = (items: string[] | React.ReactNode[]) => {
@@ -135,10 +136,10 @@ const Header: FC<Props> = ({ history }) => {
                         <li>
                           {navItem.href ? (
                             <Link href={navItem.href}>
-                              <a>{navItem.label}</a>
+                              <a className={cn({[s.linkActive]: navItem.handle === pathItems[0]})}>{navItem.label}</a>
                             </Link>
                           ) : (
-                            <a>{navItem.label}</a>
+                            <a className={cn({[s.linkActive]: navItem.handle === pathItems[0]})}>{navItem.label}</a>
                           )}
                         </li>
                       )}
@@ -159,10 +160,10 @@ const Header: FC<Props> = ({ history }) => {
                           <li>
                             {navItem.href ? (
                               <Link href={navItem.href}>
-                                <a>{navItem.label}</a>
+                                <a className={cn({[s.linkActive]: navItem.handle === pathItems[pathItems.length -1]})}>{navItem.label}</a>
                               </Link>
                             ) : (
-                              <a>{navItem.label}</a>
+                              <a className={cn({[s.linkActive]: navItem.handle === pathItems[pathItems.length -1]})}>{navItem.label}</a>
                             )}
                           </li>
                         )}
@@ -177,10 +178,10 @@ const Header: FC<Props> = ({ history }) => {
                           <li>
                             {navItem.href ? (
                               <Link href={navItem.href}>
-                                <a>{navItem.abbr ? navItem.abbr : navItem.label}</a>
+                                <a className={cn({[s.linkActive]: navItem.handle === pathItems[pathItems.length -1]})}>{navItem.abbr ? navItem.abbr : navItem.label}</a>
                               </Link>
                             ) : (
-                              <a>{navItem.abbr ? navItem.abbr : navItem.label}</a>
+                              <a className={cn({[s.linkActive]: navItem.handle === pathItems[pathItems.length -1]})}>{navItem.abbr ? navItem.abbr : navItem.label}</a>
                             )}
                           </li>
                         )}
