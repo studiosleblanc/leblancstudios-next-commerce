@@ -34,3 +34,15 @@
     content: ' ';
   }
 }
+
+/* DARK MODE */
+:global(.dark) {
+  & .slideshowSection {
+    &:before {
+      @apply border-white;
+    }
+    &:after {
+      @apply border-white;
+    }
+  }
+}

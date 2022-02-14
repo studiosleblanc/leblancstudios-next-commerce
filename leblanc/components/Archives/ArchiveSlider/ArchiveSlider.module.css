@@ -27,7 +27,7 @@
   }
 }
 .credits {
-  @apply text-xl pt-8 lg:pt-10 pb-4 font-light;
+  @apply text-xl pt-8 lg:pt-10 pb-4 font-light cursor-default;
   line-height: 2;
 }
 
@@ -44,3 +44,12 @@
     height: auto;
   }
 } */
+
+/* DARK MODE */
+:global(.dark) {
+  & .chevron {
+    & path {
+      stroke: #fff;
+    }
+  }
+}
