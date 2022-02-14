@@ -26,10 +26,6 @@
     height: auto;
   }
 }
-.credits {
-  @apply text-xl pt-8 lg:pt-10 pb-4 font-light cursor-default;
-  line-height: 2;
-}
 
 /* .chevronLeft {
   @apply left-[24px];

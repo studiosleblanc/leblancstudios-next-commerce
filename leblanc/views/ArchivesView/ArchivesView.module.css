@@ -2,11 +2,11 @@
   @apply mb-20;
 }
 .headingRow {
-  @apply w-full mb-16;
+  @apply w-full mt-14 lg:mt-32 mb-16;
   @apply flex flex-wrap justify-between items-end;
 }
 .title {
-  @apply text-6xl font-bold uppercase mb-5;
+  @apply text-4xl lg:text-6xl font-bold uppercase mb-5;
 }
 .shortText {
   @apply text-lg;
@@ -17,12 +17,12 @@
 }
 
 .container {
-  @apply my-32 max-w-[1580px] mx-auto px-8 lg:px-12;
+  @apply mb-28 lg:mb-32 max-w-[1580px] mx-auto px-8 lg:px-12;
 }
 
 /* Slide section */
 .slideshowSection {
-  @apply relative w-full mb-40 2xl:mb-60;
+  @apply relative w-full;
   &:before {
     @apply absolute top-[18%] left-0;
     @apply w-full border-t-[1px] border-solid border-text-primary;
@@ -35,9 +35,20 @@
   }
 }
 
+/* Credits Section */
+.creditsSection {
+  @apply mb-24 lg:mb-40 2xl:mb-60;
+  @apply w-full max-w-[1032px] mx-auto;
+  @apply px-[16px];
+}
+.credits {
+  @apply text-xl pt-8 lg:pt-10 pb-4 font-light cursor-default;
+  line-height: 2;
+}
+
 /* Big Abbr section */
 .bigAbbrSection {
-  @apply mb-40 2xl:mb-60;
+  @apply mb-32 lg:mb-40 2xl:mb-60;
 }
 
 /* Gallery Section */
@@ -50,7 +61,7 @@
 
 .galleryItem {
   @apply w-full;
-  @apply px-8 lg:px-10 2xl:px-12 mb-16 xl:mb-20 2xl:mb-24;
+  @apply px-6 md:px-8 lg:px-10 2xl:px-12 mb-12 md:mb-16 xl:mb-20 2xl:mb-24;
   & > div {
     @apply w-full;
   }

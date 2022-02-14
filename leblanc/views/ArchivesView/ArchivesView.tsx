@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic'
 import { MainLayout } from '@leblanc/layouts'
 import type { Archive, ArchiveImage } from '@leblanc/data/archives'
 import { ArchiveSlider } from '@leblanc/components/Archives'
+import parse from 'html-react-parser'
 
 interface Props {
   archive: Archive
@@ -35,6 +36,9 @@ const ArchivesView: FC<Props> = ({ archive }) => {
             <ArchiveSlider images={archive.images} credits={archive.credits!} />
           </>
         )}
+      </div>
+      <div className={s.creditsSection}>
+        {archive.credits && <p className={s.credits}>{parse(archive.credits)}</p>}
       </div>
       {SvgCollection && (
         <div className={cn(s.bigAbbrSection, s.container)}>
