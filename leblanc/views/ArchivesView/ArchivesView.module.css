@@ -1,0 +1,21 @@
+.headingSection {
+  @apply mb-20;
+}
+.headingRow {
+  @apply w-full mb-16;
+  @apply flex flex-wrap justify-between items-end;
+}
+.title {
+  @apply text-6xl font-bold uppercase mb-5;
+}
+.shortText {
+  @apply text-lg;
+}
+.richText {
+  @apply text-2xl lg:text-4xl;
+  line-height: 1.5;
+}
+
+.container {
+  @apply my-32 max-w-[1580px] mx-auto px-8 lg:px-12;
+}

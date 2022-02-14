@@ -9,11 +9,11 @@ import collections from './collections'
 export type NavItem = {
   id: string
   label: string | React.ReactNode
-  handle: string                     // Url path handle
+  handle: string // Url path handle
   abbr?: string
-  href?: string                      // Full url path
+  href?: string // Full url path
   childs?: NavItem[]
-  slug?: string                      // Collection handle
+  slug?: string // Collection handle
   noNav?: boolean
 }
 
@@ -50,7 +50,7 @@ export const homeNavigation: NavItem[] = [
     label: 'Archives',
     handle: 'archives',
     childs: archives,
-    href: '/archives/all',
+    href: '/archives/singular-unity',
   },
   {
     id: 'collection', // hidden links
