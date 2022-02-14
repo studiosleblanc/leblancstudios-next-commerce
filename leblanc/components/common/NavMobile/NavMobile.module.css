@@ -26,11 +26,14 @@
   }
 }
 .childHeader {
-  @apply font-bold pl-0;
+  @apply relative font-bold pl-0 py-0;
+  @apply pl-24;
   & button {
+    /* close button */
+    @apply absolute top-0 left-0;
     @apply flex items-center justify-center;
     @apply border-r-[1px] border-secondary;
-    @apply w-16 h-full;
+    @apply w-[4.5rem] h-full;
     @apply mr-4;
   }
 }
