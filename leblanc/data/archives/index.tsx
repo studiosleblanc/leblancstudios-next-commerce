@@ -13,7 +13,7 @@ export type Archive = {
   richText?: string
   images?: ArchiveImage[]
   credits?: string
-  abbrSvg?: React.ReactNode
+  abbrSvg?: string // path of svg component
 }
 
 export const archivesData: Archive[] = [
@@ -58,6 +58,7 @@ export const archivesData: Archive[] = [
     ],
     credits:
       'Photographed in the Dominican Republic by Fernando y Víctor <br /> Modeled by Edwar Guerrero and Sheila Betances <br /> at the ISOTEX factory',
+    abbrSvg: 'FW17',
   },
   {
     name: 'Foregn Affair / Criminal Intent, 1st. Edition',

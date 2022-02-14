@@ -22,7 +22,7 @@
 
 /* Slide section */
 .slideshowSection {
-  @apply relative w-full mb-40;
+  @apply relative w-full mb-40 2xl:mb-60;
   &:before {
     @apply absolute top-[18%] left-0;
     @apply w-full border-t-[1px] border-solid border-text-primary;
@@ -33,6 +33,11 @@
     @apply w-full border-t-[1px] border-solid border-text-primary;
     content: ' ';
   }
+}
+
+/* Big Abbr section */
+.bigAbbrSection {
+  @apply mb-40 2xl:mb-60;
 }
 
 /* DARK MODE */

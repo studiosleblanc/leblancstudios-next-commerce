@@ -3,8 +3,8 @@ import React from 'react'
 const FW17 = () => {
   return (
     <svg
-      width="1543"
-      height="248"
+      width="100%"
+      height="auto"
       viewBox="0 0 1543 248"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">

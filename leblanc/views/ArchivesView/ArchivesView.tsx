@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import s from './ArchivesView.module.css'
 import cn from 'classnames'
+import dynamic from 'next/dynamic'
 import { MainLayout } from '@leblanc/layouts'
 import type { Archive } from '@leblanc/data/archives'
 import { ArchiveSlider } from '@leblanc/components/Archives'
@@ -13,6 +14,10 @@ const ArchivesView: FC<Props> = ({ archive }) => {
   // if (!archive) {
   //   return null
   // }
+
+  const SvgCollection =
+    archive.abbrSvg &&
+    dynamic(() => import(`@leblanc/svg/archives/${archive.abbrSvg}.tsx`))
 
   return (
     <MainLayout>
@@ -30,7 +35,11 @@ const ArchivesView: FC<Props> = ({ archive }) => {
           </>
         )}
       </div>
-      <div className={s.bigAbbrSection}></div>
+      {SvgCollection && (
+        <div className={cn(s.bigAbbrSection, s.container)}>
+          <SvgCollection />
+        </div>
+      )}
       <div className={s.gallerySection}></div>
     </MainLayout>
   )
