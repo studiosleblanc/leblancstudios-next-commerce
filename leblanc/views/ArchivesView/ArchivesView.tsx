@@ -4,7 +4,6 @@ import cn from 'classnames'
 import { MainLayout } from '@leblanc/layouts'
 import type { Archive } from '@leblanc/data/archives'
 import { ArchiveSlider } from '@leblanc/components/Archives'
-import parse from 'html-react-parser'
 
 interface Props {
   archive: Archive
@@ -27,10 +26,7 @@ const ArchivesView: FC<Props> = ({ archive }) => {
       <div className={s.slideshowSection}>
         {archive.images && archive.images.length > 0 && (
           <>
-            <ArchiveSlider images={archive.images} />
-            {archive.credits && (
-              <p className={s.credits}>{parse(archive.credits)}</p>
-            )}
+            <ArchiveSlider images={archive.images} credits={archive.credits!} />
           </>
         )}
       </div>

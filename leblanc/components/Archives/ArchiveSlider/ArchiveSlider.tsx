@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import s from './ArchiveSlider.module.css'
 import { NavigationOptions } from 'swiper/types/components/navigation'
 import { ChevronLeft, ChevronRight } from '@leblanc/icons'
+import parse from 'html-react-parser'
 
 import type { ArchiveImage } from '@leblanc/data/archives'
 
@@ -18,9 +19,10 @@ const navOptions: NavigationOptions = {
 
 interface Props {
   images: ArchiveImage[]
+  credits: string
 }
 
-const ArchiveSlider: FC<Props> = ({ images }) => {
+const ArchiveSlider: FC<Props> = ({ images, credits }) => {
   return (
     <div className={s.slideshowContainer}>
       <div className={s.chevronContainer}>
@@ -47,6 +49,7 @@ const ArchiveSlider: FC<Props> = ({ images }) => {
             </SwiperSlide>
           )
         })}
+        {credits && <p className={s.credits}>{parse(credits)}</p>}
       </Swiper>
       <div className={s.chevronContainer}>
         <ChevronRight className={cn('lbs-chevron-right', s.chevron)} />
