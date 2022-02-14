@@ -1,9 +1,10 @@
 import React, { FC } from 'react'
 import s from './ArchivesView.module.css'
 import cn from 'classnames'
+import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import { MainLayout } from '@leblanc/layouts'
-import type { Archive } from '@leblanc/data/archives'
+import type { Archive, ArchiveImage } from '@leblanc/data/archives'
 import { ArchiveSlider } from '@leblanc/components/Archives'
 
 interface Props {
@@ -40,7 +41,22 @@ const ArchivesView: FC<Props> = ({ archive }) => {
           <SvgCollection />
         </div>
       )}
-      <div className={s.gallerySection}></div>
+      {archive.images && (
+        <div className={cn(s.gallerySection, s.container)}>
+          {archive.images.map((img: ArchiveImage) => {
+            return (
+              <div key={img.src} className={s.galleryItem}>
+                <Image
+                  src={img.src}
+                  width={img.width}
+                  height={img.height}
+                  layout="responsive"
+                />
+              </div>
+            )
+          })}
+        </div>
+      )}
     </MainLayout>
   )
 }

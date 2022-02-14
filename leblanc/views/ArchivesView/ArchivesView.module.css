@@ -40,6 +40,22 @@
   @apply mb-40 2xl:mb-60;
 }
 
+/* Gallery Section */
+.gallerySection {
+  @apply flex flex-wrap;
+  & > div {
+    @apply w-1/3 lg:w-1/4;
+  }
+}
+
+.galleryItem {
+  @apply w-full;
+  @apply px-8 lg:px-10 2xl:px-12 mb-16 xl:mb-20 2xl:mb-24;
+  & > div {
+    @apply w-full;
+  }
+}
+
 /* DARK MODE */
 :global(.dark) {
   & .slideshowSection {
