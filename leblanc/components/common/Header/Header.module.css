@@ -99,12 +99,13 @@
 .menuBottom {
   @apply flex-wrap;
   @apply px-5 pt-[14px] pb-5;
-  & li {
-    @apply mt-[14px] mb-[20px];;
-  }
   & a {
     word-break: keep-all;
   }
+}
+
+.archiveLink {
+  @apply mt-[14px] mb-[20px];
 }
 
 .linkActive {

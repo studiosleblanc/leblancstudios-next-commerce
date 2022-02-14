@@ -136,10 +136,20 @@ const Header: FC<Props> = ({ history }) => {
                         <li>
                           {navItem.href ? (
                             <Link href={navItem.href}>
-                              <a className={cn({[s.linkActive]: navItem.handle === pathItems[0]})}>{navItem.label}</a>
+                              <a
+                                className={cn({
+                                  [s.linkActive]: navItem.handle === pathItems[0],
+                                })}>
+                                {navItem.label}
+                              </a>
                             </Link>
                           ) : (
-                            <a className={cn({[s.linkActive]: navItem.handle === pathItems[0]})}>{navItem.label}</a>
+                            <a
+                              className={cn({
+                                [s.linkActive]: navItem.handle === pathItems[0],
+                              })}>
+                              {navItem.label}
+                            </a>
                           )}
                         </li>
                       )}
@@ -157,13 +167,30 @@ const Header: FC<Props> = ({ history }) => {
                     ?.childs?.map(navItem => (
                       <React.Fragment key={navItem.id}>
                         {navItem.noNav ? null : (
-                          <li>
+                          <li
+                            className={cn({
+                              [s.archiveLink]: pathItems[0] === 'archives',
+                            })}>
                             {navItem.href ? (
                               <Link href={navItem.href}>
-                                <a className={cn({[s.linkActive]: navItem.handle === pathItems[pathItems.length -1]})}>{navItem.label}</a>
+                                <a
+                                  className={cn({
+                                    [s.linkActive]:
+                                      navItem.handle ===
+                                      pathItems[pathItems.length - 1],
+                                  })}>
+                                  {navItem.label}
+                                </a>
                               </Link>
                             ) : (
-                              <a className={cn({[s.linkActive]: navItem.handle === pathItems[pathItems.length -1]})}>{navItem.label}</a>
+                              <a
+                                className={cn({
+                                  [s.linkActive]:
+                                    navItem.handle ===
+                                    pathItems[pathItems.length - 1],
+                                })}>
+                                {navItem.label}
+                              </a>
                             )}
                           </li>
                         )}
@@ -175,13 +202,30 @@ const Header: FC<Props> = ({ history }) => {
                     ?.childs?.map(navItem => (
                       <React.Fragment key={navItem.id}>
                         {navItem.noNav ? null : (
-                          <li>
+                          <li
+                            className={cn({
+                              [s.archiveLink]: pathItems[0] === 'archives',
+                            })}>
                             {navItem.href ? (
                               <Link href={navItem.href}>
-                                <a className={cn({[s.linkActive]: navItem.handle === pathItems[pathItems.length -1]})}>{navItem.abbr ? navItem.abbr : navItem.label}</a>
+                                <a
+                                  className={cn({
+                                    [s.linkActive]:
+                                      navItem.handle ===
+                                      pathItems[pathItems.length - 1],
+                                  })}>
+                                  {navItem.abbr ? navItem.abbr : navItem.label}
+                                </a>
                               </Link>
                             ) : (
-                              <a className={cn({[s.linkActive]: navItem.handle === pathItems[pathItems.length -1]})}>{navItem.abbr ? navItem.abbr : navItem.label}</a>
+                              <a
+                                className={cn({
+                                  [s.linkActive]:
+                                    navItem.handle ===
+                                    pathItems[pathItems.length - 1],
+                                })}>
+                                {navItem.abbr ? navItem.abbr : navItem.label}
+                              </a>
                             )}
                           </li>
                         )}
