@@ -121,14 +121,14 @@
 
 /* DARK MODE */
 :global(.dark) {
-  & .navbar {
-    @apply bg-lbsDarkGray border-white;
-  }
   & .topRow {
     @apply border-white;
   }
   & .position {
     @apply text-text-primary border-white;
+  }
+  & .navigation {
+    @apply bg-lbsDarkGray border-white;
   }
   & .navigationTopBox {
     @apply border-white;
