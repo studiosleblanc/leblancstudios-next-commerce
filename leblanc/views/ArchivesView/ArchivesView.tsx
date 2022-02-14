@@ -24,7 +24,9 @@ const ArchivesView: FC<Props> = ({ archive }) => {
         <div className={s.richText}>{archive.richText}</div>
       </div>
       <div className={s.slideshowSection}>
-        {archive.images.length > 0 && <ArchiveSlider images={archive.images} />}
+        {archive.images && archive.images.length > 0 && (
+          <ArchiveSlider images={archive.images} />
+        )}
       </div>
       <div className={s.bigAbbrSection}></div>
       <div className={s.gallerySection}></div>

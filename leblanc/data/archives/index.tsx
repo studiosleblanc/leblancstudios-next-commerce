@@ -12,11 +12,27 @@ export type Archive = {
   handle: string // handle and slug
   shortText?: string
   richText?: string
-  images: ArchiveImage[]
+  images?: ArchiveImage[]
   abbrSvg?: React.ReactNode
 }
 
 export const archivesData: Archive[] = [
+  {
+    name: 'La Cuisine, Everything Began With An Archive',
+    handle: 'la-cuisine',
+  },
+  {
+    name: 'Timeless Duck Shirt: L’ Olympique',
+    handle: 'timeless-duck-shirt-lolympique',
+  },
+  {
+    name: 'Fausse Geométrié',
+    handle: 'fausse-geometrie',
+  },
+  {
+    name: 'Kapput',
+    handle: 'kapput',
+  },
   {
     name: 'Singular Unity',
     handle: 'singular-unity',
@@ -46,5 +62,21 @@ export const archivesData: Archive[] = [
           'Photographed in the Dominican Republic by Fernando y Víctor <br /> Modeled by Edwar Guerrero and Sheila Betances <br /> at the ISOTEX factory',
       },
     ],
+  },
+  {
+    name: 'Foregn Affair / Criminal Intent, 1st. Edition',
+    handle: 'white-shirt-17-1',
+  },
+  {
+    name: 'Identity Theft Cards, Bribery & Artnapping, 2nd. Edition',
+    handle: 'white-shirt-17-2',
+  },
+  {
+    name: 'Murder Is My Business, 3rd. Edition',
+    handle: 'white-shirt-18',
+  },
+  {
+    name: 'Murder Is My Business II / El Pueblo Cuestiona, 4th. Edition',
+    handle: 'white-shirt-19',
   },
 ]
