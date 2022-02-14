@@ -4,7 +4,6 @@ export type ArchiveImage = {
   src: string
   width: number
   height: number
-  caption?: string
 }
 
 export type Archive = {
@@ -13,6 +12,7 @@ export type Archive = {
   shortText?: string
   richText?: string
   images?: ArchiveImage[]
+  credits?: string
   abbrSvg?: React.ReactNode
 }
 
@@ -44,24 +44,20 @@ export const archivesData: Archive[] = [
         src: '/assets/archives/singular-unity/singular-1.jpg',
         width: 1785,
         height: 2232,
-        caption:
-          'Photographed in the Dominican Republic by Fernando y Víctor <br /> Modeled by Edwar Guerrero and Sheila Betances <br /> at the ISOTEX factory',
       },
       {
         src: '/assets/archives/singular-unity/singular-2.jpg',
         width: 1953,
         height: 2441,
-        caption:
-          'Photographed in the Dominican Republic by Fernando y Víctor <br /> Modeled by Edwar Guerrero and Sheila Betances <br /> at the ISOTEX factory',
       },
       {
         src: '/assets/archives/singular-unity/singular-3.jpg',
         width: 1841,
         height: 2301,
-        caption:
-          'Photographed in the Dominican Republic by Fernando y Víctor <br /> Modeled by Edwar Guerrero and Sheila Betances <br /> at the ISOTEX factory',
       },
     ],
+    credits:
+      'Photographed in the Dominican Republic by Fernando y Víctor <br /> Modeled by Edwar Guerrero and Sheila Betances <br /> at the ISOTEX factory',
   },
   {
     name: 'Foregn Affair / Criminal Intent, 1st. Edition',

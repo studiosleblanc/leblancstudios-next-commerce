@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import s from './ArchiveSlider.module.css'
 import { NavigationOptions } from 'swiper/types/components/navigation'
 import { ChevronLeft, ChevronRight } from '@leblanc/icons'
-import parse from 'html-react-parser'
+
 import type { ArchiveImage } from '@leblanc/data/archives'
 
 SwiperCore.use([Autoplay, EffectFade, Navigation])
@@ -44,7 +44,6 @@ const ArchiveSlider: FC<Props> = ({ images }) => {
                   layout="responsive"
                 />
               </div>
-              {img.caption && <p className={s.caption}>{parse(img.caption)}</p>}
             </SwiperSlide>
           )
         })}
