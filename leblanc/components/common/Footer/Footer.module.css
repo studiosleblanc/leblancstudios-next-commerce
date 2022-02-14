@@ -81,6 +81,15 @@
 
 :global(.dark) {
   & .root {
-    @apply text-primary-2;
+    @apply text-primary-2 border-white;
+  }
+  & .social {
+    @apply border-white;
+  }
+  & .copyRow {
+    @apply border-white;
+  }
+  & .content {
+    @apply lg:border-white;
   }
 }
