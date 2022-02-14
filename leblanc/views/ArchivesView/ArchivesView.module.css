@@ -77,4 +77,11 @@
       @apply border-white;
     }
   }
+  & .bigAbbrSection {
+    & svg {
+      & path {
+        fill: #fff;
+      }
+    }
+  }
 }
