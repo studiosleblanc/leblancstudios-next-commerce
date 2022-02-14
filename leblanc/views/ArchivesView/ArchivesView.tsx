@@ -3,6 +3,7 @@ import s from './ArchivesView.module.css'
 import cn from 'classnames'
 import { MainLayout } from '@leblanc/layouts'
 import type { Archive } from '@leblanc/data/archives'
+import { ArchiveSlider } from '@leblanc/components/Archives'
 
 interface Props {
   archive: Archive
@@ -22,7 +23,9 @@ const ArchivesView: FC<Props> = ({ archive }) => {
         </div>
         <div className={s.richText}>{archive.richText}</div>
       </div>
-      <div className={s.slideshowSection}></div>
+      <div className={s.slideshowSection}>
+        {archive.images.length > 0 && <ArchiveSlider images={archive.images} />}
+      </div>
       <div className={s.bigAbbrSection}></div>
       <div className={s.gallerySection}></div>
     </MainLayout>

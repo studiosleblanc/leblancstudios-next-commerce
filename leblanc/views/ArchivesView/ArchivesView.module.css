@@ -19,3 +19,18 @@
 .container {
   @apply my-32 max-w-[1580px] mx-auto px-8 lg:px-12;
 }
+
+/* Slide section */
+.slideshowSection {
+  @apply relative w-full mb-40;
+  &:before {
+    @apply absolute top-[18%] left-0;
+    @apply w-full border-t-[1px] border-solid border-text-primary;
+    content: ' ';
+  }
+  &:after {
+    @apply absolute bottom-[16%] left-0;
+    @apply w-full border-t-[1px] border-solid border-text-primary;
+    content: ' ';
+  }
+}
