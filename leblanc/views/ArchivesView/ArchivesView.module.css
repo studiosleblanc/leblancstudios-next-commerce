@@ -12,7 +12,7 @@
   @apply text-lg;
 }
 .richText {
-  @apply text-2xl lg:text-4xl;
+  @apply text-base md:text-xl lg:text-2xl lg:text-4xl;
   line-height: 1.5;
 }
 
@@ -29,7 +29,7 @@
     content: ' ';
   }
   &:after {
-    @apply absolute bottom-[16%] left-0;
+    @apply absolute bottom-[30%] md:bottom-[20%] lg:bottom-[16%] left-0;
     @apply w-full border-t-[1px] border-solid border-text-primary;
     content: ' ';
   }
@@ -42,7 +42,7 @@
   @apply px-[16px];
 }
 .credits {
-  @apply text-xl pt-8 lg:pt-10 pb-4 font-light cursor-default;
+  @apply text-sm md:text-xl pt-8 lg:pt-10 pb-4 font-light cursor-default;
   line-height: 2;
 }
 

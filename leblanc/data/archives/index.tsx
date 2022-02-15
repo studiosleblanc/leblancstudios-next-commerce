@@ -57,7 +57,7 @@ export const archivesData: Archive[] = [
       },
     ],
     credits:
-      'Photographed in the Dominican Republic by Fernando y Víctor <br /> Modeled by Edwar Guerrero and Sheila Betances <br /> at the ISOTEX factory',
+      'Photographed in the Dominican Republic by Fernando y Víctor. <br /> Modeled by Edwar Guerrero and Sheila Betances <br /> at the ISOTEX factory.',
     abbrSvg: 'FW17',
   },
   {
