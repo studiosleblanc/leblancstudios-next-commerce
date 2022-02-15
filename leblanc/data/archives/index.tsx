@@ -62,8 +62,125 @@ export const archivesData: Archive[] = [
     richText:
       'KAPUTT’S DISCOURSE COMPREHENDS THE HUMAN DISINTEGRATION IN MODERN HISTORY. IT’S BOUND FROM LINGUISTICS TO DISPOSABLE OBJECTS AND SELF-DESTRUCTIVE BEHAVIOUR... GENOCIDE, WHITE-COLLAR CRIMES, FAKE FRIENDSHIP, WAR AND PROPAGANDA. THE COLLECTION IS DEPICTED BY MILITARY SILHOUETTES, STRONG SHOULDER PADS, CARGO POCKETS SHIRT-JACKETS, PRINTS OF RELEVANT NEWS, ARCHIVE MATERIALS AND USELESS... COMPANY SLOGANS...',
     abbrSvg: 'SS16',
+    images: [
+      {
+        src: '/assets/archives/kaputt/kapput-1.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-2.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-3.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-4.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-5.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-6.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-7.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-8.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-9.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-10.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-11.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-12.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-13.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-14.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-15.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-16.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-17.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-18.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-19.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-20.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-21.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-22.jpg',
+        width: 1080,
+        height: 1620,
+      },
+      {
+        src: '/assets/archives/kaputt/kapput-23.jpg',
+        width: 1080,
+        height: 1620,
+      },
+    ],
     credits:
-      'KAPUTT S/S 2016 WAS LAUNCHED AT THE CASA DE BASTIDAS MUSEUM AT THE ZONA COLONIAL, SANTO DOMINGO. AD CAMPAIGN SHOT BY MÁXIMO DEL CASTILLO.',
+      'KAPUTT S/S 2016 WAS LAUNCHED AT THE CASA DE BASTIDAS MUSEUM AT THE ZONA COLONIAL, SANTO DOMINGO. <br/> AD CAMPAIGN SHOT BY MÁXIMO DEL CASTILLO.',
   },
   {
     name: 'Singular Unity',
