@@ -39,6 +39,7 @@ const ArchiveSlider: FC<Props> = ({ images, credits }) => {
             <SwiperSlide key={img.src}>
               <div className={s.imageContainer}>
                 <Image
+                  unoptimized
                   src={img.src}
                   width={img.width}
                   height={img.height}
