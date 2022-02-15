@@ -374,6 +374,7 @@ export const archivesData: Archive[] = [
   {
     name: 'A Necessary Risk',
     handle: 'a-necessary-risk',
+    abbrSvg: 'Svg2022',
     images: [
       {
         src: '/assets/archives/a-necessary-risk/a-necessary-risk-1.jpg',
