@@ -159,10 +159,92 @@ export const archivesData: Archive[] = [
   {
     name: 'Murder Is My Business, 3rd. Edition',
     handle: 'white-shirt-18',
+    images: [
+      {
+        src: '/assets/archives/white-shirt-3/white-shirt_3_1.png',
+        width: 1619,
+        height: 1080,
+      },
+      {
+        src: '/assets/archives/white-shirt-3/white-shirt_3_2.png',
+        width: 1619,
+        height: 1080,
+      },
+      {
+        src: '/assets/archives/white-shirt-3/white-shirt_3_3.png',
+        width: 1619,
+        height: 1080,
+      },
+      {
+        src: '/assets/archives/white-shirt-3/white-shirt_3_4.png',
+        width: 1619,
+        height: 1080,
+      },
+      {
+        src: '/assets/archives/white-shirt-3/white-shirt_3_5.png',
+        width: 1619,
+        height: 1080,
+      },
+      {
+        src: '/assets/archives/white-shirt-3/white-shirt_3_6.png',
+        width: 1373,
+        height: 1080,
+      },
+      {
+        src: '/assets/archives/white-shirt-3/white-shirt_3_7.png',
+        width: 1619,
+        height: 1080,
+      },
+      {
+        src: '/assets/archives/white-shirt-3/white-shirt_3_8.png',
+        width: 1619,
+        height: 1080,
+      },
+      {
+        src: '/assets/archives/white-shirt-3/white-shirt_3_9.png',
+        width: 1080,
+        height: 1619,
+      },
+      {
+        src: '/assets/archives/white-shirt-3/white-shirt_3_10.png',
+        width: 1619,
+        height: 1080,
+      },
+      {
+        src: '/assets/archives/white-shirt-3/white-shirt_3_11.png',
+        width: 1619,
+        height: 1080,
+      },
+    ],
+    credits:
+      'Angelo Beato, creative director. <br />Luis Quijada, film director & photographee. <br />Jaime Moreno, Art Director.',
   },
   {
     name: 'Murder Is My Business II / El Pueblo Cuestiona, 4th. Edition',
     handle: 'white-shirt-19',
+    images: [
+      {
+        src: '/assets/archives/white-shirt-4/white-shirt_4_1.png',
+        width: 1080,
+        height: 1350,
+      },
+      {
+        src: '/assets/archives/white-shirt-4/white-shirt_4_2.png',
+        width: 1080,
+        height: 1350,
+      },
+      {
+        src: '/assets/archives/white-shirt-4/white-shirt_4_3.png',
+        width: 1080,
+        height: 1350,
+      },
+      {
+        src: '/assets/archives/white-shirt-4/white-shirt_4_4.png',
+        width: 1080,
+        height: 1350,
+      },
+    ],
+    credits: '',
   },
   {
     name: 'A Necessary Risk',
