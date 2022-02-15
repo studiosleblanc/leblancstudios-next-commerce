@@ -6,13 +6,13 @@
   @apply flex flex-wrap justify-between items-end;
 }
 .title {
-  @apply text-4xl lg:text-6xl font-bold uppercase mb-5;
+  @apply text-4xl 2xl:text-6xl font-bold uppercase mb-5;
 }
 .shortText {
   @apply text-lg;
 }
 .richText {
-  @apply text-base md:text-xl lg:text-2xl lg:text-4xl;
+  @apply text-base md:text-xl lg:text-2xl 2xl:text-4xl;
   line-height: 1.5;
 }
 

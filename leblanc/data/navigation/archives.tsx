@@ -33,14 +33,14 @@ const archives: NavItem[] = [
     href: '/archives/fausse-geometrie',
   },
   {
-    id: 'kapput',
+    id: 'kaputt',
     label: (
       <Fragment>
         SS16: <b>[Kaputt]</b>
       </Fragment>
     ),
-    handle: 'kapput',
-    href: '/archives/kapput',
+    handle: 'kaputt',
+    href: '/archives/kaputt',
   },
   {
     id: 'singular-unity',
