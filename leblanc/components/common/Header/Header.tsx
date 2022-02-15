@@ -107,13 +107,13 @@ const Header: FC<Props> = ({ history }) => {
         <div className={s.navbar}>
           <div
             style={
-              positionItems.length > 0
+              positionItems.length > 0 && pathItems[0] !== 'archives'
                 ? getFitFontStyles(positionItems)
                 : pathItems && getStringFitFontStyles(pathItems[0])
             }
             className={s.position}>
             {/* <div style={getFitFontStyles(positionItems)} className={s.position}> */}
-            {breadcrumbs.length > 0
+            {breadcrumbs.length > 0 && pathItems[0] !== 'archives'
               ? positionItems.map((pItem, i) => (
                   <React.Fragment key={i}>
                     {i >= 1 && (
