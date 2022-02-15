@@ -15,6 +15,7 @@ export type NavItem = {
   childs?: NavItem[]
   slug?: string // Collection handle
   noNav?: boolean
+  forceHref?: boolean // force render as anchor instead of a button even if has childs
 }
 
 export const homeNavigation: NavItem[] = [
@@ -50,7 +51,8 @@ export const homeNavigation: NavItem[] = [
     label: 'Archives',
     handle: 'archives',
     childs: archives,
-    href: '/archives/singular-unity',
+    href: '/archives/no-medium-inserted',
+    forceHref: true,
   },
   {
     id: 'collection', // hidden links
