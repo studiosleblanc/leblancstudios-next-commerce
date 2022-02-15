@@ -79,7 +79,7 @@
 }
 
 .menu {
-  @apply flex px-5 text-2xl;
+  @apply flex px-5 text-lg 2xl:text-2xl;
   & > li {
     @apply mx-4;
     & a {
@@ -105,7 +105,7 @@
 }
 
 .archiveLink {
-  @apply mt-[14px] mb-[20px];
+  @apply mt-[12px] 2xl:mt-[14px] 2xl:mb-[20px] mb-[12px];
 }
 
 .linkActive {
