@@ -13,23 +13,26 @@ export type Archive = {
   richText?: string
   images?: ArchiveImage[]
   credits?: string
-  abbrSvg?: string // path of svg component
+  abbrSvg?: string // File name of svg component
 }
 
 export const archivesData: Archive[] = [
   {
     name: 'La Cuisine, Everything Began With An Archive',
     handle: 'la-cuisine',
+    abbrSvg: 'SS14',
   },
   {
     name: 'Timeless Duck Shirt: L’ Olympique',
     handle: 'timeless-duck-shirt-lolympique',
+    abbrSvg: 'SS15',
   },
   {
     name: 'Fausse Geométrié',
     handle: 'fausse-geometrie',
     richText:
       'FAUSSE GEOMÉTRIÉ EMBRACES THE IMPERFECTION ABOUT THE CONSTRUCTION OF CLASSIC GARMENTS. DEVELOPING LOUNGE PANTS MADE OF CASHMERE, SWEATERS WITH PATCHES OF DISTORTED FIGURES, HAVING A RESULT OF A CASUAL AND FUN ENVIRONMENT.',
+    abbrSvg: 'FW15',
     images: [
       {
         src: '/assets/archives/fausse-geometrie/fausse-geometrie-4.jpg',
@@ -58,6 +61,7 @@ export const archivesData: Archive[] = [
     handle: 'kapput',
     richText:
       'KAPUTT’S DISCOURSE COMPREHENDS THE HUMAN DISINTEGRATION IN MODERN HISTORY. IT’S BOUND FROM LINGUISTICS TO DISPOSABLE OBJECTS AND SELF-DESTRUCTIVE BEHAVIOUR... GENOCIDE, WHITE-COLLAR CRIMES, FAKE FRIENDSHIP, WAR AND PROPAGANDA. THE COLLECTION IS DEPICTED BY MILITARY SILHOUETTES, STRONG SHOULDER PADS, CARGO POCKETS SHIRT-JACKETS, PRINTS OF RELEVANT NEWS, ARCHIVE MATERIALS AND USELESS... COMPANY SLOGANS...',
+    abbrSvg: 'SS16',
     credits:
       'KAPUTT S/S 2016 WAS LAUNCHED AT THE CASA DE BASTIDAS MUSEUM AT THE ZONA COLONIAL, SANTO DOMINGO. AD CAMPAIGN SHOT BY MÁXIMO DEL CASTILLO.',
   },
@@ -91,6 +95,7 @@ export const archivesData: Archive[] = [
   {
     name: 'Foregn Affair / Criminal Intent, 1st. Edition',
     handle: 'white-shirt-17-1',
+    abbrSvg: 'WhiteShirt17',
     images: [
       {
         src: '/assets/archives/white-shirt-1/white-shirt_1_-1.jpg',
@@ -129,6 +134,7 @@ export const archivesData: Archive[] = [
   {
     name: 'Identity Theft Cards, Bribery & Artnapping, 2nd. Edition',
     handle: 'white-shirt-17-2',
+    abbrSvg: 'WhiteShirt17',
     richText:
       'WHITE SHIRT 2ND. EDITION LOOK INTO WHITE-COLLAR CRIMES, FROM IDENTITY THEFT CARDS, ODEBRECHT BRIBERY SCANDAL TO GLOBAL ARTNAPPING SITUATIONS. DELIVERED WITH STRONG GRAPHICS, INFORMATIVE LABELS, BEING THIS COLLECTION A DECISIVE INPUT IN OUR GRAPHIC AND COMMUNICATION IDENTITY, AND WHAT GOES AFTERWARDS.',
     images: [
@@ -159,6 +165,7 @@ export const archivesData: Archive[] = [
   {
     name: 'Murder Is My Business, 3rd. Edition',
     handle: 'white-shirt-18',
+    abbrSvg: 'WhiteShirt18',
     images: [
       {
         src: '/assets/archives/white-shirt-3/white-shirt_3_1.png',
@@ -222,6 +229,7 @@ export const archivesData: Archive[] = [
   {
     name: 'Murder Is My Business II / El Pueblo Cuestiona, 4th. Edition',
     handle: 'white-shirt-19',
+    abbrSvg: 'WhiteShirt19',
     images: [
       {
         src: '/assets/archives/white-shirt-4/white-shirt_4_1.png',
@@ -300,5 +308,6 @@ export const archivesData: Archive[] = [
   {
     name: 'No Medium Inserted',
     handle: 'no-medium-inserted',
+    abbrSvg: 'FW22',
   },
 ]
