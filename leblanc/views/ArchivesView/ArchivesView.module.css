@@ -23,6 +23,7 @@
 /* Slide section */
 .slideshowSection {
   @apply relative w-full;
+  @apply mb-24 lg:mb-40 2xl:mb-60;
   &:before {
     @apply absolute top-[18%] left-0;
     @apply w-full border-t-[1px] border-solid border-text-primary;
@@ -36,15 +37,11 @@
 }
 
 /* Credits Section */
-.creditsSection {
+/* .creditsSection {
   @apply mb-24 lg:mb-40 2xl:mb-60;
   @apply w-full max-w-[1032px] mx-auto;
   @apply px-[16px];
-}
-.credits {
-  @apply text-sm md:text-xl pt-8 lg:pt-10 pb-4 font-light cursor-default;
-  line-height: 2;
-}
+} */
 
 /* Big Abbr section */
 .bigAbbrSection {
