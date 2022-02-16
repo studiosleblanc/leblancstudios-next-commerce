@@ -1,5 +1,7 @@
 import { Fragment } from 'react'
 
+import noMediumInserted from './no-medium-inserted'
+
 export type ArchiveImage = {
   src: string
   width: number
@@ -417,5 +419,6 @@ export const archivesData: Archive[] = [
     name: 'No Medium Inserted',
     handle: 'no-medium-inserted',
     abbrSvg: 'FW22',
+    images: noMediumInserted,
   },
 ]
