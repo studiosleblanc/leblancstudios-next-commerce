@@ -34,7 +34,7 @@ const ArchiveSlider: FC<Props> = ({ images, credits }) => {
         autoplay={{ delay: 3000 }}
         className={s.slideshow}
         navigation={navOptions}>
-        {images.map((img: ArchiveImage) => {
+        {images.slice(0, 8).map((img: ArchiveImage) => {
           return (
             <SwiperSlide key={img.src}>
               <div className={s.imageContainer}>
