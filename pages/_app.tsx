@@ -1,7 +1,10 @@
 import '@assets/main.css'
 import '@assets/chrome-bug.css'
 import 'keen-slider/keen-slider.min.css'
-import 'swiper/swiper-bundle.css'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/effect-fade'
+// import "swiper/css/lazy";
 
 import { FC, useEffect } from 'react'
 import type { AppProps } from 'next/app'
