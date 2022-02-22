@@ -2,6 +2,8 @@ import { Fragment } from 'react'
 
 import noMediumInserted from './no-medium-inserted'
 import murderIsMyBusiness2 from './murder-is-my-business-2'
+import whiteShirt1 from './white-shirt-1'
+import fausseGeometrie from './fausse-geometrie'
 
 export type ArchiveImage = {
   src: string
@@ -36,28 +38,7 @@ export const archivesData: Archive[] = [
     richText:
       'FAUSSE GEOMÉTRIÉ EMBRACES THE IMPERFECTION ABOUT THE CONSTRUCTION OF CLASSIC GARMENTS. DEVELOPING LOUNGE PANTS MADE OF CASHMERE, SWEATERS WITH PATCHES OF DISTORTED FIGURES, HAVING A RESULT OF A CASUAL AND FUN ENVIRONMENT.',
     abbrSvg: 'FW15',
-    images: [
-      {
-        src: '/assets/archives/fausse-geometrie/fausse-geometrie-4.jpg',
-        width: 2400,
-        height: 1600,
-      },
-      {
-        src: '/assets/archives/fausse-geometrie/fausse-geometrie-2.jpg',
-        width: 2400,
-        height: 1600,
-      },
-      {
-        src: '/assets/archives/fausse-geometrie/fausse-geometrie-3.jpg',
-        width: 1600,
-        height: 2400,
-      },
-      {
-        src: '/assets/archives/fausse-geometrie/fausse-geometrie-1.jpg',
-        width: 2400,
-        height: 1600,
-      },
-    ],
+    images: fausseGeometrie,
   },
   {
     name: 'Kaputt',
@@ -216,38 +197,7 @@ export const archivesData: Archive[] = [
     name: 'Foregn Affair / Criminal Intent, 1st. Edition',
     handle: 'white-shirt-17-1',
     abbrSvg: 'WhiteShirt17',
-    images: [
-      {
-        src: '/assets/archives/white-shirt-1/white-shirt_1_-1.jpg',
-        width: 3648,
-        height: 5472,
-      },
-      {
-        src: '/assets/archives/white-shirt-1/white-shirt_1_-2.jpg',
-        width: 5472,
-        height: 3648,
-      },
-      {
-        src: '/assets/archives/white-shirt-1/white-shirt_1_-3.jpg',
-        width: 3648,
-        height: 5472,
-      },
-      {
-        src: '/assets/archives/white-shirt-1/white-shirt_1_-4.jpg',
-        width: 3648,
-        height: 5472,
-      },
-      {
-        src: '/assets/archives/white-shirt-1/white-shirt_1_-5.jpg',
-        width: 5472,
-        height: 3648,
-      },
-      {
-        src: '/assets/archives/white-shirt-1/white-shirt_1_-6.jpg',
-        width: 5472,
-        height: 3648,
-      },
-    ],
+    images: whiteShirt1,
     credits:
       'Photographed in the Dominican Republic at "Teatro de Agua y la Luz" by Luis Miguel Molina.',
   },
