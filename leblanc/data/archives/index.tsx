@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 
 import noMediumInserted from './no-medium-inserted'
+import murderIsMyBusiness2 from './murder-is-my-business-2'
 
 export type ArchiveImage = {
   src: string
@@ -349,28 +350,7 @@ export const archivesData: Archive[] = [
     name: 'Murder Is My Business II / El Pueblo Cuestiona, 4th. Edition',
     handle: 'white-shirt-19',
     abbrSvg: 'WhiteShirt19',
-    images: [
-      {
-        src: '/assets/archives/white-shirt-4/white-shirt_4_1.png',
-        width: 1080,
-        height: 1350,
-      },
-      {
-        src: '/assets/archives/white-shirt-4/white-shirt_4_2.png',
-        width: 1080,
-        height: 1350,
-      },
-      {
-        src: '/assets/archives/white-shirt-4/white-shirt_4_3.png',
-        width: 1080,
-        height: 1350,
-      },
-      {
-        src: '/assets/archives/white-shirt-4/white-shirt_4_4.png',
-        width: 1080,
-        height: 1350,
-      },
-    ],
+    images: murderIsMyBusiness2,
     credits: '',
   },
   {
