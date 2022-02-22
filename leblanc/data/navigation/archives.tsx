@@ -43,6 +43,16 @@ const archives: NavItem[] = [
     href: '/archives/kaputt',
   },
   {
+    id: 'valentines-ad-campaign',
+    label: (
+      <Fragment>
+        2018: <b>[Valentines Ad Campaign]</b>
+      </Fragment>
+    ),
+    handle: 'valentines-ad-campaign',
+    href: '/archives/valentines-ad-campaign',
+  },
+  {
     id: 'singular-unity',
     label: (
       <Fragment>

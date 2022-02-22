@@ -5,6 +5,7 @@ import murderIsMyBusiness1 from './murder-is-my-business-1'
 import murderIsMyBusiness2 from './murder-is-my-business-2'
 import whiteShirt1 from './white-shirt-1'
 import fausseGeometrie from './fausse-geometrie'
+import valentinesAdCampaign from './valentines-ad-campaign'
 
 export type ArchiveImage = {
   src: string
@@ -166,6 +167,11 @@ export const archivesData: Archive[] = [
     ],
     credits:
       'KAPUTT S/S 2016 WAS LAUNCHED AT THE CASA DE BASTIDAS MUSEUM AT THE ZONA COLONIAL, SANTO DOMINGO. <br/> AD CAMPAIGN SHOT BY MÁXIMO DEL CASTILLO.',
+  },
+  {
+    name: 'Valentines Ad Campaign',
+    handle: 'valentines-ad-campaign',
+    images: valentinesAdCampaign
   },
   {
     name: 'Singular Unity',
