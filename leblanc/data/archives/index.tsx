@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 
 import noMediumInserted from './no-medium-inserted'
+import murderIsMyBusiness1 from './murder-is-my-business-1'
 import murderIsMyBusiness2 from './murder-is-my-business-2'
 import whiteShirt1 from './white-shirt-1'
 import fausseGeometrie from './fausse-geometrie'
@@ -236,63 +237,7 @@ export const archivesData: Archive[] = [
     name: 'Murder Is My Business, 3rd. Edition',
     handle: 'white-shirt-18',
     abbrSvg: 'WhiteShirt18',
-    images: [
-      {
-        src: '/assets/archives/white-shirt-3/white-shirt_3_1.png',
-        width: 1619,
-        height: 1080,
-      },
-      {
-        src: '/assets/archives/white-shirt-3/white-shirt_3_2.png',
-        width: 1619,
-        height: 1080,
-      },
-      {
-        src: '/assets/archives/white-shirt-3/white-shirt_3_3.png',
-        width: 1619,
-        height: 1080,
-      },
-      {
-        src: '/assets/archives/white-shirt-3/white-shirt_3_4.png',
-        width: 1619,
-        height: 1080,
-      },
-      {
-        src: '/assets/archives/white-shirt-3/white-shirt_3_5.png',
-        width: 1619,
-        height: 1080,
-      },
-      {
-        src: '/assets/archives/white-shirt-3/white-shirt_3_6.png',
-        width: 1373,
-        height: 1080,
-      },
-      {
-        src: '/assets/archives/white-shirt-3/white-shirt_3_7.png',
-        width: 1619,
-        height: 1080,
-      },
-      {
-        src: '/assets/archives/white-shirt-3/white-shirt_3_8.png',
-        width: 1619,
-        height: 1080,
-      },
-      {
-        src: '/assets/archives/white-shirt-3/white-shirt_3_9.png',
-        width: 1080,
-        height: 1619,
-      },
-      {
-        src: '/assets/archives/white-shirt-3/white-shirt_3_10.png',
-        width: 1619,
-        height: 1080,
-      },
-      {
-        src: '/assets/archives/white-shirt-3/white-shirt_3_11.png',
-        width: 1619,
-        height: 1080,
-      },
-    ],
+    images: murderIsMyBusiness1,
     credits:
       'Angelo Beato, creative director. <br />Luis Quijada, film director & photographee. <br />Jaime Moreno, Art Director.',
   },
