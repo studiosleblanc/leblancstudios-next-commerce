@@ -1,10 +1,10 @@
 import React, { useState, FC } from 'react'
 import cn from 'classnames'
 import Image from 'next/image'
-import SwiperCore, { Autoplay, EffectFade, Navigation } from 'swiper/core'
+import SwiperCore, { Autoplay, EffectFade, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import s from './ProductSlider.module.css'
-import { NavigationOptions } from 'swiper/types/components/navigation'
+import { NavigationOptions } from 'swiper/types'
 import { ChevronLeft, ChevronRight } from '@leblanc/icons'
 import { ProductImage } from '@commerce/types/product'
 import products from '@framework/api/endpoints/catalog/products'
@@ -34,14 +34,14 @@ const ProductSlider: FC<Props> = ({ images }) => {
           if (i > 0) {
             return (
               <SwiperSlide key={img.url}>
-                <div className={s.imageContainer}>
+                {/* <div className={s.imageContainer}> */}
                   <Image
                     src={img.url}
                     width={img.width}
                     height={img.height}
                     layout="responsive"
                   />
-                </div>
+                {/* </div> */}
               </SwiperSlide>
             )
           }

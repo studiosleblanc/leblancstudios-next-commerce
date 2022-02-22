@@ -1,15 +1,21 @@
 import React, { useState, FC } from 'react'
 import cn from 'classnames'
 import Image from 'next/image'
-import SwiperCore, { Autoplay, EffectFade, Navigation } from 'swiper/core'
+import SwiperCore, {
+  // Lazy,
+  // Virtual,
+  Autoplay,
+  EffectFade,
+  Navigation,
+} from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { NavigationOptions } from 'swiper/types'
 import s from './ArchiveSlider.module.css'
-import { NavigationOptions } from 'swiper/types/components/navigation'
 import { ChevronLeft, ChevronRight } from '@leblanc/icons'
 import parse from 'html-react-parser'
 import type { ArchiveImage } from '@leblanc/data/archives'
 
-SwiperCore.use([Autoplay, EffectFade, Navigation])
+SwiperCore.use([ Autoplay, EffectFade, Navigation])
 
 const navOptions: NavigationOptions = {
   prevEl: '.lbs-chevron-left',
@@ -33,11 +39,12 @@ const ArchiveSlider: FC<Props> = ({ images, credits }) => {
         autoHeight
         autoplay={{ delay: 3000 }}
         className={s.slideshow}
-        navigation={navOptions}>
-        {images.slice(0, 8).map((img: ArchiveImage) => {
+        navigation={navOptions}
+        >
+        {images.map((img: ArchiveImage, i) => {
           return (
             <SwiperSlide key={img.src}>
-              <div className={s.imageContainer}>
+              {/* <div className={s.imageContainer}> */}
                 <Image
                   unoptimized
                   src={img.src}
@@ -45,7 +52,11 @@ const ArchiveSlider: FC<Props> = ({ images, credits }) => {
                   height={img.height}
                   layout="responsive"
                 />
-              </div>
+              {/* </div> */}
+              {/* <img
+                data-src={img.src}
+                className="swiper-lazy"
+              /> */}
             </SwiperSlide>
           )
         })}
