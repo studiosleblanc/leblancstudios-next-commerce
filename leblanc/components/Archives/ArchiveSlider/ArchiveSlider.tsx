@@ -15,7 +15,7 @@ import { ChevronLeft, ChevronRight } from '@leblanc/icons'
 import parse from 'html-react-parser'
 import type { ArchiveImage } from '@leblanc/data/archives'
 
-SwiperCore.use([ Autoplay, EffectFade, Navigation])
+SwiperCore.use([Autoplay, EffectFade, Navigation])
 
 const navOptions: NavigationOptions = {
   prevEl: '.lbs-chevron-left',
@@ -37,14 +37,13 @@ const ArchiveSlider: FC<Props> = ({ images, credits }) => {
         effect={'fade'}
         loop
         autoHeight
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 5000 }}
         className={s.slideshow}
-        navigation={navOptions}
-        >
+        navigation={navOptions}>
         {images.map((img: ArchiveImage, i) => {
           return (
             <SwiperSlide key={img.src}>
-              {/* <div className={s.imageContainer}> */}
+              <div className={s.imageContainer}>
                 <Image
                   unoptimized
                   src={img.src}
@@ -52,7 +51,8 @@ const ArchiveSlider: FC<Props> = ({ images, credits }) => {
                   height={img.height}
                   layout="responsive"
                 />
-              {/* </div> */}
+                {credits && <p className={s.credits}>{parse(credits)}</p>}
+              </div>
               {/* <img
                 data-src={img.src}
                 className="swiper-lazy"
@@ -60,7 +60,6 @@ const ArchiveSlider: FC<Props> = ({ images, credits }) => {
             </SwiperSlide>
           )
         })}
-        {credits && <p className={s.credits}>{parse(credits)}</p>}
       </Swiper>
       <div className={s.chevronContainer}>
         <ChevronRight className={cn('lbs-chevron-right', s.chevron)} />

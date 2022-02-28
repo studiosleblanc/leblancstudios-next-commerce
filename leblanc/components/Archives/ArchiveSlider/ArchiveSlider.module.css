@@ -28,6 +28,7 @@
 }
 .credits {
   @apply text-sm md:text-xl pt-8 lg:pt-10 pb-4 font-light cursor-default;
+  @apply bg-white;
   line-height: 2;
 }
 
