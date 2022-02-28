@@ -3,8 +3,8 @@ import React from 'react'
 const Svg2022 = () => {
   return (
     <svg
-      width="1454"
-      height="258"
+      width="100%"
+      height="auto"
       viewBox="0 0 1454 258"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
