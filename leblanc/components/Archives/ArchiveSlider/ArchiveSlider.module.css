@@ -53,4 +53,7 @@
       stroke: #fff;
     }
   }
+  & .credits {
+    @apply bg-black;
+  }
 }
