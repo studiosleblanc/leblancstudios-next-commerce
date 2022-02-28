@@ -43,16 +43,6 @@ const archives: NavItem[] = [
     href: '/archives/kaputt',
   },
   {
-    id: 'valentines-ad-campaign',
-    label: (
-      <Fragment>
-        2018: <b>[Valentines Ad Campaign]</b>
-      </Fragment>
-    ),
-    handle: 'valentines-ad-campaign',
-    href: '/archives/valentines-ad-campaign',
-  },
-  {
     id: 'singular-unity',
     label: (
       <Fragment>
@@ -82,6 +72,16 @@ const archives: NavItem[] = [
     ),
     handle: 'white-shirt-17-2',
     href: '/archives/white-shirt-17-2',
+  },
+  {
+    id: 'valentines-ad-campaign',
+    label: (
+      <Fragment>
+        2018: <b>[Valentines Ad Campaign]</b>
+      </Fragment>
+    ),
+    handle: 'valentines-ad-campaign',
+    href: '/archives/valentines-ad-campaign',
   },
   {
     id: 'white-shirt-18',
