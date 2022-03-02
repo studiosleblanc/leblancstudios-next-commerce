@@ -173,11 +173,6 @@ export const archivesData: Archive[] = [
       'KAPUTT S/S 2016 WAS LAUNCHED AT THE CASA DE BASTIDAS MUSEUM AT THE ZONA COLONIAL, SANTO DOMINGO. <br/> AD CAMPAIGN SHOT BY MÁXIMO DEL CASTILLO.',
   },
   {
-    name: 'Valentines Ad Campaign',
-    handle: 'valentines-ad-campaign',
-    images: valentinesAdCampaign,
-  },
-  {
     name: 'Singular Unity',
     handle: 'singular-unity',
     shortText: 'Finalist at the Iberoamerican Design Biennial 2018',
@@ -226,6 +221,13 @@ export const archivesData: Archive[] = [
     ],
     credits:
       "Photographed in the Dominican Republic at Adolfo's House by Máximo del Castillo. <br /> Modeled by Mónica de Hostos and Edwar Guerrero.",
+  },
+  {
+    name: 'Valentines Ad Campaign',
+    handle: 'valentines-ad-campaign',
+    images: valentinesAdCampaign,
+    credits:
+      'Photographed at El Malecón by Adolfo Sesto. <br /> Modeled by Marielis.',
   },
   {
     name: 'Murder Is My Business, 3rd. Edition',
