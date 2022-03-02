@@ -286,6 +286,8 @@ export const archivesData: Archive[] = [
         height: 2998,
       },
     ],
+    credits:
+      'Photographed in Bani, Dominican Republic by Luis Quijada. <br />Modeled by Luca Baldessari, Manuela Corji and Axel Esteva.',
   },
   {
     name: 'No Medium Inserted',
