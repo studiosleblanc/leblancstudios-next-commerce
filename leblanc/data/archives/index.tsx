@@ -294,5 +294,7 @@ export const archivesData: Archive[] = [
     handle: 'no-medium-inserted',
     abbrSvg: 'FW22',
     images: noMediumInserted,
+    credits:
+      'Photographed in Santo Domingo Este, Dominican Republic by Luis Miguel Molina. <br />Modeled by Angel, Steven and Glorianny.',
   },
 ]
