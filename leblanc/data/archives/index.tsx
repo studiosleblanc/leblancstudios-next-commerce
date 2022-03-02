@@ -242,7 +242,8 @@ export const archivesData: Archive[] = [
     handle: 'white-shirt-19',
     abbrSvg: 'WhiteShirt19',
     images: murderIsMyBusiness2,
-    credits: '',
+    credits:
+      'Photographed in the Universidad Pedro Hénriquez Urena by Luis Quijada.',
   },
   {
     name: 'A Necessary Risk',
