@@ -225,6 +225,7 @@ export const archivesData: Archive[] = [
   {
     name: 'Valentines Ad Campaign',
     handle: 'valentines-ad-campaign',
+    abbrSvg: 'Svg2018',
     images: valentinesAdCampaign,
     credits:
       'Photographed at El Malecón by Adolfo Sesto. <br /> Modeled by Marielis.',
