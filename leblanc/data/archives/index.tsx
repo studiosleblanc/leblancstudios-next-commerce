@@ -225,7 +225,7 @@ export const archivesData: Archive[] = [
       },
     ],
     credits:
-      "Photographed in the Dominican Republic at Adolfo's House. Photographed by Máximo del Castillo",
+      "Photographed in the Dominican Republic at Adolfo's House by Máximo del Castillo. <br /> Modeled by Mónica de Hostos and Edwar Guerrero.",
   },
   {
     name: 'Murder Is My Business, 3rd. Edition',
