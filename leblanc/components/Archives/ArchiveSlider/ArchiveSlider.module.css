@@ -29,6 +29,7 @@
 .credits {
   @apply text-sm md:text-xl pt-8 lg:pt-10 pb-4 font-light cursor-default;
   @apply bg-white uppercase;
+  @apply mb-0;
   line-height: 2;
 }
 
