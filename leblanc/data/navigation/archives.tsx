@@ -2,16 +2,16 @@ import { Fragment } from 'react'
 import type { NavItem } from '@leblanc/data/navigation'
 
 const archives: NavItem[] = [
-  {
-    id: 'la-cuisine',
-    label: (
-      <Fragment>
-        SS14: <b>[La Cuisine, Everything Began With An Archive]</b>
-      </Fragment>
-    ),
-    handle: 'la-cuisine',
-    href: '/archives/la-cuisine',
-  },
+  // {
+  //   id: 'la-cuisine',
+  //   label: (
+  //     <Fragment>
+  //       SS14: <b>[La Cuisine, Everything Began With An Archive]</b>
+  //     </Fragment>
+  //   ),
+  //   handle: 'la-cuisine',
+  //   href: '/archives/la-cuisine',
+  // },
   {
     id: 'timeless-duck-shirt-lolympique',
     label: (
