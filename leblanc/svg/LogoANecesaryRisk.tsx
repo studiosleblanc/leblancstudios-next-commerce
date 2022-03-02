@@ -7,8 +7,8 @@ interface LogoANecesaryRiskProps {
 const LogoANecesaryRisk: FC<LogoANecesaryRiskProps> = props => {
   return (
     <svg
-      width="1870"
-      height="264"
+      width="100%"
+      height="auto"
       viewBox="0 0 1870 264"
       xmlns="http://www.w3.org/2000/svg"
       {...props}>
