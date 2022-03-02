@@ -12,6 +12,7 @@ export type ArchiveImage = {
   src: string
   width: number
   height: number
+  caption?: string
 }
 
 export type Archive = {
@@ -42,6 +43,8 @@ export const archivesData: Archive[] = [
       'FAUSSE GEOMÉTRIÉ EMBRACES THE IMPERFECTION ABOUT THE CONSTRUCTION OF CLASSIC GARMENTS. DEVELOPING LOUNGE PANTS MADE OF CASHMERE, SWEATERS WITH PATCHES OF DISTORTED FIGURES, HAVING A RESULT OF A CASUAL AND FUN ENVIRONMENT.',
     abbrSvg: 'FW15',
     images: fausseGeometrie,
+    credits:
+      'After Party Fausse Geométrié at the Museum of Modern Art, Santo Domingo',
   },
   {
     name: 'Kaputt',
@@ -172,7 +175,7 @@ export const archivesData: Archive[] = [
   {
     name: 'Valentines Ad Campaign',
     handle: 'valentines-ad-campaign',
-    images: valentinesAdCampaign
+    images: valentinesAdCampaign,
   },
   {
     name: 'Singular Unity',
