@@ -194,7 +194,7 @@ export const archivesData: Archive[] = [
     abbrSvg: 'WhiteShirt17',
     images: whiteShirt1,
     credits:
-      'Photographed in the Dominican Republic at "Teatro de Agua y la Luz" by Luis Miguel Molina.',
+      'Photographed in the Dominican Republic at "Teatro de Agua y la Luz" by Luis Miguel Molina. <br /> Modeled by Víctor y Jorge',
   },
   {
     name: 'Identity Theft Cards, Bribery & Artnapping, 2nd. Edition',
