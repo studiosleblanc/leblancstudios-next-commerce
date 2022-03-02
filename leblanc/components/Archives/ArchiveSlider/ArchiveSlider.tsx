@@ -51,7 +51,11 @@ const ArchiveSlider: FC<Props> = ({ images, credits }) => {
                   height={img.height}
                   layout="responsive"
                 />
-                {credits && <p className={s.credits}>{parse(credits)}</p>}
+                {img.caption ? (
+                  <p className={s.credits}>{parse(img.caption)}</p>
+                ) : (
+                  credits && <p className={s.credits}>{parse(credits)}</p>
+                )}
               </div>
               {/* <img
                 data-src={img.src}
