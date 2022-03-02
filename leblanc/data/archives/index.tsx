@@ -235,7 +235,7 @@ export const archivesData: Archive[] = [
     abbrSvg: 'WhiteShirt18',
     images: murderIsMyBusiness1,
     credits:
-      'Angelo Beato, creative director. <br />Luis Quijada, film director & photographee. <br />Jaime Moreno, Art Director.',
+      'Photographed by Luis Quijada. <br />Creative Director, Angelo Beato. <br />Art Director, Jaime Moreno.',
   },
   {
     name: 'Murder Is My Business II / El Pueblo Cuestiona, 4th. Edition',
