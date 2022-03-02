@@ -4,7 +4,7 @@ import Image from 'next/image'
 import SwiperCore, {
   // Lazy,
   // Virtual,
-  Autoplay,
+  // Autoplay,
   EffectFade,
   Navigation,
 } from 'swiper'
@@ -15,7 +15,7 @@ import { ChevronLeft, ChevronRight } from '@leblanc/icons'
 import parse from 'html-react-parser'
 import type { ArchiveImage } from '@leblanc/data/archives'
 
-SwiperCore.use([Autoplay, EffectFade, Navigation])
+SwiperCore.use([/*Autoplay,*/ EffectFade, Navigation])
 
 const navOptions: NavigationOptions = {
   prevEl: '.lbs-chevron-left',
@@ -37,7 +37,7 @@ const ArchiveSlider: FC<Props> = ({ images, credits }) => {
         effect={'fade'}
         loop
         autoHeight
-        autoplay={{ delay: 5000 }}
+        // autoplay={{ delay: 5000 }}
         className={s.slideshow}
         navigation={navOptions}>
         {images.map((img: ArchiveImage, i) => {
