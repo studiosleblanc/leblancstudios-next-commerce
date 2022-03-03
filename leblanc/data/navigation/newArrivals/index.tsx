@@ -37,7 +37,7 @@ const newArrivals: NavItem[] = [
     handle: 'a-necessary-risk-x-gus-pena',
     abbr: 'ANR',
     childs: aNecessaryRisk,
-    href: '/new-arrivals/a-necessary-risk-x-gus-pena/shirts',
+    href: '/new-arrivals/a-necessary-risk-x-gus-pena/socks',
   },
   {
     id: 'white-nacked-duck-da78t',
