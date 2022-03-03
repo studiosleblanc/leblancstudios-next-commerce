@@ -10,6 +10,9 @@
 .leftImage {
   @apply w-full;
 }
+.imageLink {
+  @apply block w-full h-full;
+}
 
 .bgContainer {
   @apply w-full h-full;

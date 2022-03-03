@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import s from './FeaturedSection.module.css'
 import { TextANRxGusPena } from '@leblanc/svg'
 import { ProductItem } from '@leblanc/components/Product'
@@ -19,12 +20,16 @@ const FeaturedSection: FC = () => {
           <TextANRxGusPena className={s.textxGusPena} />
         </div>
         <div className={s.leftImage}>
-          <Image
-            src="/assets/images/gus_pena_road.jpg"
-            width={664}
-            height={699}
-            layout="responsive"
-          />
+          <Link href="/new-arrivals/a-necessary-risk-x-gus-pena/socks">
+            <a className={s.imageLink}>
+              <Image
+                src="/assets/images/gus_pena_road.jpg"
+                width={664}
+                height={699}
+                layout="responsive"
+              />
+            </a>
+          </Link>
         </div>
       </div>
       <div className={s.rightCol}>
