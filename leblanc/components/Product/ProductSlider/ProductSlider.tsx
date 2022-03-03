@@ -28,25 +28,31 @@ const ProductSlider: FC<Props> = ({ images }) => {
       autoHeight
       autoplay={{ delay: 4000 }}
       navigation={navOptions}>
-      <ChevronLeft className={cn('lbs-chevron-left', s.chevron, s.chevronLeft)} />
-      {images.length > 2 &&
+      {images.length > 2 && (
+        <ChevronLeft className={cn('lbs-chevron-left', s.chevron, s.chevronLeft)} />
+      )}
+      {images.length >= 2 &&
         images.map((img, i) => {
           if (i > 0) {
             return (
               <SwiperSlide key={img.url}>
                 {/* <div className={s.imageContainer}> */}
-                  <Image
-                    src={img.url}
-                    width={img.width}
-                    height={img.height}
-                    layout="responsive"
-                  />
+                <Image
+                  src={img.url}
+                  width={img.width}
+                  height={img.height}
+                  layout="responsive"
+                />
                 {/* </div> */}
               </SwiperSlide>
             )
           }
         })}
-      <ChevronRight className={cn('lbs-chevron-right', s.chevron, s.chevronRight)} />
+      {images.length > 2 && (
+        <ChevronRight
+          className={cn('lbs-chevron-right', s.chevron, s.chevronRight)}
+        />
+      )}
     </Swiper>
   )
 }
