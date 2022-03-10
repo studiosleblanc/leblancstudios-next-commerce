@@ -34,16 +34,11 @@ export const archivesData: Archive[] = [
   },
   {
     name: 'Olympique',
-    handle: 'olympique',
+    handle: 'timeless-duck-shirt-lolympique',
     abbrSvg: 'SS15',
     images: olympique,
     credits:
       'Photographed in the Dominican Republic by Máximo del Castillo. <br />Modeled by Blanca Aguiló, Paola Giachero, and Luis Acosta.',
-  },
-  {
-    name: 'Timeless Duck Shirt: L’ Olympique',
-    handle: 'timeless-duck-shirt-lolympique',
-    abbrSvg: 'SS15',
   },
   {
     name: 'Fausse Geométrié',

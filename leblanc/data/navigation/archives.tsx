@@ -12,16 +12,16 @@ const archives: NavItem[] = [
   //   handle: 'la-cuisine',
   //   href: '/archives/la-cuisine',
   // },
-  {
-    id: 'olympique',
-    label: (
-      <Fragment>
-        SS15: <b>[Olympique]</b>
-      </Fragment>
-    ),
-    handle: 'olympique',
-    href: '/archives/olympique',
-  },
+  // {
+  //   id: 'olympique',
+  //   label: (
+  //     <Fragment>
+  //       SS15: <b>[Olympique]</b>
+  //     </Fragment>
+  //   ),
+  //   handle: 'olympique',
+  //   href: '/archives/olympique',
+  // },
   {
     id: 'timeless-duck-shirt-lolympique',
     label: (
