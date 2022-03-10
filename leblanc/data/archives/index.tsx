@@ -7,6 +7,7 @@ import whiteShirt1 from './white-shirt-1'
 import fausseGeometrie from './fausse-geometrie'
 import valentinesAdCampaign from './valentines-ad-campaign'
 import singularUnity from './singular-unity'
+import olympique from './olympique'
 
 export type ArchiveImage = {
   src: string
@@ -297,5 +298,13 @@ export const archivesData: Archive[] = [
     images: noMediumInserted,
     credits:
       'Photographed in Santo Domingo Este, Dominican Republic by Luis Miguel Molina. <br />Modeled by Angel, Steven and Glorianny.',
+  },
+  {
+    name: 'Olympique',
+    handle: 'olympique',
+    abbrSvg: 'FW22',
+    images: olympique,
+    credits:
+      'Photographed in the Dominican Republic by Máximo del Castillo. <br />Modeled by Blanca Aguiló, Paola Giachero, and Luis Acosta.',
   },
 ]
