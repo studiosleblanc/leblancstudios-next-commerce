@@ -1,0 +1,61 @@
+.imageContainer {
+  @apply w-full;
+  & > div {
+    @apply w-full;
+  }
+}
+
+.slideshowContainer {
+  @apply flex;
+  @apply relative w-full;
+}
+.slideshow {
+  @apply w-full max-w-[1000px] mx-auto;
+}
+
+.chevronContainer {
+  @apply flex-grow flex justify-center items-center px-6 md:px-8;
+}
+.chevron {
+  @apply cursor-pointer;
+  z-index: 1;
+}
+@media (max-width: 600px) {
+  .chevron {
+    width: 20px;
+    height: auto;
+  }
+}
+.credits {
+  @apply block;
+  @apply text-sm md:text-xl pt-8 lg:pt-10 pb-4 font-light cursor-default;
+  @apply bg-white uppercase;
+  @apply mb-0;
+  line-height: 2;
+}
+
+/* .chevronLeft {
+  @apply left-[24px];
+}
+.chevronRight {
+  @apply right-[24px];
+} */
+
+/* @media only screen and (max-width: 600px) {
+  .lbs-chevron-right svg {
+    width: 20px;
+    height: auto;
+  }
+} */
+
+/* DARK MODE */
+:global(.dark) {
+  & .chevron {
+    & path {
+      stroke: #fff;
+    }
+  }
+  & .credits {
+    @apply bg-black;
+  }
+}

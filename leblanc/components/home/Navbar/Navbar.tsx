@@ -64,7 +64,7 @@ const Navbar: FC = () => {
                   <React.Fragment key={navItem.id}>
                     {navItem.noNav ? null : (
                       <li>
-                        {navItem.childs ? (
+                        {navItem.childs && !navItem.forceHref ? (
                           <a href="#" onClick={e => handleActiveItem(e, navItem)}>
                             {navItem.label}
                           </a>

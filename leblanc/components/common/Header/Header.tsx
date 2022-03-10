@@ -107,13 +107,13 @@ const Header: FC<Props> = ({ history }) => {
         <div className={s.navbar}>
           <div
             style={
-              positionItems.length > 0
+              positionItems.length > 0 && pathItems[0] !== 'archives'
                 ? getFitFontStyles(positionItems)
                 : pathItems && getStringFitFontStyles(pathItems[0])
             }
             className={s.position}>
             {/* <div style={getFitFontStyles(positionItems)} className={s.position}> */}
-            {breadcrumbs.length > 0
+            {breadcrumbs.length > 0 && pathItems[0] !== 'archives'
               ? positionItems.map((pItem, i) => (
                   <React.Fragment key={i}>
                     {i >= 1 && (
@@ -136,10 +136,20 @@ const Header: FC<Props> = ({ history }) => {
                         <li>
                           {navItem.href ? (
                             <Link href={navItem.href}>
-                              <a className={cn({[s.linkActive]: navItem.handle === pathItems[0]})}>{navItem.label}</a>
+                              <a
+                                className={cn({
+                                  [s.linkActive]: navItem.handle === pathItems[0],
+                                })}>
+                                {navItem.label}
+                              </a>
                             </Link>
                           ) : (
-                            <a className={cn({[s.linkActive]: navItem.handle === pathItems[0]})}>{navItem.label}</a>
+                            <a
+                              className={cn({
+                                [s.linkActive]: navItem.handle === pathItems[0],
+                              })}>
+                              {navItem.label}
+                            </a>
                           )}
                         </li>
                       )}
@@ -157,13 +167,30 @@ const Header: FC<Props> = ({ history }) => {
                     ?.childs?.map(navItem => (
                       <React.Fragment key={navItem.id}>
                         {navItem.noNav ? null : (
-                          <li>
+                          <li
+                            className={cn({
+                              [s.archiveLink]: pathItems[0] === 'archives',
+                            })}>
                             {navItem.href ? (
                               <Link href={navItem.href}>
-                                <a className={cn({[s.linkActive]: navItem.handle === pathItems[pathItems.length -1]})}>{navItem.label}</a>
+                                <a
+                                  className={cn({
+                                    [s.linkActive]:
+                                      navItem.handle ===
+                                      pathItems[pathItems.length - 1],
+                                  })}>
+                                  {navItem.label}
+                                </a>
                               </Link>
                             ) : (
-                              <a className={cn({[s.linkActive]: navItem.handle === pathItems[pathItems.length -1]})}>{navItem.label}</a>
+                              <a
+                                className={cn({
+                                  [s.linkActive]:
+                                    navItem.handle ===
+                                    pathItems[pathItems.length - 1],
+                                })}>
+                                {navItem.label}
+                              </a>
                             )}
                           </li>
                         )}
@@ -175,13 +202,30 @@ const Header: FC<Props> = ({ history }) => {
                     ?.childs?.map(navItem => (
                       <React.Fragment key={navItem.id}>
                         {navItem.noNav ? null : (
-                          <li>
+                          <li
+                            className={cn({
+                              [s.archiveLink]: pathItems[0] === 'archives',
+                            })}>
                             {navItem.href ? (
                               <Link href={navItem.href}>
-                                <a className={cn({[s.linkActive]: navItem.handle === pathItems[pathItems.length -1]})}>{navItem.abbr ? navItem.abbr : navItem.label}</a>
+                                <a
+                                  className={cn({
+                                    [s.linkActive]:
+                                      navItem.handle ===
+                                      pathItems[pathItems.length - 1],
+                                  })}>
+                                  {navItem.abbr ? navItem.abbr : navItem.label}
+                                </a>
                               </Link>
                             ) : (
-                              <a className={cn({[s.linkActive]: navItem.handle === pathItems[pathItems.length -1]})}>{navItem.abbr ? navItem.abbr : navItem.label}</a>
+                              <a
+                                className={cn({
+                                  [s.linkActive]:
+                                    navItem.handle ===
+                                    pathItems[pathItems.length - 1],
+                                })}>
+                                {navItem.abbr ? navItem.abbr : navItem.label}
+                              </a>
                             )}
                           </li>
                         )}

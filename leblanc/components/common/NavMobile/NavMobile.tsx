@@ -61,7 +61,7 @@ const NavMobile = () => {
                     item.href && (
                       <NextLink href={item.href || ''}>
                         <a className={s.navItem} onClick={handleLinkClick}>
-                          {item.label}
+                          <span>{item.label}</span>
                         </a>
                       </NextLink>
                     )
@@ -100,7 +100,7 @@ const NavMobile = () => {
                       item.href && (
                         <NextLink href={item.href || ''}>
                           <a className={s.navItem} onClick={handleLinkClick}>
-                            {item.label}
+                            <span>{item.label}</span>
                           </a>
                         </NextLink>
                       )
@@ -134,7 +134,7 @@ const NavMobile = () => {
                     {item.href && (
                       <NextLink href={item.href || ''}>
                         <a className={s.navItem} onClick={handleLinkClick}>
-                          {item.label}
+                          <span>{item.label}</span>
                         </a>
                       </NextLink>
                     )}

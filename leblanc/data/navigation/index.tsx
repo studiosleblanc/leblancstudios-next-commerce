@@ -2,17 +2,20 @@ import React from 'react'
 import newArrivals from './newArrivals'
 import mens from './mens'
 import womens from './womens'
+import archives from './archives'
+// this file contains all remaining paths
 import collections from './collections'
 
 export type NavItem = {
   id: string
   label: string | React.ReactNode
-  handle: string
+  handle: string // Url path handle
   abbr?: string
-  href?: string
+  href?: string // Full url path
   childs?: NavItem[]
-  slug?: string
+  slug?: string // Collection handle
   noNav?: boolean
+  forceHref?: boolean // force render as anchor instead of a button even if has childs
 }
 
 export const homeNavigation: NavItem[] = [
@@ -47,10 +50,12 @@ export const homeNavigation: NavItem[] = [
     id: 'archives',
     label: 'Archives',
     handle: 'archives',
-    href: '/archives',
+    childs: archives,
+    href: '/archives/no-medium-inserted',
+    forceHref: true,
   },
   {
-    id: 'collection',
+    id: 'collection', // hidden links
     label: 'Collection',
     handle: 'collection',
     href: '/collection/all',
