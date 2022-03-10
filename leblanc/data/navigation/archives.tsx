@@ -13,6 +13,16 @@ const archives: NavItem[] = [
   //   href: '/archives/la-cuisine',
   // },
   {
+    id: 'olympique',
+    label: (
+      <Fragment>
+        SS15: <b>[Olympique]</b>
+      </Fragment>
+    ),
+    handle: 'olympique',
+    href: '/archives/olympique',
+  },
+  {
     id: 'timeless-duck-shirt-lolympique',
     label: (
       <Fragment>
@@ -123,16 +133,6 @@ const archives: NavItem[] = [
     ),
     handle: 'no-medium-inserted',
     href: '/archives/no-medium-inserted',
-  },
-  {
-    id: 'olympique',
-    label: (
-      <Fragment>
-        FW22: <b>[Olympique]</b>
-      </Fragment>
-    ),
-    handle: 'olympique',
-    href: '/archives/olympique',
   },
 ]
 
