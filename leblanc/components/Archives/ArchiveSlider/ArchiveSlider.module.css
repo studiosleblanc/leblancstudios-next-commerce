@@ -5,6 +5,9 @@
   }
 }
 
+.swiperSlide {
+  @apply bg-white;
+}
 .slideshowContainer {
   @apply flex;
   @apply relative w-full;
@@ -56,6 +59,9 @@
     }
   }
   & .credits {
+    @apply bg-black;
+  }
+  & .swiperSlide {
     @apply bg-black;
   }
 }

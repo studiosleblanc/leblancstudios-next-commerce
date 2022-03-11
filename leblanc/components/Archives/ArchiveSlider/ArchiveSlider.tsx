@@ -42,7 +42,7 @@ const ArchiveSlider: FC<Props> = ({ images, credits }) => {
         navigation={navOptions}>
         {images.map((img: ArchiveImage, i) => {
           return (
-            <SwiperSlide key={img.src}>
+            <SwiperSlide key={img.src} className={s.swiperSlide}>
               <div className={s.imageContainer}>
                 <Image
                   unoptimized
