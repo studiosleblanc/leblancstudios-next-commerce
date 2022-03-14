@@ -44,7 +44,7 @@ const HistorySectionB = () => {
           // offset="100%"
           offset="-100px"
           triggerHook="onEnter"
-          indicators={true}
+          // indicators={true}
         >
           {(progress: number) => (
             <div className={s.cardsContainer}>
