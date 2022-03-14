@@ -14,11 +14,11 @@ const variants_1 = {
   visible: { opacity: 1, display: 'flex' },
   hidden: { opacity: 0, transitionEnd: { display: 'none' } },
 }
-const variants_2 = {
+const textAppear = {
   visible: {
     opacity: 1,
     display: 'block',
-    y: '-100px',
+    y: '-18vh',
     transition: { duration: 0.6 },
   },
   hidden: { opacity: 0, y: 0, transitionEnd: { display: 'none' } },
@@ -40,7 +40,7 @@ const HistorySectionF = () => {
           // classToggle="visible"
           // offset="-200%"
           triggerHook="onLeave"
-          // indicators={true}
+          indicators={true}
           >
           {(progress: number, scene: any) => {
             console.log(scene)
@@ -114,7 +114,7 @@ const HistorySectionF = () => {
                   </div>
                   <motion.div
                     animate={progress > 0.99 ? 'visible' : 'hidden'}
-                    variants={variants_2}>
+                    variants={textAppear}>
                     <HistoryTitle className={s.title}>
                       <b>WHITE SHIRT 2ND. EDITION</b> LOOK INTO WHITE-COLLAR CRIMES,
                       FROM IDENTITY THEFT CARDS, ODEBRECHT BRIBERY SCANDAL TO GLOBAL
