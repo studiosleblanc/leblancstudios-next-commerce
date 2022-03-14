@@ -10,5 +10,5 @@ export default function History() {
   return <HistoryView />
 }
 
-// History.theme = 'dark'
+History.theme = 'dark'
 History.Layout = Layout

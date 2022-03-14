@@ -20,20 +20,20 @@ const HistoryView = () => {
     <HistoryLayout>
       <div className={s.container}>
         {/* Section A */}
-        {/* <HistorySectionA /> */}
+        <HistorySectionA />
         {/* Section B */}
-        {/* <HistorySectionB /> */}
+        <HistorySectionB />
         {/* Section C */}
-        {/* <HistorySectionC /> */}
+        <HistorySectionC />
         {/* Section D */}
-        {/* <HistorySectionD /> */}
+        <HistorySectionD />
         {/* Section E */}
-        {/* <HistorySectionE /> */}
+        <HistorySectionE />
         {/* Section F */}
-        {/* <HistorySectionF /> */}
+        <HistorySectionF />
         {/* Section G */}
-        {/* <HistorySectionG /> */}
-        <ComingSoon />
+        <HistorySectionG />
+        {/* <ComingSoon /> */}
       </div>
     </HistoryLayout>
   )
