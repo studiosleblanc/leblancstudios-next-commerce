@@ -30,12 +30,12 @@ const HistorySectionG = () => {
             <div style={{ opacity: progress }}>
               <HistoryCard>
                 <HistoryTitle className={s.title}>
-                  <b>SINGULAR UNITY</b> iIS BASED ON THE CONCEPT OF TECHNOLOGICAL
+                  <b>SINGULAR UNITY</b> IS BASED ON THE CONCEPT OF TECHNOLOGICAL
                   SINGULARITY, OR THE WAY IN WHICH EVERYTHING CONVERGES IN ONE PLACE
                   DUE TO THE LARGE AMOUNT OF INFORMATION THAT WE ARE PROCESSING
                   NOWADAYS. WE ARE HIGHLY CONNECTED AND SURROUNDED BY INFORMATION
                   THAT WE ARE CONSTANTLY PROCESSING VIA OUR TECHNOLOGICAL DEVICES,
-                  RSULTING IN A DILUTION OR LOSS OF CULTURAL IDENTITY, LEAVING US ALL
+                  RESULTING IN A DILUTION OR LOSS OF CULTURAL IDENTITY, LEAVING US ALL
                   IN A STATE OF SOME FORM OF “CUT-AND-PASTE”. SINGULAR UNITY IS MADE
                   UP OF TWO CONVERSATIONS: THE WAY IN TECHNOLOGY AFFECTS US AND IS
                   CHANGING OUR PERCEPTION OF TIME AND THE CLASS-BASED STEREOTYPES IN
@@ -70,8 +70,8 @@ const HistorySectionG = () => {
                         <Image
                           src="/assets/history/history-G-1.jpg"
                           className={s.img}
-                          width={937}
-                          height={1171}
+                          width={1501}
+                          height={1875}
                           layout="responsive"
                           objectFit="cover"
                           priority
@@ -86,8 +86,8 @@ const HistorySectionG = () => {
                         <Image
                           src="/assets/history/history-G-2.jpg"
                           className={s.img}
-                          width={877}
-                          height={1094}
+                          width={1501}
+                          height={1875}
                           layout="responsive"
                           objectFit="cover"
                           priority
