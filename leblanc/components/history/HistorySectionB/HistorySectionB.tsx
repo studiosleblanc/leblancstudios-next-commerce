@@ -36,13 +36,15 @@ const HistorySectionB = () => {
         </Scene>
       </Controller>
 
-      <div id="scene-B-2"></div>
+      
       <Controller>
         <Scene
           triggerElement="#scene-B-2"
-          duration={200}
-          triggerHook="onLeave"
-          // indicators={true}
+          duration={100}
+          // offset="100%"
+          offset="-100px"
+          triggerHook="onEnter"
+          indicators={true}
         >
           {(progress: number) => (
             <div className={s.cardsContainer}>
@@ -100,6 +102,7 @@ const HistorySectionB = () => {
           )}
         </Scene>
       </Controller>
+      <div id="scene-B-2"></div>
     </div>
   )
 }
