@@ -65,7 +65,7 @@ const HistorySectionB = () => {
                   </p>
                   <p>
                     WAS PRESENTED AT THE MUSEUM OF MODERN ART, IN PLAZA DE LA
-                    CULTURA, StANTO DOMINGO.
+                    CULTURA, SANTO DOMINGO.
                   </p>
                   <p>AD CAMPAIGN SHOT BY MÁXIMO DEL CASTILLO.</p>
                 </HistoryCaption>
@@ -90,7 +90,7 @@ const HistorySectionB = () => {
                     </p>
                     <p>
                       WAS PRESENTED AT THE MUSEUM OF MODERN ART, IN PLAZA DE LA
-                      CULTURA, StANTO DOMINGO.
+                      CULTURA, SANTO DOMINGO.
                     </p>
                     <p>AD CAMPAIGN SHOT BY MÁXIMO DEL CASTILLO.</p>
                   </HistoryCaption>
