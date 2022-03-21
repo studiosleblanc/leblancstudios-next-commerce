@@ -4,7 +4,7 @@ import s from './RichText.module.css'
 
 interface Props {
   children: React.ReactNode
-  uppercase: boolean
+  uppercase?: boolean
 }
 
 const RichText: FC<Props> = ({ children, uppercase }) => {
