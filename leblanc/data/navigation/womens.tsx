@@ -65,6 +65,20 @@ const womens: NavItem[] = [
     href: '/womens/womens-tds',
     slug: 'womens-tds',
   },
+  {
+    id: 'shoes-dedaereaddq213431',
+    label: 'Shoes',
+    handle: 'shoes',
+    href: '/womens/shoes',
+    slug: 'womens-shoes',
+  },
+  {
+    id: 'hoodies-deddq213431',
+    label: 'Hoodies',
+    handle: 'hoodies',
+    href: '/womens/hoodies',
+    slug: 'womens-hoodies',
+  },
 ]
 
 export default womens

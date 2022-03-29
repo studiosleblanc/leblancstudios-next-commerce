@@ -1,13 +1,13 @@
 import type { NavItem } from '@leblanc/data/navigation'
 
 const aNecessaryRisk: NavItem[] = [
-  // {
-  //   id: 'shirts-88g87rt65',
-  //   label: 'Shirts',
-  //   handle: 'shirts',
-  //   href: '/new-arrivals/a-necessary-risk-x-gus-pena/shirts',
-  //   slug: 'new-arrivals-a-necessary-risk-x-gus-pena-shirts'
-  // },
+  {
+    id: 'shirts-88g87rt65',
+    label: 'Shirts',
+    handle: 'shirts',
+    href: '/new-arrivals/a-necessary-risk-x-gus-pena/shirts',
+    slug: 'new-arrivals-a-necessary-risk-x-gus-pena-shirts'
+  },
   // {
   //   id: 't-Shirt-908h78f',
   //   label: 'T-Shirts',

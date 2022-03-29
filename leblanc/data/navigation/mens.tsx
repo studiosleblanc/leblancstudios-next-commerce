@@ -58,6 +58,20 @@ const mens: NavItem[] = [
     href: '/mens/mens-tds',
     slug: 'mens-tds',
   },
+  {
+    id: 'shoes-dfsdf',
+    label: 'Shoes',
+    handle: 'shoes',
+    href: '/mens/shoes',
+    slug: 'mens-shoes',
+  },
+  {
+    id: 'hoodies-dfsdf',
+    label: 'Hoodies',
+    handle: 'hoodies',
+    href: '/mens/hoodies',
+    slug: 'mens-hoodies',
+  },
 ]
 
 export default mens
