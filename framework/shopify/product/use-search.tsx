@@ -39,7 +39,7 @@ export const handler: SWRHook<SearchProductsHook> = {
     let products
 
     // change the query to getCollectionProductsQuery when categoryId is set
-    // if (categoryId) {
+    if (categoryId) {
       const data = await fetch<
         CollectionEdge,
         GetProductsFromCollectionQueryVariables
@@ -55,14 +55,14 @@ export const handler: SWRHook<SearchProductsHook> = {
               vendor.replace(/\s+/g, '-').toLowerCase() === brandId
           )
         : data.node?.products?.edges
-    // } else {
-    //   const data = await fetch<GetAllProductsQuery>({
-    //     query: options.query,
-    //     method,
-    //     variables,
-    //   })
-    //   products = data.products?.edges
-    // }
+     } else {
+    const data = await fetch<GetAllProductsQuery>({
+         query: options.query,
+         method,
+         variables,
+       })
+      products = data.products?.edges
+    }
 
     return {
       products: products?.map(({ node }) =>
