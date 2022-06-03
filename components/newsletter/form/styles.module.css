@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+.form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 36px;
+}
+form .input {
+  width: 100%;
+}
+.inp {
+  width: 100%;
+  height: fit-content;
+}
+.inp label {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  width: 100%;
+}
+.inp label span {
+  font-size: 20px;
+  width: fit-content;
+}
+.inp label input {
+  flex: 2;
+  outline: none;
+  height: 38px;
+  background-color: hsla(0, 0%, 77%, 0.12);
+  width: 100%;
+  border-radius: 2px;
+  font-size: 20px;
+  padding: 0 24px;
+}
+.submit {
+  margin-top: 88px;
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+}
+.button {
+  font-size: 20px;
+  border: 1px solid #000;
+  padding: 8px 24px;
+}
+.messageError {
+  font-size: 16px;
+  color: red;
+  
+}

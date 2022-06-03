@@ -1,0 +1,173 @@
+.modal {
+  max-width: 640px;
+  width: 100%;
+  min-height: 480px;
+  max-height: 680px;
+  height: auto;
+  background-color: hsla(58, 100%, 52%, 1);
+  border: 1px solid #000;
+  outline: none;
+  bottom: 0;
+  position: absolute;
+  right: 140px;
+}
+.root {
+  width: 100%;
+  height: 100%;
+}
+.actions {
+  display: flex;
+  width: 100%;
+  padding: 6px 6px 0;
+  justify-content: flex-end;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 64px 42px 0;
+}
+.content h1 {
+  font-size: 72px;
+  line-height: 72px;
+  font-family: 'Tungsten';
+  font-weight: 700;
+}
+.content p {
+  font-size: 13px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+}
+.overlay {
+  position: fixed;
+  z-index: 11111;
+  inset: 0px;
+  right: 120px;
+  width: 100%;
+}
+.content .form {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+}
+.form form {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form .input {
+  width: fit-content;
+}
+.radio {
+  width: 100%;
+  height: auto;
+}
+.button {
+  margin-top: 24px;
+  width: 100% !important;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 100px;
+}
+.submit {
+  color: #000;
+  font-size: 10px;
+  font-weight: 700;
+}
+.spot {
+  display: flex;
+  justify-content: center;
+  margin-top: 46px;
+}
+.messageError {
+  color: red;
+  font-size: 10px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+.container {
+  position: relative;
+  cursor: pointer;
+  font-size: 10px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  padding-left: 22px;
+  flex-direction: row-reverse;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.email {
+  display: flex;
+  width: fit-content;
+  height: auto;
+}
+.email label {
+  display: flex;
+  column-gap: 6px;
+  align-items: flex-end;
+}
+.email label span {
+  color: #000;
+  font-size: 10px;
+}
+.email label input {
+  width: 200px;
+  background-color: transparent;
+  color: #000;
+  font-size: 10px;
+  outline: none;
+  border-bottom: 1px solid #000;
+}
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 0%;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #fff;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #000;
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  top: 3px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #000;
+}

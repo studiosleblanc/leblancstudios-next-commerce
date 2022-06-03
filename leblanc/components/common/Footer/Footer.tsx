@@ -67,6 +67,11 @@ const LBSFooter: FC<Props> = ({ pages }) => {
                   <a>Stores</a>
                 </Link>
               </li>
+              <li>
+                <Link href="/newsletter">
+                  <a>Newsletter</a>
+                </Link>
+              </li>
             </ul>
             <ul>
               <li>

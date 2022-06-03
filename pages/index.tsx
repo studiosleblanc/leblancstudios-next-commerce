@@ -4,6 +4,7 @@ import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 // import { Grid, Marquee, Hero } from '@components/ui'
 // import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
 import { Layout, MainLayout } from '@leblanc/layouts'
+import Popup from '@components/newsletter/popup'
 import {
   Hero,
   MenWomen,
@@ -92,6 +93,7 @@ export default function Home({
       /> */}
 
       <MainLayout noHeader noDMSwitcher>
+        <Popup />
         <Hero />
         <MenWomen />
         <ANecesaryRisk />

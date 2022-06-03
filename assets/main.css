@@ -24,6 +24,11 @@
   font-weight: 700;
   src: url('/assets/fonts/MassimoDisplay-Semi.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Tungsten';
+  font-weight: 700;
+  src: url('/assets/fonts/Tungsten-Black.otf') format('truetype');
+}
 /* @font-face {
   font-family: 'Massimo Display';
   font-weight: 700;
