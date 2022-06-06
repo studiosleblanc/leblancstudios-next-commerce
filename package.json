@@ -19,6 +19,7 @@
     "node": ">=14.x"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "@react-spring/web": "^9.2.1",
     "@types/react-modal": "^3.13.1",
     "@types/react-truncate": "^2.3.4",

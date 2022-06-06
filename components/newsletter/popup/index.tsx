@@ -3,11 +3,13 @@ import styles from './styles.module.css'
 import Modal from 'react-modal'
 import { useEffect, useState } from 'react'
 import { ClosePopup, Spot } from 'components/icons'
+import { useNewsletterForm } from '@lib/hooks/useNewsletterForm'
 Modal.setAppElement('#__next')
 const Popup: FC = () => {
   const [popupOpen, setPopupOpen] = useState(false)
   const [message, setMessage] = useState('')
   const [form, setForm] = useState({ gender: '', email: '', submit: false })
+  const emailForm = useNewsletterForm(form, 'popup', form.submit)
   const handleForm = (e: any) => {
     const aux: any = { ...form }
     aux[e.target.name] = e.target.value
@@ -95,7 +97,7 @@ const Popup: FC = () => {
                 </div>
               </div>
               <div className={`${styles.input} ${styles.button}`}>
-                <button className={styles.submit}>SEND</button>
+                <button className={styles.submit}>{form.submit ? 'SENT' : 'SEND'}</button>
               </div>
             </form>
           </div>

@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import styles from './styles.module.css'
 import { useEffect, useState } from 'react'
+import { useNewsletterForm } from '@lib/hooks/useNewsletterForm'
 const Form: FC = () => {
   const [form, setForm] = useState({
     name: '',
@@ -14,6 +15,7 @@ const Form: FC = () => {
     aux[e.target.name] = e.target.value
     setForm(aux)
   }
+  const emailForm = useNewsletterForm(form, 'page', form.submit)
   const onSubmit = (e: any) => {
     e.preventDefault()
     if (form.name !== '' && form.email !== '' && form.lastname !== '') {
@@ -23,6 +25,9 @@ const Form: FC = () => {
       setMessage('The fields must not be empty')
     }
   }
+  useEffect(() => {
+    console.log(emailForm)
+  }, [emailForm])
   return (
     <div className={styles.container}>
       <div className={styles.form}>
@@ -58,7 +63,9 @@ const Form: FC = () => {
             />
           </div>
           <div className={`${styles.input} ${styles.submit}`}>
-            <button className={styles.button}>Send</button>
+            <button className={styles.button}>
+              {form.submit ? 'Sent' : 'Send'}
+            </button>
           </div>
         </form>
       </div>
