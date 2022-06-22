@@ -54,9 +54,9 @@ const Popup: FC = () => {
         <div className={styles.content}>
           <h1>WHERE DO YOU HAVE YOUR MONEY BURIED?</h1>
           <p>
-            Please join to our newsletter to receive information regarding to new
-            collections, special events, exclusive offers and tell us where is your
-            money hidden.
+            Please join our newsletter to receive information regarding new
+            collections, special events, exclusive offers and tell us where your
+            money is hidden.
           </p>
           <div className={styles.form}>
             {message && (
@@ -97,7 +97,9 @@ const Popup: FC = () => {
                 </div>
               </div>
               <div className={`${styles.input} ${styles.button}`}>
-                <button className={styles.submit}>{form.submit ? 'SENT' : 'SEND'}</button>
+                <button className={styles.submit}>
+                  {form.submit ? 'SENT' : 'SEND'}
+                </button>
               </div>
             </form>
           </div>
