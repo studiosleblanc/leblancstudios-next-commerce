@@ -40,8 +40,11 @@ const ArchivesSlider: FC = () => {
   }
   return (
     <>
+
       {isDesktop && (
         <Swiper effect={'fade'} loop autoplay={{ delay: 4000 }}>
+          <TextArchives className={s.slideSvgText} />
+
           <SwiperSlide className={s.swiperSlide}>
             {({ isActive }) => {
               return (
@@ -58,7 +61,7 @@ const ArchivesSlider: FC = () => {
                     initial="exit"
                     animate={isActive ? 'enter' : 'exit'}
                     variants={sliderSvgAnimate}>
-                    <TextArchives className={s.slideSvgText} />
+
                   </motion.div>
                   <div className={s.slideCaption}>
                     <h5>

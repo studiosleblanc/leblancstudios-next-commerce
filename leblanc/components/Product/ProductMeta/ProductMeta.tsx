@@ -28,8 +28,8 @@ interface Props {
   asCard?: boolean
 }
 
-const ProductMeta: FC<Props> = ({ product, asCard = false }) => {
-  console.log(product)
+const ProductMeta: FC<Props> = ({ product, asCard }) => {
+  console.log('pr',product, asCard)
   const addItem = useAddItem()
   const { openSidebar, setSidebarView } = useUI()
   const [cartLoading, setCartLoading] = useState(false)
@@ -147,7 +147,7 @@ const ProductMeta: FC<Props> = ({ product, asCard = false }) => {
           </div>
         )}
       </div>
-      {!asCard && <StyleWith product={product} />}
+     <StyleWith product={product} />
     </div>
   )
 }

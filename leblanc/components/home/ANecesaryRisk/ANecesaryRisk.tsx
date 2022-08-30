@@ -10,45 +10,47 @@ const ANecesaryRisk: FC = () => {
   const [toggle, setToggle] = useState(false)
   return (
     <div className={s.root}>
+    
+        <Image
+          priority
+          unoptimized
+          src="/assets/home/kid.png"
+          alt="kids leblanc"
+          className={s.bgImage}
+          width={1920}
+          height={1441}
+          layout="responsive"
+          objectFit="cover"
+        />
+
       <motion.div
         animate={{ opacity: toggle ? 1 : 0 }}
         transition={{ duration: 0.35 }}
         className={s.bgImageWrapper}>
-        <Image
-          priority
-          unoptimized
-          src="/assets/home/aNecessaryRisk_bg.jpg"
-          alt="A Necesary Risk BG"
-          className={s.bgImage}
-          width={1920}
-          height={1355}
-          layout="responsive"
-          objectFit="cover"
-        />
+        <Link href="/product/anr-blue-socks">
+          <a className={s.card}>
+            <Image
+              unoptimized
+              src="/assets/home/kid2.png"
+              alt="kids leblanc"
+              className={s.cardImage}
+              width={1920}
+              height={1441}
+              layout="fill"
+              objectFit="cover"
+            />
+          </a>
+        </Link>
       </motion.div>
-      <div className={s.topBar}>
-        <LogoHorizontal className={s.logoLeblanc} />
-        <LogoGusPena className={s.logoGus} />
-      </div>
-      <Link href="/product/anr-blue-socks">
-        <a className={s.card}>
-          <Image
-            unoptimized
-            src="/assets/home/aNecessaryRisk_socks.png"
-            alt="A Necesary Risk"
-            className={s.cardImage}
-            width={2560}
-            height={1437}
-            layout="responsive"
-          />
-          <div className={s.cardLogoContainer}>
-            <LogoANecesaryRisk className={s.cardLogo} />
-          </div>
-        </a>
-      </Link>
       <SwitchButton toggle={toggle} setToggle={setToggle} />
     </div>
   )
 }
 
 export default ANecesaryRisk
+/*
+  <div className={s.topBar}>
+        <LogoHorizontal className={s.logoLeblanc} />
+        <LogoGusPena className={s.logoGus} />
+      </div>
+      */

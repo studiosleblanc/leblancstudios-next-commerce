@@ -15,7 +15,7 @@ const Hero: FC = () => {
         <Image
           priority
           unoptimized
-          src="/assets/home/banner-main.jpg"
+          src="/assets/home/banner.jpg"
           alt="Leblanc Studios"
           width={1920}
           height={1080}

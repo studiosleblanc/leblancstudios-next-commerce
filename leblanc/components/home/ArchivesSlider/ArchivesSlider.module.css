@@ -1,4 +1,5 @@
 .swiperSlide {
+  position: relative;
 }
 .slideCaption {
   @apply absolute w-full bottom-0 left-0 bg-primary;
@@ -10,5 +11,7 @@
   @apply flex justify-center items-start;
 }
 .slideSvgText {
-  @apply w-4/5 h-auto;
+  @apply absolute top-0 w-4/5 h-auto;
+  z-index: 2;
+  left: 120px;
 }

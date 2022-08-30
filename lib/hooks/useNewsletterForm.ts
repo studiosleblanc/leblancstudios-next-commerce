@@ -20,10 +20,10 @@ export const useNewsletterForm = (
             }
       email
         .send(
-          process.env.SERVICE_ID_EMAILJS || 'service_lpzbna7',
-          process.env.TEMPLATE_ID_EMAILJS || 'template_b3ygj4i',
+          process.env.SERVICE_ID_EMAILJS || 'service_57kiusk',
+          process.env.TEMPLATE_ID_EMAILJS || 'template_xen6li8',
           formEmailJS,
-          '1NBwvd_V8fGbyqSis'
+          'guZwHre1GX2NbscjW'
         )
         .then((res: any) => {
           setStatus({ message: 'Email sent', status: res.text })

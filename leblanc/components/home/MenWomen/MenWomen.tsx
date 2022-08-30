@@ -16,7 +16,7 @@ const MenWomen: FC = () => {
             <Image
               priority
               unoptimized
-              src="/assets/home/mens.jpg"
+              src="/assets/home/men.png"
               alt="Leblanc Studios"
               width={963}
               height={1443}
@@ -62,7 +62,7 @@ const MenWomen: FC = () => {
             <Image
               priority
               unoptimized
-              src="/assets/home/womens.jpg"
+              src="/assets/home/women.png"
               alt="Leblanc Studios"
               width={964}
               height={1440}

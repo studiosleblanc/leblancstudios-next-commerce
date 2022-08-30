@@ -37,88 +37,96 @@ const FeaturedRow: FC = () => {
 
   return (
     <div className={s.root}>
+
       <Link href="/collection/all-tds">
-        <a
-          className={cn(s.column, s.columnLeft)}
-          onMouseEnter={handleHover}
-          onMouseLeave={handleHover}>
-          <div className={s.imgContainer}>
-            <Image
-              quality="85"
-              src="/assets/home/shop_timeless.jpg"
-              alt="Leblanc Studios"
-              width={963}
-              height={1443}
-              layout="responsive"
-              objectFit="cover"
-              className={s.image}
-              // layout="fill"
-            />
+        <div className={s.row}>
+          <div className={s.item}>
+            <span>
+              <b>Now Available:</b> Light Blue Classic Duck Shirt
+            </span>
           </div>
+          <a
+            className={cn(s.column, s.columnLeft)}
+            onMouseEnter={handleHover}
+            onMouseLeave={handleHover}>
+            <div className={s.imgContainer}>
 
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ repeat: Infinity, duration: 10, ease: 'linear' }}
-            className={s.logoIntimoWrapper}>
-            <LogoIntimo className={s.logoIntimo} />
-          </motion.div>
-
-          <TextShopTimelessDuck className={s.textDuck} />
-
-          <motion.div
-            className={s.content}
-            initial="exit"
-            animate={isHover ? 'enter' : 'exit'}
-            variants={contentAnimate}>
-            <div className={s.contentBody}>
-              <p>
-                <b>Timeless Duck Shirt: [Intimo y Personal]</b> belongs to the line
-                with most recognition of LEBLANCSTUDIOS. For this season, we explored
-                the private sphere of our clients using clothes that reflect the
-                Caribbean masculinity and femininity. Creating a character based on
-                traditional clothing typologies of our country and interpreting the
-                sillhouettes and colors that typically define Caribbean casualwear in
-                a new way.
-              </p>
-              <p>
-                We expanded our range of products, developing denim shirts, skirts
-                bucket hats, tote bags, and more featured products. With patches and
-                embroidery motifs with messages like “Federación de Mujeres
-                Dominicanas 1962”, “Federación de Mujeres Puertorriquenas 1975”,
-                “African-Caribbean-Pacific”, that explore and encourage cultural
-                dialogues within the Caribbean region and the rest of the world.
-              </p>
-
-              <p>
-                The names of the pieces came from important names of overlooked
-                people in fashion. For example, Viola Longacre, the woman who had the
-                oldest pair of jeans.
-              </p>
+              <Image
+                quality="85"
+                src="/assets/home/shirt.png"
+                alt="Leblanc Studios"
+                width={1100}
+                height={1100}
+                layout="responsive"
+                objectFit="contain"
+                className={s.image}
+              // layout="fill"
+              />
             </div>
 
-            <div className={s.contentfooter}>
-              The collection was developed in Santo Domingo, Dominican Republic and
-              produced in Peru, Turkey, China, and the Dominican Republic in 2021.
-            </div>
-          </motion.div>
-        </a>
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ repeat: Infinity, duration: 10, ease: 'linear' }}
+              className={s.logoIntimoWrapper}>
+              <LogoIntimo className={s.logoIntimo} />
+            </motion.div>
+
+            <motion.div
+              className={s.content}
+              initial="exit"
+              animate={isHover ? 'enter' : 'exit'}
+              variants={contentAnimate}>
+              <div className={s.contentBody}>
+                <p>
+                  OFF SEASON: A Necessary Risk <b>[Collaboration with Gus Pena]</b>
+                </p>
+                <p>
+                  LEBLANCSTUDIOS is pleased to present A Necessary Risk: a capsule
+                  collection designed alongside the Dominican Artist Gus Pena.
+                </p>
+
+                <p>
+                  Informed by his latest gallery exhibition, sci-fi, fictional
+                  caribbean spaces and the absurd, LEBLANCSTUDIOS delves into the
+                  universe of Gus Pena.
+                </p>
+                <br />
+                <br />
+                <br />
+                  <br />
+                <br />
+                <br />
+                <p style={{ display: 'flex', alignItems: 'flex-end', height: 'min-content' }}>
+                  The collection was developed in Santo Domingo, Dominican Republic and produced in Portugal, China and the Dominican Republic.
+
+                </p>
+              </div>
+            </motion.div>
+          </a></div>
       </Link>
       <Link href="/product/grey-longrace-duck-shirt">
-        <a className={s.column}>
-          <div className={s.imgContainer}>
-            <Image
-              quality="85"
-              src="/assets/home/duck.jpg"
-              alt="Leblanc Studios"
-              width={964}
-              height={1440}
-              layout="responsive"
-              objectFit="cover"
-              className={s.image}
-              // layout="fill"
-            />
+        <div className={s.row}>
+          <div className={s.item}>
+            <span>
+              <b>Now Available:</b> Light Blue Classic Duck Shirt
+            </span>
           </div>
-        </a>
+          <a className={s.column}>
+            <div className={s.imgContainer}>
+
+              <Image
+                quality="85"
+                src="/assets/home/t-shirt.png"
+                alt="Leblanc Studios"
+                width={1010}
+                height={1010}
+                layout="responsive"
+                objectFit="contain"
+                className={s.image}
+              // layout="fill"
+              />
+            </div>
+          </a></div>
       </Link>
     </div>
   )
