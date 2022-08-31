@@ -49,7 +49,7 @@
   flex-direction: column;
   width: fit-content;
   flex: 1 auto;
-  
+  cursor: pointer;
 
 }
 .row .item {
@@ -75,6 +75,10 @@
 .contentBody {
   @apply text-lg sm:text-3xl md:text-4xl lg:text-2xl xl:text-4xl 3xl:text-5xl flex-grow;
   line-height: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   & p {
     @apply mb-12;
   }

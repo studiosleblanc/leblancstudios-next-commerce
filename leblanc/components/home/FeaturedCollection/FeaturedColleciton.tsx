@@ -10,7 +10,7 @@ const FeaturedRow: FC = () => {
   const [isHover, toggleHover] = useState(false)
 
   const handleHover = () => {
-    toggleHover(!isHover)
+    toggleHover(isHover => !isHover)
   }
 
   const contentAnimate = {
@@ -37,7 +37,6 @@ const FeaturedRow: FC = () => {
 
   return (
     <div className={s.root}>
-
       <Link href="/product/light-blue-classic-duck-shirtare a">
         <div className={s.row}>
           <div className={s.item}>
@@ -50,7 +49,6 @@ const FeaturedRow: FC = () => {
             onMouseEnter={handleHover}
             onMouseLeave={handleHover}>
             <div className={s.imgContainer}>
-
               <Image
                 quality="85"
                 src="/assets/home/shirt.png"
@@ -60,7 +58,7 @@ const FeaturedRow: FC = () => {
                 layout="responsive"
                 objectFit="contain"
                 className={s.image}
-              // layout="fill"
+                // layout="fill"
               />
             </div>
 
@@ -77,32 +75,34 @@ const FeaturedRow: FC = () => {
               animate={isHover ? 'enter' : 'exit'}
               variants={contentAnimate}>
               <div className={s.contentBody}>
-                <p>
-                  OFF SEASON: A Necessary Risk <b>[Collaboration with Gus Pena]</b>
-                </p>
-                <p>
-                  LEBLANCSTUDIOS is pleased to present A Necessary Risk: a capsule
-                  collection designed alongside the Dominican Artist Gus Pena.
-                </p>
+                <div>
+                  <p>
+                    OFF SEASON: A Necessary Risk <b>[Collaboration with Gus Pena]</b>
+                  </p>
+                  <p>
+                    LEBLANCSTUDIOS is pleased to present A Necessary Risk: a capsule
+                    collection designed alongside the Dominican Artist Gus Pena.
+                  </p>
 
-                <p>
-                  Informed by his latest gallery exhibition, sci-fi, fictional
-                  caribbean spaces and the absurd, LEBLANCSTUDIOS delves into the
-                  universe of Gus Pena.
-                </p>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <p style={{ display: 'flex', alignItems: 'flex-end', height: 'min-content' }}>
-                  The collection was developed in Santo Domingo, Dominican Republic and produced in Portugal, China and the Dominican Republic.
-
+                  <p>
+                    Informed by his latest gallery exhibition, sci-fi, fictional
+                    caribbean spaces and the absurd, LEBLANCSTUDIOS delves into the
+                    universe of Gus Pena.
+                  </p>
+                </div>
+                <p
+                  style={{
+                    margin: 0,
+                    fontWeight: 'lighter',
+                    fontSize: '13px',
+                  }}>
+                  The collection was developed in Santo Domingo, Dominican Republic
+                  and produced in Portugal, China and the Dominican Republic.
                 </p>
               </div>
             </motion.div>
-          </a></div>
+          </a>
+        </div>
       </Link>
       <Link href="/product/a-necessary-risk-printed-t-shirt">
         <div className={s.row}>
@@ -113,7 +113,6 @@ const FeaturedRow: FC = () => {
           </div>
           <a className={s.column}>
             <div className={s.imgContainer}>
-
               <Image
                 quality="85"
                 src="/assets/home/t-shirt.png"
@@ -123,10 +122,11 @@ const FeaturedRow: FC = () => {
                 layout="responsive"
                 objectFit="contain"
                 className={s.image}
-              // layout="fill"
+                // layout="fill"
               />
             </div>
-          </a></div>
+          </a>
+        </div>
       </Link>
     </div>
   )
