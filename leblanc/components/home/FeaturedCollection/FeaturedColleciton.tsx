@@ -38,7 +38,7 @@ const FeaturedRow: FC = () => {
   return (
     <div className={s.root}>
 
-      <Link href="/collection/all-tds">
+      <Link href="/product/light-blue-classic-duck-shirtare a">
         <div className={s.row}>
           <div className={s.item}>
             <span>
@@ -93,7 +93,7 @@ const FeaturedRow: FC = () => {
                 <br />
                 <br />
                 <br />
-                  <br />
+                <br />
                 <br />
                 <br />
                 <p style={{ display: 'flex', alignItems: 'flex-end', height: 'min-content' }}>
@@ -104,11 +104,11 @@ const FeaturedRow: FC = () => {
             </motion.div>
           </a></div>
       </Link>
-      <Link href="/product/grey-longrace-duck-shirt">
+      <Link href="/product/a-necessary-risk-printed-t-shirt">
         <div className={s.row}>
           <div className={s.item}>
             <span>
-              <b>Now Available:</b> Light Blue Classic Duck Shirt
+              <b>Coming Soon:</b> A Necessary Risk Printed T-Shirt
             </span>
           </div>
           <a className={s.column}>

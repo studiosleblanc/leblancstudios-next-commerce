@@ -28,30 +28,14 @@ const MenWomen: FC = () => {
             <div className={s.cardContent}>
               <div className={s.cardHeader}>
                 <div className={s.headerCaption}>
-                  ss22: <b>[No Medium Inserted]</b>
+                  FW22: <b>[No Medium Inserted]</b>
                 </div>
               </div>
               <div className={s.cardFooter}>
                 <div className={s.footerCaption}>MENS</div>
               </div>
 
-              <Tooltip
-                appear={menLoaded}
-                top="34%"
-                left="11%"
-                width="20.6%"
-                className={s.tooltip}
-                text="Shirt [NMI]"
-              />
-              <Tooltip
-                appear={menLoaded}
-                bottom="30%"
-                right="15%"
-                align="right"
-                width="23.5%"
-                className={s.tooltip}
-                text="Trousers [NMI]"
-              />
+             
             </div>
           </a>
         </Link>
@@ -74,47 +58,13 @@ const MenWomen: FC = () => {
             <div className={s.cardContent}>
               <div className={s.cardHeader}>
                 <div className={s.headerCaption}>
-                  <b>[Timeless Duck Shirt: Intimo y Personal]</b>
+                  FW22: <b>[No Medium Inserted]</b>
                 </div>
               </div>
               <div className={s.cardFooter}>
                 <div className={s.footerCaption}>WOMENS</div>
               </div>
 
-              <Tooltip
-                appear={womenLoaded}
-                top="8%"
-                right="17%"
-                align="right"
-                width="23%"
-                className={s.tooltip}
-                text="Bucket Hat [TDS]"
-              />
-              <Tooltip
-                appear={womenLoaded}
-                top="36%"
-                left="11%"
-                width="26.5%"
-                className={s.tooltip}
-                text="Shirt Jacket [TDS]"
-              />
-              <Tooltip
-                appear={womenLoaded}
-                bottom="29%"
-                right="7%"
-                align="right"
-                width="23.5%"
-                className={s.tooltip}
-                text="Skirt [TDS]"
-              />
-              <Tooltip
-                appear={womenLoaded}
-                bottom="25.5%"
-                left="2.5%"
-                width="26%"
-                className={s.tooltip}
-                text="Tote Bag [FMP]"
-              />
             </div>
           </a>
         </Link>

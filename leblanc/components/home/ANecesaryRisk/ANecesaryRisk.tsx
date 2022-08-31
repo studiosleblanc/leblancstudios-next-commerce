@@ -18,7 +18,7 @@ const ANecesaryRisk: FC = () => {
           alt="kids leblanc"
           className={s.bgImage}
           width={1920}
-          height={1441}
+          height={1413}
           layout="responsive"
           objectFit="cover"
         />
@@ -35,7 +35,7 @@ const ANecesaryRisk: FC = () => {
               alt="kids leblanc"
               className={s.cardImage}
               width={1920}
-              height={1441}
+              height={1413}
               layout="fill"
               objectFit="cover"
             />

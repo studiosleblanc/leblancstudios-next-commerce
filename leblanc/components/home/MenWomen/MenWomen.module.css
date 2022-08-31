@@ -11,14 +11,7 @@
     /* important to keep image same size */
     @apply h-full;
   }
-  &:hover {
-    & .image {
-      filter: none;
-    }
-    & .tooltip {
-      @apply text-black  border-black border-solid;
-    }
-  }
+
 }
 .cardContent {
   @apply absolute top-0 left-0 w-full h-full;
@@ -32,19 +25,18 @@
 }
 .headerCaption {
   @apply inline;
-  @apply border-t-2 border-secondary border-solid pt-2 px-4;
-  @apply text-right text-text-primary uppercase text-xs md:text-sm whitespace-nowrap;
+  @apply border-t-2 border-primary border-solid pt-2 px-4;
+  @apply text-right text-text-secondary uppercase text-xs md:text-sm whitespace-nowrap;
   width: 357px;
   max-width: 50%;
 }
 .footerCaption {
-  @apply border-t-2 border-secondary border-solid pt-2 md:pt-4;
-  @apply text-right text-text-primary text-lg uppercase;
+  @apply border-t-2 border-primary border-solid pt-2 md:pt-4;
+  @apply text-right text-text-secondary text-lg uppercase;
   width: 100px;
 }
 
 .image {
-  filter: grayscale(100%);
   transition-property: filter;
   @apply duration-300 ease-in;
 }

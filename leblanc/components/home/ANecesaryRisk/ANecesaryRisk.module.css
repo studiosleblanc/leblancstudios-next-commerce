@@ -1,5 +1,5 @@
 .root {
-  @apply relative pt-16 md:pt-12 lg:pt-10 2xl:pt-10 pb-10;
+  @apply relative ;
 }
 /* Top Bar */
 .topBar {
