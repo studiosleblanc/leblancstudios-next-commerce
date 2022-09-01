@@ -27,7 +27,6 @@ const ANecesaryRisk: FC = () => {
         animate={{ opacity: toggle ? 1 : 0 }}
         transition={{ duration: 0.35 }}
         className={s.bgImageWrapper}>
-        <Link href="/product/anr-blue-socks">
           <a className={s.card}>
             <Image
               unoptimized
@@ -40,7 +39,6 @@ const ANecesaryRisk: FC = () => {
               objectFit="cover"
             />
           </a>
-        </Link>
       </motion.div>
       <SwitchButton toggle={toggle} setToggle={setToggle} />
     </div>

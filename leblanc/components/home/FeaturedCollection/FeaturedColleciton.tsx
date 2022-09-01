@@ -37,7 +37,7 @@ const FeaturedRow: FC = () => {
 
   return (
     <div className={s.root}>
-      <Link href="/product/light-blue-classic-duck-shirtare a">
+      <Link href="/product/light-blue-classic-duck-shirt">
         <div className={s.row}>
           <div className={s.item}>
             <span>
@@ -53,8 +53,8 @@ const FeaturedRow: FC = () => {
                 quality="85"
                 src="/assets/home/shirt.png"
                 alt="Leblanc Studios"
-                width={1100}
-                height={1100}
+                width={1010}
+                height={1010}
                 layout="responsive"
                 objectFit="contain"
                 className={s.image}
