@@ -71,7 +71,7 @@ export default function CollectionView({ categories, brands }: SearchPropsType) 
     <MainLayout>
       {isLoading && <CollectionEmpty text="Loading..." />}
       {!isLoading &&
-        (activeCollection && data?.found ? (
+        (activeCollection?.id && data?.found ? (
           <CollectionGrid products={data?.products || []} />
         ) : (
           <CollectionEmpty text="Collection Empty" />
