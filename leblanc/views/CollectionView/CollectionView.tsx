@@ -35,7 +35,7 @@ import CollectionEmpty from '@leblanc/components/collection/CollectionEmpty'
 export default function CollectionView({ categories, brands }: SearchPropsType) {
   const [activeFilter, setActiveFilter] = useState('')
   const [toggleFilter, setToggleFilter] = useState(false)
-
+  const [dat, setData] = useState()
   // console.log(categories)
 
   const router = useRouter()
@@ -67,12 +67,11 @@ export default function CollectionView({ categories, brands }: SearchPropsType) 
     // sort: typeof sort === 'string' ? sort : '',
     locale,
   })
-
   return (
     <MainLayout>
       {isLoading && <CollectionEmpty text="Loading..." />}
       {!isLoading &&
-        (data?.found ? (
+        (activeCollection && data?.found ? (
           <CollectionGrid products={data?.products || []} />
         ) : (
           <CollectionEmpty text="Collection Empty" />

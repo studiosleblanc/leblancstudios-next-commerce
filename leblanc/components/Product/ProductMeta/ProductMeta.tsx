@@ -29,7 +29,7 @@ interface Props {
 }
 
 const ProductMeta: FC<Props> = ({ product, asCard }) => {
-  console.log('pr',product, asCard)
+  // console.log('pr',product, asCard)
   const addItem = useAddItem()
   const { openSidebar, setSidebarView } = useUI()
   const [cartLoading, setCartLoading] = useState(false)
