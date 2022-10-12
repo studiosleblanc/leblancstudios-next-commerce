@@ -92,3 +92,21 @@
     @apply text-text-primary;
   }
 }
+@media screen and (min-width:320px) {
+  .row .item {
+    padding: 24px 12px;
+  }
+  .logoIntimoWrapper svg {
+    width: 80px !important;
+    height: 80px !important;
+  }
+}
+@media screen and (min-width:320px) {
+  .row .item {
+    padding: 24px 12px;
+  }
+  .logoIntimoWrapper svg {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}

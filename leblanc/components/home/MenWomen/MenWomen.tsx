@@ -11,7 +11,7 @@ const MenWomen: FC = () => {
   return (
     <div className={s.root}>
       <div className={s.column}>
-        <Link href="/product/black-lissajous-shirt">
+        <Link href="/archives/no-medium-inserted">
           <a className={s.card}>
             <Image
               priority
@@ -34,14 +34,12 @@ const MenWomen: FC = () => {
               <div className={s.cardFooter}>
                 <div className={s.footerCaption}>MENS</div>
               </div>
-
-             
             </div>
           </a>
         </Link>
       </div>
       <div className={s.column}>
-        <Link href="/product/grey-longrace-duck-shirt">
+        <Link href="/archives/no-medium-inserted">
           <a className={s.card}>
             <Image
               priority
@@ -64,7 +62,6 @@ const MenWomen: FC = () => {
               <div className={s.cardFooter}>
                 <div className={s.footerCaption}>WOMENS</div>
               </div>
-
             </div>
           </a>
         </Link>
