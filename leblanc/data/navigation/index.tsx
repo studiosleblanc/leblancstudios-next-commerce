@@ -1,6 +1,7 @@
 import React from 'react'
 import newArrivals from './newArrivals'
 import mens from './mens'
+import kids from './kids'
 import womens from './womens'
 import archives from './archives'
 // this file contains all remaining paths
@@ -39,6 +40,13 @@ export const homeNavigation: NavItem[] = [
     handle: 'mens',
     childs: mens,
     href: '/mens/all',
+  },
+  {
+    id: 'kids',
+    label: 'kids',
+    handle: 'kids',
+    childs: kids,
+    href: '/kids/all',
   },
   {
     id: 'history',
