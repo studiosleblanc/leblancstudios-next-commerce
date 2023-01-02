@@ -43,7 +43,7 @@ export const homeNavigation: NavItem[] = [
   },
   {
     id: 'kids',
-    label: 'kids',
+    label: 'Kids',
     handle: 'kids',
     childs: kids,
     href: '/kids/all',
