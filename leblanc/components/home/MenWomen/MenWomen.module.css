@@ -5,6 +5,14 @@
 .column {
   @apply w-full lg:w-1/2;
 }
+.column:first-child:hover .card .headerCaption  {
+color: #000;
+border-color: #000;
+}
+.column:first-child:hover .card .footerCaption {
+  color: #000;
+border-color: #000;
+}
 .card {
   @apply relative block h-full;
   & > div:first-child {
@@ -24,16 +32,26 @@
   @apply absolute bottom-6 md:bottom-12 w-full;
 }
 .headerCaption {
-  @apply inline;
   @apply border-t-2 border-primary border-solid pt-2 px-4;
   @apply text-right text-text-secondary uppercase text-xs md:text-sm whitespace-nowrap;
   width: 357px;
   max-width: 50%;
+  transition: all 0.3s ease;
+
 }
 .footerCaption {
+  display: flex;
+
   @apply border-t-2 border-primary border-solid pt-2 md:pt-4;
-  @apply text-right text-text-secondary text-lg uppercase;
-  width: 100px;
+  @apply text-right text-text-secondary text-lg ;
+  width: 35%;
+  transition: all 0.3s ease;
+  justify-content: flex-end;
+}
+.footerCaption span {
+  max-width: 196px;
+  width: 100%;
+  font-size: 9px;
 }
 
 .image {
