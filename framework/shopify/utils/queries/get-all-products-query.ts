@@ -65,16 +65,16 @@ export const productConnectionFragment = /* GraphQL */ `
             }
           }
         }
-        metafields(first: 100) {
-          edges {
-            node {
-              value
-              namespace
-              id
-              key
-            }
-          }
-        }
+        # metafields(first: 100) {
+        #   edges {
+        #     node {
+        #       value
+        #       namespace
+        #       id
+        #       key
+        #     }
+        #   }
+        # }
       }
     }
   }

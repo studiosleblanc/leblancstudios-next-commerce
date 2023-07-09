@@ -5,12 +5,16 @@
   /* @apply relative; */
   /* top: -18%; */
 }
+/*
+
 
 .navbar {
   @apply inline-block relative;
   @apply min-w-[70%] xl:min-w-[60%] ml-[18%] xl:ml-[20%];
+}*/
+.navbar {
+  width: 100% !important;
 }
-
 .topRow {
   @apply flex items-end justify-between;
   @apply bg-aqua border-secondary border-solid border-[1px];

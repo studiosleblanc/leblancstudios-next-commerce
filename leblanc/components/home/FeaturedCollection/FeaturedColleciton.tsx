@@ -41,7 +41,7 @@ const FeaturedRow: FC = () => {
         <div className={s.row}>
           <div className={s.item}>
             <span>
-              <b>Now Available:</b> Light Blue Classic Duck Shirt
+              <b>Now Available:</b> Black Classic Duck Shirt
             </span>
           </div>
           <a
@@ -51,7 +51,7 @@ const FeaturedRow: FC = () => {
             <div className={s.imgContainer}>
               <Image
                 quality="85"
-                src="/assets/home/shirt.png"
+                src="/assets/home/black-shirt.png"
                 alt="Leblanc Studios"
                 width={1010}
                 height={1010}

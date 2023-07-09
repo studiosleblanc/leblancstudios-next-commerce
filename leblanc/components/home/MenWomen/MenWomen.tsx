@@ -16,34 +16,6 @@ const MenWomen: FC = () => {
             <Image
               priority
               unoptimized
-              src="/assets/home/men.png"
-              alt="Leblanc Studios"
-              width={963}
-              height={1443}
-              layout="responsive"
-              className={s.image}
-              placeholder="empty"
-              onLoadingComplete={() => setMenLoaded(true)}
-            />
-            <div className={s.cardContent}>
-              <div className={s.cardHeader}>
-                <div className={s.headerCaption}>
-                  FW22: <b>[No Medium Inserted]</b>
-                </div>
-              </div>
-              <div className={s.cardFooter}>
-                <div className={s.footerCaption}>MENS</div>
-              </div>
-            </div>
-          </a>
-        </Link>
-      </div>
-      <div className={s.column}>
-        <Link href="/archives/no-medium-inserted">
-          <a className={s.card}>
-            <Image
-              priority
-              unoptimized
               src="/assets/home/women.png"
               alt="Leblanc Studios"
               width={964}
@@ -56,11 +28,49 @@ const MenWomen: FC = () => {
             <div className={s.cardContent}>
               <div className={s.cardHeader}>
                 <div className={s.headerCaption}>
-                  FW22: <b>[No Medium Inserted]</b>
+                  <b>[WOMENS]</b>
                 </div>
               </div>
               <div className={s.cardFooter}>
-                <div className={s.footerCaption}>WOMENS</div>
+                <div className={s.footerCaption}>
+                  <span>
+                    Photographed by Layton Davis Styled by K.S. Tehara Modeled by
+                    Jeanie Yoo
+                  </span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </Link>
+      </div>
+      <div className={s.column}>
+        <Link href="/archives/no-medium-inserted">
+          <a className={s.card}>
+            <Image
+              priority
+              unoptimized
+              src="/assets/home/men.png"
+              alt="Leblanc Studios"
+              width={963}
+              height={1443}
+              layout="responsive"
+              className={s.image}
+              placeholder="empty"
+              onLoadingComplete={() => setMenLoaded(true)}
+            />
+            <div className={s.cardContent}>
+              <div className={s.cardHeader}>
+                <div className={s.headerCaption}>
+                  <b>[MENS]</b>
+                </div>
+              </div>
+              <div className={s.cardFooter}>
+                <div className={s.footerCaption}>
+                  <span>
+                    Photographed by Luis Molina Styled by K.S. Laura Jiménez Modeled
+                    by Angel De Jesús
+                  </span>
+                </div>
               </div>
             </div>
           </a>
