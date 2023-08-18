@@ -6,6 +6,8 @@
   }
   & h2 {
     @apply font-bold text-lg text-center mb-2;
+  } & h3 {
+    @apply font-bold text-base text-center mb-2;
   }
   & p {
     @apply mb-6 ;

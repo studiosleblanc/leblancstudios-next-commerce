@@ -10,7 +10,7 @@ const GlossaryView = () => {
         <br />
         <br />
         <br />
-       <h2> Work Ethic</h2>
+       <h3> Work Ethic</h3>
         LEBLANCSTUDIOS operates as an open, dynamic learning space before it operates as a business. 
         Its company structure works to dismantle traditional notions of hierarchy and places all of its 
         studio members in complete control of their time, responsibilities, and relations. This open-ended plan 
@@ -22,7 +22,7 @@ const GlossaryView = () => {
         <br />
         <br />
 
-      <h2>Sustainability</h2>
+      <h3>Sustainability</h3>
         Reusing textiles, donating them amongst our sphere of designers and even repurposing fabrics from 
         mediums outside of fashion are some of our many forays into sustainability. We take pride in sourcing 
         the finest recycled textiles from all corners of the globe. Canada, Portugal, Peru, and China are just some 
@@ -38,7 +38,7 @@ const GlossaryView = () => {
         <br />
         <br />
 
-      <h2>NYC/DR</h2>
+      <h3>NYC/DR</h3>
         An active presence in both NYC and Santo Domingo has allowed us to translate our Caribbean sensibilities to an international audience. 
         Yamil our Co-Founder and Production Manager, operates from NYC while Angelo Beato, our second founder and Creative Director, operates from the Dominican Republic.
          Yamil managed to complete his Bachelors's and MFA Degrees at Parsons School of Design while juggling a job at ODIN retail store and managing his duties at 
