@@ -49,10 +49,10 @@ export const homeNavigation: NavItem[] = [
     href: '/kids/all',
   },
   {
-    id: 'history',
-    label: 'History',
-    handle: 'history',
-    href: '/history',
+    id: 'glossary',
+    label: 'Glossary',
+    handle: 'glossary',
+    href: '/glossary',
   },
   {
     id: 'archives',

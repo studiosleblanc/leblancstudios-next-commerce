@@ -8,6 +8,7 @@
   @apply px-6;
   @apply w-full h-[40px];
   @apply shadow-sm bg-white;
+  @apply border-b border-solid border-black;
   @apply z-50;
 }
 .logosContainer {

@@ -5,10 +5,11 @@ import s from './RichText.module.css'
 interface Props {
   children: React.ReactNode
   uppercase?: boolean
+  centered?: boolean 
 }
 
-const RichText: FC<Props> = ({ children, uppercase }) => {
-  return <div className={cn(s.root, { uppercase: uppercase })}>{children}</div>
+const RichText: FC<Props> = ({ children, uppercase, centered }) => {
+  return <div className={cn(s.root, { uppercase: uppercase, "text-center": true })}>{children}</div>
 }
 
 export default RichText
