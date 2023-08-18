@@ -2,7 +2,7 @@
   @apply flex;
   @apply fixed w-full;
   @apply top-[40px] left-0;
-  @apply bg-aqua border-t-[1px] border-text-primary;
+  @apply bg-aqua border-text-primary;
   @apply z-50;
   height: calc(100% - 40px);
 }
