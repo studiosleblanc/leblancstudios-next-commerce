@@ -5,7 +5,7 @@
   @apply flex lg:block;
   @apply flex-col;
 
-  @apply sm:border-black sm:border-b-[1px];
+  @apply border-black border-b-[1px];
   &:nth-child(1n + 1),&:nth-child(3n + 2){
     @apply border-r-[1px] ;
   }
