@@ -48,7 +48,7 @@ const GlossaryView = () => {
         <br />
         <br />
 
-    <h2>Collaboration</h2>
+    <h3>Collaboration</h3>
       Elevating the narrative, cultural and traditional codes of the global south is one of LEBLANCSTUDIOS many aesthetic goals. Thus, collaborations with some of its
        most vibrant creative voices are at the core of all our studio processes. Angolan illustrator Tiago Mena Abrantes, and Dominican painter Gustavo Pena, are just 
        some of the names that adorn our sprawling list of collaborators. Their talents remain infused in our capsule collections, AD campaigns, standalone items, and 
