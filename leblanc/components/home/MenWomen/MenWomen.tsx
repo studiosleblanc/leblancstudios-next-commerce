@@ -16,7 +16,7 @@ const MenWomen: FC = () => {
             <Image
               priority
               unoptimized
-              src="/assets/home/women.png"
+              src="/assets/home/women.jpg"
               alt="Leblanc Studios"
               width={964}
               height={1440}
@@ -34,8 +34,8 @@ const MenWomen: FC = () => {
               <div className={s.cardFooter}>
                 <div className={s.footerCaption}>
                   <span>
-                    Photographed by Layton Davis Styled by K.S. Tehara Modeled by
-                    Jeanie Yoo
+                    Photographed by Phi Vū
+                    Modeled by Ariadna Sánchez
                   </span>
                 </div>
               </div>
@@ -67,8 +67,8 @@ const MenWomen: FC = () => {
               <div className={s.cardFooter}>
                 <div className={s.footerCaption}>
                   <span>
-                    Photographed by Luis Molina Styled by K.S. Laura Jiménez Modeled
-                    by Angel De Jesús
+                    Photographed by Luis Molina Styled by Laura Jiménez Modeled
+                    by Ángel De Jesús
                   </span>
                 </div>
               </div>
