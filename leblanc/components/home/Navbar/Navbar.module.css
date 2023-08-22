@@ -44,7 +44,7 @@
 }
 
 .search {
-  @apply flex pl-6 pt-4 xl:p-0;
+  @apply flex pl-6 pt-4 xl:p-0 mr-5;
 }
 .searchGroup {
   @apply relative ml-3 mb-1;
