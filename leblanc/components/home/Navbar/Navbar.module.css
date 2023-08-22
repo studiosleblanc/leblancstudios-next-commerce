@@ -44,13 +44,13 @@
 }
 
 .search {
-  @apply flex pl-6 pt-4 xl:p-0;
+  @apply flex pl-6 pt-4 xl:p-0 mr-5;
 }
 .searchGroup {
   @apply relative ml-3 mb-1;
 }
 .searchInput {
-  @apply h-12 bg-lbsGray border-secondary uppercase border-solid outline-none px-4 mr-1.5;
+  @apply h-12 bg-lbsGray border-secondary uppercase border-solid outline-none px-4;
   border-width: 1px;
   width: 200px;
 }
