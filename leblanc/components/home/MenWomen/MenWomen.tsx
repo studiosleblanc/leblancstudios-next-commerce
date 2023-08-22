@@ -18,8 +18,8 @@ const MenWomen: FC = () => {
               unoptimized
               src="/assets/home/women.jpg"
               alt="Leblanc Studios"
-              width={964}
-              height={1440}
+              width={1400}
+              height={1750}
               layout="responsive"
               className={s.image}
               placeholder="empty"
