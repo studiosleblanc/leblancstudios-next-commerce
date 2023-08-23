@@ -49,9 +49,10 @@ border-color: #000;
   justify-content: flex-end;
 }
 .footerCaption span {
+  @apply text-sm leading-normal sm:text-lg;
   max-width: 196px;
   width: 100%;
-  font-size: 9px;
+
 }
 
 .image {
