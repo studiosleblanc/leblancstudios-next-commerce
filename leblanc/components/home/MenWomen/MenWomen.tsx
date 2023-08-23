@@ -34,7 +34,8 @@ const MenWomen: FC = () => {
               <div className={s.cardFooter}>
                 <div className={s.footerCaption}>
                   <span>
-                    Photographed by Phi Vū
+                    Photographed by Phi Vū 
+                    <br />
                     Modeled by Ariadna Sánchez
                   </span>
                 </div>
@@ -67,8 +68,11 @@ const MenWomen: FC = () => {
               <div className={s.cardFooter}>
                 <div className={s.footerCaption}>
                   <span>
-                    Photographed by Luis Molina Styled by Laura Jiménez Modeled
-                    by Ángel De Jesús
+                    Photographed by Luis Molina
+                    <br />
+                    Styled by Laura Jiménez 
+                    <br />
+                    Modeled by Ángel De Jesús
                   </span>
                 </div>
               </div>
