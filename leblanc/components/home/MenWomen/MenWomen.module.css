@@ -5,11 +5,11 @@
 .column {
   @apply w-full lg:w-1/2;
 }
-.column:first-child:hover .card .headerCaption  {
+.column:hover .card .headerCaption  {
 color: #000;
 border-color: #000;
 }
-.column:first-child:hover .card .footerCaption {
+.column:hover .card .footerCaption {
 color: #000;
 border-color: #000;
 }
@@ -53,10 +53,6 @@ border-color: #000;
   max-width: 196px;
   width: 100%;
 
-}
-.footerCaption:hover {
-  color: #000;
-  border-color: #000;
 }
 
 .image {
