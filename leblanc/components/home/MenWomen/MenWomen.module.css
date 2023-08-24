@@ -10,7 +10,7 @@ color: #000;
 border-color: #000;
 }
 .column:first-child:hover .card .footerCaption {
-  color: #000;
+color: #000;
 border-color: #000;
 }
 .card {
@@ -53,6 +53,10 @@ border-color: #000;
   max-width: 196px;
   width: 100%;
 
+}
+.footerCaption:hover {
+  color: #000;
+  border-color: #000;
 }
 
 .image {
