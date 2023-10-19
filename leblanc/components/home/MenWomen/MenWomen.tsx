@@ -34,9 +34,9 @@ const MenWomen: FC = () => {
               <div className={s.cardFooter}>
                 <div className={s.footerCaption}>
                   <span>
-                    Photographed by Phi Vū 
+                    Photographed by Ales Constantino 
                     <br />
-                    Modeled by Ariadna Sánchez
+                    Modeled by kat
                   </span>
                 </div>
               </div>
