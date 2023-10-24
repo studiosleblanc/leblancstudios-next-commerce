@@ -69,38 +69,6 @@ const FeaturedRow: FC = () => {
               <LogoIntimo className={s.logoIntimo} />
             </motion.div>
 
-            <motion.div
-              className={s.content}
-              initial="exit"
-              animate={isHover ? 'enter' : 'exit'}
-              variants={contentAnimate}>
-              <div className={s.contentBody}>
-                <div>
-                  <p>
-                    OFF SEASON: A Necessary Risk <b>[Collaboration with Gus Pena]</b>
-                  </p>
-                  <p>
-                    LEBLANCSTUDIOS is pleased to present A Necessary Risk: a capsule
-                    collection designed alongside the Dominican Artist Gus Pena.
-                  </p>
-
-                  <p>
-                    Informed by his latest gallery exhibition, sci-fi, fictional
-                    caribbean spaces and the absurd, LEBLANCSTUDIOS delves into the
-                    universe of Gus Pena.
-                  </p>
-                </div>
-                <p
-                  style={{
-                    margin: 0,
-                    fontWeight: 'lighter',
-                    fontSize: '13px',
-                  }}>
-                  The collection was developed in Santo Domingo, Dominican Republic
-                  and produced in Portugal, China and the Dominican Republic.
-                </p>
-              </div>
-            </motion.div>
           </a>
         </div>
       </Link>
