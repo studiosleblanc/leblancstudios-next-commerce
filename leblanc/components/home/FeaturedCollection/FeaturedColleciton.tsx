@@ -41,7 +41,7 @@ const FeaturedRow: FC = () => {
         <div className={s.row}>
           <div className={s.item}>
             <span>
-              <b>Now Available:</b> Black Classic Duck Shirt
+              <b>Now Available:</b> 10 Years Issue Classic Duck Shirt
             </span>
           </div>
           <a
@@ -51,7 +51,7 @@ const FeaturedRow: FC = () => {
             <div className={s.imgContainer}>
               <Image
                 quality="85"
-                src="/assets/home/black-shirt.png"
+                src="/assets/home/classic-duck-shirt.png"
                 alt="Leblanc Studios"
                 width={1010}
                 height={1010}
@@ -108,14 +108,14 @@ const FeaturedRow: FC = () => {
         <div className={s.row}>
           <div className={s.item}>
             <span>
-              <b>Coming Soon:</b> A Necessary Risk Printed T-Shirt
+              <b>Now Available:</b> A Silent Mass Sunglasses
             </span>
           </div>
           <a className={s.column}>
             <div className={s.imgContainer}>
               <Image
                 quality="85"
-                src="/assets/home/t-shirt.png"
+                src="/assets/home/silent-mass-sunglasses.png"
                 alt="Leblanc Studios"
                 width={1010}
                 height={1010}

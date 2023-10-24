@@ -11,7 +11,7 @@ const MenWomen: FC = () => {
   return (
     <div className={s.root}>
       <div className={s.column}>
-        <Link href="/archives/no-medium-inserted">
+        <Link href="product/pretty-forma-belly-t-shirt">
           <a className={s.card}>
             <Image
               priority
@@ -34,7 +34,7 @@ const MenWomen: FC = () => {
               <div className={s.cardFooter}>
                 <div className={s.footerCaption}>
                   <span>
-                    Photographed by Ales Constantino 
+                    Photographed by Ales Constantino  
                     <br />
                     Modeled by kat
                   </span>
