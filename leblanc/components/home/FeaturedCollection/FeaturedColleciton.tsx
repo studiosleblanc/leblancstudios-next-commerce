@@ -53,7 +53,7 @@ const FeaturedRow: FC = () => {
                 quality="85"
                 src="/assets/home/classic-duck-shirt.png"
                 alt="Leblanc Studios"
-                width={1010}
+                width={1110}
                 height={1010}
                 layout="responsive"
                 objectFit="contain"
