@@ -111,8 +111,11 @@
   }
 }
 @media screen and (max-width:420px) {
+  .row .item {
+    padding: 24px 12px;
+  }
   .logoIntimoWrapper svg {
-    width: 50px !important;
-    width: 50px !important;
+    width: 40px !important;
+    width: 40px !important;
   }
 }
