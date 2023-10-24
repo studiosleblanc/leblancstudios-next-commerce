@@ -37,7 +37,7 @@ const FeaturedRow: FC = () => {
 
   return (
     <div className={s.root}>
-      <Link href="/product/light-blue-classic-duck-shirt">
+      <Link href="/product/10-years-issue-classic-duck-shirt">
         <div className={s.row}>
           <div className={s.item}>
             <span>
@@ -72,7 +72,7 @@ const FeaturedRow: FC = () => {
           </a>
         </div>
       </Link>
-      <Link href="/product/a-necessary-risk-printed-t-shirt">
+      <Link href="/product/a-silent-mass-sunglasses">
         <div className={s.row}>
           <div className={s.item}>
             <span>
