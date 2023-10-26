@@ -107,6 +107,15 @@
   }
   .logoIntimoWrapper svg {
     width: 100px !important;
-    height: 100px !important;
+    width: 100px !important;
+  }
+}
+@media screen and (max-width:420px) {
+  .row .item {
+    padding: 24px 12px;
+  }
+  .logoIntimoWrapper svg {
+    width: 40px !important;
+    width: 40px !important;
   }
 }

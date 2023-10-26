@@ -37,11 +37,11 @@ const FeaturedRow: FC = () => {
 
   return (
     <div className={s.root}>
-      <Link href="/product/light-blue-classic-duck-shirt">
+      <Link href="/product/10-years-issue-classic-duck-shirt">
         <div className={s.row}>
           <div className={s.item}>
             <span>
-              <b>Now Available:</b> Black Classic Duck Shirt
+              <b>Now Available:</b> 10 Years Issue Classic Duck Shirt
             </span>
           </div>
           <a
@@ -51,9 +51,9 @@ const FeaturedRow: FC = () => {
             <div className={s.imgContainer}>
               <Image
                 quality="85"
-                src="/assets/home/black-shirt.png"
+                src="/assets/home/classic-duck-shirt.png"
                 alt="Leblanc Studios"
-                width={1010}
+                width={1110}
                 height={1010}
                 layout="responsive"
                 objectFit="contain"
@@ -69,53 +69,21 @@ const FeaturedRow: FC = () => {
               <LogoIntimo className={s.logoIntimo} />
             </motion.div>
 
-            <motion.div
-              className={s.content}
-              initial="exit"
-              animate={isHover ? 'enter' : 'exit'}
-              variants={contentAnimate}>
-              <div className={s.contentBody}>
-                <div>
-                  <p>
-                    OFF SEASON: A Necessary Risk <b>[Collaboration with Gus Pena]</b>
-                  </p>
-                  <p>
-                    LEBLANCSTUDIOS is pleased to present A Necessary Risk: a capsule
-                    collection designed alongside the Dominican Artist Gus Pena.
-                  </p>
-
-                  <p>
-                    Informed by his latest gallery exhibition, sci-fi, fictional
-                    caribbean spaces and the absurd, LEBLANCSTUDIOS delves into the
-                    universe of Gus Pena.
-                  </p>
-                </div>
-                <p
-                  style={{
-                    margin: 0,
-                    fontWeight: 'lighter',
-                    fontSize: '13px',
-                  }}>
-                  The collection was developed in Santo Domingo, Dominican Republic
-                  and produced in Portugal, China and the Dominican Republic.
-                </p>
-              </div>
-            </motion.div>
           </a>
         </div>
       </Link>
-      <Link href="/product/a-necessary-risk-printed-t-shirt">
+      <Link href="/product/a-silent-mass-sunglasses">
         <div className={s.row}>
           <div className={s.item}>
             <span>
-              <b>Coming Soon:</b> A Necessary Risk Printed T-Shirt
+              <b>Now Available:</b> A Silent Mass Sunglasses
             </span>
           </div>
           <a className={s.column}>
             <div className={s.imgContainer}>
               <Image
                 quality="85"
-                src="/assets/home/t-shirt.png"
+                src="/assets/home/silent-mass-sunglasses.png"
                 alt="Leblanc Studios"
                 width={1010}
                 height={1010}
