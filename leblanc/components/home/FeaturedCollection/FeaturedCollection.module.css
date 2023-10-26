@@ -1,7 +1,9 @@
 .root {
-  @apply flex flex-wrap bg-primary;
   width: 100%;
+}
 
+.row {
+  @apply flex flex-wrap bg-primary;
 }
 
 .column {
@@ -17,14 +19,16 @@
   } */
 }
 
+.heading {
+  padding: 24px 12px;
+}
+
 /* Image */
 .imgContainer {
   @apply h-full;
   & > div {
     @apply h-full;
   }
-}
-.image {
 }
 
 /* SVG Logos and Text */
@@ -41,25 +45,8 @@
   left: 6%;
 }
 .logoIntimo {
-  @apply w-[100px] md:w-[186px];
-  @apply h-auto md:h-[188px];
-}
-.row {
-  display: flex; 
-  flex-direction: column;
-  width: fit-content;
-  flex: 1 1;
-  cursor: pointer;
-
-}
-.row .item {
-    height: min-content;
-    padding: 24px 48px;
-  }
-.row a  {
-  width: 100%;
-  height: 100%;
-
+  @apply w-[40px] md:w-[80px];
+  @apply h-auto md:h-[80px];
 }
 /* Content */
 .content {
@@ -90,32 +77,5 @@
 :global(.dark) {
   & .content {
     @apply text-text-primary;
-  }
-}
-@media screen and (min-width:320px) {
-  .row .item {
-    padding: 24px 12px;
-  }
-  .logoIntimoWrapper svg {
-    width: 80px !important;
-    height: 80px !important;
-  }
-}
-@media screen and (min-width:320px) {
-  .row .item {
-    padding: 24px 12px;
-  }
-  .logoIntimoWrapper svg {
-    width: 100px !important;
-    width: 100px !important;
-  }
-}
-@media screen and (max-width:420px) {
-  .row .item {
-    padding: 24px 12px;
-  }
-  .logoIntimoWrapper svg {
-    width: 40px !important;
-    width: 40px !important;
   }
 }

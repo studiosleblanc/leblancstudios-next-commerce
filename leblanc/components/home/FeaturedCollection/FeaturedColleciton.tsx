@@ -37,65 +37,65 @@ const FeaturedRow: FC = () => {
 
   return (
     <div className={s.root}>
-      <Link href="/product/10-years-issue-classic-duck-shirt">
-        <div className={s.row}>
-          <div className={s.item}>
-            <span>
-              <b>Now Available:</b> 10 Years Issue Classic Duck Shirt
-            </span>
-          </div>
-          <a
-            className={cn(s.column, s.columnLeft)}
-            onMouseEnter={handleHover}
-            onMouseLeave={handleHover}>
-            <div className={s.imgContainer}>
-              <Image
-                quality="85"
-                src="/assets/home/classic-duck-shirt.png"
-                alt="Leblanc Studios"
-                width={1110}
-                height={1010}
-                layout="responsive"
-                objectFit="contain"
-                className={s.image}
-                // layout="fill"
-              />
-            </div>
-
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ repeat: Infinity, duration: 10, ease: 'linear' }}
-              className={s.logoIntimoWrapper}>
-              <LogoIntimo className={s.logoIntimo} />
-            </motion.div>
-
-          </a>
+      <div className={s.row}>
+        <div className={s.column}>
+          <Link href="/product/10-years-issue-classic-duck-shirt">
+            <a
+              className={cn(s.item, s.columnLeft)}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleHover}>
+              <div className={s.heading}>
+                <p>
+                  <b>Now Available:</b> 10 Years Issue Classic Duck Shirt
+                </p>
+              </div>
+              <div className={s.imgContainer}>
+                <Image
+                  quality="85"
+                  src="/assets/home/classic-duck-shirt.png"
+                  alt="Leblanc Studios"
+                  width={1110}
+                  height={1010}
+                  layout="responsive"
+                  objectFit="contain"
+                  className={s.image}
+                  // layout="fill"
+                />
+              </div>
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ repeat: Infinity, duration: 10, ease: 'linear' }}
+                className={s.logoIntimoWrapper}>
+                <LogoIntimo className={s.logoIntimo} />
+              </motion.div>
+            </a>
+          </Link>
         </div>
-      </Link>
-      <Link href="/product/a-silent-mass-sunglasses">
-        <div className={s.row}>
-          <div className={s.item}>
-            <span>
-              <b>Now Available:</b> A Silent Mass Sunglasses
-            </span>
-          </div>
-          <a className={s.column}>
-            <div className={s.imgContainer}>
-              <Image
-                quality="85"
-                src="/assets/home/silent-mass-sunglasses.png"
-                alt="Leblanc Studios"
-                width={1010}
-                height={1010}
-                layout="responsive"
-                objectFit="contain"
-                className={s.image}
-                // layout="fill"
-              />
-            </div>
-          </a>
+        <div className={s.column}>
+          <Link href="/product/a-silent-mass-sunglasses">
+            <a className={s.item}>
+              <div className={s.heading}>
+                <p>
+                  <b>Now Available:</b> A Silent Mass Sunglasses
+                </p>
+              </div>
+              <div className={s.imgContainer}>
+                <Image
+                  quality="85"
+                  src="/assets/home/silent-mass-sunglasses.png"
+                  alt="Leblanc Studios"
+                  width={1010}
+                  height={1010}
+                  layout="responsive"
+                  objectFit="contain"
+                  className={s.image}
+                  // layout="fill"
+                />
+              </div>
+            </a>
+          </Link>
         </div>
-      </Link>
+      </div>
     </div>
   )
 }
