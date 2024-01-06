@@ -5,10 +5,10 @@
   @apply flex lg:block;
   @apply flex-col;
 
-  @apply border-black border-b-[1px];
-  &:nth-child(1n + 1),&:nth-child(3n + 2){
+  @apply border-black border-solid border-[1px];
+  /* &:nth-child(1n + 1),&:nth-child(3n + 2){
     @apply border-r-[1px] ;
-  }
+  } */
   
   &.asCard {
     @apply w-full;
