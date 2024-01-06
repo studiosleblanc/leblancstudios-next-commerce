@@ -3,7 +3,6 @@ import { CollectionGrid } from '@leblanc/components/collection'
 import { useRouter } from 'next/router'
 
 const HomeCollection = ({ categories }: any): JSX.Element => {
-  console.log(categories)
   const router = useRouter()
   const { asPath, locale } = router
 
