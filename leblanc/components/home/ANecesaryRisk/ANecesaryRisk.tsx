@@ -3,7 +3,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import s from './ANecesaryRisk.module.css'
 import { motion } from 'framer-motion'
-import { LogoGusPena, LogoHorizontal, LogoANecesaryRisk } from '@leblanc/svg'
+// import { LogoGusPena, LogoHorizontal, LogoANecesaryRisk } from '@leblanc/svg'
+import KidImg from 'public/assets/home/kid.png'
+import Kid2Img from 'public/assets/home/kid2.png'
 import { SwitchButton } from '@leblanc/components/ui'
 
 const ANecesaryRisk: FC = () => {
@@ -14,7 +16,7 @@ const ANecesaryRisk: FC = () => {
         <Image
           priority
           unoptimized
-          src="/assets/home/kid.png"
+          src={KidImg}
           alt="kids leblanc"
           className={s.bgImage}
           width={1920}
@@ -30,7 +32,7 @@ const ANecesaryRisk: FC = () => {
           <a className={s.card}>
             <Image
               unoptimized
-              src="/assets/home/kid2.png"
+              src={Kid2Img}
               alt="kids leblanc"
               className={s.cardImage}
               width={1920}
