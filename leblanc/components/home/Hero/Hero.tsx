@@ -12,16 +12,42 @@ const Hero: FC = () => {
       <div className={s.content}>
         <div className={s.column}>
           <div className={s.navContainer}>
-            <h3>WHITE SHIRT</h3>
+            <h3 className={s.navTitle}>WHITE SHIRT</h3>
             <ul>
               <li>NEW ARRIVALS</li>
               <li>GIFTS</li>
               <li>JACKETS AND COATS</li>
+              <li>TOPS</li>
+              <li>BOTOMS</li>
+              <li>ACCESSORIES</li>
             </ul>
           </div>
         </div>
-        <div className={s.column}>2</div>
-        <div className={s.column}>3</div>
+        <div className={s.column}>
+          <div className={s.navContainer}>
+            <h3 className={s.navTitle}>TIMELESS DUCK SHIRT</h3>
+            <ul>
+              <li>NEW ARRIVALS</li>
+              <li>GIFTS</li>
+              <li>JACKETS AND COATS</li>
+              <li>TOPS</li>
+              <li>BOTOMS</li>
+              <li>ACCESSORIES</li>
+            </ul>
+          </div>
+        </div>
+        <div className={s.column}>
+          <div className={s.navContainer}>
+            <h3 className={s.navTitle}>SPECIAL PROJECTS</h3>
+            <ul>
+              <li>STO-DGO</li>
+              <li>LBS + P.1991</li>
+              <br />
+              <li>THE PROWER OF SOUND</li>
+              <li>FILM + ART DIRECTION</li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div className={s.imageContainer}>
         <Image
