@@ -22,7 +22,11 @@
 }
 
 .navTitle {
-  @apply text-[22px] font-bold;
+  @apply text-[22px] font-bold mb-4;
+}
+
+.navItems li {
+  @apply m-1 text-base hover:underline;
 }
 
 .imageContainer {
