@@ -57,6 +57,9 @@ export default function Home({
         {/* <ANecesaryRisk /> */}
         {/* <FeaturedCollection /> */}
         {/* <ArchivesSlider /> */}
+
+        {/* Footer */}
+
         <Popup />
       </MainLayout>
     </>
