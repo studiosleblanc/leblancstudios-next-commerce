@@ -1,16 +1,19 @@
 .root {
-  @apply w-full pr-12;
+  @apply w-full;
   @apply border-b-[1px] border-black border-solid;
   @apply hidden lg:block;
 }
 
 .topRow {
   @apply flex justify-between items-center;
-  @apply w-full px-6 pl-8 pt-10 pb-2 border-b-[1px] border-black border-solid;
+  @apply w-full px-12 pl-8 pt-8 pb-3;
   & .toolbar {
-    @apply flex items-end text-2xl font-bold;
+    @apply flex items-end text-[2.5rem] font-normal;
     & > li:not(first-child) {
-      @apply ml-8;
+      @apply ml-14 m-auto;
+      & > span {
+        @apply font-bold;
+      }
     }
   }
 }
@@ -19,14 +22,14 @@
   @apply flex;
 }
 .cartItemsCounter {
-  @apply absolute left-0 bottom-[2px] w-full text-center text-base;
+  @apply absolute left-0 bottom-[2px] w-full text-center text-base m-auto;
 }
 .totalPrice {
-  @apply ml-4 flex items-end;
+  @apply ml-14 flex items-end m-auto;
 }
 
 .bottomRow {
-  @apply pl-8 pt-6 pb-8;
+  @apply pl-9 pt-6 pb-8;
 }
 
 /* Breadcrumbs */
