@@ -15,14 +15,16 @@
 }
 
 .column:nth-child(1) {
-  @apply flex justify-end pr-[3.5vw];
+  @apply flex justify-end;
 }
 .navContainer {
-  @apply pt-[32vh] pl-[3.5vw];
+  @apply pt-[32vh];
+  @apply lg:px-[3vw] 2xl:pl-[6vw];
 }
 
 .navTitle {
-  @apply text-[22px] font-bold mb-4;
+  @apply font-bold mb-5;
+  @apply lg:text-3xl xl:text-4xl;
 }
 
 .navItems li {
