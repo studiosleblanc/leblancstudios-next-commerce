@@ -15,10 +15,10 @@
 }
 
 .column:nth-child(1) {
-  @apply flex justify-end pr-40;
+  @apply flex justify-end pr-[3.5vw];
 }
 .navContainer {
-  @apply pt-[32vh] pl-[6vh];
+  @apply pt-[32vh] pl-[3.5vw];
 }
 
 .navTitle {
