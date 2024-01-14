@@ -5,16 +5,30 @@
 .nav {
   @apply relative flex flex-row justify-between py-4 md:py-4;
 }
-/* 
-.navMenu {
-  @apply hidden ml-6 space-x-4 lg:block mr-5;
-} */
 
-/* .link {
-  @apply inline-flex items-center leading-6
-  transition ease-in-out duration-75 cursor-pointer
-  text-accent-5;
-} */
+.toolbar {
+  @apply flex items-end text-[2rem] font-normal;
+  & > li:not(first-child) {
+    @apply ml-14 m-auto;
+    & > span {
+      @apply font-bold;
+    }
+  }
+}
+
+.cartContainer {
+  @apply flex;
+}
+.cartItemsCounter {
+  @apply absolute left-0 bottom-[2px] w-full text-center text-base m-auto;
+}
+.totalPrice {
+  @apply ml-14 flex items-end m-auto;
+}
+
+.cartButton {
+  @apply flex font-bold p-1;
+}
 
 .link:hover {
   @apply text-accent-9;

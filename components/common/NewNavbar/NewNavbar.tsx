@@ -46,7 +46,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
               <Searchbar />
             </div>
           )}
-          <ul className="flex items-center justify-end flex-1 space-x-8">
+          <ul className={s.toolbar}>
             <li>HISTORIA</li>
             <li>Bag</li>
             <button
