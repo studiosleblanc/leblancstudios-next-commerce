@@ -41,12 +41,12 @@ const Searchbar: FC<Props> = ({ className, id = 'search' }) => {
         <input
           id={id}
           className={s.input}
-          placeholder="Search for products..."
+          placeholder=" "
           defaultValue={router.query.q}
           onKeyUp={handleKeyUp}
         />
         <div className={s.iconContainer}>
-          <svg className={s.icon} fill="currentColor" viewBox="0 0 20 20">
+          <svg className={s.icon} fill="currentColor" viewBox="0 0 16 16">
             <path
               fillRule="evenodd"
               clipRule="evenodd"

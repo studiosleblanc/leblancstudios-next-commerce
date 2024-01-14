@@ -13,6 +13,9 @@ import {
   ANecesaryRisk,
 } from '@leblanc/components/home'
 import HomeCollection from '@leblanc/components/home/HomeCollection'
+import { Navbar } from '@components/common'
+import { Header } from '@leblanc/components/common'
+import NewNavbar from '@components/common/NewNavbar'
 
 export async function getStaticProps({
   preview,
@@ -51,6 +54,7 @@ export default function Home({
   return (
     <>
       <MainLayout noHeader noDMSwitcher>
+        <NewNavbar />
         <Hero />
         <HomeCollection categories={categories} />
         {/* <MenWomen /> */}
