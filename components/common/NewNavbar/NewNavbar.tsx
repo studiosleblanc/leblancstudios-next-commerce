@@ -42,13 +42,13 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
             <HeaderLogos />
           </div>
           {process.env.COMMERCE_SEARCH_ENABLED && (
-            <div className="justify-center flex-1 hidden lg:flex">
+            <div className="justify-center flex-1">
               <Searchbar />
             </div>
           )}
           <ul className={s.toolbar}>
-            <li>HISTORIA</li>
-            <li>Bag</li>
+            <li>HISTORY</li>
+            <li className="font-extrabold">Bag</li>
             <button
               className={s.cartButton}
               onClick={toggleSidebar}
