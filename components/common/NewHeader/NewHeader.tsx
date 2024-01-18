@@ -36,36 +36,34 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
 
   return (
     <NavbarRoot>
-      <Container>
-        <div className={s.nav}>
-          <div className="flex items-center flex-1">
-            <HeaderLogos />
-          </div>
-          {process.env.COMMERCE_SEARCH_ENABLED && (
-            <div className="justify-center flex-1">
-              <Searchbar />
-            </div>
-          )}
-          <ul className={s.toolbar}>
-            <li>HISTORY</li>
-            <li className="font-extrabold">Bag</li>
-            <button
-              className={s.cartButton}
-              onClick={toggleSidebar}
-              aria-label="open cart">
-              <span className="relative">
-                <span className={s.cartItemsCounter}>
-                  {itemsCount > 0 ? itemsCount : 0}
-                </span>
-                <CartIcon width={28} className={s.cartIcon} />
-              </span>
-              <span className={s.totalPrice}>
-                <span> {totalPrice}</span>
-              </span>
-            </button>
-          </ul>
+      <div className={s.nav}>
+        <div className={s.logoContainer}>
+          <HeaderLogos />
         </div>
-      </Container>
+        {process.env.COMMERCE_SEARCH_ENABLED && (
+          <div className={s.searchContainer}>
+            <Searchbar />
+          </div>
+        )}
+        <ul className={s.toolbar}>
+          <li>HISTORY</li>
+          <li className="font-extrabold">Bag</li>
+          <button
+            className={s.cartButton}
+            onClick={toggleSidebar}
+            aria-label="open cart">
+            <span className="relative">
+              <span className={s.cartItemsCounter}>
+                {itemsCount > 0 ? itemsCount : 0}
+              </span>
+              <CartIcon width={28} className={s.cartIcon} />
+            </span>
+            <span className={s.totalPrice}>
+              <span> {totalPrice}</span>
+            </span>
+          </button>
+        </ul>
+      </div>
     </NavbarRoot>
   )
 }

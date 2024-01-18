@@ -1,14 +1,20 @@
 .root {
-  @apply sticky top-0 bg-primary z-40 transition-all duration-150;
+  @apply sticky top-0 bg-primary z-40;
 }
 
 .nav {
-  @apply relative flex flex-row justify-between py-5 px-5;
+  @apply relative flex flex-row justify-between border-b-2 border-black;
+}
+
+.logoContainer,
+.searchContainer {
+  @apply flex items-center flex-1 border-r-2 border-black py-5 px-5;
 }
 
 .toolbar {
-  @apply flex items-center text-[2.2rem] font-normal flex-1 justify-end;
-  & > li:not(first-child) {
+  @apply flex items-center text-[2.2rem] font-normal;
+  @apply justify-end flex-1 py-5 px-5;
+  & > li {
     @apply m-1 pr-[3rem];
     & > span {
       @apply font-bold;
