@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import Link from 'next/link'
-import s from './NewNavbar.module.css'
+import s from './NewHeader.module.css'
 import NavbarRoot from '../Navbar/NavbarRoot'
 import { useUI } from '@components/ui/context'
 import useCart from '@framework/cart/use-cart'
