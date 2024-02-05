@@ -10,6 +10,7 @@ import { CartIcon } from '@leblanc/icons'
 import usePrice from '@commerce/product/use-price'
 import { Searchbar, UserNav } from '@components/common'
 import { HeaderLogos } from '@leblanc/components/common'
+import cn from 'classnames'
 
 interface Link {
   href: string
@@ -37,32 +38,34 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
   return (
     <NavbarRoot>
       <div className={s.nav}>
-        <div className={s.logoContainer}>
+        <div className={cn(s.column, s.logoContainer)}>
           <HeaderLogos />
         </div>
         {process.env.COMMERCE_SEARCH_ENABLED && (
-          <div className={s.searchContainer}>
+          <div className={cn(s.column, s.searchContainer)}>
             <Searchbar />
           </div>
         )}
-        <ul className={s.toolbar}>
-          <li>HISTORY</li>
-          <li className="font-extrabold">Bag</li>
-          <button
-            className={s.cartButton}
-            onClick={toggleSidebar}
-            aria-label="open cart">
-            <span className="relative">
-              <span className={s.cartItemsCounter}>
-                {itemsCount > 0 ? itemsCount : 0}
+        <div className={cn(s.column, s.toolbarContainer)}>
+          <ul className={s.toolbar}>
+            <li>HISTORY</li>
+            <li className="font-extrabold">Bag</li>
+            <button
+              className={s.cartButton}
+              onClick={toggleSidebar}
+              aria-label="open cart">
+              <span className="relative">
+                <span className={s.cartItemsCounter}>
+                  {itemsCount > 0 ? itemsCount : 0}
+                </span>
+                <CartIcon width={28} className={s.cartIcon} />
               </span>
-              <CartIcon width={28} className={s.cartIcon} />
-            </span>
-            <span className={s.totalPrice}>
-              <span> {totalPrice}</span>
-            </span>
-          </button>
-        </ul>
+              <span className={s.totalPrice}>
+                <span> {totalPrice}</span>
+              </span>
+            </button>
+          </ul>
+        </div>
       </div>
     </NavbarRoot>
   )
