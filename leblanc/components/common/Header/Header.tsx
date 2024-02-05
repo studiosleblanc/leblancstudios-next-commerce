@@ -17,7 +17,6 @@ import { useUI } from '@components/ui/context'
 import type { LineItem } from '@commerce/types/cart'
 import { HeaderLogos } from '@leblanc/components/common'
 import { DarkModeSwitcher } from '@leblanc/components/ui'
-import { Searchbar } from '@components/common'
 
 interface Props {
   history?: boolean
@@ -71,14 +70,10 @@ const Header: FC<Props> = ({ history }) => {
       <div className={s.topRow}>
         <HeaderLogos />
         <ul className={s.toolbar}>
-          <li>Search</li>
           <li>
             <DarkModeSwitcher />
           </li>
-          <li>HISTORY</li>
-          <li>
-            <span>Bag</span>
-          </li>
+          <li className="pb-1">My Account</li>
           <li>
             <button
               className={s.cartButton}
@@ -88,7 +83,7 @@ const Header: FC<Props> = ({ history }) => {
                 <span className={s.cartItemsCounter}>
                   {itemsCount > 0 ? itemsCount : 0}
                 </span>
-                <CartIcon width={32} className={s.cartIcon} />
+                <CartIcon width={28} className={s.cartIcon} />
               </span>
               <span className={s.totalPrice}>
                 <span> {totalPrice}</span>
@@ -97,7 +92,7 @@ const Header: FC<Props> = ({ history }) => {
           </li>
         </ul>
       </div>
-      {/*<div className={s.bottomRow}>
+      <div className={s.bottomRow}>
         <div className={s.breadcrumbs}>
           {breadcrumbs.length >= 3 && (
             <>
@@ -117,6 +112,7 @@ const Header: FC<Props> = ({ history }) => {
                 : pathItems && getStringFitFontStyles(pathItems[0])
             }
             className={s.position}>
+            {/* <div style={getFitFontStyles(positionItems)} className={s.position}> */}
             {breadcrumbs.length > 0 && pathItems[0] !== 'archives'
               ? positionItems.map((pItem, i) => (
                   <React.Fragment key={i}>
@@ -239,7 +235,7 @@ const Header: FC<Props> = ({ history }) => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </header>
   )
 }
