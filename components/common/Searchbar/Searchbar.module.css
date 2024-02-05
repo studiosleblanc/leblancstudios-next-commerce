@@ -4,6 +4,7 @@
 
 .input {
   @apply bg-transparent px-3 py-2 appearance-none w-full transition duration-150 ease-in-out pr-10;
+  @apply hidden;
 }
 
 .input::placeholder {
@@ -15,11 +16,7 @@
 }
 
 .iconContainer {
-  @apply absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none top-4;
-}
-
-.icon {
-  @apply h-12 w-12;
+  @apply inset-y-0 pr-3 flex items-center justify-end pointer-events-none;
 }
 
 @screen sm {
