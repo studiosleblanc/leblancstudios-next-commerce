@@ -1,7 +1,6 @@
 .logoContainer {
-  @apply relative inline-block h-6 lg:h-[30px];
+  @apply relative block h-6 lg:h-[25px];
   & svg {
-    @apply mb-1;
     @apply w-auto h-6 lg:h-auto;
   }
 }
