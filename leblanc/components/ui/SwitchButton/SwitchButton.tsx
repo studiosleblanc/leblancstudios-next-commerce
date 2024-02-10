@@ -18,7 +18,7 @@ const SwitchButton: FC<SwitchButtonProps> = ({ toggle, setToggle }) => {
       backgroundColor: '#14FF00',
     },
     off: {
-      backgroundColor: '#dddddd',
+      backgroundColor: '#F70000',
     },
   }
 
