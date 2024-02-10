@@ -6,14 +6,29 @@
   @apply relative flex flex-row justify-between border-b-2 border-black;
 }
 
-.logoContainer,
+.column {
+  @apply w-1/3;
+  @apply border-r-2 border-black;
+}
+
+.logoContainer {
+  @apply flex items-center flex-1 py-5 px-5;
+  @apply border-r-[1px];
+  border-left: solid transparent 1px;
+}
 .searchContainer {
-  @apply flex items-center flex-1 border-r-2 border-black py-5 px-5;
+  @apply flex items-center flex-1 py-5 px-5;
+  @apply border-r-[1px];
+  @apply border-l-[1px];
+}
+.toolbarContainer {
+  @apply border-l-[1px];
+  border-right: solid transparent 1px;
 }
 
 .toolbar {
-  @apply flex items-center text-[2.2rem] font-normal;
-  @apply justify-end flex-1 py-5 px-5;
+  @apply flex items-center text-[2.2rem] font-normal h-full px-5;
+  @apply justify-end flex-1;
   & > li {
     @apply m-1 pr-[3rem];
     & > span {
@@ -29,7 +44,7 @@
   @apply absolute left-0 bottom-[2px] w-full text-center text-base m-auto;
 }
 .totalPrice {
-  @apply ml-14 flex items-end m-auto;
+  @apply ml-10 flex items-end m-auto;
 }
 
 .cartButton {

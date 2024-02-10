@@ -18,7 +18,7 @@ const MainLayout: FC<Props> = ({
       <HeaderMobile noDMSwitcher={noDMSwitcher} />
       {!noHeader && <Header />}
       {children}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

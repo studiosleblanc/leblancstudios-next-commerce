@@ -10,12 +10,13 @@ import {
   MenWomen,
   FeaturedCollection,
   ArchivesSlider,
-  ANecesaryRisk,
+  ANecessaryRisk,
 } from '@leblanc/components/home'
 import HomeCollection from '@leblanc/components/home/HomeCollection'
 import { Navbar } from '@components/common'
 import { Header } from '@leblanc/components/common'
 import NewHeader from '@components/common/NewHeader'
+import { Banners } from '@leblanc/components/home/Banners/Banners'
 
 export async function getStaticProps({
   preview,
@@ -57,12 +58,8 @@ export default function Home({
         <NewHeader />
         <Hero />
         <HomeCollection categories={categories} />
-        {/* <MenWomen /> */}
-        {/* <ANecesaryRisk /> */}
-        {/* <FeaturedCollection /> */}
-        {/* <ArchivesSlider /> */}
-
-        {/* Footer */}
+        <Banners />
+        <ANecessaryRisk />
 
         <Popup />
       </MainLayout>
