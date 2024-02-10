@@ -9,7 +9,7 @@ import {
   MenWomen,
   FeaturedCollection,
   ArchivesSlider,
-  ANecesaryRisk,
+  ANecessaryRisk,
 } from '@leblanc/components/home'
 
 export async function getStaticProps({
@@ -93,7 +93,7 @@ export default function Home({
 
       <Hero />
       <MenWomen />
-      <ANecesaryRisk />
+      <ANecessaryRisk />
       <FeaturedCollection />
       <ArchivesSlider />
     </>
