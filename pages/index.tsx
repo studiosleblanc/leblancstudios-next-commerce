@@ -10,7 +10,7 @@ import {
   MenWomen,
   FeaturedCollection,
   ArchivesSlider,
-  ANecesaryRisk,
+  ANecessaryRisk,
 } from '@leblanc/components/home'
 import HomeCollection from '@leblanc/components/home/HomeCollection'
 import { Navbar } from '@components/common'
@@ -59,10 +59,7 @@ export default function Home({
         <Hero />
         <HomeCollection categories={categories} />
         <Banners />
-        <ANecesaryRisk />
-        {/* <MenWomen /> */}
-        {/* <FeaturedCollection /> */}
-        {/* <ArchivesSlider /> */}
+        <ANecessaryRisk />
 
         <Popup />
       </MainLayout>
