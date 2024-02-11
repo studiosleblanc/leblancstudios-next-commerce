@@ -9,12 +9,9 @@
   @apply flex flex-col;
 }
 .menuRow {
-  @apply lg:pb-3 flex flex-col justify-between font-bold;
-
+  @apply lg:pb-3 flex flex-col justify-between font-bold mx-auto;
   width: 56vw;
   height: 78vh;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 10vh;
 }
 .copyRow {
