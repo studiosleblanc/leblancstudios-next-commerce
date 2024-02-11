@@ -20,16 +20,6 @@ const LBSFooter: FC<Props> = ({ pages }) => {
   // console.log(pages)
   return (
     <footer className={s.root}>
-      <div className={s.imageContainer}>
-        <Image
-          unoptimized
-          src="/assets/images/footer_img.jpg"
-          alt="footer image"
-          width={1139}
-          height={1422}
-          layout="responsive"
-        />
-      </div>
       <div className={s.content}>
         <div className={s.menuRow}>
           <div className={s.menu}>
@@ -38,25 +28,30 @@ const LBSFooter: FC<Props> = ({ pages }) => {
                 <a href="">Wholesale</a>
               </li> */}
               <li>
+                <Link href="/">
+                  <a>Wholesales</a>
+                </Link>
+              </li>
+              <li>
                 <Link href="/about-us">
                   <a>About Us</a>
                 </Link>
               </li>
               <li>
-                <Link href="/shipping-and-returns">
-                  <a>Shipping & Returns</a>
+                <Link href="/returns">
+                  <a>Return</a>
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-policy">
-                  <a>Privacy Policy</a>
+                <Link href="/shipping">
+                  <a>Shipping</a>
                 </Link>
               </li>
             </ul>
             <ul>
-              {/* <li>
-                <a href="">Newsletter</a>
-              </li> */}
+              <li>
+                <a href="/newsletter">Newsletter</a>
+              </li>
               <li>
                 <a href="http://sto-dgo.com/" target="_blank">
                   Santo Domingo
@@ -67,30 +62,33 @@ const LBSFooter: FC<Props> = ({ pages }) => {
                   <a>Stores</a>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/newsletter">
                   <a>Newsletter</a>
                 </Link>
-              </li>
+              </li> */}
             </ul>
             <ul>
               <li>
                 <a href="mailto:info@leblancstudios.com">Contact Us</a>
               </li>
-              {/* <li>
+              <li>
                 <a href="">WhatsApp Business</a>
-              </li> */}
+              </li>
               <li>
                 <a href="mailto:info@leblancstudios.com">E-Mail</a>
               </li>
             </ul>
             <ul className={s.social}>
-              <li>
+              {/* <li>
                 <a
                   href="https://open.spotify.com/user/la1my6jfhjhxpbqhk2xdxb5vk?si=6VrMFCCKRNOqvlLh75MFyA"
                   target="_blank">
                   Spotify
                 </a>
+              </li> */}
+              <li>
+                <a href="">Facebook</a>
               </li>
               <li>
                 <a href="https://www.instagram.com/LEBLANCSTUDIOS/">Instagram</a>
@@ -100,17 +98,21 @@ const LBSFooter: FC<Props> = ({ pages }) => {
                   Youtube
                 </a>
               </li>
+              <li>
+                <a href="">Twitter</a>
+              </li>
+              <li>
+                <a href="">Linkedin</a>
+              </li>
             </ul>
           </div>
           {/* <I18nWidget /> */}
-          <div className={s.logoLBSContainer}>
-            <LogoHorizontal className={s.logoLBS} />
-          </div>
         </div>
         <div className={s.copyRow}>
           <div className={s.copy}>
             <p>DESIGNED BY LEBLANCSTUDIOS, COPYRIGHT RESERVED 2021</p>
-            <LogoAfricanCaribeanPacific className={s.acpLogo} />
+            <p>LEBLANCFOUNDATION</p>
+            <p>AFRICAN-CARIBBEAN-PACIFIC</p>
           </div>
         </div>
       </div>
