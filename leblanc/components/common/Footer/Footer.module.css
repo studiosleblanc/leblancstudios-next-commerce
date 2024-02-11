@@ -18,7 +18,7 @@
   margin-top: 10vh;
 }
 .copyRow {
-  @apply border-t-[1px] border-secondary border-solid;
+  @apply border-t-[3px] border-secondary border-solid;
   @apply hidden lg:block;
 }
 
@@ -54,9 +54,10 @@
 
 /* Copyright */
 .copy {
-  @apply px-4 py-7 cursor-default;
+  @apply px-7 py-11 my-10 cursor-default;
+  margin-left: 80px;
   & p {
-    @apply text-right mb-4 text-lg tracking-widest;
+    @apply mb-4 text-lg tracking-widest my-10 font-semibold;
   }
 }
 

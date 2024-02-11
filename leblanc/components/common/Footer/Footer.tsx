@@ -80,13 +80,6 @@ const LBSFooter: FC<Props> = ({ pages }) => {
               </li>
             </ul>
             <ul className={s.social}>
-              {/* <li>
-                <a
-                  href="https://open.spotify.com/user/la1my6jfhjhxpbqhk2xdxb5vk?si=6VrMFCCKRNOqvlLh75MFyA"
-                  target="_blank">
-                  Spotify
-                </a>
-              </li> */}
               <li>
                 <a href="">Facebook</a>
               </li>
@@ -110,7 +103,7 @@ const LBSFooter: FC<Props> = ({ pages }) => {
         </div>
         <div className={s.copyRow}>
           <div className={s.copy}>
-            <p>DESIGNED BY LEBLANCSTUDIOS, COPYRIGHT RESERVED 2021</p>
+            <p>DEVELOPED BY LEBLANCSTUDIOS, COPYRIGHT RESERVED.</p>
             <p>LEBLANCFOUNDATION</p>
             <p>AFRICAN-CARIBBEAN-PACIFIC</p>
           </div>
