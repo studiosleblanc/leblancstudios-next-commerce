@@ -1,3 +1,3 @@
 .imageContainer {
-  @apply w-full border-b-2 border-solid border-lbsDarkGray;
+  @apply w-full border-b-4 border-solid border-lbsDarkGray;
 }

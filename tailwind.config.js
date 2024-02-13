@@ -19,6 +19,9 @@ module.exports = {
       // fontFamily: {
       //   massimo: '"Massimo Display"',
       // },
+      fontWeight: {
+        'extra-bold': 1000,
+      },
       maxWidth: {
         '8xl': '1920px',
       },

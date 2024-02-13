@@ -34,8 +34,8 @@ const ANecesaryRisk: FC = () => {
             src={Kid2Img}
             alt="kids leblanc"
             className={s.cardImage}
-            width={1920}
-            height={1413}
+            // width={1920}
+            // height={1413}
             layout="fill"
             objectFit="cover"
           />
