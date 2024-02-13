@@ -1,6 +1,6 @@
 .root {
   @apply flex;
-  @apply lg:border-t-[2px] border-black border-solid;
+  @apply lg:border-t-4 border-black border-solid;
   @apply text-text-primary;
 }
 
@@ -10,12 +10,12 @@
 }
 .menuRow {
   @apply lg:pb-3 flex flex-col justify-between font-bold mx-auto;
-  width: 56vw;
+  width: 65vw;
   height: 78vh;
   margin-top: 10vh;
 }
 .copyRow {
-  @apply border-t-[3px] border-secondary border-solid;
+  @apply border-t-4 border-secondary border-solid;
   @apply hidden lg:block;
 }
 
