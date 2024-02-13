@@ -31,6 +31,14 @@
        url('/assets/fonts/TWKLausanne/TWKLausanne-700.ttf') format('truetype');
 }
 @font-face {
+  font-family: 'TWKLausanne';
+  font-weight: 1000;
+  src: url('/assets/fonts/TWKLausanne/TWKLausanne-1000.woff2') format('woff2'), /* Preferred format for modern browsers */
+       url('/assets/fonts/TWKLausanne/TWKLausanne-1000.woff') format('woff'),
+       url('/assets/fonts/TWKLausanne/TWKLausanne-1000.ttf') format('truetype');
+}
+
+@font-face {
   font-family: 'Tungsten';
   font-weight: 700;
   src: url('/assets/fonts/Tungsten-Black.otf') format('truetype');

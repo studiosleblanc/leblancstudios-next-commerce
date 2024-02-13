@@ -23,12 +23,12 @@
 }
 
 .navTitle {
-  @apply font-bold mb-5;
+  @apply font-extra-bold mb-5;
   @apply lg:text-3xl xl:text-4xl;
 }
 
 .navItems li {
-  @apply m-1 text-base hover:underline;
+  @apply m-1 text-lg hover:underline;
 }
 
 .imageContainer {
