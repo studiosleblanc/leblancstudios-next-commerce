@@ -27,7 +27,7 @@
 }
 
 .toolbar {
-  @apply flex items-center text-[2.2rem] font-normal h-full px-5;
+  @apply flex items-center text-2xl 2xl:text-3xl font-normal h-full px-5;
   @apply justify-end flex-1;
   & > li {
     @apply m-1 pr-[3rem];
@@ -41,12 +41,12 @@
   @apply flex;
 }
 .cartItemsCounter {
-  @apply absolute left-0 bottom-[2px] w-full text-center text-base m-auto;
+  @apply absolute left-0 bottom-0 w-full text-center text-sm m-auto;
 }
 .totalPrice {
   @apply ml-10 flex items-end m-auto;
 }
 
 .cartButton {
-  @apply flex font-bold p-1;
+  @apply flex items-center font-bold p-1;
 }
