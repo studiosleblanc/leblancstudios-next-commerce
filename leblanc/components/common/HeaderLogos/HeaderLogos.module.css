@@ -1,7 +1,8 @@
 .logoContainer {
   @apply relative block h-6 lg:h-[25px];
   & svg {
-    @apply w-auto h-6 lg:h-auto;
+    @apply w-[60vw] lg:w-auto h-6 lg:h-auto;
+    /* width: 50vw; */
   }
 }
 .logoItem {
