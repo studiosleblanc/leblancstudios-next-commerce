@@ -1,5 +1,5 @@
 .root {
-  @apply flex flex-col mb-8;
+  @apply flex flex-col mb-16 xl:mb-8;
 }
 
 .button {
