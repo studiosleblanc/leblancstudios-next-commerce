@@ -18,7 +18,7 @@
   @apply flex justify-end;
 }
 .navContainer {
-  @apply pt-[10vh] xl:pt-[32vh];
+  @apply pt-[20vh] xl:pt-[32vh];
   @apply lg:px-[3vw] 2xl:pl-[6vw];
 }
 

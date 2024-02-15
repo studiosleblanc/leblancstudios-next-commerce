@@ -30,7 +30,7 @@
   @apply flex items-center text-2xl 2xl:text-3xl font-normal h-full px-5;
   @apply justify-end flex-1;
   & > li {
-    @apply m-1 pr-[3rem];
+    @apply m-1 pr-5 xl:pr-[3rem];
     & > span {
       @apply font-bold;
     }
