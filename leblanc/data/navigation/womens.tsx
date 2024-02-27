@@ -79,6 +79,13 @@ const womens: NavItem[] = [
     href: '/womens/hoodies',
     slug: 'womens-hoodies',
   },
+  {
+    id: 'bottoms-d4524356f13431',
+    label: 'Bottoms',
+    handle: 'bottoms',
+    href: '/womens/bottoms',
+    slug: 'womens-bottoms',
+  },
 ]
 
 export default womens

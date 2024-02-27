@@ -72,6 +72,13 @@ const mens: NavItem[] = [
     href: '/mens/hoodies',
     slug: 'mens-hoodies',
   },
+  {
+    id: 'jackets-dfs423422df',
+    label: 'Jackets',
+    handle: 'jackets',
+    href: '/mens/jackets',
+    slug: 'mens-jackets',
+  },
 ]
 
 export default mens
