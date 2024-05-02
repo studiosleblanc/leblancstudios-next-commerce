@@ -33,8 +33,9 @@
 .headerCaption {
   @apply border-t-2 border-primary border-solid pt-2;
   @apply text-right text-text-secondary uppercase text-xs md:text-sm whitespace-nowrap;
+  @apply pl-8;
   width: 357px;
-  max-width: 50%;
+  max-width: 60%;
   transition: all 0.3s ease;
 }
 .footerCaption {
