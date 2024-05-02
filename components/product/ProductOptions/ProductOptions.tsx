@@ -12,7 +12,7 @@ const ProductOptions: React.FC<ProductOptionsProps> = React.memo(
   ({ options, selectedOptions, setSelectedOptions }) => {
     return (
       <div>
-        {options.map((opt) => (
+        {options.map(opt => (
           <div className="pb-4" key={opt.displayName}>
             <h2 className="uppercase font-medium text-sm tracking-wide">
               {opt.displayName}
@@ -28,11 +28,10 @@ const ProductOptions: React.FC<ProductOptionsProps> = React.memo(
                     color={v.hexColors ? v.hexColors[0] : ''}
                     label={v.label}
                     onClick={() => {
-                      setSelectedOptions((selectedOptions) => {
+                      setSelectedOptions(selectedOptions => {
                         return {
                           ...selectedOptions,
-                          [opt.displayName.toLowerCase()]:
-                            v.label.toLowerCase(),
+                          [opt.displayName.toLowerCase()]: v.label.toLowerCase(),
                         }
                       })
                     }}

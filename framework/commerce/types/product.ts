@@ -1,3 +1,9 @@
+export type ProductFeaturedImage = {
+  url: string
+  width?: number | string
+  height?: number | string
+}
+
 export type ProductImage = {
   url: string
   alt?: string
@@ -48,6 +54,7 @@ export type Product = {
   price: ProductPrice
   options: ProductOption[]
   metafields: ProductMetafield[]
+  featuredImage: ProductFeaturedImage
 }
 
 export type ProductMetafield = {
