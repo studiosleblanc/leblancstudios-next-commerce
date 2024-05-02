@@ -1,3 +1,9 @@
+export type ProductFeaturedImage = {
+	url: string
+	width?: number | string
+	height?: number | string
+}
+
 export type ProductImage = {
   url: string
   alt?: string
@@ -43,6 +49,7 @@ export type Product = {
   sku?: string
   slug?: string
   path?: string
+  featuredImage: ProductFeaturedImage
   images: ProductImage[]
   variants: ProductVariant[]
   price: ProductPrice

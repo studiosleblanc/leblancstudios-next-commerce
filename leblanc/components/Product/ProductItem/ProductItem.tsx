@@ -33,8 +33,6 @@ const ProductItem: FC<Props> = ({ item, asCard = false, i }) => {
     setSqueezeOut(!squeezeOut)
   }
 
-  // console.log(cardLightText)
-
   return (
     <div className={cn(s.item, { [s.asCard]: asCard })} key={item.name}>
       <Link href={`/product/${item.slug}`}>
@@ -42,9 +40,9 @@ const ProductItem: FC<Props> = ({ item, asCard = false, i }) => {
           {item?.images && (
             <Image
               unoptimized
-              src={item.images[0]?.url || placeholderImg}
-              width={item.images[0]?.width || 800}
-              height={item.images[0]?.height || 800}
+              src={item.featuredImage?.url || placeholderImg}
+              width={item.featuredImage?.width || 800}
+              height={item.featuredImage?.height || 800}
               objectFit="cover"
               layout="responsive"
             />
