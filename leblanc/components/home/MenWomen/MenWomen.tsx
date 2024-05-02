@@ -11,12 +11,12 @@ const MenWomen: FC = () => {
   return (
     <div className={s.root}>
       <div className={s.column}>
-        <Link href="product/pretty-forma-belly-t-shirt">
+        <Link href="product/black-crisis-t-shirt">
           <a className={s.card}>
             <Image
               priority
               unoptimized
-              src="/assets/home/women.jpg"
+              src="/assets/home/black-crisis-t-shirt.png"
               alt="Leblanc Studios"
               width={963}
               height={1443}
@@ -28,29 +28,29 @@ const MenWomen: FC = () => {
             <div className={s.cardContent}>
               <div className={s.cardHeader}>
                 <div className={s.headerCaption}>
-                  <b>[WOMENS]</b>
+                  <b> NEW ARRIVAL: BLACK CRISIS T-SHIRT</b>
                 </div>
               </div>
-              <div className={s.cardFooter}>
+              {/* <div className={s.cardFooter}>
                 <div className={s.footerCaption}>
                   <span>
-                    Photographed by Ales Constantino  
+                    Photographed by Ales Constantino
                     <br />
                     Modeled by kat
                   </span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </a>
         </Link>
       </div>
       <div className={s.column}>
-        <Link href="/archives/no-medium-inserted">
+        <Link href="product/crisis-t-shirt">
           <a className={s.card}>
             <Image
               priority
               unoptimized
-              src="/assets/home/men.png"
+              src="/assets/home/crisis-t-shirt.png"
               alt="Leblanc Studios"
               width={963}
               height={1443}
@@ -62,20 +62,20 @@ const MenWomen: FC = () => {
             <div className={s.cardContent}>
               <div className={s.cardHeader}>
                 <div className={s.headerCaption}>
-                  <b>[MENS]</b>
+                  <b>NEW ARRIVAL: PINK CRISIS T-SHIRT</b>
                 </div>
               </div>
-              <div className={s.cardFooter}>
+              {/* <div className={s.cardFooter}>
                 <div className={s.footerCaption}>
                   <span>
                     Photographed by Luis Molina
                     <br />
-                    Styled by Laura Jiménez 
+                    Styled by Laura Jiménez
                     <br />
                     Modeled by Ángel De Jesús
                   </span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </a>
         </Link>
