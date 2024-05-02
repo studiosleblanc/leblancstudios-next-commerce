@@ -10,6 +10,11 @@ export const getProductQuery = /* GraphQL */ `
         preview
         name
       }
+      featuredImage {
+        url(transform: { maxWidth: 1100 })
+        height
+        width
+      }
       variants {
         id
         priceWithTax
@@ -27,6 +32,7 @@ export const getProductQuery = /* GraphQL */ `
           }
         }
       }
+
       optionGroups {
         id
         code
@@ -35,6 +41,19 @@ export const getProductQuery = /* GraphQL */ `
           id
           name
         }
+      }
+      metafields(
+        identifiers: [
+          { namespace: "next_app", key: "variant_1_color" }
+          { namespace: "next_app", key: "variant_2_color" }
+          { namespace: "next_app", key: "variant_3_color" }
+          { namespace: "next_app", key: "variant_1_page" }
+          { namespace: "next_app", key: "variant_2_page" }
+        ]
+      ) {
+        id
+        key
+        value
       }
     }
   }

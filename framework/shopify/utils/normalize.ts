@@ -1,5 +1,5 @@
 import type { Page } from '../types/page'
-import type { Product } from '../types/product'
+import type { Metafield, Product } from '../types/product'
 import type { Cart, LineItem } from '../types/cart'
 import type { Category } from '../types/site'
 
@@ -15,7 +15,7 @@ import {
   Page as ShopifyPage,
   PageEdge,
   Collection,
-  MetafieldConnection,
+  Maybe,
 } from '../schema'
 import {
   // colorMap,
@@ -58,19 +58,27 @@ const normalizeProductOption = ({
 }
 
 const normalizeProductImages = ({ edges }: ImageConnection) =>
-  edges?.map(({ node: { transformedSrc: url, ...rest } }) => ({
+  edges?.map(({ node: { url, ...rest } }) => ({
     url,
     ...rest,
   }))
 
-const normalizeMetafields = ({ edges }: MetafieldConnection) =>
-  edges?.map(({ node: { id, key, namespace, value } }) => ({
-    id,
-    key,
-    namespace,
-    value,
-    hexColors: key.includes('color') ? [checkHexAndColors(value.toLowerCase())] : [],
-  }))
+const normalizeMetafields = (metafieldsArray: Maybe<Metafield>[] | null) => {
+  if (metafieldsArray) {
+    const filteredArray = metafieldsArray.filter(element => element !== null)
+    return filteredArray.map((metafieldItem: Maybe<Metafield>) => {
+      if (metafieldItem) {
+        return {
+          ...metafieldItem,
+          hexColors: metafieldItem.key?.includes('color')
+            ? [checkHexAndColors(metafieldItem.value.toLowerCase())]
+            : [],
+        }
+      }
+    })
+  }
+  return []
+}
 
 const normalizeProductVariants = ({ edges }: ProductVariantConnection) => {
   return edges?.map(
@@ -114,6 +122,7 @@ export function normalizeProduct({
   vendor,
   images,
   variants,
+  featuredImage,
   description,
   descriptionHtml,
   handle,
@@ -130,6 +139,7 @@ export function normalizeProduct({
     path: `/${handle}`,
     slug: handle?.replace(/^\/+|\/+$/g, ''),
     price: money(priceRange?.minVariantPrice),
+    featuredImage,
     images: normalizeProductImages(images),
     variants: variants ? normalizeProductVariants(variants) : [],
     options: options
