@@ -51,6 +51,11 @@ export const productConnectionFragment = /* GraphQL */ `
             }
           }
         }
+        featuredImage {
+					url(transform: { maxWidth: 1100 })
+          width
+          height
+				}
         images(first: 1) {
           pageInfo {
             hasNextPage
@@ -58,23 +63,27 @@ export const productConnectionFragment = /* GraphQL */ `
           }
           edges {
             node {
-              transformedSrc(maxWidth: 800)
+              url(transform: { maxWidth: 1100 })
               altText
               width
               height
             }
           }
         }
-        # metafields(first: 100) {
-        #   edges {
-        #     node {
-        #       value
-        #       namespace
-        #       id
-        #       key
-        #     }
-        #   }
-        # }
+        metafields(
+					identifiers: [
+						{ namespace: "next_app", key: "variant_1_color" }
+						{ namespace: "next_app", key: "variant_2_color" }
+						{ namespace: "next_app", key: "variant_3_color" }
+						{ namespace: "next_app", key: "variant_1_page" }
+						{ namespace: "next_app", key: "variant_2_page" }
+						{ namespace: "next_app", key: "variant_3_page" }
+					]
+				) {
+					id
+					key
+					value
+				}
       }
     }
   }
