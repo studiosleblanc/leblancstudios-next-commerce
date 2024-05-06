@@ -4,13 +4,13 @@
   @apply flex flex-col justify-between;
 }
 .sizeTitle {
-  @apply text-xl font-bold mb-5;
+  @apply text-xl font-bold mb-2 xl:mb-5;
 }
 
 .sizesContainer {
   @apply list-none;
   & > li {
-    @apply mb-6;
+    @apply xl:mb-6;
   }
 }
 
