@@ -18,8 +18,8 @@ const MenWomen: FC = () => {
               unoptimized
               src="/assets/home/black-crisis-t-shirt.png"
               alt="Leblanc Studios"
-              width={963}
-              height={1443}
+              width={1920}
+              height={2560}
               layout="responsive"
               className={s.image}
               placeholder="empty"
@@ -52,8 +52,8 @@ const MenWomen: FC = () => {
               unoptimized
               src="/assets/home/crisis-t-shirt.png"
               alt="Leblanc Studios"
-              width={963}
-              height={1443}
+              width={1920}
+              height={2560}
               layout="responsive"
               className={s.image}
               placeholder="empty"
